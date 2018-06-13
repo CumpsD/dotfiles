@@ -2,4 +2,6 @@
 
 - link:
     ~/.gitconfig: git/gitconfig
-    ~/.git-templates/hooks/post-checkout: git/post-checkout
+    ~/.git-templates/hooks/post-checkout: 
+        create: true
+        path: ~/.git-templates/hooks/post-checkout
