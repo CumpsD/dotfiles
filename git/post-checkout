@@ -7,8 +7,9 @@ shopt -s nocasematch
 # .gitconfig where the 'name' and 'email' for that service are specified
 remote_url="$( git config --get --local remote.origin.url )"
 services=(
+    'vlaamseoverheid'
+    'gogs'
     'github'
-    'gitlab'
 )
 
 set_local_user_config() {
