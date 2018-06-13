@@ -1,4 +1,6 @@
-- clean: ['~']
+- clean:
+    ~/
+    ~/.git-templates/hooks
 
 - link:
     ~/.gitconfig: git/gitconfig
