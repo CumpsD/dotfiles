@@ -1,5 +1,5 @@
 - clean: ['~']
 
 - link:
-
-
+    ~/.gitconfig: git/gitconfig
+    ~/.git-templates/hooks/post-checkout: git/post-checkout

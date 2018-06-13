@@ -1,0 +1,20 @@
+[push]
+    default = simple
+	
+[vlaamseoverheid]
+    email = david.cumps@kb.vlaanderen.be
+    name = David Cumps
+
+[gogs]
+    email = david@exira.com
+    name = David Cumps
+
+[github]
+    email = david@cumps.be
+    name = David Cumps
+
+[init]
+    templatedir = ~/.git-templates
+
+[user]
+    useConfigOnly = true
