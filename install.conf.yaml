@@ -2,6 +2,6 @@
 
 - link:
     ~/.gitconfig: git/gitconfig
-    ~/.git-templates/hooks/post-checkout: 
+    ~/.git-templates/hooks/pre-commit: 
         create: true
-        path: git/post-checkout
+        path: git/pre-commit
