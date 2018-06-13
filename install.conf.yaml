@@ -4,6 +4,18 @@
 
 - link:
     ~/.gitconfig: git/gitconfig
-    ~/.git-templates/hooks/pre-commit: 
+    ~/.git-templates/hooks/commit-message: 
         create: true
-        path: git/pre-commit
+        path: git/set-repo-user-hook
+    ~/.git-templates/hooks/post-checkout:
+        create: true
+        path: git/set-repo-user-hook
+    ~/.git-templates/hooks/post-merge:
+        create: true
+        path: git/set-repo-user-hook
+    ~/.git-templates/hooks/pre-commit:
+        create: true
+        path: git/set-repo-user-hook
+    ~/.git-templates/hooks/prepare-commit-msg:
+        create: true
+        path: git/set-repo-user-hook
