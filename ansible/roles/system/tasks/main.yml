@@ -1,0 +1,25 @@
+---
+- name: Update all packages
+  become: yes
+  become_method: sudo
+  apt: 
+    upgrade: dist 
+    update_cache: yes
+    autoclean: yes
+    autoremove: yes
+
+- name: Install basic command-line utilities
+  apt:
+    name: "{{ item }}"
+    state: latest
+  become: yes
+  become_method: sudo
+  with_items:
+    - curl
+
+- name: Install essential build tools
+  package:
+    name: "build-essential"
+    state: latest
+  become: yes
+  become_method: sudo

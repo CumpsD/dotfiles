@@ -1,3 +1,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/cumpsd/dotbot
+[submodule "ansible/roles/pip"]
+	path = ansible/roles/pip
+	url = https://github.com/Oefenweb/ansible-pip

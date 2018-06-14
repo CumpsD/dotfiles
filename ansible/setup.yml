@@ -1,0 +1,7 @@
+---
+- name: Setup new machine
+  hosts: local
+  
+  roles:
+    - system
+    - pip
