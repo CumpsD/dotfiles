@@ -1,3 +1,8 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
 - clean:
     ~/
     ~/.git-templates/hooks
@@ -5,23 +10,8 @@
 - link:
     ~/.gitconfig: git/gitconfig
 
-    ~/.git-templates/hooks/commit-message: 
-        create: true
-        relink: true
-        path: git/set-repo-user-hook
-    ~/.git-templates/hooks/post-checkout:
-        create: true
-        relink: true
-        path: git/set-repo-user-hook
-    ~/.git-templates/hooks/post-merge:
-        create: true
-        relink: true
-        path: git/set-repo-user-hook
-    ~/.git-templates/hooks/pre-commit:
-        create: true
-        relink: true
-        path: git/set-repo-user-hook
-    ~/.git-templates/hooks/prepare-commit-msg:
-        create: true
-        relink: true
-        path: git/set-repo-user-hook
+    ~/.git-templates/hooks/commit-message: git/set-repo-user-hook
+    ~/.git-templates/hooks/post-checkout: git/set-repo-user-hook
+    ~/.git-templates/hooks/post-merge: git/set-repo-user-hook
+    ~/.git-templates/hooks/pre-commit: git/set-repo-user-hook
+    ~/.git-templates/hooks/prepare-commit-msg: git/set-repo-user-hook
