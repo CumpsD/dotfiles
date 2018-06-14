@@ -79,7 +79,7 @@
     g = !git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
     # Save some time typing
-    s = !git status
+    st = !git status -sb
 
     # Return a list of commit SHA1s
     l = "!f() { git log $* | grep '^commit ' | cut -f 2 -d ' '; }; f"
