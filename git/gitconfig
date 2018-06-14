@@ -18,3 +18,15 @@
 
 [user]
     useConfigOnly = true
+
+[credential]
+    canFallBackToInsecureStore = false
+
+[url "git@github.com:"]
+    insteadOf = gh:
+
+[url "git@gist.github.com:"]
+    insteadOf = gist:
+
+[url "git@bitbucket.org:"]
+    insteadOf = bb:
