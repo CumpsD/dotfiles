@@ -3,5 +3,5 @@
 git pull
 
 pushd ansible
-ansible-playbook -i inventory system.yml
+ansible-playbook -K -i inventory system.yml
 popd

@@ -1,7 +1,5 @@
 ---
 - name: Update all packages
-  become: yes
-  become_method: sudo
   apt: 
     upgrade: dist 
     update_cache: yes
@@ -12,8 +10,6 @@
   apt:
     name: "{{ item }}"
     state: latest
-  become: yes
-  become_method: sudo
   with_items:
     - curl
 
@@ -21,5 +17,3 @@
   package:
     name: "build-essential"
     state: latest
-  become: yes
-  become_method: sudo

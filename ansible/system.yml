@@ -3,5 +3,5 @@
   hosts: local
   
   roles:
-    - system
-    - pip
+    - { role: system, become: yes }
+    - { role: pip, become: yes }
