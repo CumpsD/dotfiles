@@ -36,7 +36,7 @@
 
 [color "branch"]
     current = yellow reverse
-    local = yello
+    local = yellow
     remote = green
 
 [color "diff"]
@@ -50,3 +50,36 @@
     changed = green
     untracked = red
 
+[alias]
+    # Show all configured aliases
+    aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ \t => \\2/' | sort
+
+    # For when you made that commit a bit too early, amend
+    amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+
+    # Show all branches
+    branches = branch -avv
+
+    # List all tags
+    tags = tag -l
+
+    # Which files are receiving the most "love"
+    churn = !git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print "count,file"} {print $1 "," $2}'
+
+    # View the log and diff for a commit (previous if no SHA1 provided)
+    details = log -n1 -p --format=fuller
+
+    # Save a repo as a tarball
+    export = archive -o latest.tar.gz -9 --prefix=latest/
+
+    # View a pretty git log with branch tree
+    g = !git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+    # Save some time typing
+    s = !git status
+
+    # Return a list of commit SHA1s
+    l = "!f() { git log $* | grep '^commit ' | cut -f 2 -d ' '; }; f"
+
+    # Thin out older metadata within the repository, reduceses filesystem footprint
+    trim = !git reflog expire --expire=now --all && git gc --prune=now
