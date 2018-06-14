@@ -7,3 +7,6 @@
 [submodule "ansible/roles/docker"]
 	path = ansible/roles/docker
 	url = https://github.com/cumpsd/ansible-role-docker
+[submodule "ansible/roles/dotnet-core"]
+	path = ansible/roles/dotnet-core
+	url = https://github.com/cumpsd/ansible-role-dotnet-core

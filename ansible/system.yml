@@ -7,7 +7,10 @@
     docker_apt_release_channel: edge
     docker_users: ['cumpsd']
   
+    dotnet_package: 'dotnet-sdk-2.1'
+
   roles:
     - { role: system, become: yes }
     - { role: pip, become: yes }
     - { role: docker, become: yes }
+    - { role: dotnet-core, become: yes }
