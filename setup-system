@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+git pull
+
+pushd ansible
+ansible-playbook -i inventory system.yml
+popd
