@@ -15,3 +15,7 @@
     ~/.git-templates/hooks/post-merge: git/set-repo-user-hook
     ~/.git-templates/hooks/pre-commit: git/set-repo-user-hook
     ~/.git-templates/hooks/prepare-commit-msg: git/set-repo-user-hook
+
+- shell:
+    - [sudo cp wsl/wsl.conf /etc/wsl.conf, Configuring WSL]
+    
