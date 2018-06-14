@@ -1,7 +1,13 @@
 ---
 - name: Setup new machine
   hosts: local
+
+  vars:
+    docker_package_state: latest
+    docker_apt_release_channel: edge
+    docker_users: ['cumpsd']
   
   roles:
     - { role: system, become: yes }
     - { role: pip, become: yes }
+    - { role: docker, become: yes }

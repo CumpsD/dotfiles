@@ -3,4 +3,7 @@
 	url = https://github.com/cumpsd/dotbot
 [submodule "ansible/roles/pip"]
 	path = ansible/roles/pip
-	url = https://github.com/Oefenweb/ansible-pip
+	url = https://github.com/cumpsd/ansible-pip
+[submodule "ansible/roles/docker"]
+	path = ansible/roles/docker
+	url = https://github.com/cumpsd/ansible-role-docker
