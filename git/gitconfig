@@ -22,6 +22,9 @@
 [credential]
     canFallBackToInsecureStore = false
 
+[core]
+    compression = 9
+
 [url "git@github.com:"]
     insteadOf = gh:
 
