@@ -8,7 +8,7 @@
     include_role: 
       name: system
 
-  - name: Install Fish
+  - name: Install Fish and configure default shell
     include_role:
       name: fish
 

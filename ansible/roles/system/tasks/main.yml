@@ -17,8 +17,3 @@
   package:
     name: "build-essential"
     state: latest
-
-- name: Install Hack font
-  apt:
-    name: fonts-hack-ttf
-    state: latest
