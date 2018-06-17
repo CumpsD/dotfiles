@@ -1,6 +1,7 @@
 ---
 - name: Setup new machine
   hosts: local
+  become: yes
 
   vars:
     git_packages:
@@ -11,15 +12,18 @@
     git_version: '2.17.1'
     git_install_from_source_force_update: true
 
-    nodejs_version: '6.x'
-    #nodejs_npm_global_packages:
-    #  - npm
+    pip_install_packages:
+      - awscli
+
+    nodejs_version: '10.x'
+    nodejs_npm_global_packages:
+      - npm
 
     docker_edition: 'ce'
     docker_version: '18.05.0'
     docker_compose_version: '1.21.2'
     docker_users: ['cumpsd']
-    docker_package: 'docker-{{ docker_edition }}-{{ docker_version }}'
+    docker_package: 'docker-{{ docker_edition }}={{ docker_version }}~{{ docker_edition }}-0~{{ ansible_distribution|lower }}-{{ ansible_distribution_release }}'
     docker_package_state: latest
     docker_apt_release_channel: edge
     docker_service_state: stopped
@@ -30,10 +34,26 @@
 
     dotnet_package: 'dotnet-sdk-2.1'
 
+    ntp_enabled: true
+    ntp_timezone: Europe/Brussels
+
+    packer_version: '1.2.4'
+
   roles:
-    - { role: system, become: yes }
-    - { role: git, become: yes }
-    - { role: pip, become: yes }
-    - { role: nodejs, become: yes }
-    - { role: docker, become: yes }
-    #- { role: dotnet-core, become: yes }
+    - system
+    - git
+    - pip
+    - nodejs
+    - docker
+    #- dotnet-core
+    - ntp
+    - packer
+
+#    - { role: system, become: yes }
+#    - { role: git, become: yes }
+#    - { role: pip, become: yes }
+#    - { role: nodejs, become: yes }
+#    - { role: docker, become: yes }
+#    #- { role: dotnet-core, become: yes }
+#    - { role: ntp, become: yes }
+#    - { role: packer, becomes:  yes}

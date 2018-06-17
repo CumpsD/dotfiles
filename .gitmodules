@@ -6,7 +6,7 @@
         url = https://github.com/cumpsd/ansible-role-git
 [submodule "ansible/roles/pip"]
         path = ansible/roles/pip
-        url = https://github.com/cumpsd/ansible-pip
+        url = https://github.com/cumpsd/ansible-role-pip
 [submodule "ansible/roles/nodejs"]
         path = ansible/roles/nodejs
         url = https://github.com/cumpsd/ansible-role-nodejs
@@ -16,3 +16,9 @@
 [submodule "ansible/roles/dotnet-core"]
         path = ansible/roles/dotnet-core
         url = https://github.com/cumpsd/ansible-role-dotnet-core
+[submodule "ansible/roles/ntp"]
+	path = ansible/roles/ntp
+	url = https://github.com/cumpsd/ansible-role-ntp
+[submodule "ansible/roles/packer"]
+	path = ansible/roles/packer
+	url = https://github.com/cumpsd/ansible-role-packer
