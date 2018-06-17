@@ -5,3 +5,7 @@ git pull
 pushd ansible
 ansible-playbook -K -i inventory system.yml
 popd
+
+pushd fish/oh-my-fish
+bin/install --offline --verbose --yes
+popd
