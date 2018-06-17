@@ -34,3 +34,6 @@
 [submodule "fish/oh-my-fish"]
 	path = fish/oh-my-fish
 	url = https://github.com/oh-my-fish/oh-my-fish
+[submodule "fonts/hack"]
+	path = fonts/hack
+	url = https://github.com/source-foundry/Hack

@@ -11,6 +11,13 @@ git clone --recurse-submodules -j8 https://github.com/cumpsd/dotfiles.git ~/.dot
 ~/.dotfiles/setup-system
 ```
 
+## Post Install steps on WSL
+
+### Font Install
+
+* Download https://github.com/source-foundry/Hack-windows-installer/releases/download/v1.6.0/HackFontsWindowsInstaller.exe
+* Set default console font to Hack, 14
+
 ## Troubleshooting
 
 ### PIP Errors
