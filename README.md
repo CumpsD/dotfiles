@@ -10,3 +10,15 @@ sudo apt-get install ansible software-properties-common git
 git clone --recurse-submodules -j8 https://github.com/cumpsd/dotfiles.git ~/.dotfiles
 ~/.dotfiles/setup-system
 ```
+
+## Credits
+
+### Ansible Roles
+
+* https://github.com/geerlingguy/ansible-role-git
+* https://github.com/geerlingguy/ansible-role-pip
+* https://github.com/geerlingguy/ansible-role-nodejs
+* https://github.com/geerlingguy/ansible-role-docker
+* https://github.com/geerlingguy/ansible-role-packer
+* https://github.com/geerlingguy/ansible-role-ntp
+* https://github.com/ocha/ansible-role-dotnet-core
