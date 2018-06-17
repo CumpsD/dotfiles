@@ -16,6 +16,8 @@
     ~/.git-templates/hooks/pre-commit: git/set-repo-user-hook
     ~/.git-templates/hooks/prepare-commit-msg: git/set-repo-user-hook
 
+    ~/.config/fish/config.fish: fish/config.fish
+
 - shell:
     - [sudo cp wsl/wsl.conf /etc/wsl.conf, Configuring WSL]
-    
+    - [git submodule update --init --recursive, Installing submodules]
