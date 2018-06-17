@@ -5,8 +5,8 @@
         path = ansible/roles/git
         url = https://github.com/cumpsd/ansible-role-git
 [submodule "ansible/roles/pip"]
-        path = ansible/roles/pip
-        url = https://github.com/cumpsd/ansible-role-pip
+	path = ansible/roles/pip
+	url = https://github.com/cumpsd/ansible-role-pip
 [submodule "ansible/roles/nodejs"]
         path = ansible/roles/nodejs
         url = https://github.com/cumpsd/ansible-role-nodejs
