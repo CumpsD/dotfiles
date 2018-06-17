@@ -8,6 +8,10 @@
     include_role: 
       name: system
 
+  - name: Install Fish
+    include_role:
+      name: fish
+
   - name: Install Git from source
     include_role:
       name: git
