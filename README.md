@@ -13,6 +13,10 @@ git clone --recurse-submodules -j8 https://github.com/cumpsd/dotfiles.git ~/.dot
 
 ## Credits
 
+### Dotfiles
+
+* https://github.com/anishathalye/dotbot - A tool that bootstraps your dotfiles ⚡️
+
 ### Ansible Roles
 
 * https://github.com/geerlingguy/ansible-role-git
