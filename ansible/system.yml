@@ -81,8 +81,3 @@
   - name: Install VS Code
     include_role:
       name: visual-studio-code
-    vars:
-      users:
-      - username: cumpsd
-        visual_studio_code_extensions:
-        - Shan.code-settings-sync
