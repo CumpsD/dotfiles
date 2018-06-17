@@ -15,9 +15,9 @@ git clone --recurse-submodules -j8 https://github.com/cumpsd/dotfiles.git ~/.dot
 
 ### Font Install
 
-* Download https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Hack.zip
-* Extract and install the required fonts
-* Set default console font to Hack, 14
+* Download https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Hack.zip
+* Extract and install the required fonts (everything which ends with `Complete Mono Windows Compatible.ttf`)
+* Set default console font to Hack NF, 14
 
 ## Troubleshooting
 
