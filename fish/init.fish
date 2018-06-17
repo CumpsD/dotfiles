@@ -1,3 +1,5 @@
+set -gx EDITOR nano
+
 # Bobthefish theme settings
 set -g theme_title_display_process yes
 set -g theme_nerd_fonts yes
