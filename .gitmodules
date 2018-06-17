@@ -22,3 +22,6 @@
 [submodule "ansible/roles/packer"]
         path = ansible/roles/packer
         url = https://github.com/cumpsd/ansible-role-packer
+[submodule "ansible/roles/mono"]
+	path = ansible/roles/mono
+	url = https://github.com/cumpsd/ansible-role-mono
