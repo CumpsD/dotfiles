@@ -25,3 +25,6 @@
 [submodule "ansible/roles/mono"]
 	path = ansible/roles/mono
 	url = https://github.com/cumpsd/ansible-role-mono
+[submodule "ansible/roles/visual-studio-code"]
+	path = ansible/roles/visual-studio-code
+	url = https://github.com/cumpsd/ansible-role-visual-studio-code

@@ -3,49 +3,82 @@
   hosts: local
   become: yes
 
-  vars:
-    git_packages:
+  tasks:
+  - name: Setup basic system
+    include_role: 
+      name: system
+
+  - name: Install Git from source
+    include_role:
+      name: git
+    vars:
+      git_packages:
       - git
 
-    git_version: '2.17.1'
-    git_install_from_source: true
-    git_install_path: '/usr'
-    git_install_from_source_force_update: true
+      git_version: '2.17.1'
+      git_install_from_source: true
+      git_install_path: '/usr'
+      git_install_from_source_force_update: true
 
-    pip_install_packages:
+  - name: Install Pip
+    include_role:
+      name: pip
+    vars:
+      pip_install_packages:
       - pip
       - awscli
 
-    nodejs_version: '10.x'
-    nodejs_npm_global_packages:
+  - name: Install Node.js and NPM
+    include_role:
+      name: nodejs
+    vars:
+      nodejs_version: '10.x'
+      nodejs_npm_global_packages:
       - npm
       - npx
 
-    docker_edition: 'ce'
-    docker_package_state: latest
-    docker_apt_release_channel: edge
-    docker_service_state: stopped
-    docker_service_enabled: no
-    docker_restart_handler_state: stopped
-    docker_install_compose: True
-    docker_compose_version: '1.21.2'
-    docker_compose_path: /usr/local/bin/docker-compose
-    docker_users: ['cumpsd']
+  - name: Install Docker and Docker-compose
+    include_role:
+      name: docker
+    vars:
+      docker_edition: 'ce'
+      docker_package_state: latest
+      docker_apt_release_channel: edge
+      docker_service_state: stopped
+      docker_service_enabled: no
+      docker_restart_handler_state: stopped
+      docker_install_compose: True
+      docker_compose_version: '1.21.2'
+      docker_compose_path: /usr/local/bin/docker-compose
+      docker_users: ['cumpsd']
 
-    dotnet_package: 'dotnet-sdk-2.1'
+#  - include_role:
+#      name: dotnet-core
+#    vars:
+#      dotnet_package: 'dotnet-sdk-2.1'
 
-    ntp_enabled: true
-    ntp_timezone: Europe/Brussels
+  - name: Setup NTP and configure timezone
+    include_role:
+      name: ntp
+    vars:
+      ntp_enabled: true
+      ntp_timezone: Europe/Brussels
 
-    packer_version: '1.2.4'
+  - name: Install Packer
+    include_role:
+      name: packer
+    vars:
+      packer_version: '1.2.4'
 
-  roles:
-    - system
-    - git
-    - pip
-    - nodejs
-    - docker
-    #- dotnet-core
-    - ntp
-    - packer
-    - mono
+  - name: Install Mono
+    include_role:
+      name: mono
+
+  - name: Install VS Code
+    include_role:
+      name: visual-studio-code
+    vars:
+      users:
+      - username: cumpsd
+        visual_studio_code_extensions:
+        - Shan.code-settings-sync
