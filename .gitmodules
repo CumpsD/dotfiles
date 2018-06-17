@@ -37,3 +37,5 @@
 [submodule "fonts/nerd-fonts"]
 	path = fonts/nerd-fonts
 	url = https://github.com/cumpsd/nerd-fonts
+	branch = v1.2.0
+	shallow = true
