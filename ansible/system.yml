@@ -3,6 +3,14 @@
   hosts: local
 
   vars:
+    git_packages:
+      - git
+
+    git_install_from_source: true
+    git_install_path: "/usr"
+    git_version: "2.17.1"
+    git_install_from_source_force_update: true
+
     docker_package_state: latest
     docker_apt_release_channel: edge
     docker_users: ['cumpsd']
@@ -11,6 +19,7 @@
 
   roles:
     - { role: system, become: yes }
+    - { role: git, become: yes }
     - { role: pip, become: yes }
     - { role: docker, become: yes }
-    - { role: dotnet-core, become: yes }
+    #- { role: dotnet-core, become: yes }
