@@ -28,3 +28,6 @@
 [submodule "ansible/roles/visual-studio-code"]
 	path = ansible/roles/visual-studio-code
 	url = https://github.com/cumpsd/ansible-role-visual-studio-code
+[submodule "ansible/roles/fish"]
+	path = ansible/roles/fish
+	url = https://github.com/cumpsd/ansible-role-fish

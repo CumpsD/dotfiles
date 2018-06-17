@@ -41,3 +41,6 @@ You can fix it by running `python -m pip uninstall pip` and then executing `~/.d
 * https://github.com/geerlingguy/ansible-role-packer
 * https://github.com/geerlingguy/ansible-role-ntp
 * https://github.com/ocha/ansible-role-dotnet-core
+* https://github.com/cumpsd/ansible-role-mono
+* https://github.com/gantsign/ansible-role-visual-studio-code
+* https://github.com/telus/ansible-fish (with modifications at https://github.com/cumpsd/ansible-role-fish)
