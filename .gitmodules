@@ -1,15 +1,18 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/cumpsd/dotbot
-[submodule "ansible/roles/pip"]
-	path = ansible/roles/pip
-	url = https://github.com/cumpsd/ansible-pip
-[submodule "ansible/roles/docker"]
-	path = ansible/roles/docker
-	url = https://github.com/cumpsd/ansible-role-docker
-[submodule "ansible/roles/dotnet-core"]
-	path = ansible/roles/dotnet-core
-	url = https://github.com/cumpsd/ansible-role-dotnet-core
 [submodule "ansible/roles/git"]
-	path = ansible/roles/git
-	url = https://github.com/CumpsD/ansible-role-git
+        path = ansible/roles/git
+        url = https://github.com/cumpsd/ansible-role-git
+[submodule "ansible/roles/pip"]
+        path = ansible/roles/pip
+        url = https://github.com/cumpsd/ansible-pip
+[submodule "ansible/roles/nodejs"]
+        path = ansible/roles/nodejs
+        url = https://github.com/cumpsd/ansible-role-nodejs
+[submodule "ansible/roles/docker"]
+        path = ansible/roles/docker
+        url = https://github.com/cumpsd/ansible-role-docker
+[submodule "ansible/roles/dotnet-core"]
+        path = ansible/roles/dotnet-core
+        url = https://github.com/cumpsd/ansible-role-dotnet-core
