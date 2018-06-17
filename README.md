@@ -11,6 +11,21 @@ git clone --recurse-submodules -j8 https://github.com/cumpsd/dotfiles.git ~/.dot
 ~/.dotfiles/setup-system
 ```
 
+## Troubleshooting
+
+### PIP Errors
+
+If the task `[pip : Ensure pip_install_packages are installed.]` is throwing errors looking like:
+
+```
+stderr: Traceback (most recent call last):
+File \"/home/cumpsd/.local/bin/pip2\", line 7, in <module>
+from pip import main
+ImportError: cannot import name main\
+```
+
+You can fix it by running `python -m pip uninstall pip` and then executing `~/.dotfiles/setup-system` again.
+
 ## Credits
 
 ### Dotfiles
