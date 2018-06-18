@@ -25,6 +25,7 @@
     ~/.config/omf/bundle: fish/omf/bundle
     ~/.config/omf/channel: fish/omf/channel
     ~/.config/omf/theme: fish/omf/theme
+    ~/.config/fish/functions/fisher.fish: fish/fisher.fish
 
     ~/.config/terminator/config: terminator/config
 

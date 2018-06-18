@@ -11,6 +11,8 @@
   - name: Install Fish and configure default shell
     include_role:
       name: fish
+    vars:
+      fish_users: ['cumpsd']      
 
   - name: Install Git from source
     include_role:
