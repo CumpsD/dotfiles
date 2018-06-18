@@ -6,8 +6,12 @@
 - clean:
     ~/
     ~/.git-templates/hooks
+    ~/.config/fish
+    ~/.config/omf
+    ~/.config/terminator
 
 - link:
+    ~/.dotfiles: ""
     ~/.gitconfig: git/gitconfig
 
     ~/.git-templates/hooks/commit-message: git/set-repo-user-hook
