@@ -14,6 +14,12 @@
     vars:
       fish_users: ['cumpsd']      
 
+  - name: Install FZF
+    include_role:
+      name: fzf
+    vars:
+      fzf_version: '0.17.4'
+
   - name: Install Git from source
     include_role:
       name: git

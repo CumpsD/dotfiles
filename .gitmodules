@@ -42,3 +42,6 @@
 [submodule "dircolors"]
 	path = dircolors
 	url = https://github.com/cumpsd/dircolors-solarized
+[submodule "ansible/roles/fzf"]
+	path = ansible/roles/fzf
+	url = https://github.com/cumpsd/ansible-fzf

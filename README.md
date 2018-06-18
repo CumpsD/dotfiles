@@ -61,12 +61,14 @@ You can fix it by running `python -m pip uninstall pip` and then executing `~/.d
 | [ansible-role-visual-studio-code](https://github.com/gantsign/ansible-role-visual-studio-code) | Install VS Code |
 | [ansible-fish](https://github.com/telus/ansible-fish) ([with modifications](https://github.com/cumpsd/ansible-role-fish)) | Install Fish and configure default shell |
 | [ansible-role-ntp](https://github.com/geerlingguy/ansible-role-ntp) | Setup NTP and configure timezone |
+| [ansible-fzf](https://github.com/dotstrap/ansible-fzf) | Install & configure fzf |
 
 ### Misc
 
 | Where | What |
 | --- | --- |
 | [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) | The Fishshell Framework. |
+| [fisherman](https://github.com/fisherman/fisherman] | The fish-shell plugin manager. |
 | [theme-bobthefish](https://github.com/oh-my-fish/theme-bobthefish) | A Powerline-style, Git-aware fish theme optimized for awesome. |
 | [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) | Iconic font aggregator, collection, and patcher. |
 | [dircolors-solarized](https://github.com/seebi/dircolors-solarized/) | Solarized dircolors. |
