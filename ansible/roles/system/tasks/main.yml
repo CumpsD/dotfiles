@@ -19,5 +19,3 @@
     state: latest
   with_items:
     - build-essential
-    - cmake
-    - libcairo2-dev

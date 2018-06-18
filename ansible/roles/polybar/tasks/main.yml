@@ -1,0 +1,49 @@
+---
+- name: Install polybar ppa key
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: BFAA29B9F42F43A1BE90C14944C2C88B9058FBF6
+    state: present
+
+- name: Install polybar ppa
+  apt_repository:
+    repo: deb http://ppa.launchpad.net/aguignard/ppa/ubuntu {{ ansible_distribution_release }} main
+    state: present
+
+- name: Install polybar build tools
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - cmake
+    - libcairo2-dev
+    - libxcb-xrm-dev
+    - libxcb1-dev
+    - libxcb-keysyms1-dev
+    - libpango1.0-dev
+    - libxcb-util0-dev
+    - libxcb-icccm4-dev
+    - libyajl-dev
+    - libstartup-notification0-dev
+    - libxcb-randr0-dev
+    - libev-dev
+    - libxcb-cursor-dev
+    - libxcb-xinerama0-dev
+    - libxcb-xkb-dev
+    - libxkbcommon-dev
+    - libxkbcommon-x11-dev
+    - autoconf
+    - xcb-proto
+    - libxcb-ewmh-dev
+    - python-xcbgen
+    - cmake-data
+    - libxcb-image0-dev
+    - pkg-config
+    - libjsoncpp-dev
+    - libasound2-dev
+    - libpulse-dev
+    - libmpdclient-dev
+    - libiw-dev
+    - libcurl4-openssl-dev
+    - i3-wm
+
