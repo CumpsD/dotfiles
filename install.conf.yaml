@@ -26,6 +26,7 @@
     ~/.config/omf/channel: fish/omf/channel
     ~/.config/omf/theme: fish/omf/theme
     ~/.config/fish/functions/fisher.fish: fish/fisher.fish
+    ~/.config/fish/functions/fisherfile: fish/fishfile
 
     ~/.config/terminator/config: terminator/config
 
@@ -33,4 +34,5 @@
 
 - shell:
     - [fonts/nerd-fonts/install.sh --link --clean --install-to-user-path --complete Hack, Installing Hack font]
+    - [fish -c fisher, Install fisherman plugins]
     - [sudo cp wsl/wsl.conf /etc/wsl.conf, Configuring WSL]
