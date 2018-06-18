@@ -24,6 +24,8 @@
 
     ~/.config/terminator/config: terminator/config
 
+    ~/.dir_colors: dircolors/dircolors.256dark
+
 - shell:
     - [fonts/nerd-fonts/install.sh --link --clean --install-to-user-path --complete Hack, Installing Hack font]
     - [sudo cp wsl/wsl.conf /etc/wsl.conf, Configuring WSL]
