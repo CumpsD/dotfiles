@@ -1,0 +1,10 @@
+git@github.com:CumpsD/ansible-role-fish.git
+git@github.com:CumpsD/ansible-role-mono.git
+git@github.com:CumpsD/ansible-role-docker.git
+git@github.com:CumpsD/ansible-role-nodejs.git
+git@github.com:CumpsD/ansible-role-ntp.git
+git@github.com:CumpsD/ansible-role-dotnet-core.git
+git@github.com:CumpsD/ansible-role-pip.git
+git@github.com:CumpsD/ansible-role-visual-studio-code.git
+git@github.com:CumpsD/ansible-role-git.git
+
