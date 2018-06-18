@@ -18,3 +18,6 @@ set -g theme_display_hostname ssh
 
 # Configure Docker to use Docker for Windows
 set -gx DOCKER_HOST tcp://0.0.0.0:2375
+
+# Start in home directory
+cd ~
