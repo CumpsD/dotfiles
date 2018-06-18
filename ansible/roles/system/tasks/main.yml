@@ -12,6 +12,7 @@
     state: latest
   with_items:
     - curl
+    - gnupg2
 
 - name: Install essential build tools
   apt:

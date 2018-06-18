@@ -13,6 +13,11 @@
 
 - link:
     ~/.dotfiles: ''
+
+    ~/.dir_colors: dircolors/dircolors.256dark
+
+    ~/repos: repos
+
     ~/.gitconfig: git/gitconfig
 
     ~/.git-templates/hooks/commit-message: git/set-repo-user-hook
@@ -21,7 +26,12 @@
     ~/.git-templates/hooks/pre-commit: git/set-repo-user-hook
     ~/.git-templates/hooks/prepare-commit-msg: git/set-repo-user-hook
 
+    ~/.config/fish/fishfile:
+      force: true
+      path: fish/fishfile
+
     ~/.config/fish/config.fish: fish/config.fish
+
     ~/.config/omf/init.fish: fish/init.fish
     ~/.config/omf/bundle: fish/omf/bundle
     ~/.config/omf/channel: fish/omf/channel
@@ -31,15 +41,17 @@
       force: true
       path: fish/fisher.fish
 
-    ~/.config/fish/fishfile: 
-      force: true
-      path: fish/fishfile
+    ~/.config/fish/functions/abbrex.fish: fish/functions/abbrex.fish
+    ~/.config/fish/functions/clear.fish: fish/functions/clear.fish
+    ~/.config/fish/functions/fish_greeting.fish: fish/functions/fish_greeting.fish
+    ~/.config/fish/functions/forrepos.fish: fish/functions/forrepos.fish
+    ~/.config/fish/functions/repo.fish: fish/functions/repo.fish
+    ~/.config/fish/functions/repodir.fish: fish/functions/repodir.fish
+
+    ~/.config/fish/completions/repo.fish: fish/completions/repo.fish
+    ~/.config/fish/completions/repodir.fish: fish/completions/repodir.fish
 
     ~/.config/terminator/config: terminator/config
-
-    ~/.dir_colors: dircolors/dircolors.256dark
-
-    ~/repos: repos
 
 - shell:
     - [fonts/nerd-fonts/install.sh --link --clean --install-to-user-path --complete Hack, Installing Hack font]
