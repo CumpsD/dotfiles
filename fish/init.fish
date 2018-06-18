@@ -1,3 +1,7 @@
+# Note: Bash on Windows does not currently apply umask properly.
+if [ (umask) = "0000" ]; umask 022; end
+
+# Set a default editor
 set -gx EDITOR nano
 
 # Bobthefish theme settings
@@ -9,3 +13,5 @@ set -g theme_display_ruby no
 set -g theme_display_user ssh
 set -g theme_display_hostname ssh
 
+# Configure Docker to use Docker for Windows
+set -gx DOCKER_HOST tcp://0.0.0.0:2375
