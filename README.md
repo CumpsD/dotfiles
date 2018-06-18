@@ -19,6 +19,10 @@ git clone --recurse-submodules -j8 https://github.com/cumpsd/dotfiles.git ~/.dot
 * Extract and install the required fonts (everything which ends with `Complete Mono Windows Compatible.ttf`)
 * Set default console font to Hack NF, 14
 
+### X Server Install
+
+* Install https://github.com/CumpsD/dotfiles/raw/master/wsl/vcxsrv-64.1.20.0.0.installer.exe
+
 ## Troubleshooting
 
 ### PIP Errors
@@ -60,4 +64,5 @@ You can fix it by running `python -m pip uninstall pip` and then executing `~/.d
 | Where | What |
 | --- | --- |
 | [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) | The Fishshell Framework. |
+| [theme-bobthefish](https://github.com/oh-my-fish/theme-bobthefish) | A Powerline-style, Git-aware fish theme optimized for awesome. |
 | [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) | Iconic font aggregator, collection, and patcher. |
