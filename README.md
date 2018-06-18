@@ -22,9 +22,9 @@ git clone --recurse-submodules -j8 https://github.com/cumpsd/dotfiles.git ~/.dot
 ### X Server Install
 
 * Install https://github.com/CumpsD/dotfiles/raw/master/wsl/vcxsrv-64.1.20.0.0.installer.exe
-* Download https://github.com/CumpsD/dotfiles/raw/master/wsl/X.lnk, save it somewere and edit the path
+* Download https://raw.githubusercontent.com/CumpsD/dotfiles/master/wsl/X.lnk, save it somewere and edit the path
 * Download https://raw.githubusercontent.com/CumpsD/dotfiles/master/wsl/terminator.vbs and save it somewhere
-* Download https://github.com/CumpsD/dotfiles/raw/master/wsl/Terminator.lnk, save it somewhere and edit the path
+* Download https://raw.githubusercontent.com/CumpsD/dotfiles/master/wsl/Terminator.lnk, save it somewhere and edit the path
 
 ## Troubleshooting
 
