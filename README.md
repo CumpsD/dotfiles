@@ -68,7 +68,7 @@ You can fix it by running `python -m pip uninstall pip` and then executing `~/.d
 | Where | What |
 | --- | --- |
 | [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) | The Fishshell Framework. |
-| [fisherman](https://github.com/fisherman/fisherman] | The fish-shell plugin manager. |
+| [fisherman](https://github.com/fisherman/fisherman) | The fish-shell plugin manager. |
 | [theme-bobthefish](https://github.com/oh-my-fish/theme-bobthefish) | A Powerline-style, Git-aware fish theme optimized for awesome. |
 | [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) | Iconic font aggregator, collection, and patcher. |
 | [dircolors-solarized](https://github.com/seebi/dircolors-solarized/) | Solarized dircolors. |
