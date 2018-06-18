@@ -7,6 +7,9 @@ set -gx DISPLAY :0
 # Set a default editor
 set -gx EDITOR nano
 
+# OMF Settings
+set -gx OMF_REPO_URI "https://github.com/cumpsd/oh-my-fish"
+
 # Bobthefish theme settings
 set -g theme_title_display_process yes
 set -g theme_nerd_fonts yes
