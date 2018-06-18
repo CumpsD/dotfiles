@@ -8,6 +8,7 @@
     ~/.git-templates/hooks
     ~/.config/fish
     ~/.config/omf
+    ~/.config/fish/functions
     ~/.config/terminator
 
 - link:
@@ -25,8 +26,14 @@
     ~/.config/omf/bundle: fish/omf/bundle
     ~/.config/omf/channel: fish/omf/channel
     ~/.config/omf/theme: fish/omf/theme
-    ~/.config/fish/functions/fisher.fish: fish/fisher.fish
-    ~/.config/fish/functions/fisherfile: fish/fishfile
+
+    ~/.config/fish/functions/fisher.fish: 
+      force: true
+      path: fish/fisher.fish
+
+    ~/.config/fish/fishfile: 
+      force: true
+      path: fish/fishfile
 
     ~/.config/terminator/config: terminator/config
 
