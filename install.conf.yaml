@@ -39,6 +39,8 @@
 
     ~/.dir_colors: dircolors/dircolors.256dark
 
+    ~/repos: repos
+
 - shell:
     - [fonts/nerd-fonts/install.sh --link --clean --install-to-user-path --complete Hack, Installing Hack font]
     - [fish -c fisher, Install fisherman plugins]
