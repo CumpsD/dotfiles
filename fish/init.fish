@@ -19,5 +19,8 @@ set -g theme_display_hostname ssh
 # Configure Docker to use Docker for Windows
 set -gx DOCKER_HOST tcp://0.0.0.0:2375
 
+# Configure new keybindings for fzf
+set -U FZF_LEGACY_KEYBINDINGS 0
+
 # Start in home directory
 cd ~
