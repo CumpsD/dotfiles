@@ -11,7 +11,7 @@
     ~/.config/terminator
 
 - link:
-    ~/.dotfiles: ""
+    ~/.dotfiles: ''
     ~/.gitconfig: git/gitconfig
 
     ~/.git-templates/hooks/commit-message: git/set-repo-user-hook
