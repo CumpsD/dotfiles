@@ -39,3 +39,6 @@
 	url = https://github.com/cumpsd/nerd-fonts
 	branch = v1.2.0
 	shallow = true
+[submodule "dircolors"]
+	path = dircolors
+	url = https://github.com/cumpsd/dircolors-solarized

@@ -22,6 +22,9 @@ git clone --recurse-submodules -j8 https://github.com/cumpsd/dotfiles.git ~/.dot
 ### X Server Install
 
 * Install https://github.com/CumpsD/dotfiles/raw/master/wsl/vcxsrv-64.1.20.0.0.installer.exe
+* Download https://github.com/CumpsD/dotfiles/raw/master/wsl/X.lnk, save it somewere and edit the path
+* Download https://raw.githubusercontent.com/CumpsD/dotfiles/master/wsl/terminator.vbs and save it somewhere
+* Download https://github.com/CumpsD/dotfiles/raw/master/wsl/Terminator.lnk, save it somewhere and edit the path
 
 ## Troubleshooting
 
@@ -66,3 +69,4 @@ You can fix it by running `python -m pip uninstall pip` and then executing `~/.d
 | [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) | The Fishshell Framework. |
 | [theme-bobthefish](https://github.com/oh-my-fish/theme-bobthefish) | A Powerline-style, Git-aware fish theme optimized for awesome. |
 | [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) | Iconic font aggregator, collection, and patcher. |
+| [dircolors-solarized](https://github.com/seebi/dircolors-solarized/) | Solarized dircolors. |
