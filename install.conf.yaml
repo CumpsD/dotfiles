@@ -33,9 +33,18 @@
     ~/.config/fish/config.fish: fish/config.fish
 
     ~/.config/omf/init.fish: fish/init.fish
-    ~/.config/omf/bundle: fish/omf/bundle
-    ~/.config/omf/channel: fish/omf/channel
-    ~/.config/omf/theme: fish/omf/theme
+
+    ~/.config/omf/bundle: 
+      force: true
+      path: fish/omf/bundle
+
+    ~/.config/omf/channel: 
+      force: true
+      path: fish/omf/channel
+
+    ~/.config/omf/theme: 
+      force: true
+      path: fish/omf/theme
 
     ~/.config/fish/functions/fisher.fish: 
       force: true
