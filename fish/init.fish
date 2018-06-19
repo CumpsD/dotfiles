@@ -25,5 +25,8 @@ set -gx DOCKER_HOST tcp://0.0.0.0:2375
 # Configure new keybindings for fzf
 set -U FZF_LEGACY_KEYBINDINGS 0
 
+# Disable .NET telemetry
+set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
+
 # Start in home directory
 cd ~
