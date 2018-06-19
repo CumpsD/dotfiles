@@ -1,11 +1,23 @@
 #!/usr/bin/env bash
 
+echo "Updating dotfiles..."
 git pull
 
-pushd ansible
+echo
+echo "Executing Ansible to setup machine..."
+read -p "Press enter to continue"
+pushd ansible > /dev/null
 ansible-playbook -K -i inventory system.yml
-popd
+popd > /dev/null
 
-pushd repos
+echo
+echo "Setting up dotfiles with dotbot..."
+read -p "Press enter to continue"
+./install
+
+echo
+echo "Cloning repos..."
+read -p "Press enter to continue"
+pushd repos > /dev/null
 ./setup.sh
-popd
+popd > /dev/null
