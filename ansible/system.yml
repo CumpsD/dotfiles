@@ -12,7 +12,7 @@
     include_role:
       name: fish
     vars:
-      fish_users: ['cumpsd']
+      fish_users: ['root', 'cumpsd']
 
   - name: Install FZF
     include_role:
