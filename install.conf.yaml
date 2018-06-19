@@ -59,6 +59,7 @@
 
     ~/.config/fish/completions/repo.fish: fish/completions/repo.fish
     ~/.config/fish/completions/repodir.fish: fish/completions/repodir.fish
+    ~/.config/fish/completions/dotnet.fish: fish/completions/dotnet.fish
 
     ~/.config/terminator/config: terminator/config
 
