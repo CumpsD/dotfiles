@@ -1,0 +1,29 @@
+.wp_syntax_download {
+    font-family: monospace;
+    color: #48c;
+    background-color: #eee;
+}
+
+.wp_syntax_download .wp_syntax_download_filename {
+    display: inline;
+}
+
+.wp_syntax_download .wp_syntax_download_filename::before {
+    content: "\0000AB";	/* &laquo; */
+    margin-right: 0.5ex;
+}
+
+.wp_syntax_download .wp_syntax_download_filename::after {
+    content: "\0000BB";	/* &raquo; */
+    margin-left: 0.5ex;
+}
+
+.wp_syntax_download .wp_syntax_download_actions {
+    display: inline;
+    float: right;
+    text-align: right;
+}
+
+.wp_syntax_download .wp_syntax_download_actions a {
+    margin-left: 2em;
+}

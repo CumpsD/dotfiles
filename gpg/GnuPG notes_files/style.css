@@ -1,0 +1,20 @@
+/*
+Theme Name:     Hueman Pro Child
+Description:    A child theme for the Hueman theme.
+Author:         Norbert Preining
+Author URI:     http://www.preining.info
+Template:       hueman-pro
+Version:        1.0.0
+*/
+
+/* Your awesome customizations start right here !
+-------------------------------------------------------------- */
+
+/* body {
+	font-family: 'Source Sans Pro', 'Verdana', sans-serif;
+}
+*/
+code, pre code, tt {
+	font-family : 'Source Code Pro', monospace;
+	font-size : 90%
+}

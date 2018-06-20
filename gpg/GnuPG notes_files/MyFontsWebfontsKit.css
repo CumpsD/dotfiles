@@ -1,0 +1,46 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3541314, 2018-03-13T19:49:16-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: TTJenevers-Bold by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-jenevers/bold/
+ * 
+ * Webfont: TTJenevers-Regular by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-jenevers/regular/
+ * 
+ * Webfont: TTJenevers-Italic by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-jenevers/italic/
+ * 
+ * Webfont: TTJenevers-BoldItalic by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-jenevers/bold-italic/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3541314
+ * Licensed pageviews: 20,000
+ * Webfonts copyright: Copyright (c) 2018 by Typetype. Designer Ivan Gladkikh, technical designers Nadezhda Polomoshnova, Vika Usmanova, Philipp Nurullin, Nadyr Rakhimov. All rights reserved.
+ * 
+ * © 2018 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("/count/360942");
+
+  
+@font-face {font-family: 'TTJenevers-Bold';src: url('webfonts/360942_0_0.eot');src: url('webfonts/360942_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/360942_0_0.woff2') format('woff2'),url('webfonts/360942_0_0.woff') format('woff'),url('webfonts/360942_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'TTJenevers-Regular';src: url('webfonts/360942_1_0.eot');src: url('webfonts/360942_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/360942_1_0.woff2') format('woff2'),url('webfonts/360942_1_0.woff') format('woff'),url('webfonts/360942_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'TTJenevers-Italic';src: url('webfonts/360942_2_0.eot');src: url('webfonts/360942_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/360942_2_0.woff2') format('woff2'),url('webfonts/360942_2_0.woff') format('woff'),url('webfonts/360942_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'TTJenevers-BoldItalic';src: url('webfonts/360942_3_0.eot');src: url('webfonts/360942_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/360942_3_0.woff2') format('woff2'),url('webfonts/360942_3_0.woff') format('woff'),url('webfonts/360942_3_0.ttf') format('truetype');}
+ 

@@ -1,0 +1,69 @@
+A:active  {background: #C0C0FF}
+A:focus   {background: #C0C0FF}
+A:hover   {background: #C0C0FF}
+A:link    {color: #0000FF}
+A:visited {color: #000080}
+
+BODY {font-family:Arial,sans-serif; margin-left:20pt; margin-right:20pt; margin-top: 20pt; font-size:small; background: #FFFFFF}
+
+CODE        {font-family: "Lucida Console",monospace; font-size:100%; color:#006000}
+CODE.fspbase {font-family: "Lucida Console",monospace; font-size:100%; color:#000000}
+CODE.fsp    {font-weight:normal; background:#E0E0FF}
+CODE.input  {font-weight: bold}
+CODE.output {background: #F0F0F0}
+CODE.comment {color: #0000A0}
+
+PRE.tiny { font-size:4pt }
+
+DT         {font-weight: bold}
+DT.sparse  {margin-top: 5pt}
+
+H1, H2, H3, H4, H5, H6   {color: #0000C0}
+H1           {text-align:center}
+H2           {margin-top: 40pt}
+H3           {margin-top: 30pt}
+
+IMG.top   {vertical-align:top}
+
+LI        {margin: 10pt}
+LI.sparse {margin-top: 5pt}
+LI.dense  {margin: 2pt}
+LI.code   {font-family: "Lucida Console",monospace; font-size:100%}
+
+UL        {margin-bottom: 6pt; margin-top: 3pt}
+
+P.CENTER  {text-align:center}
+P.warning { background: #FF0000; color: #FFFF80; padding: 12pt }
+P.code {  margin: 5pt; padding: 5pt }
+P.codeborder {  margin: 5pt; padding: 5pt; border-style: solid; color: #CCFFCC}
+P.codeback {  margin: 5pt; padding: 5pt; background: #EEEEEE}
+
+SPAN.warning { color: #FF0000 }
+
+TABLE.center {margin-left: auto; margin-right: auto}
+TABLE.back   { background: #D0D0FF; padding-left: 7pt; padding-right: 7pt;
+               padding-top: 5pt; padding-bottom: 5pt }
+
+DIV.back   { background: #F0F0FF; padding: 10pt }
+DIV.fsp    {font-family: "Lucida Console",monospace; font-size:100%;
+            font-weight:normal; background:#E0E0FF }
+DIV.code   {font-family: "Lucida Console",monospace; font-size:100%;
+            font-weight:normal }
+DIV.note   { background: #D0D0D0; padding-left: 5pt; padding-right: 5pt;
+padding-top: 2pt;  padding-bottom: 2pt; margin: 5pt; font-size:85% }
+
+TD        {font-family:Arial,sans-serif}
+TD.back   {background: #D0D0FF; text-align:center; vertical-align:middle}
+TD.light  {background: #F0F0FF; text-align:center; vertical-align:middle}
+TD.lit    {font-family:"Lucida Console",monospace; vertical-align:top; 
+           color:#006000}
+TD.litc    {font-family:"Lucida Console",monospace; vertical-align:top; 
+            text-align:center; color:#006000}
+TD.litr    {font-family:"Lucida Console",monospace; vertical-align:top; 
+            text-align:right;  color:#006000}
+TD.center {text-align:center; vertical-align:middle }
+TD.centerlit {font-family:"Lucida Console",monospace; text-align:center; vertical-align:middle; color:#006000}
+TD.right  {text-align:right; vertical-align:middle }
+
+TH        {font-family:Arial,sans-serif; background: #D0D0FF}
+TH.back   {background: #D0D0FF; text-align:center; vertical-align:middle}

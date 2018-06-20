@@ -1,0 +1,51 @@
+A:active  {background: #C0C0FF}
+A:focus   {background: #C0C0FF}
+A:hover   {background: #C0C0FF}
+A:link    {color: #0000FF}
+A:visited {color: #000080}
+
+BODY {font-family:Arial,sans-serif; font-size:x-small; background: #FFFFFF}
+
+CODE        {font-family: "Lucida Console",monospace}
+CODE.fsp    {background:#E0E0FF}
+CODE.input  {font-weight: bold}
+CODE.output {background: #E0E0E0}
+CODE.comment {color: #0000A0}
+
+PRE.tiny { font-size:4pt }
+
+DT       {font-weight: bold}
+
+
+H1             {text-align:center}
+H1, H2, H3, H4 {color: #0000C0}
+H6             {text-align:center}
+
+LI.code  {font-family: "Lucida Console",monospace}
+
+P.CENTER {text-align:center}
+P.warning { background: #FF0000; color: #FFFF80; padding: 12pt }
+
+SPAN.warning { color: #FF0000 }
+
+TABLE.center {margin-left: auto; margin-right: auto}
+TABLE.back   { background: #D0D0FF }
+
+DIV.back   { background: #F0F0FF }
+DIV.fsp    {font-family: "Lucida Console",monospace; font-size:100%;
+            font-weight:normal; background:#E0E0FF
+}
+DIV.code   {font-family: "Lucida Console",monospace; font-size:100%;
+            font-weight:normal }
+DIV.note   { background: #D0D0D0; padding-left: 5pt; padding-right: 5pt;
+padding-top: 2pt;  padding-bottom: 2pt; margin: 5pt; font-size:85% }
+
+TD      {font-family:Arial, sans-serif}
+TD.lit  {font-family:"Lucida Console",monospace; vertical-align:top}
+TD.litr  {font-family:"Lucida Console",monospace; vertical-align:top; text-align:right}
+TD.litc  {font-family:"Lucida Console",monospace; vertical-align:top; text-align:center}
+TH      {font-family:Arial, sans-serif}
+TH.back {background: #D0D0FF; text-align:center; vertical-align:middle}
+TD.center {text-align:center; vertical-align:middle }
+TD.centerlit {font-family:"Lucida Console",monospace; text-align:center; vertical-align:middle }
+TD.right  {text-align:right; vertical-align:middle }
