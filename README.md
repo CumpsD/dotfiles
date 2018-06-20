@@ -43,7 +43,7 @@ You can fix it by running `python -m pip uninstall pip` and then executing `~/.d
 
 ### ebtables on WSL with Ubuntu 18.04
 
-When doing an `apt-get dist-upgrade on Ubuntu Bionic, it will fail on `ebtables` due to https://github.com/Microsoft/WSL/issues/3274
+When doing an `apt-get dist-upgrade` on Ubuntu Bionic, it will fail on `ebtables` due to https://github.com/Microsoft/WSL/issues/3274
 
 You can fix it by running `sudo apt-mark hold ebtables` and then executing `~/.dotfiles/setup-system` again.
 
