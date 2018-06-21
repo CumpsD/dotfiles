@@ -57,17 +57,17 @@ You can fix it by running `sudo apt-mark hold ebtables` and then executing `~/.d
 
 | Role | Purpose |
 | --- | --- |
-| [ansible-role-git](https://github.com/geerlingguy/ansible-role-git) | Install Git from source |
-| [ansible-role-pip](https://github.com/geerlingguy/ansible-role-pip) | Install Pip |
-| [ansible-role-nodejs](https://github.com/geerlingguy/ansible-role-nodejs) | Install Node.js and NPM |
 | [ansible-role-docker](https://github.com/geerlingguy/ansible-role-docker) | Install Docker and Docker-compose |
-| [ansible-role-packer](https://github.com/geerlingguy/ansible-role-packer) | Install Packer |
 | [ansible-role-dotnet-core](https://github.com/ocha/ansible-role-dotnet-core) | Install .NET Core |
-| [ansible-role-mono](https://github.com/cumpsd/ansible-role-mono) | Install Mono |
-| [ansible-role-visual-studio-code](https://github.com/gantsign/ansible-role-visual-studio-code) | Install VS Code |
 | [ansible-fish](https://github.com/telus/ansible-fish) ([with modifications](https://github.com/cumpsd/ansible-role-fish)) | Install Fish and configure default shell |
-| [ansible-role-ntp](https://github.com/geerlingguy/ansible-role-ntp) | Setup NTP and configure timezone |
 | [ansible-fzf](https://github.com/dotstrap/ansible-fzf) | Install & configure fzf |
+| [ansible-role-git](https://github.com/geerlingguy/ansible-role-git) | Install Git from source |
+| [ansible-role-mono](https://github.com/cumpsd/ansible-role-mono) | Install Mono |
+| [ansible-role-nodejs](https://github.com/geerlingguy/ansible-role-nodejs) | Install Node.js and NPM |
+| [ansible-role-ntp](https://github.com/geerlingguy/ansible-role-ntp) | Setup NTP and configure timezone |
+| [ansible-role-packer](https://github.com/geerlingguy/ansible-role-packer) | Install Packer |
+| [ansible-role-pip](https://github.com/geerlingguy/ansible-role-pip) | Install Pip |
+| [ansible-role-visual-studio-code](https://github.com/gantsign/ansible-role-visual-studio-code) | Install VS Code |
 
 ### Misc
 
@@ -78,3 +78,10 @@ You can fix it by running `sudo apt-mark hold ebtables` and then executing `~/.d
 | [theme-bobthefish](https://github.com/oh-my-fish/theme-bobthefish) | A Powerline-style, Git-aware fish theme optimized for awesome. |
 | [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) | Iconic font aggregator, collection, and patcher. |
 | [dircolors-solarized](https://github.com/seebi/dircolors-solarized/) | Solarized dircolors. |
+| [git-crypt](https://github.com/AGWA/git-crypt) | Transparent file encryption in git. |
+
+### Resources
+
+| Where | What |
+| [Increasing development productivity with repository management](https://blog.kalis.me/increasing-development-productivity-repository-management/) | System to easily manage repositories. |
+| [GNU Privacy Guard](https://gnupg.org/) | All things encryption. |
