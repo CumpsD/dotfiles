@@ -28,5 +28,8 @@ set -U FZF_LEGACY_KEYBINDINGS 0
 # Disable .NET telemetry
 set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
 
+# Start GnuPG-agent
+. ~/.config/fish/gnupg.fish
+
 # Start in home directory
 cd ~

@@ -13,11 +13,21 @@
     email = david@cumps.be
     name = David Cumps
 
+[gpg]
+    program = /usr/bin/gpg2
+
 [init]
-    templatedir = ~/.git-templates
+    templateDir = ~/.git-templates
 
 [user]
     useConfigOnly = true
+    signingKey = 9D771C7A03413FB3
+
+[commit]
+    gpgSign = true
+
+[tag]
+    forceSignAnnotated = true
 
 [credential]
     canFallBackToInsecureStore = false

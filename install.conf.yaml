@@ -2,6 +2,7 @@
     link:
         create: true
         relink: true
+        force: true
 
 - clean:
     ~/
@@ -10,11 +11,15 @@
     ~/.config/omf
     ~/.config/fish/functions
     ~/.config/terminator
+    ~/.gnupg
 
 - link:
     ~/.dotfiles: ''
 
     ~/.dir_colors: dircolors/dircolors.256dark
+
+    ~/.gnupg/gpg.conf: gpg/gpg.conf
+    ~/.gnupg/gpg-agent.conf: gpg/gpg-agent.conf
 
     ~/repos: repos
 
@@ -26,30 +31,15 @@
     ~/.git-templates/hooks/pre-commit: git/set-repo-user-hook
     ~/.git-templates/hooks/prepare-commit-msg: git/set-repo-user-hook
 
-    ~/.config/fish/fishfile:
-      force: true
-      path: fish/fishfile
-
-    ~/.config/fish/config.fish: fish/config.fish
-
     ~/.config/omf/init.fish: fish/init.fish
+    ~/.config/omf/bundle: fish/omf/bundle
+    ~/.config/omf/channel: fish/omf/channel
+    ~/.config/omf/theme: fish/omf/theme
 
-    ~/.config/omf/bundle: 
-      force: true
-      path: fish/omf/bundle
-
-    ~/.config/omf/channel: 
-      force: true
-      path: fish/omf/channel
-
-    ~/.config/omf/theme: 
-      force: true
-      path: fish/omf/theme
-
-    ~/.config/fish/functions/fisher.fish: 
-      force: true
-      path: fish/fisher.fish
-
+    ~/.config/fish/fishfile: fish/fishfile
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/functions/fisher.fish: fish/fisher.fish
+    ~/.config/fish/gnupg.fish: fish/gnupg.fish
     ~/.config/fish/functions/abbrex.fish: fish/functions/abbrex.fish
     ~/.config/fish/functions/clear.fish: fish/functions/clear.fish
     ~/.config/fish/functions/fish_greeting.fish: fish/functions/fish_greeting.fish
