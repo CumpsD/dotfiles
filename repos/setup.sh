@@ -68,7 +68,7 @@ substep_error() {
 COMMENT=\#*
 REPO_PATH=$(realpath ~/repos)
 
-find * -name "*.list" | while read fn; do
+find * -maxdepth 1 -name "*.list" | while read fn; do
     folder="${fn%.*}"
 
     info "Cloning $folder repositories..."
