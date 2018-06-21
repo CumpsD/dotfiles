@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://carouth.com/blog/2014/05/25/signing-pgp-keys/ -->
+<html class="js video maskImage placeholder" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Signing PGP Keys - Jeff Carouth - https://carouth.com/</title>
+  <meta name="author" content="Jeff Carouth">
+
+  
+  <meta name="description" content="At the php[tek] keysigning and PGP open space the question of how to actually sign keys came up. I had planned to write this post anyway, but now …">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+  
+  <link rel="canonical" href="http://carouth.com/blog/2014/05/25/signing-pgp-keys">
+  <link href="https://carouth.com/favicon.png" rel="icon">
+  <link href="./Signing PGP Keys_files/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="https://carouth.com/atom.xml" rel="alternate" title="Jeff Carouth" type="application/atom+xml">
+  <script type="text/javascript" async="" src="./Signing PGP Keys_files/ga.js.download"></script><script src="./Signing PGP Keys_files/modernizr-2.0.js.download"></script>
+  <script src="./Signing PGP Keys_files/jquery.min.js.download"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="./Signing PGP Keys_files/octopress.js.download" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="./Signing PGP Keys_files/css" rel="stylesheet" type="text/css">
+<link href="./Signing PGP Keys_files/css(1)" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2213019-6']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+<script type="text/javascript" async="" src="./Signing PGP Keys_files/embed.js.download"></script><script type="text/javascript" async="" src="./Signing PGP Keys_files/widgets.js.download"></script><link rel="preload" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.3999ac261b914f8b8b5e85df0ff3eaea.css"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.5f8e47303ecf1055cd7c6905466d140a.js"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.33067ddbd4792de0b384ceb588602715.js"><link rel="preload" as="script" href="https://disqus.com/next/config.js"><script type="text/javascript" charset="utf-8" async="" src="./Signing PGP Keys_files/button.bf357a6ba1a5f1fa0ddb61377ae3add5.js.download"></script></head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1 id="header-replace"><a href="https://carouth.com/">Jeff Carouth</a></h1>
+  
+    <h2>Web and mobile developer. Agile apprentice.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="https://carouth.com/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:carouth.com">
+    <input class="search" type="text" name="q" results="0" placeholder="Search">
+  </fieldset>
+</form>
+  
+<fieldset class="mobile-nav"><select><option value="">Navigate…</option><option value="https://carouth.com/">» Blog</option><option value="https://carouth.com/blog/archives">» Archives</option><option value="https://carouth.com/projects">» Projects</option><option value="https://carouth.com/about/">» About Me</option><option value="https://carouth.com/pgp/">» PGP Key</option><option value="https://carouth.com/atom.xml">» RSS</option></select></fieldset><ul class="main-navigation">
+  <li><a href="https://carouth.com/">Blog</a></li>
+  <li><a href="https://carouth.com/blog/archives">Archives</a></li>
+  <li><a href="https://carouth.com/projects">Projects</a></li>
+  <li><a href="https://carouth.com/about/">About Me</a></li>
+  <li><a href="https://carouth.com/pgp/">PGP Key</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Signing PGP Keys</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class="entry-date" datetime="2014-05-25T08:03:41-05:00"><span class="date"><span class="date-month">May</span> <span class="date-day">25</span><span class="date-suffix">th</span>, <span class="date-year">2014</span></span> <span class="time">8:03 am</span></time>
+        
+           | <a href="https://carouth.com/blog/2014/05/25/signing-pgp-keys/#disqus_thread" data-disqus-identifier="http://carouth.com">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>At the <a href="http://carouth.com/blog/2014/05/04/keysigning-at-php-tek-2014/">php[tek] keysigning and PGP open space</a> the question of how to actually sign keys came up. I had planned to write this post anyway, but now seems like as good a time as any. What follows is my process for verifying keys and how I go about signing after I’ve verified.</p>
+
+<h2>Verification</h2>
+
+<p>As far as verifying a person’s key I have two different pieces of information I need to verify. The first is the key itself, to ensure that it is the key the person wants me to sign; and the second is the person’s identity, to ensure that that person is identified by the UID(s) on the key. There is also a slight difference depending on signing context. If I’m signing the key in the context of a keysigning party or other organized signing event, my strategy or procedure is slightly different than if I’m signing a person’s key individually. I will outline both below.</p>
+
+<h3>Verifying a key individually</h3>
+
+<p>When someone asks me to verify his or her key, I ask that person to provide me a written or printed copy of the key’s fingerprint, ID, size, type and UID(s) they want me to sign. That last requirement is a fuzzy requirement. It’s easiest to use the <a href="http://openpgp.quelltextlich.at/slip.html">OpenPGP key paper slip generator</a> and bring the slip with you.</p>
+
+<p>The reason I ask for a paper copy of this information is to ensure the key I eventually sign is actually the key you want me to sign. If you provide the key information electronically, there is a chance someone altered the information. Getting it directly from you, in person, on paper is the best way I know to ensure it is your key details.</p>
+
+<p>After you give me your key information on paper, I will ask you, “is this the ID, fingerprint, and details of the PGP key you want me to sign?” I do this to get a verbal confirmation that you checked the information against your local copy of your key. Once you confirm this I will initial the paper slip so I know I asked.</p>
+
+<p>The next step is to verify that you are the person you say you are. This requires checking identification. While it is placing some level of trust in the various governments of the world, I require checking one photo identification that is government issued. This could be a driver’s license, an identification card, a passport, or similar. While I don’t possess the ability to truly verify the authenticity of every government-issued identification card, I am willing to accept these on “faith.”</p>
+
+<p>I then request a second form of identification. This could be as simple as a business card from your company or something similar. When at conferences, I will accept your conference badge if it was printed by the conference as these are typically based on billing information or at least require some forethought if you are trying to dupe me. When not at a conference anything will do, with or without picture. Just some form of secondary identification.</p>
+
+<p>After all of that, I will place a mark by each UID I am asked to sign indicating the ID matches. For picture UIDs I will check them later but I only sign photo UIDs at level 2.</p>
+
+<p>The final verification happens later when I actually go to sign the key. I will cover that in the Signing section below.</p>
+
+<h3>Verifying a key in a group setting</h3>
+
+<p>In a group setting, such as a keysigning party, the paper slips are often not required based on how the party is organized. If keys are submitted ahead of time and printed in a list form verifying that the key matches can be as simple as each person reading off his or her key information. If the key information read aloud matches that person’s information on the sheet I consider that good enough as verification.</p>
+
+<p>The rest of the verification is the same as individual verification.</p>
+
+<h2>Signing</h2>
+
+<p>After going through all the work of verification, I have extreme motivation to actually sign the key. This seems to be in contrast to other people who simply fail to follow through.</p>
+
+<p>There is one caveat here. It is possible to go through the work and still not be convinced the key belongs to the person you met for one reason or another. For me this could happen if I don’t think the ID card is real, the photo doesn’t look enough like the person, or the secondary ID doesn’t match.</p>
+
+<p>When I get ready to sign the key, I pull in a copy from the keyservers or via a shared key ring if provided by the event or similar. I then check the fingerprint and key details for the key I obtained against the initialed slip or party worksheet. If these all match, I’m ready to sign.</p>
+
+<p>The actual process for signing is the same for both single- and multiple-UID keys. The amount of work is a little different. The process looks like this:</p>
+
+<ul>
+<li>Import key into keyring</li>
+<li>Verify fingerprint and details match paper slip</li>
+<li>Use <code>gpg</code> to sign UID</li>
+<li>Export signed public key</li>
+<li>Encrypt exported key for the UID signed</li>
+<li>Email the encrypted, signed key to the email address associated with the signed UID</li>
+</ul>
+
+
+<p>The following sections will show the specific commands needed to accomplish this process.</p>
+
+<h3>Single UID</h3>
+
+<p>Importing the key into my keyring is accomplished with the <code>--import</code> command. Suppose we are working with a key for UID/email address <a href="mailto:someone@example.com.">someone@example.com.</a></p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">gpg --import someone@example.com</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>I could, of course, replace the ‘<a href="mailto:someone@example.com">someone@example.com</a>’ with the key ID, or even import from a file or from the paste buffer.</p>
+
+<p>Now to actually sign, the <code>--sign-key</code> command is used.</p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">gpg --ask-cert-level --sign-key someone@example.com</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>This will bring up the gpg interface which should look as follows:</p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">→ gpg --ask-cert-level --sign-key someone@example.com
+</span><span class="line">
+</span><span class="line">pub  2048R/521A3B7C  created: 2014-03-31  expires: 2018-03-31  usage: SC
+</span><span class="line">                     trust: unknown       validity: unknown
+</span><span class="line">sub  2048R/EA195394  created: 2014-03-31  expires: 2018-03-31  usage: E
+</span><span class="line">[ unknown] (1). Someone Special &lt;someone@example.com&gt;
+</span><span class="line">
+</span><span class="line">
+</span><span class="line">pub  2048R/521A3B7C  created: 2014-03-31  expires: 2018-03-31  usage: SC
+</span><span class="line">                     trust: unknown       validity: unknown
+</span><span class="line"> Primary key fingerprint: B25F 2DAA 8C20 927D 5A72  A239 656E C97E 53FB 2C6D
+</span><span class="line">
+</span><span class="line">     Someone Special &lt;someone@example.com&gt;
+</span><span class="line">
+</span><span class="line">This key is due to expire on 2018-03-31.
+</span><span class="line">How carefully have you verified the key you are about to sign actually belongs
+</span><span class="line">to the person named above?  If you don't know what to answer, enter "0".
+</span><span class="line">
+</span><span class="line">   (0) I will not answer. (default)
+</span><span class="line">   (1) I have not checked at all.
+</span><span class="line">   (2) I have done casual checking.
+</span><span class="line">   (3) I have done very careful checking.
+</span><span class="line">
+</span><span class="line">Your selection? (enter `?' for more information):</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>Answer this prompt following your policy. For this example case I will sign with level 3 since I did some careful checking. Some people have the policy to only sign level three if they have known the person for several years. Others are more lax. I suggesting picking a policy for yourself and sticking to it. This is the best way to ensure people know what it means when you sign something at each level.</p>
+
+<p>Entering ‘3’ will then proceed with the signing process.</p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">Your selection? (enter `?' for more information): 3
+</span><span class="line">Are you sure that you want to sign this key with your
+</span><span class="line">key "Jeff Carouth &lt;jcarouth@gmail.com&gt;" (4D8BD439)
+</span><span class="line">
+</span><span class="line">I have checked this key very carefully.
+</span><span class="line">
+</span><span class="line">Really sign? (y/N)</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>Entering ‘y’ will prompt you to enter the passphrase for your private key and complete the signing for this single-UID key.</p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">Really sign? (y/N) Y
+</span><span class="line">
+</span><span class="line">You need a passphrase to unlock the secret key for
+</span><span class="line">user: "Jeff Carouth &lt;jcarouth@gmail.com&gt;"
+</span><span class="line">4096-bit RSA key, ID 4D8BD439, created 2014-03-22
+</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>Now the key is signed by me. To check this signature you can use <code>--list-sigs</code>.</p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">→ gpg --list-sigs someone@example.com
+</span><span class="line">gpg: checking the trustdb
+</span><span class="line">gpg: 3 marginal(s) needed, 1 complete(s) needed, PGP trust model
+</span><span class="line">gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+</span><span class="line">gpg: next trustdb check due at 2015-08-18
+</span><span class="line">pub   2048R/521A3B7C 2014-03-31 [expires: 2018-03-31]
+</span><span class="line">uid                  Someone Special &lt;someone@example.com&gt;
+</span><span class="line">sig 3        521A3B7C 2014-03-31  Someone Special &lt;someone@example.com&gt;
+</span><span class="line">sig 3        4D8BD439 2014-05-25  Jeff Carouth &lt;jcarouth@gmail.com&gt;
+</span><span class="line">sub   2048R/EA195394 2014-03-31 [expires: 2018-03-31]
+</span><span class="line">sig          521A3B7C 2014-03-31  Someone Special &lt;someone@example.com&gt;</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>As you can see, the key for ‘<a href="mailto:someone@example.com">someone@example.com</a>’ now has a signature from me listed on the key. The key is now considered signed. The next step is to distribute this signed key, which will be covered below.</p>
+
+<h3>Multiple UIDs</h3>
+
+<p>A key with multiple UIDs slightly complicates this process, because if you sign all UIDs at once and send the signed key to one or all of them, you lose the security of knowing the person has access to each email address. In essence you are giving away signatures for free without knowing if the person actually owns the addresses or the private key.</p>
+
+<p>Signing each UID actually follows the same process, but it must be done one time for each UID. The process starts a little differently, in that the first prompt you will see asks if you want to sign all the UIDs.</p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">→ gpg --sign-key --ask-cert-level someone@example.com
+</span><span class="line">
+</span><span class="line">pub  2048R/521A3B7C  created: 2014-03-21  expires: never       usage: SCEA
+</span><span class="line">                     trust: unknown       validity: unknown
+</span><span class="line">[ unknown] (1). Someone Special &lt;someone@example.com&gt;
+</span><span class="line">[ unknown] (2)  Someone Special &lt;someone@something.net&gt;
+</span><span class="line">
+</span><span class="line">Really sign all user IDs? (y/N)</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>Answering this question ‘N’ will then give you the ‘gpg&gt;’ prompt.</p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">Really sign all user IDs? (y/N) N
+</span><span class="line">Hint: Select the user IDs to sign
+</span><span class="line">
+</span><span class="line">gpg&gt;</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>This is where you select the UID, by number, you wish to sign. In our case we will sign the first UID first, so we enter 1.</p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">gpg&gt; 1
+</span><span class="line">
+</span><span class="line">pub  2048R/521A3B7C  created: 2014-03-21  expires: never       usage: SCEA
+</span><span class="line">                     trust: unknown       validity: unknown
+</span><span class="line">[ unknown] (1)* Someone Special &lt;someone@example.com&gt;
+</span><span class="line">[ unknown] (2)  Someone Special &lt;someone@something.net&gt;
+</span><span class="line">
+</span><span class="line">gpg&gt;</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>The next step is to tell gpg we want to sign the selected UID with the <code>sign</code> command which is the same process as above but instead of exiting, it will drop you into the <code>gpg&gt;</code> prompt. The command you want is to <code>save</code> and it will write the signature to the key.</p>
+
+<p>Now you follow the procedure for exporting and encrypting the public key just as in a single-UID situation. After doing this you want to remove the key from your keyring using the <code>--delete-key</code>.</p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">→ gpg --delete-key someone@example.com
+</span><span class="line">gpg (GnuPG) 1.4.16; Copyright (C) 2013 Free Software Foundation, Inc.
+</span><span class="line">This is free software: you are free to change and redistribute it.
+</span><span class="line">There is NO WARRANTY, to the extent permitted by law.
+</span><span class="line">
+</span><span class="line">
+</span><span class="line">pub  2048R/521A3B7C 2014-03-21 Someone Special &lt;someone@example.com&gt;
+</span><span class="line">
+</span><span class="line">Delete this key from the keyring? (y/N) Y</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>Now that key will be removed from your keyring. You then import the key again which will not have the signature you made above on the first UID and complete the same process for each of the other UIDs you are signing.</p>
+
+<p>Once you are finished signing all UIDs, follow the same process for distributing the signed key back to its owner.</p>
+
+<h2>Distributing the signed key</h2>
+
+<p>My process for distributing a signed key involves exporting the key into ascii-armored form, encrypting that file for the UID you signed, and emailing the encrypted, signed key to the email address for the UID. Doing this, I am checking two different things: 1) that the person I talked to actually has access to the email address associated with the UID; and 2) that the person who can access the email address has access to the private key for that UID. If neither of those two things are true, my signature will never make it onto a public key server.</p>
+
+<p>The first step in this process is to export the signed public key and then encrypt it for the.</p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">gpg --armor --export someone@example.com &gt; ~/tmp/someone_at_example.com.asc
+</span><span class="line">gpg --sign --encrypt --recipient someone@example.com ~/tmp/someone_at_example.com.asc</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>Alternatively, all in one:</p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">gpg -a --export someone@example.com | gpg -se -r someone@example.com &gt; ~/tmp/someone_at_example.com.asc.pgp</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>This should create a file located at <code>~/tmp/someone_at_example.com.asc.pgp</code> which is the encrypted, ascii-armored, signed public key for <a href="mailto:someone@example.com.">someone@example.com.</a> Someone with access to the private key for that UID should be able to decrypt the file and no one else. It is also a signed file, meaning the person who receives it can verify it came from me by checking the signature.</p>
+
+<p>At this point you should have an encrypted, signed public key file for each UID you signed. To distribute the key back to its owner all you have to do is email that file to the person (at the UID email address.)</p>
+
+<p>The alternative here is to not encrypt the file and simply push it up to a keyserver. I advise against this because it reduces the confidence in the person actually owning the key and email address.</p>
+
+<h2>Receiving a signed key</h2>
+
+<p>If you are on the receiving end of this exchange of signed keys you should push the signed key up to the keyserver. But, to do that you must first decrypt it.</p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">gpg --decrypt someone_at_example.com.asc.pgp</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>Decrypting the file should create one named <code>someone_at_example.com.asc</code> which can then be imported into your keychain and pushed to the key server.</p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">gpg --import someone_at_example.com.asc
+</span><span class="line">gpg --send-keys 521A3B7C</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>Now your UID(s) which were signed in that file should be updated on the key servers. Note that you can do this any number of times and it won’t overwrite your key, it will simply update it. So if you have, for exmaple, three UIDs and you get three separate key files to three different emails, you can run this import and send-keys process for each one, or you can import them all and then send afterwards.</p>
+
+<h2>Fin</h2>
+
+<p>Signing PGP keys is important and while it might seem somewhat complicated is actually just a few steps. I highly encourage you to participate in keysigning events at a conference near you, or to sign keys of people you know outside of a larger event. Hopefully the above explanation of the process helps.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jeff Carouth</span></span>
+
+      
+
+
+
+
+<time class="entry-date" datetime="2014-05-25T08:03:41-05:00"><span class="date"><span class="date-month">May</span> <span class="date-day">25</span><span class="date-suffix">th</span>, <span class="date-year">2014</span></span> <span class="time">8:03 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class="category" href="https://carouth.com/blog/categories/gpg-slash-pgp/">gpg/pgp</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 61px; height: 20px;" title="Twitter Tweet Button" src="./Signing PGP Keys_files/tweet_button.c5b006ac082bc92aa829181b9ce63af1.en.html" data-url="http://carouth.com/blog/2014/05/25/signing-pgp-keys/"></iframe>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="https://carouth.com/blog/2014/05/04/keysigning-at-php-tek-2014/" title="Previous Post: Keysigning at php[tek] 2014">« Keysigning at php[tek] 2014</a>
+      
+      
+        <a class="basic-alignment right" href="https://carouth.com/blog/2014/09/01/a-personal-fitness-challenge/" title="Next Post: A Personal Fitness Challenge">A Personal Fitness Challenge »</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><iframe id="dsq-app9559" name="dsq-app9559" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Signing PGP Keys_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 984px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+  </section>
+
+</div>
+
+<aside class="sidebar thirds">
+  
+    <section class="first odd">
+    <h1>Loosely Coupled</h1>
+    <p>Check out <a href="http://looselycoupled.info/">the Loosely Coupled podcast</a> I co-host with <a href="https://twitter.com/shrtwhitebldguy">Matt Frost</a> where we talk about developer lives and developer problems.</p>
+</section>
+<section class="even">
+    <h1>Dev Book Club</h1>
+    <p>The <a href="http://devbookclub.org/">Dev Book Club</a> is a group of developers from around the world reading a technical book and discussing it live. Join in the discussions on <a href="https://plus.google.com/u/0/113250505599769873265/posts">Google+ Hangouts</a> or watch previous discussions on <a href="https://www.youtube.com/user/devbookclub">the Dev Book Club YouTube channel</a>.</p>
+</section>
+<section class="odd">
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="https://carouth.com/blog/2015/02/15/i-am-a-technical-lead/">I Am a Technical Lead, but Am I a Manager?</a>
+      </li>
+    
+      <li class="post">
+        <a href="https://carouth.com/blog/2015/02/05/my-proposal-was-rejected/">My Proposal Was Rejected, Now What?</a>
+      </li>
+    
+      <li class="post">
+        <a href="https://carouth.com/blog/2014/09/01/a-personal-fitness-challenge/">A Personal Fitness Challenge</a>
+      </li>
+    
+      <li class="post">
+        <a href="https://carouth.com/blog/2014/05/25/signing-pgp-keys/">Signing PGP Keys</a>
+      </li>
+    
+      <li class="post">
+        <a href="https://carouth.com/blog/2014/05/04/keysigning-at-php-tek-2014/">Keysigning at Php[tek] 2014</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    <span class="toggle-sidebar"></span></div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright © 2016 - Jeff Carouth -
+  <span class="credit">Powered by <a href="http://octopress.org/">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'jeffcarouthsblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://carouth.com/blog/2014/05/25/signing-pgp-keys/';
+        var disqus_url = 'http://carouth.com/blog/2014/05/25/signing-pgp-keys/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+
+<iframe style="display: none;" src="./Signing PGP Keys_files/saved_resource(1).html"></iframe><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Signing PGP Keys_files/widget_iframe.c5b006ac082bc92aa829181b9ce63af1.html" title="Twitter settings iframe" style="display: none;"></iframe></body></html>
