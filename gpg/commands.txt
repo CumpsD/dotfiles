@@ -10,6 +10,29 @@ sub   rsa4096/637C7180FEFDFA8E 2018-06-20 [S] [expires: 2019-06-20]
 sub   rsa4096/605387509EB4883F 2018-06-20 [E] [expires: 2019-06-20]
 sub   rsa4096/A023169D8CC7660E 2018-06-20 [A] [expires: 2019-06-20]
 
+Key gebruiken voor SSH:
+-----------
+Keygrips oplijsten:
+gpg2 --with-keygrip -k david@cumps.be
+
+Selecteer de keygrip voor Authentication, bv:
+sub   rsa4096/0xA023169D8CC7660E 2018-06-20 [A] [expires: 2019-06-20]
+      Keygrip = 6E099D2423C136E5940C77B58A641237C0E37DAB
+
+Edit  ~/.gnupg/sshcontrol en zet de keygrip erin:
+# List of allowed ssh keys.  Only keys present in this file are used
+# in the SSH protocol.  The ssh-add tool may add new entries to this
+[…]
+6E099D2423C136E5940C77B58A641237C0E37DAB
+
+Controleer:
+ssh-add -l
+
+Export:
+ssh-add -L
+
+-----------
+
 Export public key:
 gpg2 --export -a david@cumps.be > 2018-06-20-gpg-public-david_cumps_be.asc
 
