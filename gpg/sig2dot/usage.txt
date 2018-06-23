@@ -1,5 +1,5 @@
-gpg2 --list-sigs | ./sig2dot.pl > cumpsd.dot
-neato -Tps cumpsd.dot > cumpsd.neato.ps
-dot -Tps cumpsd.dot > cumpsd.dot.ps
-convert cumpsd.neato.ps cumpsd.neato.jpg
+gpg2 --list-sigs 0x9D771C7A03413FB3 | ../sig2dot/sig2dot.pl -a > cumpsd.dot; \
+neato -Tps cumpsd.dot > cumpsd.neato.ps; \
+dot -Tps cumpsd.dot > cumpsd.dot.ps; \
+convert cumpsd.neato.ps cumpsd.neato.jpg; \
 convert -geometry 320x240 cumpsd.neato.ps cumpsd.neato.320.jpg
