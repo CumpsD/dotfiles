@@ -63,6 +63,7 @@ You can fix it by running `sudo apt-mark hold ebtables` and then executing `~/.d
 | [ansible-fish](https://github.com/telus/ansible-fish) ([with modifications](https://github.com/cumpsd/ansible-role-fish)) | Install Fish and configure default shell |
 | [ansible-fzf](https://github.com/dotstrap/ansible-fzf) | Install & configure fzf |
 | [ansible-role-git](https://github.com/geerlingguy/ansible-role-git) | Install Git from source |
+| [ansible-role-hub](https://github.com/wtanaka/ansible-role-hub) | Install Hub |
 | [ansible-role-mono](https://github.com/cumpsd/ansible-role-mono) | Install Mono |
 | [ansible-role-nodejs](https://github.com/geerlingguy/ansible-role-nodejs) | Install Node.js and NPM |
 | [ansible-role-ntp](https://github.com/geerlingguy/ansible-role-ntp) | Setup NTP and configure timezone |
@@ -80,9 +81,10 @@ You can fix it by running `sudo apt-mark hold ebtables` and then executing `~/.d
 | [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) | Iconic font aggregator, collection, and patcher. |
 | [dircolors-solarized](https://github.com/seebi/dircolors-solarized/) | Solarized dircolors. |
 | [git-crypt](https://github.com/AGWA/git-crypt) | Transparent file encryption in git. |
+| [thefuck](https://github.com/nvbn/thefuck) | Magnificent app which corrects your previous console command. |
+| [GNU Privacy Guard](https://gnupg.org/) | All things encryption. |
 
 ### Resources
 
 | Where | What |
 | [Increasing development productivity with repository management](https://blog.kalis.me/increasing-development-productivity-repository-management/) | System to easily manage repositories. |
-| [GNU Privacy Guard](https://gnupg.org/) | All things encryption. |
