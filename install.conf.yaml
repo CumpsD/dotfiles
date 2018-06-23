@@ -48,6 +48,7 @@
     ~/.config/fish/functions/repo.fish: fish/functions/repo.fish
     ~/.config/fish/functions/repodir.fish: fish/functions/repodir.fish
     ~/.config/fish/functions/fuck.fish: fish/functions/fuck.fish
+    ~/.config/fish/functions/dotfiles.fish: fish/functions/dotfiles.fish
 
     ~/.config/fish/completions/repo.fish: fish/completions/repo.fish
     ~/.config/fish/completions/repodir.fish: fish/completions/repodir.fish
