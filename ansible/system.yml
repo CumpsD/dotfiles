@@ -36,7 +36,7 @@
     include_role:
       name: hub
     vars:
-       hub_version: "2.4.0"
+      hub_version: "2.4.0"
 
   - name: Install Pip
     include_role:
