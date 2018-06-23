@@ -45,3 +45,6 @@
 [submodule "ansible/roles/fzf"]
 	path = ansible/roles/fzf
 	url = https://github.com/cumpsd/ansible-fzf
+[submodule "ansible/roles/hub"]
+	path = ansible/roles/hub
+	url = https://github.com/cumpsd/ansible-role-hub

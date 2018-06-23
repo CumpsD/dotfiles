@@ -28,6 +28,9 @@ set -U FZF_LEGACY_KEYBINDINGS 0
 # Disable .NET telemetry
 set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
 
+# Map hub to git for TheFuck
+set -x THEFUCK_OVERRIDDEN_ALIASES 'git'
+
 # Start GnuPG-agent
 . ~/.config/fish/gnupg.fish
 

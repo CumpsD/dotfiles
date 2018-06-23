@@ -32,6 +32,12 @@
       git_install_path: '/usr'
       git_install_from_source_force_update: true
 
+  - name: Install Hub
+    include_role:
+      name: hub
+    vars:
+       hub_version: "2.4.0"
+
   - name: Install Pip
     include_role:
       name: pip
@@ -39,6 +45,7 @@
       pip_install_packages:
       - pip
       - awscli
+      - thefuck
 
   - name: Install Node.js and NPM
     include_role:
