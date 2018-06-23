@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="HTML Tidy for Linux/x86 (vers 12 April 2005), see www.w3.org" />
+<title>sig2dot Useage - http://www.chaosreigns.com/</title>
+<link rel="StyleSheet" href="./sig2dot Usage_files/light.css" type="text/css" />
+</head>
+<body>
+<div>
+<h1>sig2dot Useage</h1>
+<br />
+<br />
+<kbd>$ <a href="http://www.gnupg.org/">gpg</a> --list-sigs --keyring
+./phillylinux.gpg | ./<a href="http://www.chaosreigns.com/code/sig2dot/sig2dot.pl">sig2dot.pl</a> &gt;
+phillylinux.dot<br />
+$ <a href="http://www.research.att.com/sw/tools/graphviz/">neato</a> -Tps
+phillylinux.dot &gt; phillylinux.neato.ps<br />
+$ <a href="http://www.research.att.com/sw/tools/graphviz/">dot</a> -Tps
+phillylinux.dot &gt; phillylinux.dot.ps<br />
+$ <a href="http://www.imagemagick.org/">convert</a> phillylinux.neato.ps
+phillylinux.neato.jpg<br />
+$ <a href="http://www.imagemagick.org/">convert</a> -geometry 320x240
+phillylinux.neato.ps phillylinux.neato.320.jpg</kbd><br />
+<br />
+Note: I have found that generating postscript output with neato (with -Tps) and
+then converting it to a more common image format with convert (part of <a href="http://www.imagemagick.org/">imagemagick</a>), as I did in the above example,
+results in nicer images than directly generating gif output with neato (with
+-Tgif). This method also avoids common font problems with -Tgif.
+<hr />
+<h2>Commandline Arguments</h2>
+<table border="1">
+<tr>
+<td>-b</td>
+<td>Black and white / do not colorize.</td>
+</tr>
+<tr>
+<td>-d &lt;date&gt;</td>
+<td>Render graph as it appeared on &lt;date&gt; (ignores more recent
+signatures). Date must be in the format "YYYY-MM-DD". Will also ignore keys
+that have since been revoked.</td>
+</tr>
+</table>
+<hr />
+<a href="http://www.chaosreigns.com/code/sig2dot/">Return to sig2dot</a><br />
+<a href="http://www.chaosreigns.com/code/">Darxus' code index</a><br />
+<a href="http://www.chaosreigns.com/">Return to Darxus' Home Page</a><br />
+Mon May 6 16:50:09 EDT 2002<br />
+<a href="http://validator.w3.org/check/referer">Valid HTML 3.2.</a></div>
+</body>
+</html>

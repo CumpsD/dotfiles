@@ -1,0 +1,28 @@
+body {
+  background: #FFFFFF;
+  color: #000000;
+  font-family: sans-serif;
+}
+
+A {text-decoration: none}
+A:hover {
+  background: #FFFFFF;
+  color: #7F55D4;
+}
+
+
+/*
+ul {
+  list-style-image: url(/bullet.png);
+}
+*/
+
+div.center { text-align: center; }
+
+img { border-style: none; }
+
+/*
+h1 { text-align: center; }
+*/
+
+td.date { white-space:nowrap }

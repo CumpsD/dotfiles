@@ -1,0 +1,58 @@
+Key informatie:
+gpg2 --keyid-format long --list-keys --fingerprint david@cumps
+pub   rsa4096/9D771C7A03413FB3 2018-06-20 [SC] [expires: 2019-06-20]
+      Key fingerprint = D02E BD22 71ED EAC7 B5D3  A17C 9D77 1C7A 0341 3FB3
+uid                 [ultimate] David Cumps <david@cumps.be>
+uid                 [ultimate] David Cumps <david@exira.com>
+uid                 [ultimate] [jpeg image of size 5606]
+sub   rsa4096/91C68CA34F0FF349 2018-06-20 [E] [expires: 2019-06-20]
+sub   rsa4096/637C7180FEFDFA8E 2018-06-20 [S] [expires: 2019-06-20]
+sub   rsa4096/605387509EB4883F 2018-06-20 [E] [expires: 2019-06-20]
+sub   rsa4096/A023169D8CC7660E 2018-06-20 [A] [expires: 2019-06-20]
+
+Export public key:
+gpg2 --export -a david@cumps.be > 2018-06-20-gpg-public-david_cumps_be.asc
+
+Key laten signen door iemand:
+-----------
+Persoon A export public key en mailed naar persoon B
+gpg2 --armor --export david@cumps.be > ~/tmp/david_at_cumps.be.asc
+
+Persoon B import public key
+gpg2 --import david_at_cumps.be.asc
+
+Persoon B checked fingerprint
+gpg2 --keyid-format long --list-keys david@cumps.be
+
+Persoon B signed UID en checked trust level
+gpg2 --ask-cert-level --sign-key someone@example.com
+(3) I have done very careful checking.
+
+Persoon B export signed public key
+gpg2 --armor --export david@cumps.be > ~/tmp/david_at_cumps.be.asc
+
+Persoon B encrypt exported key en mailed naar persoon A
+gpg2 --sign --encrypt --recipient david@cumps.be ~/tmp/david_at_cumps.be.asc
+
+Persoon A decrypt
+gpg2 --decrypt david_at_cumps.be.asc.pgp
+
+Persoon A importeert
+gpg2 --import david_at_cumps.be.asc
+
+Persoon A stuurt door naar keyservers
+gpg2 --keyserver hkp://pool.sks-keyservers.net --send-keys 0x9D771C7A03413FB3
+gpg2 --keyserver hkp://eu.pool.sks-keyservers.net --send-keys 0x9D771C7A03413FB3
+
+Persoon A kan nakijken wie de key gesigned heeft
+gpg2 --list-sigs david@cumps.be
+-----------
+
+Importen vanuit keybase:
+curl https://keybase.io/yvesreynhout/pgp_keys.asc?fingerprint=8c9d4e00a084eb5c64a15b9ea137deb5cff98317 | gpg2 --import
+
+Iemand zn key downloaden obv fingerprint:
+gpg2 --keyserver hkp://eu.pool.sks-keyservers.net --recv-keys 8c9d4e00a084eb5c64a15b9ea137deb5cff98317
+
+Key preferences:
+setpref AES256 CAMELLIA256 AES192 CAMELLIA192 AES CAMELLIA128 TWOFISH CAST5 3DES SHA512 SHA384 SHA256 SHA224 SHA1 RIPEMD160 ZLIB BZIP2 ZIP Uncompressed

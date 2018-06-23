@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 12 April 2005), see www.w3.org" />
+
+  <title>springgraph - http://www.chaosreigns.com/</title>
+  <link rel="StyleSheet" href="./springgraph_files/light.css" type="text/css" />
+  <style type="text/css">
+  img { float: right; }
+  </style>
+</head>
+
+<body>
+  <div>
+    <a href="http://www.chaosreigns.com/code/springgraph/dl/phillylinux_springgraph.png"><img src="./springgraph_files/phillylinux_springgraph.300.png" alt="plug 2d" width="215" height="300" /></a>
+
+      <h1>springgraph</h1>
+    Download latest version: <a href="http://www.chaosreigns.com/code/springgraph/dl/springgraph.pl">springgraph.pl</a>
+    <small><br />
+    (<a href="http://www.chaosreigns.com/code/springgraph/dl/">older
+    versions</a>)</small><br />
+    <a href="http://packages.debian.org/unstable/graphics/springgraph.html">
+    Debian (unstable) package:
+    springgraph</a><br />
+    <a href="http://www.freebsd.org/cgi/cvsweb.cgi/ports/graphics/springgraph">
+    BSD Port: springgraph</a>
+
+    <p>(5/12/02) <b><a href="http://www.chaosreigns.com/code/springgraph/3d.html">Can now
+    generate 3D graphs !</a></b></p>
+
+    <p>Springgraph will read in a <a href="http://www.chaosreigns.com/code/springgraph/input.html">.dot file description of a
+    graph</a>, which, for each node, specifies
+    its name and which other nodes it is
+    connected to, and then renders a graph. Each
+    node is drawn as an ellipse, and each
+    connection is drawn as an arrow. The node
+    placement is a result of all of the nodes
+    moving away from each other, while all nodes
+    which are connected move toward each other.
+    This movement is repeated until it
+    stabilizes.</p>
+
+    <p>Springgraph was written as an alternative
+    to neato, which is part of <a href="http://www.research.att.com/sw/tools/graphviz/">
+    graphviz</a>. It attempts to read the same
+    .dot files used by graphviz, but currently
+    only supports a limited number of node
+    attributes (label and fillcolor). I am open
+    to requests for support for more
+    graph/node/edge attributes. I have used neato
+    quite a lot since September of 2000, when I
+    started writing programs to convert <a href="http://www.chaosreigns.com/code/apache2dot/">apache log files</a>,
+    <a href="http://www.chaosreigns.com/code/sig2dot/">gpg/pgp keyring
+    signature relationships</a>, and <a href="http://www.chaosreigns.com/code/cinclude2dot/">C include
+    relationships</a> to .dot files to be graphed
+    with neato. <a href="http://www.chaosreigns.com/code/springgraph/3d.html"><img src="./springgraph_files/phillylinux_full_white.png" alt="plug 3d" width="346" height="260" /></a></p>
+
+    <p><a href="http://www.chaosreigns.com/code/springgraph/compare.html">Compare springgraph
+    and neato output.</a></p>
+
+    <p>Reasons I wanted an alternative to
+    neato:</p>
+
+    <ul>
+      <li>More appropriate math for what I graph,
+      resulting in better graph layouts: neato
+      uses line lengths - every node tries to be
+      a certain distance from every other node it
+      is connected to. To increase the size of
+      the graph (and eliminate node overlaps),
+      you must increase the default line length.
+      So in large graphs, all nodes try to be
+      some large distance from every other node.
+      In springgraph, every node tries to be as
+      close as possible to every node it is
+      connected to, while pushing away from every
+      node. I think this method is better suited
+      to the kinds of graphs I tend to generate,
+      like those of keyrings.</li>
+
+      <li>neato is released under an (opensource)
+      license that is incompatible with the
+      <a href="http://www.gnu.org/copyleft/gpl.html">GPL</a>.
+      springgraph is released under the GPL.</li>
+
+      <li>In the process of figuring out how to
+      write springgraph, I <b>DID</b>, as I had
+      hoped, learn how to <a href="http://www.chaosreigns.com/code/springgraph/3d.html">output a graph in 3D</a>.</li>
+    </ul>
+    <hr />
+
+    <p>Usage:</p>
+
+    <p><tt>cat test.dot | ./springgraph.pl -s 3
+    &gt; springgraph.png</tt></p>
+
+    <p>The "<tt>-s 3</tt>" specifies the scale,
+    and is optional. All of the node locations
+    are multiplied by this. Increase the scale to
+    eliminate node overlaps. Decrease the scale
+    to make the graph smaller.</p>
+    <hr />
+    <a href="http://www.chaosreigns.com/code/springgraph/input.html">Definition of the input
+    (.dot) files that springgraph renders</a>
+
+    <p>The following programs generate .dot files
+    that are fully supported by springgraph:</p>
+
+    <ul>
+      <li><a href="http://www.chaosreigns.com/code/sig2dot/">sig2dot</a></li>
+
+      <li><a href="http://www.chaosreigns.com/code/cinclude2dot/">cinclude2dot</a></li>
+
+      <li><a href="http://itooktheredpill.dyndns.org/programming/showdep.txt">
+      c2dot</a> by Hagen Fritsch, Generates a
+      depency tree in dot-format based upon
+      c-files.</li>
+    </ul>
+    <hr />
+    Thiseveing (5/9/02) it occurred to me why
+    neato is the way it is - why its method is
+    sometimes more appropriate than the one I use
+    in springgraph. This happened as I was
+    testing springgraph with some of the graphviz
+    example files, and noticed that in <a href="http://www.research.att.com/sw/tools/graphviz/examples/undirected/process.html">
+    this graph</a>, all of the lines
+    <i>should</i> be the same length, as they are
+    drawn by neato, not adjusted according to the
+    positioning of other nodes, <a href="http://www.chaosreigns.com/code/springgraph/dl/process.png">as they are drawn by
+    springgraph</a>.
+    <hr />
+    <a href="http://www.chaosreigns.com/cgi-bin/referercomment.cgi">Comment
+    on this page.</a><br />
+    <a href="http://www.chaosreigns.com/code/">Darxus' code index</a><br />
+    <a href="http://www.chaosreigns.com/">Darxus' home page</a><br />
+    Fri May 30 14:06:58 EDT 2003
+  </div>
+<script type="text/javascript" src="./springgraph_files/logstats.js.download" /><img src="./springgraph_files/logstats.gif" alt="" />
+</body>
+</html>

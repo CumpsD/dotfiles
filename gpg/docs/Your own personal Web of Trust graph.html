@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="HTML Tidy for Linux/x86 (vers 12 April 2005), see www.w3.org" />
+<title>Your own personal Web of Trust graph - http://www.chaosreigns.com/</title>
+<link rel="StyleSheet" href="./Your own personal Web of Trust graph_files/light.css" type="text/css" />
+<style type="text/css">
+img { float: right; }
+</style>
+</head>
+<body>
+<div><img src="./Your own personal Web of Trust graph_files/darxus@chaosreigns.com.jpg" alt="Darxus&apos; trust graph" />
+<h2>Your own personal Web of Trust graph</h2>
+<a href="http://www.chaosreigns.com/code/sig2dot/trustgraph.sh">trustgraph.sh</a>
+<p>Running this script with your email address as an argument will create a
+graph of your key and all the keys that have signed your key. It requires that
+gpg, sig2dot.pl, and neato (part of graphviz) be in your path, and that you
+have a keyserver set in your ~/.gnupg/options file.</p>
+<p>For example:</p>
+<pre>
+$ ls
+$./trustgraph.sh darxus@chaosreigns.com
+$ ls 
+darxus@chaosreigns.com.gpg
+darxus@chaosreigns.com.ids
+darxus@chaosreigns.com.ps
+stats.html 
+</pre>
+As you can see, it created 4 files.
+<p>darxus@chaosreigns.com.gpg is a keyring file containing my key and all those
+which have signed my key.<br />
+darxus@chaosreigns.com.ids is a list of the key IDs of my key and all those who
+have signed it.<br />
+darxus@chaosreigns.com.ps is a graph of the signature relationships between my
+key and all those who have signed it.<br />
+stats.html is a graph if signature counts (only counting signatures from within
+this keyring file).</p>
+<p>I recommend viewing the postscript (.ps) graph with <a href="http://www.cs.wisc.edu/~ghost/gv/">gv</a>, but you can also convert it to a
+jpeg using convert, which is part of <a href="http://www.imagemagick.org/">imagemagick</a> like this:</p>
+<p><kbd>convert darxus@chaosreigns.com.ps darxus@chaosreigns.com.jpg</kbd></p>
+<p>The postscript file is much better detail and smaller than the jpeg.</p>
+<hr />
+<a href="http://www.chaosreigns.com/code/sig2dot/">sig2dot index</a><br />
+<a href="http://www.chaosreigns.com/code/">code index</a><br />
+<a href="http://www.chaosreigns.com/">Darxus' Home Page</a><br />
+Sun May 5 17:16:57 EDT 2002</div>
+</body>
+</html>
