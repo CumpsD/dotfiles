@@ -39,8 +39,9 @@
 
     ~/.config/fish/fishfile: fish/fishfile
     ~/.config/fish/config.fish: fish/config.fish
-    ~/.config/fish/functions/fisher.fish: fish/fisher.fish
     ~/.config/fish/gnupg.fish: fish/gnupg.fish
+
+    ~/.config/fish/functions/fisher.fish: fish/fisher.fish
     ~/.config/fish/functions/abbrex.fish: fish/functions/abbrex.fish
     ~/.config/fish/functions/clear.fish: fish/functions/clear.fish
     ~/.config/fish/functions/fish_greeting.fish: fish/functions/fish_greeting.fish
@@ -53,6 +54,7 @@
     ~/.config/fish/completions/repo.fish: fish/completions/repo.fish
     ~/.config/fish/completions/repodir.fish: fish/completions/repodir.fish
     ~/.config/fish/completions/dotnet.fish: fish/completions/dotnet.fish
+    ~/.config/fish/completions/hub.fish: fish/completions/hub.fish
 
     ~/.config/terminator/config: terminator/config
 
