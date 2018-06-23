@@ -30,7 +30,6 @@ ssh-add -l
 
 Export:
 ssh-add -L
-
 -----------
 
 Export public key:
@@ -45,7 +44,7 @@ Persoon B import public key
 gpg2 --import david_at_cumps.be.asc
 
 Persoon B checked fingerprint
-gpg2 --keyid-format long --list-keys david@cumps.be
+gpg2 --keyid-format long --fingerprint --list-keys david@cumps.be
 
 Persoon B signed UID en checked trust level
 gpg2 --ask-cert-level --sign-key someone@example.com
