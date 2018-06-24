@@ -12,6 +12,7 @@
     ~/.config/fish/functions
     ~/.config/terminator
     ~/.gnupg
+    ~/.i3
 
 - link:
     ~/.dotfiles: ''
@@ -21,6 +22,10 @@
     ~/.gnupg/gpg.conf: gpg/gpg.conf
     ~/.gnupg/gpg-agent.conf: gpg/gpg-agent.conf
     ~/.gnupg/sshcontrol: gpg/sshcontrol
+
+    ~/.i3/config: i3/config
+    ~/.i3/i3blocks.conf: i3/i3blocks.conf
+    ~/.i3/safe_lock_50.png: i3/safe_lock_50.png
 
     ~/repos: repos
 
