@@ -13,6 +13,7 @@
   with_items:
     - curl
     - gnupg2
+    - htop
 
 - name: Install essential build tools
   apt:
@@ -20,3 +21,7 @@
     state: latest
   with_items:
     - build-essential
+    - intltool 
+    - libtool 
+    - libsndfile1-dev 
+    - libjson-c-dev
