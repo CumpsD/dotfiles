@@ -16,6 +16,8 @@
     - htop
     - wget
     - unzip
+    - gzip
+    - bzip2
 
 - name: Install essential build tools
   apt:
