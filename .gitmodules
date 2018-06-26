@@ -48,6 +48,3 @@
 [submodule "ansible/roles/hub"]
 	path = ansible/roles/hub
 	url = https://github.com/cumpsd/ansible-role-hub
-[submodule "ansible/roles/terraform"]
-	path = ansible/roles/terraform
-	url = https://github.com/cumpsd/ansible-terraform
