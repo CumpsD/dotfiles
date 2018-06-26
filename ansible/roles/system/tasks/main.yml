@@ -15,6 +15,7 @@
     - gnupg2
     - htop
     - wget
+    - unzip
 
 - name: Install essential build tools
   apt:
