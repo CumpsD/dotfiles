@@ -17,6 +17,8 @@
 - link:
     ~/.dotfiles: ''
 
+    /etc/wsl.conf: wsl/wsl.conf
+
     ~/.dir_colors: dircolors/dircolors.256dark
 
     ~/.gnupg/gpg.conf: gpg/gpg.conf
@@ -66,4 +68,3 @@
 - shell:
     - [fonts/nerd-fonts/install.sh --link --clean --install-to-user-path --complete Hack, Installing Hack font]
     - [fish -c fisher, Install fisherman plugins]
-    - [sudo cp wsl/wsl.conf /etc/wsl.conf, Configuring WSL]

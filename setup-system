@@ -13,7 +13,7 @@ popd > /dev/null
 echo
 echo "Setting up dotfiles with dotbot..."
 read -p "Press enter to continue"
-./install
+sudo -u cumpsd ./install
 
 echo
 echo "Cloning repos..."
