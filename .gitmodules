@@ -51,3 +51,6 @@
 [submodule "ansible/roles/terraform"]
 	path = ansible/roles/terraform
 	url = https://github.com/cumpsd/ansible-terraform
+[submodule "ansible/roles/golang"]
+	path = ansible/roles/golang
+	url = https://github.com/cumpsd/ansible-go
