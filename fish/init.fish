@@ -7,6 +7,10 @@ set -gx DISPLAY :0
 # Set a default editor
 set -gx EDITOR nano
 
+# Tweak some environment variables
+SET GOPATH $HOME/go
+set PATH $GOPATH/bin /usr/local/go/bin $PATH
+
 # OMF Settings
 set -gx OMF_REPO_URI "https://github.com/cumpsd/oh-my-fish"
 
