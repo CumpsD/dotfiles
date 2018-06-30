@@ -19,6 +19,7 @@
     ~/.dotfiles: ''
 
     /etc/wsl.conf: wsl/wsl.conf
+    /etc/apt/sources.list: ubuntu/sources.list
 
     ~/.dir_colors: dircolors/dircolors.256dark
 
