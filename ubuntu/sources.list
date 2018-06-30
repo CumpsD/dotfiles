@@ -1,14 +1,7 @@
-deb http://archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse
-# deb-src http://archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse
-
-deb http://archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe multiverse
-# deb-src http://archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe multiverse
-
-deb http://archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse
-# deb-src http://archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse
-
-deb http://security.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse
-# deb-src http://security.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu/  xenial           main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu/  xenial-updates   main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu/  xenial-backports main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu/ xenial-security  main restricted universe multiverse
 
 #  # Uncomment the following two lines to add software from Canonical's
 #  # 'partner' repository.
@@ -16,3 +9,27 @@ deb http://security.ubuntu.com/ubuntu/ xenial-security main restricted universe 
 #  # respective vendors as a service to Ubuntu users.
 # deb http://archive.canonical.com/ubuntu xenial partner
 # deb-src http://archive.canonical.com/ubuntu xenial partner
+
+# Ansible
+deb http://ppa.launchpad.net/ansible/ansible/ubuntu xenial main
+
+# Node.js
+deb https://deb.nodesource.com/node_10.x xenial main
+
+# Fish
+deb http://ppa.launchpad.net/fish-shell/release-2/ubuntu xenial main
+
+# Docker
+deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial edge
+
+# Mono
+deb [arch=amd64] http://download.mono-project.com/repo/ubuntu xenial main
+
+# VS Code
+deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
+
+# .NET Core
+deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-xenial-prod xenial main
+
+# Keybase
+deb http://prerelease.keybase.io/deb stable main
