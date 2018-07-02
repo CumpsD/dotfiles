@@ -3,24 +3,51 @@
 ## Setup a new machine
 
 ```bash
+# Add Ansible, Git and GnuPG
 sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
 sudo apt-get install ansible software-properties-common git gnupg2
 
+# Get the dotfiles
 git clone --recurse-submodules -j8 https://github.com/cumpsd/dotfiles.git <your preferred location>/dotfiles
 cd <your preferred location>/dotfiles
 
+# Install git-crypt
 mkdir /tmp/git-crypt
 tar -xzf git/git-crypt-0.6.0.tar.gz -C /tmp/git-crypt --strip 1
 cd /tmp/git-crypt
 make
 sudo cp git-crypt /usr/local/bin/
 
+# Import our existing GPG keys
 gpg2 --import <key>
+
+# Unlock the repo and setup the system
 git-crypt unlock
 ./setup-system
 
+# Use SSH for remote
 git remote set-url origin git@github.com:cumpsd/dotfiles.git
+
+# Trust our imported key
+gpg --edit-key user@domain.com
+
+gpg> trust
+
+Please decide how far you trust this user to correctly verify other users' keys
+(by looking at passports, checking fingerprints from different sources, etc.)
+
+  1 = I don't know or won't say
+  2 = I do NOT trust
+  3 = I trust marginally
+  4 = I trust fully
+  5 = I trust ultimately
+  m = back to the main menu
+
+Your decision? 5
+And don't forget to save the changes:
+
+gpg> save
 ```
 
 ## Post Install steps on WSL
