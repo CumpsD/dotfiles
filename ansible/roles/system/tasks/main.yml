@@ -34,6 +34,9 @@
     - rubygems
 
 - name: Install Ruby tools
+  become: yes
+  become_user: "{{ lookup('env','LOGNAME') }}"
   gem:
     name: fpm
     state: latest
+    user_install: yes
