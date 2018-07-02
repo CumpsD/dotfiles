@@ -10,6 +10,7 @@ set -gx EDITOR nano
 # Tweak some environment variables
 set -gx GOPATH $HOME/go 2> /dev/null
 set PATH $GOPATH/bin /usr/local/go/bin $PATH 2> /dev/null
+set PATH $PATH (gem env gempath | sed 's/:/\/bin\/:/g' | string split : --) 2> /dev/null
 
 # OMF Settings
 set -gx OMF_REPO_URI "https://github.com/cumpsd/oh-my-fish"
