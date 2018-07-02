@@ -19,6 +19,8 @@ sudo cp git-crypt /usr/local/bin/
 gpg2 --import <key>
 git-crypt unlock
 ./setup-system
+
+git remote set-url origin git@github.com:cumpsd/dotfiles.git
 ```
 
 ## Post Install steps on WSL
