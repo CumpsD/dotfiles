@@ -5,11 +5,20 @@
 ```bash
 sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
-sudo apt-get install ansible software-properties-common git
+sudo apt-get install ansible software-properties-common git gnupg2
 
-git clone --recurse-submodules -j8 https://github.com/cumpsd/dotfiles.git ~/.dotfiles
+git clone --recurse-submodules -j8 https://github.com/cumpsd/dotfiles.git <your preferred location>/dotfiles
+cd <your preferred location>/dotfiles
+
+mkdir /tmp/git-crypt
+tar -xzf git/git-crypt-0.6.0.tar.gz -C /tmp/git-crypt --strip 1
+cd /tmp/git-crypt
+make
+sudo cp git-crypt /usr/local/bin/
+
+gpg2 --import <key>
 git-crypt unlock
-~/.dotfiles/setup-system
+./setup-system
 ```
 
 ## Post Install steps on WSL
