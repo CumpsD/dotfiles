@@ -1,7 +1,7 @@
 ---
 - name: Update all packages
-  apt: 
-    upgrade: dist 
+  apt:
+    upgrade: dist
     update_cache: yes
     autoclean: yes
     autoremove: yes
@@ -25,7 +25,15 @@
     state: latest
   with_items:
     - build-essential
-    - intltool 
-    - libtool 
-    - libsndfile1-dev 
+    - intltool
+    - libtool
+    - libsndfile1-dev
     - libjson-c-dev
+    - ruby
+    - ruby-dev
+    - rubygems
+
+- name: Install Ruby tools
+  gem:
+    name: fpm
+    state: latest
