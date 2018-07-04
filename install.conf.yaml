@@ -1,25 +1,28 @@
 - defaults:
     link:
-        create: true
-        relink: true
-        force: true
+      create: true
+      relink: true
+      force: true
+    shell:
+      stdin: false
+      stdout: false
+      stderr: false
 
 - clean:
-    ~/
-    ~/.git-templates/hooks
-    ~/.config/fish
-    ~/.config/omf
-    ~/.config/fish/functions
-    ~/.config/terminator
-    ~/.gnupg
-    ~/.aws
-    ~/.i3
+    - '~'
+    - ~/.git-templates/hooks
+    - ~/.config/fish
+    - ~/.config/omf
+    - ~/.config/fish/functions
+    - ~/.config/terminator
+    - ~/.gnupg
+    - ~/.aws
+    - ~/.i3
 
 - link:
-    ~/.dotfiles: ''
-
-    /etc/wsl.conf: wsl/wsl.conf
     /etc/apt/sources.list: ubuntu/sources.list
+
+    ~/.dotfiles: ''
 
     ~/.dir_colors: dircolors/dircolors.256dark
 
@@ -33,8 +36,6 @@
     ~/.i3/config: i3/config
     ~/.i3/i3blocks.conf: i3/i3blocks.conf
     ~/.i3/safe_lock_50.png: i3/safe_lock_50.png
-
-    ~/repos: repos
 
     ~/.gitconfig: git/gitconfig
 
@@ -71,6 +72,9 @@
 
     ~/.config/terminator/config: terminator/config
 
+    ~/repos: repos
+
 - shell:
-    - [fonts/nerd-fonts/install.sh --link --clean --install-to-user-path --complete Hack, Installing Hack font]
+    - [sudo cp -f ~/.dotfiles/wsl/wsl.conf /etc/wsl.conf, Update WSL configuration]
+    - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --clean --install-to-user-path --complete Hack, Installing Hack font]
     - [fish -c fisher, Install fisherman plugins]
