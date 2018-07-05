@@ -46,6 +46,7 @@
       - pip
       - awscli
       - thefuck
+      - boto
 
   - name: Install Node.js and NPM
     include_role:
