@@ -57,3 +57,9 @@
 [submodule "ansible/roles/consul-cli"]
 	path = ansible/roles/consul-cli
 	url = https://github.com/cumpsd/ansible-role-consul-cli
+[submodule "ansible/roles/nomad-cli"]
+	path = ansible/roles/nomad-cli
+	url = https://github.com/cumpsd/ansible-role-nomad-cli
+[submodule "ansible/roles/vault-cli"]
+	path = ansible/roles/vault-cli
+	url = https://github.com/cumpsd/ansible-role-vault-cli
