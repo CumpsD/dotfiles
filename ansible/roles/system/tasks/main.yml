@@ -37,6 +37,9 @@
   become: yes
   become_user: "{{ lookup('env','LOGNAME') }}"
   gem:
-    name: fpm
+    name: "{{ item }}"
     state: latest
     user_install: yes
+  with_items:
+    - fpm
+    - deb-s3
