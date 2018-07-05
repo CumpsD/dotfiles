@@ -54,3 +54,6 @@
 [submodule "ansible/roles/golang"]
 	path = ansible/roles/golang
 	url = https://github.com/cumpsd/ansible-go
+[submodule "ansible/roles/consul-cli"]
+	path = ansible/roles/consul-cli
+	url = https://github.com/cumpsd/ansible-role-consul-cli

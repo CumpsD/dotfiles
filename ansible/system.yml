@@ -112,6 +112,17 @@
         '0.11.7':
           linux_amd64: sha256:6b8ce67647a59b2a3f70199c304abca0ddec0e49fd060944c26f666298e23418
 
+  - name: Install Terraform
+    include_role:
+      name: consul-cli
+    vars:
+      consul_ver : '1.2.0'
+      consul_platform : linux_amd64
+      consul_install_dir : /usr/local/bin
+      consul_checksums:
+        '1.2.0':
+          linux_amd64: sha256:85d84ea3f6c68d52549a29b00fd0035f72c2eabff672ae46ca643cb407ef94b4
+
   - name: Install Mono
     include_role:
       name: mono
