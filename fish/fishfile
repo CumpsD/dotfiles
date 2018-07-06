@@ -10,4 +10,5 @@ fisherman/getopts
 fisherman/git_util
 fisherman/last_job_id
 fisherman/menu
+fisherman/rvm
 fisherman/z
