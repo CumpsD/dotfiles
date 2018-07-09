@@ -31,5 +31,8 @@ deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
 # .NET Core
 deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-xenial-prod xenial main
 
+# SQL Server
+deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/prod xenial main
+
 # Keybase
 deb http://prerelease.keybase.io/deb stable main

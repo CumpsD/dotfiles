@@ -32,6 +32,8 @@
     - ruby
     - ruby-dev
     - rubygems
+    - unixodbc-dev
+    - mssql-tools
 
 - name: Install Ruby tools
   become: yes
