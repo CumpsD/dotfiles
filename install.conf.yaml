@@ -46,6 +46,7 @@
     ~/.git-templates/hooks/prepare-commit-msg: git/set-repo-user-hook
 
     ~/.config/omf/init.fish: fish/init.fish
+    ~/.config/omf/init-private.fish: fish/init-private.fish
     ~/.config/omf/bundle: fish/omf/bundle
     ~/.config/omf/channel: fish/omf/channel
     ~/.config/omf/theme: fish/omf/theme

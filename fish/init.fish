@@ -42,7 +42,7 @@ set -x THEFUCK_OVERRIDDEN_ALIASES 'git'
 . ~/.config/fish/gnupg.fish
 
 # Run Private tweaks
-. ~/.dotfiles/fish/init-private.fish
+. ~/.config/fish/init-private.fish
 
 # Start in home directory
 cd ~
