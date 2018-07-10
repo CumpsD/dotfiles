@@ -41,5 +41,8 @@ set -x THEFUCK_OVERRIDDEN_ALIASES 'git'
 # Start GnuPG-agent
 . ~/.config/fish/gnupg.fish
 
+# Run Private tweaks
+. ~/.dotfiles/fish/init-private.fish
+
 # Start in home directory
 cd ~
