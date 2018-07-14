@@ -125,4 +125,5 @@ You can fix it by running `sudo apt-mark hold ebtables` and then executing `~/.d
 ### Resources
 
 | Where | What |
+| --- | --- |
 | [Increasing development productivity with repository management](https://blog.kalis.me/increasing-development-productivity-repository-management/) | System to easily manage repositories. |
