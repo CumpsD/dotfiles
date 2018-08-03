@@ -35,6 +35,7 @@ git@bitbucket.org:vlaamseoverheid/parcel-registry.git
 git@bitbucket.org:vlaamseoverheid/postal-registry.git
 git@bitbucket.org:vlaamseoverheid/projection-handling.git
 git@bitbucket.org:vlaamseoverheid/publicservice-registry.git
+git@bitbucket.org:vlaamseoverheid/redis.git
 git@bitbucket.org:vlaamseoverheid/remote-ipaddress-middleware.git
 git@bitbucket.org:vlaamseoverheid/response-correlationid-middleware.git
 git@bitbucket.org:vlaamseoverheid/road-registry.git
