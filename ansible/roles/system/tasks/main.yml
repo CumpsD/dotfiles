@@ -48,6 +48,7 @@
     - unzip
     - gzip
     - bzip2
+    - dos2unix
 
 - name: Install essential build tools
   apt:
