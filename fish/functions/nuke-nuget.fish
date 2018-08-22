@@ -15,6 +15,11 @@ function nuke-nuget
             rm -rf paket-files
         end
 
+        if ls -al | grep '\.vs' > /dev/null
+            echo 'Removing .vs folder...'
+            rm -rf .vs
+        end
+
         echo 'Clearing NuGet cache...'
         dotnet nuget locals all --clear
                                 
