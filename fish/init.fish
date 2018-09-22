@@ -40,7 +40,7 @@ set -gx WORKON_HOME $HOME/.virtualenvs                    # Environments stored 
 set -gx PROJECT_HOME /c/Touchy/dotfiles/repos/python      # Path to your Python projects
 set -gx VIRTUALENVWRAPPER_PYTHON /usr/bin/python3.6       # Make Python3 the default
 #bash /usr/local/bin/virtualenvwrapper.sh                  # Engage!
-eval (python3 -m virtualfish)
+eval (python3 -m virtualfish auto_activation projects)
 
 # Map hub to git for TheFuck
 eval (hub alias -s)
