@@ -47,6 +47,7 @@
       - awscli
       - thefuck
       - boto
+      - virtualfish
 
   - name: Install Node.js and NPM
     include_role:
