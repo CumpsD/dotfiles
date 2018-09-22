@@ -39,7 +39,8 @@ set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
 set -gx WORKON_HOME $HOME/.virtualenvs                    # Environments stored here
 set -gx PROJECT_HOME /c/Touchy/dotfiles/repos/python      # Path to your Python projects
 set -gx VIRTUALENVWRAPPER_PYTHON /usr/bin/python3.6       # Make Python3 the default
-bash /usr/local/bin/virtualenvwrapper.sh                  # Engage!
+#bash /usr/local/bin/virtualenvwrapper.sh                  # Engage!
+eval (python3 -m virtualfish)
 
 # Map hub to git for TheFuck
 eval (hub alias -s)
