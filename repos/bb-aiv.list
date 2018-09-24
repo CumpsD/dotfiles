@@ -39,6 +39,7 @@ git@bitbucket.org:vlaamseoverheid/redis.git
 git@bitbucket.org:vlaamseoverheid/remote-ipaddress-middleware.git
 git@bitbucket.org:vlaamseoverheid/response-correlationid-middleware.git
 git@bitbucket.org:vlaamseoverheid/road-registry.git
+git@bitbucket.org:vlaamseoverheid/shaperon.git
 git@bitbucket.org:vlaamseoverheid/streetname-registry.git
 git@bitbucket.org:vlaamseoverheid/swagger.git
 git@bitbucket.org:vlaamseoverheid/timestamp-jsonconverter.git
