@@ -29,6 +29,12 @@
     id: "59FDA1CE1B84B3FAD89366C027557F056DC33CA5"
     state: present
 
+- name: Install Python apt key
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: "4AB0F789CBA31744CC7DA76A8CF63AD3F06FC659"
+    state: present
+
 - name: Update all packages
   apt:
     upgrade: dist
@@ -64,6 +70,8 @@
     - ruby-dev
     - rubygems
     - unixodbc-dev
+    - python3.6
+    - python3-pip
 
 - name: Install mssql-tools package
   package:
