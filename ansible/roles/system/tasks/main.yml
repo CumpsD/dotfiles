@@ -72,6 +72,7 @@
     - unixodbc-dev
     - python3.6
     - python3-pip
+    - default-jdk
 
 - name: Install mssql-tools package
   package:
