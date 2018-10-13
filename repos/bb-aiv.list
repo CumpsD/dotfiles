@@ -20,6 +20,7 @@ git@bitbucket.org:vlaamseoverheid/elasticsearch.git
 git@bitbucket.org:vlaamseoverheid/enable-requestrewind-middleware.git
 git@bitbucket.org:vlaamseoverheid/event-handling.git
 git@bitbucket.org:vlaamseoverheid/grar-common.git
+git@bitbucket.org:vlaamseoverheid/grar-tests.git
 git@bitbucket.org:vlaamseoverheid/guid-header-modelbinding.git
 git@bitbucket.org:vlaamseoverheid/hashcode-calculator.git
 git@bitbucket.org:vlaamseoverheid/hexbyte-converter.git
