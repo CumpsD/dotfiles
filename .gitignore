@@ -1,1 +1,3 @@
 ansible/system.retry
+
+proxmark/cards/*.bin
