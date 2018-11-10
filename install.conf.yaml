@@ -77,6 +77,10 @@
 
     ~/.config/terminator/config: terminator/config
 
+    ~/proxmark/cards/aiv-david-cumps.bin: cards/1.bin
+    ~/proxmark/cards/aiv-koen-metsu.bin: cards/2.bin
+    ~/proxmark/cards/aiv-evelien-dhollander.bin: cards/3.bin
+
     ~/repos: repos
 
 - shell:
