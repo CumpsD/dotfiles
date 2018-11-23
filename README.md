@@ -6,7 +6,7 @@
 # Add Ansible, Git and GnuPG
 sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
-sudo apt-get install ansible software-properties-common git gnupg2
+sudo apt-get install ansible software-properties-common git gnupg2 make
 
 # Get the dotfiles
 git clone --recurse-submodules -j8 https://github.com/cumpsd/dotfiles.git <your preferred location>/dotfiles
