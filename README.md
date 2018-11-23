@@ -12,6 +12,11 @@ sudo apt-get install ansible software-properties-common git gnupg2 make
 git clone --recurse-submodules -j8 https://github.com/cumpsd/dotfiles.git <your preferred location>/dotfiles
 cd <your preferred location>/dotfiles
 
+# Do an initial run which sets up a lot of dependencies
+pushd ansible > /dev/null
+ansible-playbook -K -i inventory system.yml
+popd > /dev/null
+
 # Install git-crypt
 mkdir /tmp/git-crypt
 tar -xzf git/git-crypt-0.6.0.tar.gz -C /tmp/git-crypt --strip 1
