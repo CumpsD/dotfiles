@@ -38,4 +38,4 @@ deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/prod xenial main
 deb http://prerelease.keybase.io/deb stable main
 
 # Python 3.6
-deb http://ppa.launchpad.net/jonathonf/python-3.6/ubuntu xenial main
+deb http://ppa.launchpad.net/deadsnakes/ppa/ubuntu xenial main
