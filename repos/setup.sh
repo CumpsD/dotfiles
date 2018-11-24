@@ -82,7 +82,7 @@ find * -maxdepth 1 -name "*.list" | while read fn; do
           continue;
         else
             pushd "$REPO_PATH/$folder" &> /dev/null
-            git clone $repo &> /dev/null
+            git clone "$repo" &> /dev/null
             git_result=$?
             #echo $git_result
             if [[ $git_result -eq 128 ]]; then

@@ -1,2 +1,4 @@
 agiv@vs-ssh.visualstudio.com:v3/agiv/Wegwijs/Wegwijs
-agiv@vs-ssh.visualstudio.com:v3/agiv/DefaultCollection/2013030 - Basisregistraties/2013030 - Basisregistraties
+
+# Spaces in projects, seriously... Anyway, TFS requires the old format for this
+agiv@vs-ssh.visualstudio.com:22/DefaultCollection/2013030 - Basisregistraties/_ssh/2013030 - Basisregistraties
