@@ -155,6 +155,6 @@
   #   include_role:
   #     name: polybar
 
-  - name: Install VS Code
-    include_role:
-      name: visual-studio-code
+  # - name: Install VS Code
+  #   include_role:
+  #     name: visual-studio-code
