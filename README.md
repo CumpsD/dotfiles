@@ -3,18 +3,21 @@
 ## Setup a new machine
 
 ```bash
-# Add Ansible, Git and GnuPG
+# Add Ansible and Git
 sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
-sudo apt-get install ansible software-properties-common git gnupg2
+sudo apt-get install ansible git software-properties-common
 
 # Get the dotfiles
 git clone --recurse-submodules -j8 https://github.com/cumpsd/dotfiles.git <your preferred location>/dotfiles
 cd <your preferred location>/dotfiles
 
-# Do an initial run which sets up a lot of dependencies
-sudo ./install
+# Link as much as we can already
+./install
 sudo -u cumpsd ./install
+sudo ./install
+
+# Do an initial run which sets up a lot of dependencies
 pushd ansible > /dev/null
 ansible-playbook -K -i inventory system.yml
 popd > /dev/null
@@ -28,13 +31,6 @@ sudo cp git-crypt /usr/local/bin/
 
 # Import our existing GPG keys
 gpg2 --import <key>
-
-# Unlock the repo and setup the system
-git-crypt unlock
-./setup-system
-
-# Use SSH for remote
-git remote set-url origin git@github.com:cumpsd/dotfiles.git
 
 # Trust our imported key
 gpg --edit-key user@domain.com
@@ -55,6 +51,17 @@ Your decision? 5
 And don't forget to save the changes:
 
 gpg> save
+
+# Unlock the repo and setup the system
+git-crypt unlock
+./setup-system
+
+# Use SSH for remote
+git remote set-url origin git@github.com:cumpsd/dotfiles.git
+
+# At this point, it might be needed to explicitly run fisher and Oh My Fish! to get our shell setup
+fisher
+omf install
 ```
 
 ## Post Install steps on WSL
@@ -69,8 +76,6 @@ gpg> save
 
 * Install https://github.com/CumpsD/dotfiles/raw/master/wsl/vcxsrv-64.1.20.0.0.installer.exe
 * Download https://raw.githubusercontent.com/CumpsD/dotfiles/master/wsl/X.lnk, save it somewere and edit the path
-* Download https://raw.githubusercontent.com/CumpsD/dotfiles/master/wsl/terminator.vbs and save it somewhere
-* Download https://raw.githubusercontent.com/CumpsD/dotfiles/master/wsl/Terminator.lnk, save it somewhere and edit the path
 
 ## Troubleshooting
 
