@@ -2,43 +2,44 @@
 - name: Install Microsoft apt key
   become: yes
   apt_key:
-    url: "https://packages.microsoft.com/keys/microsoft.asc"
+    id: "BC528686B50D79E339D3721CEB3E94ADBE1229CF"
+    file: ../gpg/apt/microsoft.asc
     state: present
 
 - name: Install Mono apt key
   apt_key:
-    keyserver: keyserver.ubuntu.com
     id: "3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF"
+    file: ../gpg/apt/xamarin.asc
     state: present
 
 - name: Install Nodesource apt key
   apt_key:
-    url: https://keyserver.ubuntu.com/pks/lookup?op=get&fingerprint=on&search=0x1655A0AB68576280
     id: "68576280"
+    file: ../gpg/apt/nodesource.asc
     state: present
 
 - name: Install Docker apt key
   apt_key:
-    url: https://download.docker.com/linux/ubuntu/gpg
     id: "9DC858229FC7DD38854AE2D88D81803C0EBFCD88"
+    file: ../gpg/apt/docker.asc
     state: present
 
 - name: Install Fish apt key
   apt_key:
-    keyserver: keyserver.ubuntu.com
     id: "59FDA1CE1B84B3FAD89366C027557F056DC33CA5"
+    file: ../gpg/apt/fish.asc
     state: present
 
 - name: Install Python apt key
   apt_key:
-    keyserver: keyserver.ubuntu.com
     id: "4AB0F789CBA31744CC7DA76A8CF63AD3F06FC659"
+    file: ../gpg/apt/python.asc
     state: present
 
 - name: Install Keybase apt key
   apt_key:
     id: "47484E50656D16C7"
-    file: ~/.dotfiles/gpg/code_signing_key.asc
+    file: ../gpg/apt/keybase.asc
     state: present
 
 - name: Update apt repos
