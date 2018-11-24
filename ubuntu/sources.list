@@ -20,7 +20,7 @@ deb https://deb.nodesource.com/node_10.x xenial main
 deb http://ppa.launchpad.net/fish-shell/release-2/ubuntu xenial main
 
 # Docker
-deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial edge
+deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
 
 # Mono
 deb [arch=amd64] http://download.mono-project.com/repo/ubuntu xenial main
@@ -37,5 +37,5 @@ deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/prod xenial main
 # Keybase
 deb http://prerelease.keybase.io/deb stable main
 
-# Python 3.6
+# Python 3
 deb http://ppa.launchpad.net/deadsnakes/ppa/ubuntu xenial main

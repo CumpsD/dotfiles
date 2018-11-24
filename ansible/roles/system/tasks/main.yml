@@ -35,6 +35,23 @@
     id: "4AB0F789CBA31744CC7DA76A8CF63AD3F06FC659"
     state: present
 
+- name: Install Keybase apt key
+  apt_key:
+    id: "47484E50656D16C7"
+    file: ~/.dotfiles/gpg/code_signing_key.asc
+    state: present
+
+- name: Update apt repos
+  become: yes
+  apt_repository:
+    repo: '{{ item }}'
+    state: present
+    update_cache: yes
+  with_items:
+    - ppa:ansible/ansible
+    - ppa:fish-shell/release-2
+    - ppa:deadsnakes/ppa
+
 - name: Update all packages
   apt:
     upgrade: dist
@@ -55,6 +72,7 @@
     - gzip
     - bzip2
     - dos2unix
+    - xloadimage
 
 - name: Install essential build tools
   apt:
@@ -70,7 +88,7 @@
     - ruby-dev
     - rubygems
     - unixodbc-dev
-    - python3.6
+    - python3.7
     - python3-pip
     - default-jdk
 

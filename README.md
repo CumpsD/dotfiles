@@ -13,6 +13,8 @@ git clone --recurse-submodules -j8 https://github.com/cumpsd/dotfiles.git <your 
 cd <your preferred location>/dotfiles
 
 # Do an initial run which sets up a lot of dependencies
+sudo ./install
+sudo -u cumpsd ./install
 pushd ansible > /dev/null
 ansible-playbook -K -i inventory system.yml
 popd > /dev/null

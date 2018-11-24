@@ -18,7 +18,7 @@
     include_role:
       name: fzf
     vars:
-      fzf_version: '0.17.4'
+      fzf_version: '0.17.5'
 
   - name: Install Git from source
     include_role:
@@ -27,7 +27,7 @@
       git_packages:
       - git
 
-      git_version: '2.17.1'
+      git_version: '2.19.2'
       git_install_from_source: true
       git_install_path: '/usr'
       git_install_from_source_force_update: true
@@ -36,7 +36,7 @@
     include_role:
       name: hub
     vars:
-      hub_version: "2.4.0"
+      hub_version: "2.6.0"
 
   - name: Install Pip
     include_role:
@@ -63,9 +63,9 @@
     include_role:
       name: golang
     vars:
-      go_tarball: 'go1.10.3.linux-amd64.tar.gz'
-      go_tarball_checksum: 'sha256:fa1b0e45d3b647c252f51f5e1204aba049cde4af177ef9f2181f43004f901035'
-      go_version_target: 'go version go1.10.3 linux/amd64'
+      go_tarball: 'go1.11.2.linux-amd64.tar.gz'
+      go_tarball_checksum: 'sha256:1dfe664fa3d8ad714bbd15a36627992effd150ddabd7523931f077b3926d736d'
+      go_version_target: 'go version go1.11.2 linux/amd64'
 
       go_packages:
       - 'github.com/cumpsd/ccat'
@@ -81,7 +81,7 @@
       docker_service_enabled: no
       docker_restart_handler_state: stopped
       docker_install_compose: True
-      docker_compose_version: '1.21.2'
+      docker_compose_version: '1.23.1'
       docker_compose_path: /usr/local/bin/docker-compose
       docker_users: ['cumpsd']
 
@@ -101,59 +101,59 @@
     include_role:
       name: packer
     vars:
-      packer_version: '1.2.4'
+      packer_version: '1.3.2'
 
   - name: Install Terraform
     include_role:
       name: terraform
     vars:
-      terraform_ver : '0.11.7'
+      terraform_ver : '0.11.10'
       terraform_platform : linux_amd64
       terraform_install_dir : /usr/local/bin
       terraform_checksums:
-        '0.11.7':
-          linux_amd64: sha256:6b8ce67647a59b2a3f70199c304abca0ddec0e49fd060944c26f666298e23418
+        '0.11.10':
+          linux_amd64: sha256:43543a0e56e31b0952ea3623521917e060f2718ab06fe2b2d506cfaa14d54527
 
   - name: Install Consul
     include_role:
       name: consul-cli
     vars:
-      consul_ver : '1.2.0'
+      consul_ver : '1.4.0'
       consul_platform : linux_amd64
       consul_install_dir : /usr/local/bin
       consul_checksums:
-        '1.2.0':
-          linux_amd64: sha256:85d84ea3f6c68d52549a29b00fd0035f72c2eabff672ae46ca643cb407ef94b4
+        '1.4.0':
+          linux_amd64: sha256:41f8c3d63a18ef4e51372522c1e052618cdfcffa3d9f02dba0b50820e8279824
 
   - name: Install Nomad
     include_role:
       name: nomad-cli
     vars:
-      consul_ver : '0.8.4'
-      consul_platform : linux_amd64
-      consul_install_dir : /usr/local/bin
-      consul_checksums:
-        '0.8.4':
-          linux_amd64: sha256:42fc455d09ea0085cc79d7be4fb2089a9ab7db3cc2e8047e8437855a81b090e9
+      nomad_ver : '0.8.6'
+      nomad_platform : linux_amd64
+      nomad_install_dir : /usr/local/bin
+      nomad_checksums:
+        '0.8.6':
+          linux_amd64: sha256:7569561e4a8fdb283f36f9ff6ed7834be6b1f4a2149246f8bd3fb719265c800c
 
   - name: Install Vault
     include_role:
       name: vault-cli
     vars:
-      consul_ver : '0.10.3'
-      consul_platform : linux_amd64
-      consul_install_dir : /usr/local/bin
-      consul_checksums:
-        '0.10.3':
-          linux_amd64: sha256:ffec1c201f819f47581f54c08653a8d17ec0a6699854ebd7f6625babb9e290ed
+      vault_ver : '0.11.5'
+      vault_platform : linux_amd64
+      vault_install_dir : /usr/local/bin
+      vault_checksums:
+        '0.11.5':
+          linux_amd64: sha256:5230377dd8c214b274261a1474ee484a43622cdfa162458311ef11bb8c31b5b8
 
   - name: Install Mono
     include_role:
       name: mono
 
-  - name: Install Polybar
-    include_role:
-      name: polybar
+  # - name: Install Polybar
+  #   include_role:
+  #     name: polybar
 
   - name: Install VS Code
     include_role:
