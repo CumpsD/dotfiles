@@ -86,4 +86,4 @@
 - shell:
     - [sudo cp -f ~/.dotfiles/wsl/wsl.conf /etc/wsl.conf, Update WSL configuration]
     - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --clean --install-to-user-path --complete Hack, Installing Hack font]
-    - [fish -c fisher, Install fisherman plugins]
+    - [sudo -u cumpsd fish -c fisher, Install fisherman plugins]
