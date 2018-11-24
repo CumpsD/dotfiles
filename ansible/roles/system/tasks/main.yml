@@ -42,6 +42,18 @@
     file: ../gpg/apt/keybase.asc
     state: present
 
+- name: Install Deadsnakes PPA apt key
+  apt_key:
+    id: "F23C5A6CF475977595C89F51BA6932366A755776"
+    file: ../gpg/apt/deadsnakes.asc
+    state: present
+
+- name: Install Ansible PPA apt key
+  apt_key:
+    id: "6125E2A8C77F2818FB7BD15B93C4A3FD7BB9C367"
+    file: ../gpg/apt/ansible.asc
+    state: present
+
 - name: Update apt repos
   become: yes
   apt_repository:
