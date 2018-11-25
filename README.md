@@ -81,7 +81,10 @@ omf install
 
 ### VS Code
 
-
+* Install `shan.code-settings-sync`
+* Press `Shift + Alt + D` it will ask your GitHub Gist ID.
+* All VS Code settings are getting synced, whenever you change something you can upload them with `Shift + Alt + U` or turn on Auto-Upload with `Sync : Advanced Options > Toggle Auto-Upload on Settings Change`
+* More info at https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 
 ## Troubleshooting
 
