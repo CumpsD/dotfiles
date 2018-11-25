@@ -69,6 +69,7 @@
     ~/.config/fish/functions/reboot-wsl.fish: fish/functions/reboot-wsl.fish
     ~/.config/fish/functions/nuke-nuget.fish: fish/functions/nuke-nuget.fish
     ~/.config/fish/functions/connect-proxmark.fish: fish/functions/connect-proxmark.fish
+    ~/.config/fish/functions/update-keybase.fish: fish/functions/update-keybase.fish
 
     ~/.config/fish/completions/repo.fish: fish/completions/repo.fish
     ~/.config/fish/completions/repodir.fish: fish/completions/repodir.fish
