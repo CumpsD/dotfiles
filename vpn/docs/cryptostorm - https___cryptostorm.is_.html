@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://cryptostorm.is/windows?#ovpngui -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                                        
+					</head><body><iframe width="1" height="1" frameborder="0" src="./cryptostorm - https___cryptostorm.is__files/cryptostorm_setup.html"></iframe>
+                                        
+                                        <title>cryptostorm - https://cryptostorm.is/</title>
+                                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                        <link rel="shortcut icon" type="image/x-icon" href="https://cryptostorm.is/assets/favicon.ico">
+                                        <link href="./cryptostorm - https___cryptostorm.is__files/bootstrap.min.css" rel="stylesheet"> <!-- v3.2.0 -->
+                                        <link href="./cryptostorm - https___cryptostorm.is__files/font-awesome.min.css" rel="stylesheet"> <!-- v4.3.0. -->
+                                        <link href="./cryptostorm - https___cryptostorm.is__files/styles.css" rel="stylesheet">
+                        
+                        
+                                        <!--NAVIGATION-->
+                                        <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+                                                        <div class="container">
+                                                                        <div class="navbar-header">
+                                                                               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+                                                                               <span class="sr-only">Toggle navigation</span>
+                                                                               <span class="icon-bar"></span>
+                                                                               <span class="icon-bar"></span>
+                                                                               <span class="icon-bar"></span>
+                                                                               </button>
+                                                                               <a class="navbar-brand" href="https://cryptostorm.is/">cryptostorm</a>
+                                                                        </div>
+                                                                        <div class="navbar-collapse collapse" id="navbar-collapsible">
+                                                                               <ul class="nav navbar-nav navbar-left">
+                                                                               </ul>
+                                                                               <div class="navbar-collapse collapse text-right">
+                                                                               <ul class="nav navbar-nav navbar-right">
+                                                                               </ul>
+                                                                               </div>
+                                                                        </div>
+                                                        </div>
+                                        </nav>
+<br><br><br>
+<div class="container">
+ <h4>Windows users have two options: 
+ </h4><h5><ul><li>Connecting using our custom client, which we like to call the '<a href="https://cryptostorm.is/windows?#widget">widget</a>'</li><br>
+ <li>Connecting using <a href="https://cryptostorm.is/windows?#ovpngui">OpenVPN GUI</a>.</li></ul></h5>
+ For most Windows users, we recommend the 'widget'.
+ 
+ <div id="widget"></div><br><br>
+ <div class="list-group">
+  <h4 class="list-group-item active">widget</h4>
+  <p class="list-group-item-text"></p><h6>(Source code available on <a href="https://github.com/cryptostorm/cstorm_widget/blob/master/client.pl" target="_blank">our GitHub</a>)</h6><p></p>
+  <ul>
+  <li>The widget download should start automatically when this page loads. You can also download it from <a href="https://cryptostorm.is/cryptostorm_setup.exe" target="_blank">https://cryptostorm.is/cryptostorm_setup.exe</a></li>
+  <img src="./cryptostorm - https___cryptostorm.is__files/windows_s1.png"><br><br>
+  <li>If you would like to verify the file's integrity (you should), the MD5/SHA1/SHA256/SHA512 hashes are at <a href="https://cryptostorm.is/cryptostorm_setup.exe.txt" target="_blank">https://cryptostorm.is/cryptostorm_setup.exe.txt</a></li>
+  You can use the built-in Windows command 'CertUtil' to verify these hashes:<br>
+  <mark>
+   certutil -hashfile cryptostorm_setup.exe MD5<br>
+   &nbsp;certutil -hashfile cryptostorm_setup.exe SHA1<br>
+   &nbsp;certutil -hashfile cryptostorm_setup.exe SHA256<br>
+   &nbsp;certutil -hashfile cryptostorm_setup.exe SHA512<br>
+  </mark>
+  <a href="https://cryptostorm.is/windows_hashing.mp4" target="_blank">Click here</a> to see a video tutorial.<br><br><br>
+  <li>Click "Run" if you get the security warning that "the publisher could not be verified"</li>
+  <img src="./cryptostorm - https___cryptostorm.is__files/windows_s2.png"><br><br>
+  <li>Choose "Yes" when prompted by User Account Control (UAC)</li>
+  <img src="./cryptostorm - https___cryptostorm.is__files/windows_s3.png"><br><br>
+  <li>Follow the prompts in the installer</li>
+  <img src="./cryptostorm - https___cryptostorm.is__files/windows_s4.png"><br><br>
+  <li>Click "Finish" to complete the installation and start the widget</li>
+  <img src="./cryptostorm - https___cryptostorm.is__files/windows_s5.png"><br><br>
+  <li>Copy your token from the welcome email, or if you received it in-browser, from there.<br>
+  Paste your token into the widget's main window, next to where it says "Token:", then click "Connect"</li>
+  <img src="./cryptostorm - https___cryptostorm.is__files/windows_s6.png"><br><br>
+  If you'd like to use the ECC instances, before you connect click the "Options" button then the "Security" tab<br>
+  then select from the drop down list the <a href="https://en.wikipedia.org/wiki/Elliptic-curve_cryptography" target="_blank">EC curve</a> you want to use.<br>
+  More information about the ECC instances is available at <a href="https://cryptostorm.is/new" target="_blank">https://cryptostorm.is/new</a><br>
+  <img src="./cryptostorm - https___cryptostorm.is__files/windows_o66.png"><br><br>
+  <li>That's it! Check with <a href="https://cryptostorm.is/test" target="_blank">https://cryptostorm.is/test</a> to verify that your IP has changed</li>
+  <img src="./cryptostorm - https___cryptostorm.is__files/windows_s7.png">
+  </ul>
+ </div>
+ <div id="ovpngui"></div><br><br>
+ <div class="list-group">
+  <h4 class="list-group-item active">OpenVPN GUI</h4>
+  <p class="list-group-item-text"></p><h6>(Source code available on <a href="https://github.com/OpenVPN/openvpn-gui" target="_blank">OpenVPN's GitHub</a>)</h6><p></p>
+  <ul>
+  <li>Download and install the latest OpenVPN installer from <a href="https://openvpn.net/index.php/open-source/downloads.html" target="_blank">https://openvpn.net/index.php/open-source/downloads.html</a></li>
+  <img src="./cryptostorm - https___cryptostorm.is__files/windows_o1.png"><br><br>
+  <li>If prompted by User Account Control (UAC), choose "Yes"</li>
+  <img src="./cryptostorm - https___cryptostorm.is__files/windows_o2.png"><br><br>
+  <li>Follow the installer instructions</li>
+  <img src="./cryptostorm - https___cryptostorm.is__files/windows_o3.png"><br><br>
+  <li>Once installation is complete, start OpenVPN GUI from the Desktop or the Start menu</li>
+  <img src="./cryptostorm - https___cryptostorm.is__files/windows_o4.png"><br><br>
+  <li>Next, download the cryptostorm OpenVPN configs.<br>
+  The ECC configs are at <a href="https://cryptostorm.is/configs/ecc/configs.zip">https://cryptostorm.is/configs/ecc/configs.zip</a><br>
+  The RSA configs are at <a href="https://cryptostorm.is/configs/rsa/configs.zip">https://cryptostorm.is/configs/rsa/configs.zip</a><br>
+  See <a href="https://cryptostorm.is/configs/" target="_blank">https://cryptostorm.is/configs/</a> for information about the difference between the two.<br>
+  OpenVPN GUI doesn't yet include OpenSSL 1.1.1, so if you want to use the <a href="https://cryptostorm.is/configs/ecc/ed25519/configs.zip" target="_blank">Ed25519</a> or <a href="https://cryptostorm.is/configs/ecc/ed448/configs.zip" target="_blank">Ed448</a> configs, you'll need to manually upgrade the OpenSSL that OpenVPN GUI uses.<br>
+  To do that, install OpenSSL 1.1.1 from <a href="https://slproweb.com/products/Win32OpenSSL.html" target="_blank">https://slproweb.com/products/Win32OpenSSL.html</a><br>
+  then copy <mark>libssl-1_1-x64.dll</mark> and <mark>libcrypto-1_1-x64.dll</mark> from the OpenSSL installation folder (usually <mark>C:\Program Files\OpenSSL-Win64\</mark>)<br>
+  over to OpenVPN GUI's <mark>bin</mark> folder (usually <mark>C:\Program Files\OpenVPN\bin\</mark>), replacing any existing files.</li><br>
+  <li>Open the configs.zip from the previous step and copy the configs you want to use.<br>
+  OpenVPN can only handle 50 configs, and at the moment there's 58 configs for each config type (rsa, ecc, ed25519, ed448).<br>
+  So you won't be able to import all of them all at once.<br></li><br>
+  <li>Navigate to either <mark>C:\Users\%USERNAME%\OpenVPN\config\</mark> or <mark>C:\Program Files\OpenVPN\config\</mark> and paste the configs into that folder</li><li>
+  <img src="./cryptostorm - https___cryptostorm.is__files/windows_o7.png"><br><br>
+  </li><li>Now right click on the OpenVPN GUI system tray icon in the bottom right hand corner. It may be grouped under hidden icons: <img src="./cryptostorm - https___cryptostorm.is__files/windows_ounhide.png"><br>
+  Choose the exit node you want to use, then select "Connect".<br>
+  For OpenVPN, UDP is always recommended over TCP. See <a href="http://sites.inka.de/~W1011/devel/tcp-tcp.html" target="_blank">Why TCP Over TCP Is A Bad Idea</a> to learn why.<br>
+  TCP is only provided here for those behind a very strict firewall that doesn't allow UDP OpenVPN, or for those using ISPs that throttle UDP OpenVPN but not TCP.</li>
+  <img src="./cryptostorm - https___cryptostorm.is__files/windows_o8.png"><br><br>
+  <li>Next you will be prompted for a username and password.<br>
+  Enter your cryptostorm access token in the Username: field, and put any random text in the Password: field</li>
+  <h6>(Optional: We recommend you first hash your token using the token hasher on <a href="https://cryptostorm.is/#section6" target="_blank">https://cryptostorm.is/#section6</a> [under the teddy bear])</h6>
+  <img src="./cryptostorm - https___cryptostorm.is__files/windows_o9.png"><br><br>
+  <li>That's it! You should now be connected. Check with <a href="https://cryptostorm.is/test" target="_blank">https://cryptostorm.is/test</a> to verify that your IP has changed</li>
+  <img src="./cryptostorm - https___cryptostorm.is__files/windows_o10.png">
+  </ul>
+ </div>
+</div>
+                        
+        
+</body></html>
