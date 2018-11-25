@@ -9,3 +9,5 @@ gpg-connect-agent updatestartuptty /bye > /dev/null
 chmod 700 ~/.gnupg
 chmod 600 ~/.gnupg/*
 chmod 700 ~/.gnupg/private-keys-v1.d/
+
+keybase pgp pull

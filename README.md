@@ -77,6 +77,12 @@ omf install
 * Install https://github.com/CumpsD/dotfiles/raw/master/wsl/vcxsrv-64.1.20.0.0.installer.exe
 * Download https://raw.githubusercontent.com/CumpsD/dotfiles/master/wsl/X.lnk, save it somewere and edit the path
 
+## More configuration sync
+
+### VS Code
+
+
+
 ## Troubleshooting
 
 ### PIP Errors
