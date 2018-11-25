@@ -63,3 +63,6 @@
 [submodule "ansible/roles/vault-cli"]
 	path = ansible/roles/vault-cli
 	url = https://github.com/cumpsd/ansible-role-vault-cli
+[submodule "vpn/cryptostorm-config"]
+	path = vpn/cryptostorm-config
+	url = https://github.com/cryptostorm/cryptostorm_client_configuration_files
