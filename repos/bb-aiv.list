@@ -5,6 +5,7 @@ git@bitbucket.org:vlaamseoverheid/aws-infrastructure.git
 git@bitbucket.org:vlaamseoverheid/best-add.git
 git@bitbucket.org:vlaamseoverheid/building-registry.git
 git@bitbucket.org:vlaamseoverheid/build-pipeline.git
+git@bitbucket.org:vlaamseoverheid/cachet.git
 git@bitbucket.org:vlaamseoverheid/cjm-person-registry.git
 git@bitbucket.org:vlaamseoverheid/command-handling.git
 git@bitbucket.org:vlaamseoverheid/configuration.git
