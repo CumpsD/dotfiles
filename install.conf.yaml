@@ -81,6 +81,7 @@
     ~/proxmark/cards/aiv-david-cumps.bin: cards/1.bin
     ~/proxmark/cards/aiv-koen-metsu.bin: cards/2.bin
     ~/proxmark/cards/aiv-evelien-dhollander.bin: cards/3.bin
+    ~/proxmark/cards/aiv-benjamin-todts.bin: cards/4.bin
 
     ~/repos: repos
 
