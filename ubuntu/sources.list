@@ -39,3 +39,6 @@ deb http://prerelease.keybase.io/deb stable main
 
 # Python 3
 deb http://ppa.launchpad.net/deadsnakes/ppa/ubuntu xenial main
+
+# Azure CLI
+deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ xenial main

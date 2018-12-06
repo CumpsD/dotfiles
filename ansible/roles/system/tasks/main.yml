@@ -105,6 +105,11 @@
     - python3-pip
     - default-jdk
 
+- name: Install Azure cli package
+  package:
+    name: azure-cli
+    state: latest
+
 - name: Install mssql-tools package
   package:
     name: mssql-tools
