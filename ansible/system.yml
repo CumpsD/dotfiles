@@ -58,6 +58,7 @@
       - npm
       - npx
       - yarn
+      - eslint
 
   - name: Install Go
     include_role:
