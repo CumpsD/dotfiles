@@ -85,10 +85,10 @@
       docker_compose_path: /usr/local/bin/docker-compose
       docker_users: ['cumpsd']
 
-  - include_role:
-      name: dotnet-core
-    vars:
-      dotnet_package: 'dotnet-sdk-2.1'
+  # - include_role:
+  #     name: dotnet-core
+  #   vars:
+  #     dotnet_package: 'dotnet-sdk-2.1'
 
   - name: Setup NTP and configure timezone
     include_role:

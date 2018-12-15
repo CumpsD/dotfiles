@@ -14,6 +14,9 @@ set PATH $PATH (gem env gempath | sed 's/:/\/bin\/:/g' | string split : --) 2> /
 set PATH $PATH /opt/mssql-tools/bin/ 2> /dev/null
 set PATH $PATH /usr/local/lib/npm/bin 2> /dev/null
 
+# Add .NET Core to PATH
+set PATH $PATH /usr/share/dotnet 2> /dev/null
+
 # OMF Settings
 set -gx OMF_REPO_URI "https://github.com/cumpsd/oh-my-fish"
 
