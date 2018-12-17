@@ -1,3 +1,17 @@
 git@github.com:informatievlaanderen/build-pipeline.git
+git@github.com:informatievlaanderen/csv-formatter.git
+git@github.com:informatievlaanderen/deterministic-guid-generator.git
+git@github.com:informatievlaanderen/ef-entity-configuration.git
+git@github.com:informatievlaanderen/event-handling.git
+git@github.com:informatievlaanderen/hashcode-calculator.git
+git@github.com:informatievlaanderen/hexbyte-converter.git
+git@github.com:informatievlaanderen/http-logging-filter.git
+git@github.com:informatievlaanderen/infrastructure-tests.git
+git@github.com:informatievlaanderen/json-serializer-settings.git
+git@github.com:informatievlaanderen/logcontext-correlationid-middleware.git
+git@github.com:informatievlaanderen/remote-ipaddress-middleware.git
+git@github.com:informatievlaanderen/response-correlationid-middleware.git
 git@github.com:informatievlaanderen/tostring-builder.git
+git@github.com:informatievlaanderen/trim-string-jsonconverter.git
+git@github.com:informatievlaanderen/timestamp-jsonconverter.git
 git@github.com:informatievlaanderen/version-header-middleware.git
