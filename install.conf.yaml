@@ -92,4 +92,4 @@
     - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --clean --install-to-user-path --complete Hack, Installing Hack font]
     - [sudo -u cumpsd fish -c fisher, Install fisherman plugins]
     - [sudo -u cumpsd ~/.dotfiles/dotnet/dotnet-install.sh --no-path --version 2.1.500, Install .NET Core 2.1.500]
-    - [sudo -u cumpsd ~/.dotfiles/dotnet/dotnet-install.sh --no-path --version 2.2.100, Install .NET Core 2.2.100]
+    - [sudo -u cumpsd ~/.dotfiles/dotnet/dotnet-install.sh --no-path --version 2.2.101, Install .NET Core 2.2.101]
