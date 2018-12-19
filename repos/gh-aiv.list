@@ -22,3 +22,6 @@ git@github.com:informatievlaanderen/timestamp-jsonconverter.git
 git@github.com:informatievlaanderen/version-header-middleware.git
 git@github.com:informatievlaanderen/swagger.git
 git@github.com:informatievlaanderen/shaperon.git
+git@github.com:informatievlaanderen/redis-populator.git
+git@github.com:informatievlaanderen/http-security-headers-middleware.git
+git@github.com:informatievlaanderen/command-handling.git
