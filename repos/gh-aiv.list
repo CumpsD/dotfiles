@@ -18,7 +18,9 @@ git@github.com:informatievlaanderen/http-security-headers-middleware.git
 git@github.com:informatievlaanderen/infrastructure-tests.git
 git@github.com:informatievlaanderen/json-serializer-settings.git
 git@github.com:informatievlaanderen/logcontext-correlationid-middleware.git
+git@github.com:informatievlaanderen/municipality-registry.git
 git@github.com:informatievlaanderen/redis-populator.git
+git@github.com:informatievlaanderen/registry-documentation.git
 git@github.com:informatievlaanderen/remote-ipaddress-middleware.git
 git@github.com:informatievlaanderen/response-correlationid-middleware.git
 git@github.com:informatievlaanderen/shaperon.git
