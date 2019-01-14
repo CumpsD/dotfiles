@@ -29,6 +29,7 @@ git@github.com:informatievlaanderen/registry-documentation.git
 git@github.com:informatievlaanderen/remote-ipaddress-middleware.git
 git@github.com:informatievlaanderen/response-correlationid-middleware.git
 git@github.com:informatievlaanderen/shaperon.git
+git@github.com:informatievlaanderen/streetname-registry.git
 git@github.com:informatievlaanderen/swagger.git
 git@github.com:informatievlaanderen/timestamp-jsonconverter.git
 git@github.com:informatievlaanderen/tostring-builder.git
