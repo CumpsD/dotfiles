@@ -22,6 +22,7 @@ git@github.com:informatievlaanderen/infrastructure-tests.git
 git@github.com:informatievlaanderen/json-serializer-settings.git
 git@github.com:informatievlaanderen/logcontext-correlationid-middleware.git
 git@github.com:informatievlaanderen/municipality-registry.git
+git@github.com:informatievlaanderen/postal-registry.git
 git@github.com:informatievlaanderen/projection-handling.git
 git@github.com:informatievlaanderen/public-api.git
 git@github.com:informatievlaanderen/redis-populator.git
