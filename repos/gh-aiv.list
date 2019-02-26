@@ -31,6 +31,7 @@ git@github.com:informatievlaanderen/redis-populator.git
 git@github.com:informatievlaanderen/registry-documentation.git
 git@github.com:informatievlaanderen/remote-ipaddress-middleware.git
 git@github.com:informatievlaanderen/response-correlationid-middleware.git
+git@github.com:informatievlaanderen/rfc3339-datetimeoffset.git
 git@github.com:informatievlaanderen/shaperon.git
 git@github.com:informatievlaanderen/streetname-registry.git
 git@github.com:informatievlaanderen/swagger.git
