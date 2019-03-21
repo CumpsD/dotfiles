@@ -1,5 +1,6 @@
 git@github.com:informatievlaanderen/address-registry.git
 git@github.com:informatievlaanderen/api.git
+git@github.com:informatievlaanderen/bankaccountnumber-registry.git
 git@github.com:informatievlaanderen/build-pipeline.git
 git@github.com:informatievlaanderen/command-handling.git
 git@github.com:informatievlaanderen/correlationid-middleware.git
