@@ -45,6 +45,8 @@ set -gx VIRTUALENVWRAPPER_PYTHON /usr/bin/python3.7       # Make Python3 the def
 #bash /usr/local/bin/virtualenvwrapper.sh                  # Engage!
 eval (python3 -m virtualfish auto_activation projects)
 
+set PATH $PATH (python3 -m site --user-base)/bin 2> /dev/null
+
 # Map hub to git for TheFuck
 eval (hub alias -s)
 set -x THEFUCK_OVERRIDDEN_ALIASES 'git'
