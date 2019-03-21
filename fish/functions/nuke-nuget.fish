@@ -28,8 +28,8 @@ function nuke-nuget
             rm -rf ~/.nuget/
         end
 
-        find . -type d -regextype posix-extended -regex ".*/(bin|obj)" -prune -exec echo "Preparing to delete {}" \;
-        find . -type d -regextype posix-extended -regex ".*/(bin|obj)" -prune -exec rm -rf "{}" +
+        find . -type d -regextype posix-extended -regex ".*/(bin|obj)" ! -regex '\./node_modules/.*' -prune -exec echo "Preparing to delete {}" \;
+        find . -type d -regextype posix-extended -regex ".*/(bin|obj)" ! -regex '\./node_modules/.*' -prune -exec rm -rf "{}" +
                                                                 
         echo 'DONE: You got rid of all NuGet cruft!'
     else
