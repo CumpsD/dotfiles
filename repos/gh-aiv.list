@@ -32,6 +32,7 @@ git@github.com:informatievlaanderen/public-api.git
 git@github.com:informatievlaanderen/publicservice-registry.git
 git@github.com:informatievlaanderen/redis-populator.git
 git@github.com:informatievlaanderen/registry-documentation.git
+git@github.com:informatievlaanderen/registry-testing.git
 git@github.com:informatievlaanderen/remote-ipaddress-middleware.git
 git@github.com:informatievlaanderen/response-correlationid-middleware.git
 git@github.com:informatievlaanderen/rfc3339-datetimeoffset.git
