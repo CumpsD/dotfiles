@@ -63,6 +63,7 @@
   with_items:
     - ppa:ansible/ansible
     - ppa:fish-shell/release-2
+    - ppa:fish-shell/release-3
     - ppa:deadsnakes/ppa
 
 - name: Update all packages
@@ -74,36 +75,34 @@
 
 - name: Install basic command-line utilities
   apt:
-    name: "{{ item }}"
+    name: [
+        'curl',
+        'gnupg2',
+        'htop',
+        'wget',
+        'unzip',
+        'gzip',
+        'bzip2',
+        'dos2unix',
+        'xloadimage']
     state: latest
-  with_items:
-    - curl
-    - gnupg2
-    - htop
-    - wget
-    - unzip
-    - gzip
-    - bzip2
-    - dos2unix
-    - xloadimage
 
 - name: Install essential build tools
   apt:
-    name: "{{ item }}"
+    name: [
+        'build-essential',
+        'intltool',
+        'libtool',
+        'libsndfile1-dev',
+        'libjson-c-dev',
+        'ruby',
+        'ruby-dev',
+        'rubygems',
+        'unixodbc-dev',
+        'python3.7',
+        'python3-pip',
+        'default-jdk']
     state: latest
-  with_items:
-    - build-essential
-    - intltool
-    - libtool
-    - libsndfile1-dev
-    - libjson-c-dev
-    - ruby
-    - ruby-dev
-    - rubygems
-    - unixodbc-dev
-    - python3.7
-    - python3-pip
-    - default-jdk
 
 - name: Install Azure cli package
   package:
