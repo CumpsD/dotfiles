@@ -42,8 +42,8 @@ set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
 set -gx WORKON_HOME $HOME/.virtualenvs                    # Environments stored here
 set -gx PROJECT_HOME /c/Touchy/dotfiles/repos/python      # Path to your Python projects
 set -gx VIRTUALENVWRAPPER_PYTHON /usr/bin/python3.7       # Make Python3 the default
-#bash /usr/local/bin/virtualenvwrapper.sh                  # Engage!
-eval (python3 -m virtualfish auto_activation projects)
+# bash /usr/local/bin/virtualenvwrapper.sh                  # Engage!
+# eval (python3 -m virtualfish auto_activation projects)
 
 set PATH $PATH (python3 -m site --user-base)/bin 2> /dev/null
 
