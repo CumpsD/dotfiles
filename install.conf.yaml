@@ -106,4 +106,5 @@
     - [sudo -u cumpsd ~/.dotfiles/dotnet/dotnet-install.sh --no-path --runtime aspnetcore --version 2.2.0   , Install .NET Core 2.2.0]
     - [sudo -u cumpsd ~/.dotfiles/dotnet/dotnet-install.sh --no-path --runtime aspnetcore --version 2.2.1   , Install .NET Core 2.2.1]
     - [sudo -u cumpsd ~/.dotfiles/dotnet/dotnet-install.sh --no-path --runtime aspnetcore --version 2.2.2   , Install .NET Core 2.2.2]
-    - [sudo -u cumpsd ~/.dotfiles/dotnet/dotnet-install.sh --no-path --version 2.2.202                      , Install .NET Core 2.2.3]
+    - [sudo -u cumpsd ~/.dotfiles/dotnet/dotnet-install.sh --no-path --runtime aspnetcore --version 2.2.3   , Install .NET Core 2.2.3]
+    - [sudo -u cumpsd ~/.dotfiles/dotnet/dotnet-install.sh --no-path --version 2.2.203                      , Install .NET Core 2.2.4]
