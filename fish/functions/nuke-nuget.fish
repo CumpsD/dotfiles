@@ -1,5 +1,5 @@
 function nuke-nuget
-    if pwd | grep '/dotfiles/repos' > /dev/null
+    if pwd | grep '/repos' > /dev/null
         if ls -al | grep '\packages' > /dev/null
             echo 'Removing packages...'
             rm -rf packages
@@ -33,6 +33,6 @@ function nuke-nuget
                                                                 
         echo 'DONE: You got rid of all NuGet cruft!'
     else
-        echo 'WARNING: Not in a dotfiles/repos folder'
+        echo 'WARNING: Not in a /repos folder'
     end
 end
