@@ -27,6 +27,7 @@ git@github.com:informatievlaanderen/logcontext-correlationid-middleware.git
 git@github.com:informatievlaanderen/municipality-registry.git
 git@github.com:informatievlaanderen/parcel-registry.git
 git@github.com:informatievlaanderen/postal-registry.git
+git@github.com:informatievlaanderen/problemdetails-middleware.git
 git@github.com:informatievlaanderen/projection-handling.git
 git@github.com:informatievlaanderen/projector.git
 git@github.com:informatievlaanderen/public-api.git
