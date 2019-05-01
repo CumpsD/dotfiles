@@ -11,6 +11,7 @@ git@github.com:CumpsD/ansible-role-terraform.git
 git@github.com:CumpsD/ansible-role-consul-cli.git
 git@github.com:CumpsD/ansible-role-nomad-cli.git
 git@github.com:CumpsD/ansible-role-vault-cli.git
+git@github.com:CumpsD/asterisk.git
 git@github.com:CumpsD/nmct-machine-learning-ai.git
 git@github.com:CumpsD/proxmark3.git
 git@github.com:CumpsD/knx.net.git
