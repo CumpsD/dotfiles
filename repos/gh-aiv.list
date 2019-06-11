@@ -3,6 +3,7 @@ git@github.com:informatievlaanderen/api.git
 git@github.com:informatievlaanderen/aws-infrastructure.git
 git@github.com:informatievlaanderen/bankaccountnumber-registry.git
 git@github.com:informatievlaanderen/build-pipeline.git
+git@github.com:informatievlaanderen/building-registry.git
 git@github.com:informatievlaanderen/command-handling.git
 git@github.com:informatievlaanderen/correlationid-middleware.git
 git@github.com:informatievlaanderen/crab.git
