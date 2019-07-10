@@ -1,15 +1,31 @@
 # @cumpsd • dotfiles
 
-## Setup a new machine
+## Goal
+
+> Make my life easier when setting up a machine.
+
+## Prerequisites on an Ubuntu based machine
 
 ```bash
 # Add Ansible and Git
 sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
 sudo apt-get install ansible git software-properties-common
+```
 
+## Prerequisites on an Arch based machine
+
+```bash
+## Add Ansible and Git
+sudo pacman -Syu
+sudo pacman -S ansible git
+```
+
+## Setup an Ubuntu or Arch based machine
+
+```bash
 # Get the dotfiles
-git clone --recurse-submodules -j8 https://github.com/cumpsd/dotfiles.git <your preferred location>/dotfiles
+git clone --recurse-submodules https://github.com/cumpsd/dotfiles.git <your preferred location>/dotfiles
 cd <your preferred location>/dotfiles
 
 # Link as much as we can already
@@ -66,16 +82,18 @@ omf install
 
 ## Post Install steps on WSL
 
+### Set console to Solarized Dark
+
+```bash
+# Setup WSL specific tweaks
+./setup-wsl
+```
+
 ### Font Install
 
 * Download https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Hack.zip
 * Extract and install the required fonts (everything which ends with `Complete Mono Windows Compatible.ttf`)
 * Set default console font to Hack NF, 14
-
-### X Server Install
-
-* Install https://github.com/CumpsD/dotfiles/raw/master/wsl/vcxsrv-64.1.20.0.0.installer.exe
-* Download https://raw.githubusercontent.com/CumpsD/dotfiles/master/wsl/X.lnk, save it somewere and edit the path
 
 ## More configuration sync
 
@@ -92,7 +110,7 @@ omf install
 
 If the task `[pip : Ensure pip_install_packages are installed.]` is throwing errors looking like:
 
-```
+```plain
 stderr: Traceback (most recent call last):
 File \"/home/cumpsd/.local/bin/pip2\", line 7, in <module>
 from pip import main
@@ -101,17 +119,11 @@ ImportError: cannot import name main\
 
 You can fix it by running `python -m pip uninstall pip` and then executing `~/.dotfiles/setup-system` again.
 
-### ebtables on WSL with Ubuntu 18.04
-
-When doing an `apt-get dist-upgrade` on Ubuntu Bionic, it will fail on `ebtables` due to https://github.com/Microsoft/WSL/issues/3274
-
-You can fix it by running `sudo apt-mark hold ebtables` and then executing `~/.dotfiles/setup-system` again.
-
 ## Credits
 
 ### Dotfiles
 
-* https://github.com/anishathalye/dotbot - A tool that bootstraps your dotfiles ⚡️
+* [dotbot](https://github.com/anishathalye/dotbot) - A tool that bootstraps your dotfiles ⚡️
 
 ### Ansible Roles
 

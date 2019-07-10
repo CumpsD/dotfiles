@@ -1,1 +1,5 @@
 proxmark/cards/*.bin
+
+ssh/putty/Jumplist
+ssh/putty/Sessions
+ssh/putty/SshHostKeys

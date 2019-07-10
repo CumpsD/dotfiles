@@ -14,10 +14,8 @@
     - ~/.config/fish
     - ~/.config/omf
     - ~/.config/fish/functions
-    - ~/.config/terminator
     - ~/.gnupg
     - ~/.aws
-    - ~/.i3
 
 - link:
     /etc/apt/sources.list: ubuntu/sources.list
@@ -34,10 +32,6 @@
 
     ~/.aws/config: aws/config
     ~/.aws/credentials: aws/credentials
-
-    ~/.i3/config: i3/config
-    ~/.i3/i3blocks.conf: i3/i3blocks.conf
-    ~/.i3/safe_lock_50.png: i3/safe_lock_50.png
 
     ~/.gitconfig: git/gitconfig
 
@@ -77,8 +71,6 @@
     ~/.config/fish/completions/repodir.fish: fish/completions/repodir.fish
     ~/.config/fish/completions/dotnet.fish: fish/completions/dotnet.fish
     ~/.config/fish/completions/hub.fish: fish/completions/hub.fish
-
-    ~/.config/terminator/config: terminator/config
 
     ~/proxmark/cards/aiv-david-cumps.bin: cards/1.bin
     ~/proxmark/cards/aiv-koen-metsu.bin: cards/2.bin

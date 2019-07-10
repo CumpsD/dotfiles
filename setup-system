@@ -24,11 +24,4 @@ pushd repos > /dev/null
 popd > /dev/null
 
 echo
-echo "Setting default console to Solarized Dark..."
-read -p "Press enter to continue"
-pushd colortool > /dev/null
-./colortool.exe -d solarized_dark
-popd > /dev/null
-
-echo
 echo "Installed new system, it might be wise to re-open the console..."
