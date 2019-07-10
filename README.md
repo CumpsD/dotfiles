@@ -1,5 +1,25 @@
 # @cumpsd • dotfiles
 
+## Table of Contents
+
+- [@cumpsd • dotfiles](#cumpsd-•-dotfiles)
+  - [Goal](#goal)
+  - [Prerequisites on an Ubuntu based machine](#prerequisites-on-an-ubuntu-based-machine)
+  - [Prerequisites on an Arch based machine](#prerequisites-on-an-arch-based-machine)
+  - [Setup an Ubuntu or Arch based machine](#setup-an-ubuntu-or-arch-based-machine)
+  - [Post Install steps on WSL](#post-install-steps-on-wsl)
+    - [Change Console to Solarized Dark](#change-console-to-solarized-dark)
+    - [Windows Font Install](#windows-font-install)
+  - [More configuration sync](#more-configuration-sync)
+    - [VS Code](#vs-code)
+  - [Troubleshooting](#troubleshooting)
+    - [PIP Errors](#pip-errors)
+  - [Credits](#credits)
+    - [Dotfiles](#dotfiles)
+    - [Ansible Roles](#ansible-roles)
+    - [Misc](#misc)
+    - [Resources](#resources)
+
 ## Goal
 
 > Make my life easier when setting up a machine.
@@ -82,27 +102,27 @@ omf install
 
 ## Post Install steps on WSL
 
-### Set console to Solarized Dark
+### Change Console to Solarized Dark
 
 ```bash
 # Setup WSL specific tweaks
 ./setup-wsl
 ```
 
-### Font Install
+### Windows Font Install
 
-* Download https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Hack.zip
-* Extract and install the required fonts (everything which ends with `Complete Mono Windows Compatible.ttf`)
-* Set default console font to Hack NF, 14
+- Download https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Hack.zip
+- Extract and install the required fonts (everything which ends with `Complete Mono Windows Compatible.ttf`)
+- Set default console font to Hack NF, 14
 
 ## More configuration sync
 
 ### VS Code
 
-* Install `shan.code-settings-sync`
-* Press `Shift + Alt + D` it will ask your GitHub Gist ID.
-* All VS Code settings are getting synced, whenever you change something you can upload them with `Shift + Alt + U` or turn on Auto-Upload with `Sync : Advanced Options > Toggle Auto-Upload on Settings Change`
-* More info at https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
+- Install `shan.code-settings-sync`
+- Press `Shift + Alt + D` it will ask your GitHub Gist ID.
+- All VS Code settings are getting synced, whenever you change something you can upload them with `Shift + Alt + U` or turn on Auto-Upload with `Sync : Advanced Options > Toggle Auto-Upload on Settings Change`
+- More info at https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 
 ## Troubleshooting
 
@@ -123,7 +143,7 @@ You can fix it by running `python -m pip uninstall pip` and then executing `~/.d
 
 ### Dotfiles
 
-* [dotbot](https://github.com/anishathalye/dotbot) - A tool that bootstraps your dotfiles ⚡️
+- [dotbot](https://github.com/anishathalye/dotbot) - A tool that bootstraps your dotfiles ⚡️
 
 ### Ansible Roles
 
