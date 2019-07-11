@@ -10,9 +10,8 @@
 # Bring the wifi adapter up
 ip link set wlp2s0 up
 
-# Connect to the wifi
+# Connect to the wifi and authorize in Unifi
 iw dev wlp2s0 connect Purgatory
-# Authorize in Unifi
 iw dev wlp2s0 link
 
 # Get an IP
