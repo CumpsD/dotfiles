@@ -16,7 +16,8 @@ iw dev wlp2s0 link
 
 # Get an IP
 ifconfig
-dhclient
+dhcpcd
+ping google.com
 ```
 
 ## Prepare Date
@@ -95,6 +96,12 @@ nano /etc/hosts
 > ::1 localhost
 ```
 
+## Setup Wifi Tools
+
+```bash
+pacman -S iw
+```
+
 ## Change Console Font
 
 ```bash
@@ -115,10 +122,10 @@ nano /etc/vconsole.conf
 mkinitpcio -p linux
 
 # Install Intel Microcode
-pacman -S intel-ucode iucode_tool
+pacman -S intel-ucode iucode-tool
 
 # Copy everything to our EFI partition
-cp /boot/* /efi
+cp /boot/* /efi/
 
 # Install systemd-boot
 bootctl --path=/efi install
@@ -143,11 +150,13 @@ nano /efi/loader/entries/arch.conf
 
 ```bash
 # Enable 'sudo' for the wheel group
-visudo
+pacman -S sudo
+nano /etc/sudoers
 # Uncomment wheel group
 
 # Add our daily user
 useradd -m -G wheel -s /bin/bash cumpsd
+passwd cumpsd
 ```
 
 ## Cleanup and Reboot
@@ -164,38 +173,64 @@ umount -R /mnt
 
 # Cross fingers
 reboot
+
+# Pull out Live USB stick
+```
+
+## Get running after reboot, login with normal user
+
+```bash
+# Bring the wifi adapter up
+sudo ip link set wlp2s0 up
+
+# Connect to the wifi and authorize in Unifi
+sudo iw dev wlp2s0 connect Purgatory
+sudo iw dev wlp2s0 link
+
+# Get an IP
+sudo dhcpcd
+ping google.com
 ```
 
 ## Prepare Surface Kernel
 
 ```bash
-pacman -S base-devel
+# Install development tools
+sudo pacman -S base-devel git
+
+# Clone the Surface patches and prepare for compilation
 git clone https://github.com/dmhacker/arch-linux-surface
+cd arch-linux-surface
 sudo sh setup.sh
 sudo sh configure.sh
 
+# Compile the Surface specific kernel
+sudo chown -R cumpsd:cumpsd build-[VERSION]
 cd build-[VERSION]
 MAKEFLAGS="-j8" makepkg -sc
+# This takes quite a bit
 
+# Install the new kernel
 sudo pacman -U linux-surface-[VERSION]-1-x86_64.pkg.tar.xz
 sudo pacman -U linux-surface-headers-[VERSION]-1-x86_64.pkg.tar.xz
 sudo pacman -U linux-surface-docs-[VERSION]-1-x86_64.pkg.tar.xz
 
-cp /boot/* /efi
-sudo /usr/bin/mkinitcpio -p linux-surface
+# Update the EFI partition
+sudo mkinitcpio -p linux-surface
+sudo cp /boot/* /efi/
 ```
 
 ## Update Bootloader and Reboot
 
 ```bash
-nano /efi/loader/entries/arch.conf
+sudo nano /efi/loader/entries/arch.conf
 > title   Arch Linux (5.1.15-1-surface)
 > linux   /vmlinuz-linux-surface
 > initrd  /intel-ucode.img
 > initrd  /initramfs-linux-surface.img
 > options root=UUID=xxxxxx rw
 
-reboot
+sudo reboot
 ```
 
 ## Check Microcode
