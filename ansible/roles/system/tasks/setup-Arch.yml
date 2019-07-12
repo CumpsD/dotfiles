@@ -53,14 +53,20 @@
     aur_only: yes
 
 - name: Install Azure cli package
-  package:
-    name: azure-cli
-    state: latest
+  become: yes
+  become_user: aur_builder
+  aur:
+    name: [
+        'python-azure-cli']
+    aur_only: yes
 
 - name: Install mssql-tools package
-  package:
-    name: mssql-tools
-    state: latest
+  become: yes
+  become_user: aur_builder
+  aur:
+    name: [
+        'mssql-tools']
+    aur_only: yes
   environment:
     ACCEPT_EULA: "y"
 

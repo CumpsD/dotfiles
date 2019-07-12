@@ -41,7 +41,7 @@ sudo pacman -Syu
 sudo pacman -S ansible git
 
 # Add ansible AUR module
-git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur
+git clone https://github.com/cumpsd/ansible-aur.git ~/.ansible/plugins/modules/aur
 ```
 
 ## Setup an Ubuntu or Arch based machine
