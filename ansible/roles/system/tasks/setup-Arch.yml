@@ -1,0 +1,60 @@
+---
+- name: Update pacman (pacman -Syu)
+  become: yes
+  pacman:
+    update_cache: yes
+    upgrade: yes
+
+- name: Install basic command-line utilities
+  pacman:
+    name: [
+        'curl',
+        'gnupg2',
+        'htop',
+        'wget',
+        'unzip',
+        'gzip',
+        'bzip2',
+        'dos2unix',
+        'xloadimage']
+    state: latest
+
+- name: Install essential build tools
+  pacman:
+    name: [
+        'build-essential',
+        'intltool',
+        'libtool',
+        'libsndfile1-dev',
+        'libjson-c-dev',
+        'ruby',
+        'ruby-dev',
+        'rubygems',
+        'unixodbc-dev',
+        'python3.7',
+        'python3-pip',
+        'default-jdk']
+    state: latest
+
+- name: Install Azure cli package
+  package:
+    name: azure-cli
+    state: latest
+
+- name: Install mssql-tools package
+  package:
+    name: mssql-tools
+    state: latest
+  environment:
+    ACCEPT_EULA: "y"
+
+- name: Install Ruby tools
+  become: yes
+  become_user: "{{ lookup('env','LOGNAME') }}"
+  gem:
+    name: "{{ item }}"
+    state: latest
+    user_install: yes
+  with_items:
+    - fpm
+    - deb-s3
