@@ -9,7 +9,7 @@
   pacman:
     name: [
         'curl',
-        'gnupg2',
+        'gnupg',
         'htop',
         'wget',
         'unzip',
@@ -22,19 +22,23 @@
 - name: Install essential build tools
   pacman:
     name: [
-        'build-essential',
         'intltool',
         'libtool',
-        'libsndfile1-dev',
-        'libjson-c-dev',
         'ruby',
-        'ruby-dev',
         'rubygems',
-        'unixodbc-dev',
-        'python3.7',
-        'python3-pip',
-        'default-jdk']
+        'unixodbc',
+        'python',
+        'python-pip',
+        'jdk-openjdk']
     state: latest
+
+- name: Install essential build tools (AUR)
+  aur:
+    name: [
+        'json-c ',
+        'libsndfile1-dev']
+    state: latest
+    aur_only: yes
 
 - name: Install Azure cli package
   package:

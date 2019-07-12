@@ -36,9 +36,12 @@ sudo apt-get install ansible git software-properties-common
 ## Prerequisites on an Arch based machine
 
 ```bash
-## Add Ansible and Git
+# Add Ansible and Git
 sudo pacman -Syu
 sudo pacman -S ansible git
+
+# Add ansible AUR module
+git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur
 ```
 
 ## Setup an Ubuntu or Arch based machine
