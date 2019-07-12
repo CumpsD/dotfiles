@@ -1,9 +1,20 @@
 ---
 - name: Update pacman (pacman -Syu)
-  become: yes
   pacman:
     update_cache: yes
     upgrade: yes
+
+- name: Add AUR builder user
+  user:
+    name: aur_builder
+    group: wheel
+
+- name: Allow AUR builder to run pacman
+  lineinfile:
+    path: /etc/sudoers.d/11-install-aur_builder
+    line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+    create: yes
+    validate: 'visudo -cf %s'
 
 - name: Install basic command-line utilities
   pacman:
@@ -33,11 +44,12 @@
     state: latest
 
 - name: Install essential build tools (AUR)
+  become: yes
+  become_user: aur_builder
   aur:
     name: [
         'json-c ',
-        'libsndfile1-dev']
-    state: latest
+        'libsndfile-git']
     aur_only: yes
 
 - name: Install Azure cli package
