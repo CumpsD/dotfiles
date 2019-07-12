@@ -1,0 +1,8 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+
+- link:
+    /etc/apt/sources.list: ubuntu/sources.list

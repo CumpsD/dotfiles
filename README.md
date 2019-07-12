@@ -49,9 +49,13 @@ git clone --recurse-submodules https://github.com/cumpsd/dotfiles.git <your pref
 cd <your preferred location>/dotfiles
 
 # Link as much as we can already
-./install
-sudo -u cumpsd ./install
-sudo ./install
+./install base
+
+# On Ubuntu, also run:
+sudo ./install ubuntu
+
+# On WSL, also run:
+sudo ./install wsl
 
 # Do an initial run which sets up a lot of dependencies
 pushd ansible > /dev/null
@@ -92,6 +96,9 @@ gpg> save
 git-crypt unlock
 ./setup-system
 
+# If you want all .NET Core versions, also run:
+sudo ./install dotnet
+
 # Use SSH for remote
 git remote set-url origin git@github.com:cumpsd/dotfiles.git
 
@@ -111,7 +118,7 @@ omf install
 
 ### Windows Font Install
 
-- Download https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Hack.zip
+- Download [Nerd Fonts Hack](https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Hack.zip)
 - Extract and install the required fonts (everything which ends with `Complete Mono Windows Compatible.ttf`)
 - Set default console font to Hack NF, 14
 
