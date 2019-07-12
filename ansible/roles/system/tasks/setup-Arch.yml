@@ -57,7 +57,7 @@
   aur:
     use: yay
     name: [
-        'json-c ',
+        'json-c',
         'libsndfile-git']
 
 - name: Install Azure cli package
