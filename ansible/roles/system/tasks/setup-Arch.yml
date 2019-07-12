@@ -35,9 +35,7 @@
         'gzip',
         'bzip2',
         'dos2unix',
-        'xloadimage',
-        'git',
-        'hub']
+        'xloadimage']
     state: latest
 
 - name: Install essential build tools
@@ -50,8 +48,21 @@
         'unixodbc',
         'python',
         'python-pip',
-        'jdk-openjdk',
-        'nodejs']
+        'jdk-openjdk']
+    state: latest
+
+- name: Install Git and Hub
+  pacman:
+    name: [
+        'git',
+        'hub']
+    state: latest
+
+- name: Install Node and NPM
+  pacman:
+    name: [
+        'nodejs',
+        'npm']
     state: latest
 
 - name: Install essential build tools (AUR)
