@@ -8,18 +8,6 @@
     include_role:
       name: system
 
-  - name: Install Fish and configure default shell
-    include_role:
-      name: fish
-    vars:
-      fish_users: ['root', 'cumpsd']
-
-  - name: Install FZF
-    include_role:
-      name: fzf
-    vars:
-      fzf_version: '0.18.0'
-
   - name: Install Git from source
     include_role:
       name: git
@@ -37,6 +25,18 @@
       name: hub
     vars:
       hub_version: "2.12.2"
+
+  - name: Install Fish and configure default shell
+    include_role:
+      name: fish
+    vars:
+      fish_users: ['root', 'cumpsd']
+
+  - name: Install FZF
+    include_role:
+      name: fzf
+    vars:
+      fzf_version: '0.18.0'
 
   - name: Install Pip
     include_role:
