@@ -40,7 +40,7 @@ sudo apt-get install ansible git software-properties-common
 sudo pacman -Syu
 sudo pacman -S ansible git
 
-# Add ansible AUR module
+# Add Ansible AUR module
 git clone https://github.com/cumpsd/ansible-aur.git ~/.ansible/plugins/modules/aur
 ```
 
