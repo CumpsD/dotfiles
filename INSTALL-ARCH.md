@@ -99,7 +99,8 @@ nano /etc/hosts
 ## Setup Wifi Tools
 
 ```bash
-pacman -S iw
+pacman -S iw networkmanager
+systemctl enable NetworkManager.service
 ```
 
 ## Change Console Font
