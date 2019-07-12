@@ -8,18 +8,6 @@
     include_role:
       name: system
 
-  - name: Install Git from source
-    include_role:
-      name: git
-    vars:
-      git_packages:
-      - git
-
-      git_version: '2.22.0'
-      git_install_from_source: true
-      git_install_path: '/usr'
-      git_install_from_source_force_update: true
-
   - name: Install Hub
     include_role:
       name: hub
