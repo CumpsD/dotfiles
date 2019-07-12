@@ -51,6 +51,15 @@
         'jdk-openjdk']
     state: latest
 
+- name: Install essential build tools (AUR)
+  become: yes
+  become_user: aur_builder
+  aur:
+    use: yay
+    name: [
+        'json-c',
+        'libsndfile-git']
+
 - name: Install Git and Hub
   pacman:
     name: [
@@ -64,15 +73,6 @@
         'nodejs',
         'npm']
     state: latest
-
-- name: Install essential build tools (AUR)
-  become: yes
-  become_user: aur_builder
-  aur:
-    use: yay
-    name: [
-        'json-c',
-        'libsndfile-git']
 
 - name: Install Azure cli package
   become: yes
