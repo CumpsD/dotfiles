@@ -20,10 +20,9 @@
   become: yes
   become_user: aur_builder
   aur:
+    use: makepkg
     name: [
         'yay']
-    use: makepkg
-    skip_installed: yes
 
 - name: Install basic command-line utilities
   pacman:
@@ -56,29 +55,26 @@
   become: yes
   become_user: aur_builder
   aur:
+    use: yay
     name: [
         'json-c ',
         'libsndfile-git']
-    skip_installed: yes
-    use: yay
 
 - name: Install Azure cli package
   become: yes
   become_user: aur_builder
   aur:
+    use: yay
     name: [
         'python-azure-cli']
-    skip_installed: yes
-    use: yay
 
 - name: Install mssql-tools package
   become: yes
   become_user: aur_builder
   aur:
+    use: yay
     name: [
         'mssql-tools']
-    skip_installed: yes
-    use: yay
   environment:
     ACCEPT_EULA: "y"
 
