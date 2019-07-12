@@ -8,12 +8,6 @@
     include_role:
       name: system
 
-  - name: Install Hub
-    include_role:
-      name: hub
-    vars:
-      hub_version: "2.12.2"
-
   - name: Install Fish and configure default shell
     include_role:
       name: fish
