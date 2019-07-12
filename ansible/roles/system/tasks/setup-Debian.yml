@@ -1,0 +1,128 @@
+---
+- name: Install Microsoft apt key
+  become: yes
+  apt_key:
+    id: "BC528686B50D79E339D3721CEB3E94ADBE1229CF"
+    file: ../gpg/apt/microsoft.asc
+    state: present
+
+- name: Install Mono apt key
+  apt_key:
+    id: "3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF"
+    file: ../gpg/apt/xamarin.asc
+    state: present
+
+- name: Install Nodesource apt key
+  apt_key:
+    id: "68576280"
+    file: ../gpg/apt/nodesource.asc
+    state: present
+
+- name: Install Docker apt key
+  apt_key:
+    id: "9DC858229FC7DD38854AE2D88D81803C0EBFCD88"
+    file: ../gpg/apt/docker.asc
+    state: present
+
+- name: Install Fish apt key
+  apt_key:
+    id: "59FDA1CE1B84B3FAD89366C027557F056DC33CA5"
+    file: ../gpg/apt/fish.asc
+    state: present
+
+- name: Install Python apt key
+  apt_key:
+    id: "4AB0F789CBA31744CC7DA76A8CF63AD3F06FC659"
+    file: ../gpg/apt/python.asc
+    state: present
+
+- name: Install Keybase apt key
+  apt_key:
+    id: "47484E50656D16C7"
+    file: ../gpg/apt/keybase.asc
+    state: present
+
+- name: Install Deadsnakes PPA apt key
+  apt_key:
+    id: "F23C5A6CF475977595C89F51BA6932366A755776"
+    file: ../gpg/apt/deadsnakes.asc
+    state: present
+
+- name: Install Ansible PPA apt key
+  apt_key:
+    id: "6125E2A8C77F2818FB7BD15B93C4A3FD7BB9C367"
+    file: ../gpg/apt/ansible.asc
+    state: present
+
+- name: Update apt repos
+  become: yes
+  apt_repository:
+    repo: '{{ item }}'
+    state: present
+    update_cache: yes
+  with_items:
+    - ppa:ansible/ansible
+    - ppa:fish-shell/release-2
+    - ppa:fish-shell/release-3
+    - ppa:deadsnakes/ppa
+
+- name: Update all packages
+  apt:
+    upgrade: dist
+    update_cache: yes
+    autoclean: yes
+    autoremove: yes
+
+- name: Install basic command-line utilities
+  apt:
+    name: [
+        'curl',
+        'gnupg2',
+        'htop',
+        'wget',
+        'unzip',
+        'gzip',
+        'bzip2',
+        'dos2unix',
+        'xloadimage']
+    state: latest
+
+- name: Install essential build tools
+  apt:
+    name: [
+        'build-essential',
+        'intltool',
+        'libtool',
+        'libsndfile1-dev',
+        'libjson-c-dev',
+        'ruby',
+        'ruby-dev',
+        'rubygems',
+        'unixodbc-dev',
+        'python3.7',
+        'python3-pip',
+        'default-jdk']
+    state: latest
+
+- name: Install Azure cli package
+  package:
+    name: azure-cli
+    state: latest
+
+- name: Install mssql-tools package
+  package:
+    name: mssql-tools
+    state: latest
+  environment:
+    ACCEPT_EULA: "y"
+
+- name: Install Ruby tools
+  become: yes
+  become_user: "{{ lookup('env','LOGNAME') }}"
+  gem:
+    name: "{{ item }}"
+    state: latest
+    user_install: yes
+  with_items:
+    - fpm
+    - deb-s3
