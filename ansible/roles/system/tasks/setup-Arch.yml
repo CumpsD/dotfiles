@@ -50,7 +50,8 @@
         'unixodbc',
         'python',
         'python-pip',
-        'jdk-openjdk']
+        'jdk-openjdk',
+        'nodejs']
     state: latest
 
 - name: Install essential build tools (AUR)
