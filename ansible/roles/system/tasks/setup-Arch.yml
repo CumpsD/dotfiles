@@ -16,6 +16,15 @@
     create: yes
     validate: 'visudo -cf %s'
 
+- name: Install yay
+  become: yes
+  become_user: aur_builder
+  aur:
+    name: [
+        'yay']
+    use: makepkg
+    skip_installed: yes
+
 - name: Install basic command-line utilities
   pacman:
     name: [
@@ -50,7 +59,8 @@
     name: [
         'json-c ',
         'libsndfile-git']
-    aur_only: yes
+    skip_installed: yes
+    use: yay
 
 - name: Install Azure cli package
   become: yes
@@ -58,7 +68,8 @@
   aur:
     name: [
         'python-azure-cli']
-    aur_only: yes
+    skip_installed: yes
+    use: yay
 
 - name: Install mssql-tools package
   become: yes
@@ -66,7 +77,8 @@
   aur:
     name: [
         'mssql-tools']
-    aur_only: yes
+    skip_installed: yes
+    use: yay
   environment:
     ACCEPT_EULA: "y"
 
