@@ -106,6 +106,7 @@ sudo ./install dotnet
 git remote set-url origin git@github.com:cumpsd/dotfiles.git
 
 # At this point, it might be needed to explicitly run fisher and Oh My Fish! to get our shell setup
+fish
 fisher
 omf install
 ```

@@ -14,7 +14,7 @@ popd > /dev/null
 echo
 echo "Setting up dotfiles with dotbot..."
 read -p "Press enter to continue"
-sudo -u cumpsd ./install base
+./install base
 
 echo
 echo "Cloning repos..."
