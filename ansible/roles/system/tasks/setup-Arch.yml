@@ -48,7 +48,8 @@
         'unixodbc',
         'python',
         'python-pip',
-        'jdk-openjdk']
+        'jdk-openjdk',
+        'libunwind']
     state: latest
 
 - name: Install essential build tools (AUR)
