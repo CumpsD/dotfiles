@@ -81,7 +81,7 @@
   aur:
     use: yay
     name: [
-        'console-solarized',
+        'console-solarized-git',
         'tulizu']
 
 - name: Install Azure cli package
