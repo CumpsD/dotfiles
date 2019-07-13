@@ -77,3 +77,5 @@
 
 - shell:
     - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --clean --install-to-user-path --complete Hack, Installing Hack font]
+    - [sudo cp -f /home/$SUDO_USER/.dotfiles/fonts/powerline/Terminus/PSF/*.psf.gz /usr/share/kbd/consolefonts/, Installing Terminess Powerline font]
+    - [setfont ter-powerline-v22n, Enabling Terminess Powerline font]

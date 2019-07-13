@@ -66,3 +66,6 @@
 [submodule "vpn/cryptostorm-config"]
 	path = vpn/cryptostorm-config
 	url = https://github.com/cryptostorm/cryptostorm_client_configuration_files
+[submodule "fonts/powerline"]
+	path = fonts/powerline
+	url = https://github.com/CumpsD/fonts.git
