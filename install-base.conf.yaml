@@ -80,3 +80,4 @@
     - [sudo cp -f ~/.dotfiles/fonts/powerline/Terminus/PSF/*.psf.gz /usr/share/kbd/consolefonts/, Installing Terminess Powerline font]
     - [setfont ter-powerline-v22n, Enabling Terminess Powerline font]
     - [sudo cp -f ~/.dotfiles/configs/issue /etc/issue, Installing /etc/issue]
+    - [sudo cp -f ~/.dotfiles/configs/vconsole.conf /etc/vconsole.conf, Installing /etc/vconsole.conf]
