@@ -75,13 +75,14 @@
         'npm']
     state: latest
 
-- name: Install Solarized Console
+- name: Install Solarized Console and Tulizu
   become: yes
   become_user: aur_builder
   aur:
     use: yay
     name: [
-        'console-solarized']
+        'console-solarized',
+        'tulizu']
 
 - name: Install Azure cli package
   become: yes
