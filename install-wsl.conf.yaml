@@ -5,4 +5,4 @@
       stderr: false
 
 - shell:
-    - [sudo cp -f ~/.dotfiles/wsl/wsl.conf /etc/wsl.conf, Update WSL configuration]
+    - [sudo cp -f /home/$SUDO_USER/.dotfiles/wsl/wsl.conf /etc/wsl.conf, Update WSL configuration]

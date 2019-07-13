@@ -100,7 +100,7 @@ git-crypt unlock
 ./setup-system
 
 # If you want all .NET Core versions, also run:
-sudo -u cumpsd ./install dotnet
+sudo ./install dotnet
 
 # Use SSH for remote
 git remote set-url origin git@github.com:cumpsd/dotfiles.git
