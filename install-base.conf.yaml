@@ -51,6 +51,7 @@
     ~/.config/fish/functions/abbrex.fish: fish/functions/abbrex.fish
     ~/.config/fish/functions/clear.fish: fish/functions/clear.fish
     ~/.config/fish/functions/fish_greeting.fish: fish/functions/fish_greeting.fish
+    ~/.config/fish/functions/fish_right_prompt.fish: fish/functions/fish_right_prompt.fish
     ~/.config/fish/functions/forrepos.fish: fish/functions/forrepos.fish
     ~/.config/fish/functions/repo.fish: fish/functions/repo.fish
     ~/.config/fish/functions/repodir.fish: fish/functions/repodir.fish

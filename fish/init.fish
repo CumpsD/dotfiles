@@ -29,6 +29,9 @@ set -g theme_display_ruby no
 set -g theme_display_user ssh
 set -g theme_display_hostname ssh
 
+# Small tweak to autocomplate colors
+set -g fish_color_autosuggestion 555 yellow brblack
+
 # Configure Docker to use Docker for Windows
 set -gx DOCKER_HOST tcp://0.0.0.0:2375
 
