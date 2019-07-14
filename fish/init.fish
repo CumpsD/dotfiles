@@ -33,6 +33,7 @@ if tty | grep /dev/tty > /dev/null
         set -g theme_nerd_fonts yes
     else
         set -g theme_nerd_fonts no
+        set -g theme_color_scheme terminal-light
     end
 else
     set -g theme_nerd_fonts yes
