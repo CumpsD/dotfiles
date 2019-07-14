@@ -51,8 +51,8 @@ git clone https://github.com/cumpsd/ansible-aur.git ~/.ansible/plugins/modules/a
 git clone --recurse-submodules https://github.com/cumpsd/dotfiles.git <your preferred location>/dotfiles
 cd <your preferred location>/dotfiles
 
-# Link as much as we can already
-./install base
+# Setup the system
+./setup-system
 
 # On Ubuntu, also run:
 sudo ./install ubuntu
@@ -60,18 +60,19 @@ sudo ./install ubuntu
 # On WSL, also run:
 sudo ./install wsl
 
-# Do an initial run which sets up a lot of dependencies
-pushd ansible > /dev/null
-ansible-playbook -K -i inventory system.yml
-popd > /dev/null
+# If you want all .NET Core versions, also run:
+sudo ./install dotnet
 
-# Install git-crypt
-mkdir /tmp/git-crypt
-tar -xzf git/git-crypt-0.6.0.tar.gz -C /tmp/git-crypt --strip 1
-cd /tmp/git-crypt
-make
-sudo cp git-crypt /usr/local/bin/
+# At this point, it might be needed to explicitly run fisher and Oh My Fish! to get our shell setup
+fish
+fisher
+omf install
+fish_update_completions
+```
 
+## Setup all Git repos
+
+```bash
 # Import our existing GPG keys
 gpg2 --import <key>
 
@@ -95,20 +96,12 @@ And don't forget to save the changes:
 
 gpg> save
 
-# Unlock the repo and setup the system
+# Unlock the dotfiles repo and setup all git repos
 git-crypt unlock
-./setup-system
-
-# If you want all .NET Core versions, also run:
-sudo ./install dotnet
+./setup-repos
 
 # Use SSH for remote
 git remote set-url origin git@github.com:cumpsd/dotfiles.git
-
-# At this point, it might be needed to explicitly run fisher and Oh My Fish! to get our shell setup
-fish
-fisher
-omf install
 ```
 
 ## Post Install steps on WSL

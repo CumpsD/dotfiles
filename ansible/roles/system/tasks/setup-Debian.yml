@@ -84,7 +84,9 @@
         'gzip',
         'bzip2',
         'dos2unix',
-        'xloadimage']
+        'xloadimage',
+        'screenfetch',
+        'git-crypt']
     state: latest
 
 - name: Install essential build tools

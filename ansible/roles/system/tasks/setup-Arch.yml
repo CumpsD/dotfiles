@@ -66,7 +66,8 @@
   pacman:
     name: [
         'git',
-        'hub']
+        'hub',
+        'git-crypt']
     state: latest
 
 - name: Install Node and NPM
