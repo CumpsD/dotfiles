@@ -22,12 +22,21 @@ set -gx OMF_REPO_URI "https://github.com/cumpsd/oh-my-fish"
 
 # Bobthefish theme settings
 set -g theme_title_display_process yes
-set -g theme_nerd_fonts yes
 set -g theme_color_scheme solarized-dark
 set -g theme_date_format "+%a %F // %R"
 set -g theme_display_ruby no
 set -g theme_display_user ssh
 set -g theme_display_hostname ssh
+
+if tty | grep /dev/tty > /dev/null
+    if cat /proc/version | grep Microsoft > /dev/null
+        set -g theme_nerd_fonts yes
+    else
+        set -g theme_nerd_fonts no
+    end
+else
+    set -g theme_nerd_fonts yes
+end
 
 # Small tweak to autocomplate colors
 set -g fish_color_autosuggestion 555 yellow brblack
