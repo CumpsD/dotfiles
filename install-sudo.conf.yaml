@@ -9,12 +9,12 @@
       stderr: false
 
 - link:
-    /etc/issue: ~/.dotfiles/configs/issue
+    /etc/issue: /home/$SUDO_USER/.dotfiles/configs/issue
 
-    /etc/vconsole.conf: ~/.dotfiles/configs/vconsole.conf
+    /etc/vconsole.conf: /home/$SUDO_USER/.dotfiles/configs/vconsole.conf
 
-    /etc/sddm.conf.d/hidpi.conf: ~/.dotfiles/sddm/hidpi.conf
-    /etc/sddm.conf.d/theme.conf: ~/.dotfiles/sddm/theme.conf
-    /etc/sddm.conf.d/tty.conf: ~/.dotfiles/sddm/tty.conf
+    /etc/sddm.conf.d/hidpi.conf: /home/$SUDO_USER/.dotfiles/sddm/hidpi.conf
+    /etc/sddm.conf.d/theme.conf: /home/$SUDO_USER/.dotfiles/sddm/theme.conf
+    /etc/sddm.conf.d/tty.conf: /home/$SUDO_USER/.dotfiles/sddm/tty.conf
 
-    /usr/share/sddm/themes/aerial-sddm-theme/theme.conf.user: ~/.dotfiles/sddm/aerial/theme.conf.user
+    /usr/share/sddm/themes/aerial-sddm-theme/theme.conf.user: /home/$SUDO_USER/.dotfiles/sddm/aerial/theme.conf.user
