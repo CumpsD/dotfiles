@@ -30,6 +30,7 @@
         'gst-libav',
         'phonon-qt5-gstreamer',
         'gst-plugins-good',
+        'qt5-multimedia',
         'qt5-quickcontrols',
         'qt5-graphicaleffects']
     state: latest

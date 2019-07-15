@@ -16,5 +16,6 @@
     /etc/sddm.conf.d/hidpi.conf: /home/$SUDO_USER/.dotfiles/sddm/hidpi.conf
     /etc/sddm.conf.d/theme.conf: /home/$SUDO_USER/.dotfiles/sddm/theme.conf
     /etc/sddm.conf.d/tty.conf: /home/$SUDO_USER/.dotfiles/sddm/tty.conf
+    /etc/sddm.conf.d/users.conf: /home/$SUDO_USER/.dotfiles/sddm/users.conf
 
     /usr/share/sddm/themes/aerial-sddm-theme/theme.conf.user: /home/$SUDO_USER/.dotfiles/sddm/aerial/theme.conf.user
