@@ -45,4 +45,4 @@
   git:
     repo: https://github.com/CumpsD/aerial-sddm-theme.git
     dest: /usr/share/sddm/themes/aerial-sddm-theme
-    version: 42650e20705ea3b3de45df80d39561accc4c7cc2
+    version: 371ff39fd0338ab61e261a27ba3ab17ec22023f8

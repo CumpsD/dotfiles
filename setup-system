@@ -167,13 +167,13 @@ if has_param '--with-gui' "$@"; then
         printf "Executing ${Yellow}sudo mkdir -p videos/day${Color_Off}\n"
         sudo mkdir -p videos/day
 
-        printf "Executing ${Yellow}while read -r link; do sudo wget -nc -P videos/day \"$link\"; done < themes/aerial-sddm-theme/playlists/day.m3u${Color_Off}\n"
+        printf "Executing ${Yellow}while read -r link; do sudo wget -nc -P videos/day \"\$link\"; done < themes/aerial-sddm-theme/playlists/day.m3u${Color_Off}\n"
         while read -r link; do sudo wget -nc -P videos/day "$link"; done < themes/aerial-sddm-theme/playlists/day.m3u
 
         printf "Executing ${Yellow}sudo mkdir -p videos/night${Color_Off}\n"
         sudo mkdir -p videos/night
 
-        printf "Executing ${Yellow}while read -r link; do sudo wget -nc -P videos/night \"$link\"; done < themes/aerial-sddm-theme/playlists/night.m3u${Color_Off}\n"
+        printf "Executing ${Yellow}while read -r link; do sudo wget -nc -P videos/night \"\$link\"; done < themes/aerial-sddm-theme/playlists/night.m3u${Color_Off}\n"
         while read -r link; do sudo wget -nc -P videos/night "$link"; done < themes/aerial-sddm-theme/playlists/night.m3u
 
         printf "Executing ${Yellow}popd > /dev/null${Color_Off}\n"
