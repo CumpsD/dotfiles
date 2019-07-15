@@ -20,6 +20,8 @@
 - link:
     ~/.dotfiles: ''
 
+    ~/.face.icon: sddm/cumpsd.png
+
     ~/.dir_colors: dircolors/dircolors.256dark
 
     ~/.gnupg/gpg.conf: gpg/gpg.conf
@@ -80,3 +82,9 @@
     - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --clean --install-to-user-path --complete Hack, Installing Hack font]
     - [sudo cp -f ~/.dotfiles/fonts/powerline/Terminus/PSF/*.psf.gz /usr/share/kbd/consolefonts/, Installing Terminess Powerline font]
     - [setfont ter-powerline-v22n, Enabling Terminess Powerline font]
+    -
+      command: "setfacl -m u:sddm:x ~/.dotfiles/sddm"
+      description: Giving SDDM access to face.icon
+    -
+      command: "setfacl -m u:sddm:r ~/.dotfiles/sddm/cumpsd.png"
+      description: Giving SDDM access to face.icon
