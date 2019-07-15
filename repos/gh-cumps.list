@@ -9,6 +9,7 @@ git@github.com:CumpsD/ansible-role-packer.git
 git@github.com:CumpsD/ansible-role-pip.git
 git@github.com:CumpsD/ansible-role-visual-studio-code.git
 git@github.com:CumpsD/ansible-role-git.git
+git@github.com:CumpsD/ansible-role-go.git
 git@github.com:CumpsD/ansible-role-terraform.git
 git@github.com:CumpsD/ansible-role-consul-cli.git
 git@github.com:CumpsD/ansible-role-nomad-cli.git
