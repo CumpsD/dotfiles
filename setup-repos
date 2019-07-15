@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-echo "Cloning repos..."
-pushd repos > /dev/null
-./setup.sh
-popd > /dev/null
-
-echo
-echo "Installed all repos..."

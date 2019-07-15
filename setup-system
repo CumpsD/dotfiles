@@ -124,64 +124,89 @@ has_param() {
 echo "Updating dotfiles..."
 
 echo
-printf "[Running] ${Yellow}git pull${Color_Off}\n"
+printf "Executing ${Yellow}git pull${Color_Off}\n"
 git pull
 
 echo
-printf "[Running] ${Yellow}git submodule update${Color_Off}\n"
+printf "Executing ${Yellow}git submodule update${Color_Off}\n"
 git submodule update
 
 echo
 if ask "Setup dotfiles with dotbot?" Y; then
-    printf "[Running] ${Yellow}./install base${Color_Off}\n"
+    printf "Executing ${Yellow}./install base${Color_Off}\n"
     ./install base
 
     echo
-    printf "[Running] ${Yellow}sudo ./install sudo${Color_Off}\n"
+    printf "Executing ${Yellow}sudo ./install sudo${Color_Off}\n"
     sudo ./install sudo
 fi
 
 echo
 if ask "Setup machine with Ansible?" Y; then
+    printf "Executing ${Yellow}pushd ansible > /dev/null${Color_Off}\n"
     pushd ansible > /dev/null
 
     if has_param '--with-gui' "$@"; then
-        printf "[Running] ${Yellow}ansible-playbook -K -i inventory system.yml --extra-vars \"gui=true\"${Color_Off}\n"
+        printf "Executing ${Yellow}ansible-playbook -K -i inventory system.yml --extra-vars \"gui=true\"${Color_Off}\n"
         ansible-playbook -K -i inventory system.yml --extra-vars "gui=true"
     else
-        printf "[Running] ${Yellow}ansible-playbook -K -i inventory system.yml${Color_Off}\n"
+        printf "Executing ${Yellow}ansible-playbook -K -i inventory system.yml${Color_Off}\n"
         ansible-playbook -K -i inventory system.yml
     fi
 
+    printf "Executing ${Yellow}popd > /dev/null${Color_Off}\n"
     popd > /dev/null
 fi
 
 echo
 if ask "Setup dotfiles with dotbot (again)?" Y; then
-    printf "[Running] ${Yellow}./install base${Color_Off}\n"
+    printf "Executing ${Yellow}./install base${Color_Off}\n"
     ./install base
 
     echo
-    printf "[Running] ${Yellow}sudo ./install sudo${Color_Off}\n"
+    printf "Executing ${Yellow}sudo ./install sudo${Color_Off}\n"
     sudo ./install sudo
 fi
 
 echo
 if ask "Are you running on Ubuntu?" N; then
-    printf "[Running] ${Yellow}sudo ./install ubuntu${Color_Off}\n"
+    printf "Executing ${Yellow}sudo ./install ubuntu${Color_Off}\n"
     sudo ./install ubuntu
 fi
 
 echo
 if ask "Are you running on WSL?" N; then
-    printf "[Running] ${Yellow}sudo ./install wsl${Color_Off}\n"
+    printf "Executing ${Yellow}sudo ./install wsl${Color_Off}\n"
     sudo ./install wsl
+
+    echo "Setting default console to Solarized Dark..."
+
+    printf "Executing ${Yellow}pushd colortool > /dev/null${Color_Off}\n"
+    pushd colortool > /dev/null
+
+    printf "Executing ${Yellow}./colortool.exe -d solarized_dark${Color_Off}\n"
+    ./colortool.exe -d solarized_dark
+
+    printf "Executing ${Yellow}popd > /dev/null${Color_Off}\n"
+    popd > /dev/null
 fi
 
 echo
 if ask "Do you want to install .NET Core?" N; then
-    printf "[Running] ${Yellow}sudo ./install dotnet${Color_Off}\n"
+    printf "Executing ${Yellow}sudo ./install dotnet${Color_Off}\n"
     sudo ./install dotnet
+fi
+
+echo
+if ask "Do you want to clone all repos?" N; then
+    printf "Executing ${Yellow}pushd repos > /dev/null${Color_Off}\n"
+    pushd repos > /dev/null
+
+    printf "Executing ${Yellow}/setup.sh${Color_Off}\n"
+    ./setup.sh
+
+    printf "Executing ${Yellow}popd > /dev/null${Color_Off}\n"
+    popd > /dev/null
 fi
 
 echo

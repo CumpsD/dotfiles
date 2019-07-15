@@ -64,7 +64,7 @@ omf install
 fish_update_completions
 ```
 
-## Setup all Git repos
+## Setup GPG
 
 ```bash
 # Import our existing GPG keys
@@ -90,22 +90,17 @@ And don't forget to save the changes:
 
 gpg> save
 
-# Unlock the dotfiles repo and setup all git repos
+# Unlock the dotfiles repo
 git-crypt unlock
-./setup-repos
 
 # Use SSH for remote
 git remote set-url origin git@github.com:cumpsd/dotfiles.git
+
+# At this point you can clone all the repos by running:
+repos/setup.sh
 ```
 
 ## Post Install steps on WSL
-
-### Change Console to Solarized Dark
-
-```bash
-# Setup WSL specific tweaks
-./setup-wsl
-```
 
 ### Windows Font Install
 
