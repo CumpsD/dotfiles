@@ -21,3 +21,6 @@
     /usr/share/sddm/themes/aerial-sddm-theme/theme.conf.user: /home/$SUDO_USER/.dotfiles/sddm/aerial/theme.conf.user
     /usr/share/sddm/themes/aerial-sddm-theme/playlists/day_local.m3u: /home/$SUDO_USER/.dotfiles/sddm/aerial/day.m3u
     /usr/share/sddm/themes/aerial-sddm-theme/playlists/night_local.m3u: /home/$SUDO_USER/.dotfiles/sddm/aerial/night.m3u
+
+    /usr/share/xsessions/bspwm.desktop: /home/$SUDO_USER/.dotfiles/bspwm/bspwm.desktop
+

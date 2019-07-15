@@ -66,10 +66,11 @@
     ~/.config/fish/functions/connect-proxmark.fish: fish/functions/connect-proxmark.fish
     ~/.config/fish/functions/update-keybase.fish: fish/functions/update-keybase.fish
 
-    ~/.config/fish/completions/repo.fish: fish/completions/repo.fish
-    ~/.config/fish/completions/repodir.fish: fish/completions/repodir.fish
+    ~/.config/fish/completions/bspwm.fish: fish/completions/bspwm.fish
     ~/.config/fish/completions/dotnet.fish: fish/completions/dotnet.fish
     ~/.config/fish/completions/hub.fish: fish/completions/hub.fish
+    ~/.config/fish/completions/repo.fish: fish/completions/repo.fish
+    ~/.config/fish/completions/repodir.fish: fish/completions/repodir.fish
 
     ~/proxmark/cards/aiv-david-cumps.bin: cards/1.bin
     ~/proxmark/cards/aiv-koen-metsu.bin: cards/2.bin
