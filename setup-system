@@ -158,6 +158,29 @@ if ask "Setup machine with Ansible?" Y; then
     popd > /dev/null
 fi
 
+if has_param '--with-gui' "$@"; then
+    echo
+    if ask "Do you want to download all aerial sddm videos?" N; then
+        printf "Executing ${Yellow}pushd /usr/share/sddm/themes/aerial-sddm-theme > /dev/null${Color_Off}\n"
+        pushd /usr/share/sddm/themes/aerial-sddm-theme > /dev/null
+
+        printf "Executing ${Yellow}sudo mkdir -p videos/day${Color_Off}\n"
+        sudo mkdir -p videos/day
+
+        printf "Executing ${Yellow}while read -r link; do sudo wget -P videos/day \"$link\"; done < playlists/day.m3u${Color_Off}\n"
+        while read -r link; do sudo wget -P videos/day "$link"; done < playlists/day.m3u
+
+        printf "Executing ${Yellow}sudo mkdir -p videos/night${Color_Off}\n"
+        sudo mkdir -p videos/night
+
+        printf "Executing ${Yellow}while read -r link; do sudo wget -P videos/night \"$link\"; done < playlists/night.m3u${Color_Off}\n"
+        while read -r link; do sudo wget -P videos/night "$link"; done < playlists/night.m3u
+
+        printf "Executing ${Yellow}popd > /dev/null${Color_Off}\n"
+        popd > /dev/null
+    fi
+fi
+
 echo
 if ask "Setup dotfiles with dotbot (again)?" Y; then
     printf "Executing ${Yellow}./install base${Color_Off}\n"

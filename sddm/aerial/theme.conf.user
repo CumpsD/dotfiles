@@ -1,6 +1,6 @@
 [General]
-background_day=playlists/day.m3u
-background_night=playlists/night.m3u
+background_day=playlists/day_local.m3u
+background_night=playlists/night_local.m3u
 displayFont="Misc Fixed"
 passwordLeftMargin=15
 relativePositionX=0.5
@@ -8,3 +8,4 @@ relativePositionY=0.75
 showLoginButton=false
 type=color
 usernameLeftMargin=15
+showClearPasswordButton=false

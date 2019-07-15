@@ -46,9 +46,3 @@
     repo: https://github.com/CumpsD/aerial-sddm-theme.git
     dest: /usr/share/sddm/themes/aerial-sddm-theme
     version: 42650e20705ea3b3de45df80d39561accc4c7cc2
-
-# TODO: Download videos for offline
-# while read -r link; do
-#     wget "$link"
-# done < playlist_file
-# sddm-greeter --test-mode --theme /usr/share/sddm/themes
