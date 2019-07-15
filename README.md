@@ -54,6 +54,9 @@ cd <your preferred location>/dotfiles
 # Setup the system
 ./setup-system
 
+# In case you want to have a GUI, run the following instead:
+./setup-system --with-gui
+
 # On Ubuntu, also run:
 sudo ./install ubuntu
 

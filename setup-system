@@ -1,25 +1,81 @@
 #!/usr/bin/env bash
 
+ask() {
+    # https://gist.github.com/davejamesmiller/1965569
+    local prompt default reply
+
+    if [ "${2:-}" = "Y" ]; then
+        prompt="Y/n"
+        default=Y
+    elif [ "${2:-}" = "N" ]; then
+        prompt="y/N"
+        default=N
+    else
+        prompt="y/n"
+        default=
+    fi
+
+    while true; do
+
+        # Ask the question (not using "read -p" as it uses stderr not stdout)
+        echo -n "$1 [$prompt] "
+
+        # Read the answer (use /dev/tty in case stdin is redirected from somewhere else)
+        read reply </dev/tty
+
+        # Default?
+        if [ -z "$reply" ]; then
+            reply=$default
+        fi
+
+        # Check if the reply is valid
+        case "$reply" in
+            Y*|y*) return 0 ;;
+            N*|n*) return 1 ;;
+        esac
+
+    done
+}
+
+has_param() {
+    local term="$1"
+    shift
+    for arg; do
+        if [[ $arg == "$term" ]]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
 echo "Updating dotfiles..."
 git pull
 git submodule update
 
 echo
-echo "Setting up dotfiles with dotbot..."
-read -p "Press enter to continue"
-./install base
+if ask "Setup dotfiles with dotbot?" Y; then
+    ./install base
+fi
 
 echo
-echo "Executing Ansible to setup machine..."
-read -p "Press enter to continue"
-pushd ansible > /dev/null
-ansible-playbook -K -i inventory system.yml
-popd > /dev/null
+if ask "Setup machine with Ansible?" Y; then
+    pushd ansible > /dev/null
+
+    if has_param '--with-gui' "$@"; then
+        echo "Running setup playbook with gui enabled..."
+        ansible-playbook -K -i inventory system.yml --extra-vars "gui=true"
+    else
+        echo "Running setup playbook without gui enabled..."
+        ansible-playbook -K -i inventory system.yml
+    fi
+
+    popd > /dev/null
+fi
 
 echo
-echo "Setting up dotfiles with dotbot, again..."
-read -p "Press enter to continue"
-./install base
+if ask "Setup dotfiles with dotbot (again)?" Y; then
+    ./install base
+fi
 
 echo
 echo "Installed new system, it might be wise to re-open the console..."

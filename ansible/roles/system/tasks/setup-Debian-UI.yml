@@ -1,0 +1,6 @@
+---
+- name: Install Xorg
+  apt:
+    name: [
+        'xorg']
+    state: latest

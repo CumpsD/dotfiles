@@ -1,0 +1,6 @@
+---
+- name: Install Xorg
+  pacman:
+    name: [
+        'xorg-server']
+    state: latest

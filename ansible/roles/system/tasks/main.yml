@@ -4,3 +4,15 @@
 
 - include_tasks: setup-Debian.yml
   when: ansible_os_family == 'Debian'
+
+- name: Install UI
+  include_tasks: setup-Arch-UI.yml
+  when:
+    - ansible_os_family == 'Archlinux'
+    - include_gui|bool
+
+- name: Install UI
+  include_tasks: setup-Debian-UI.yml
+  when:
+    - ansible_os_family == 'Debian'
+    - include_gui|bool

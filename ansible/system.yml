@@ -3,10 +3,15 @@
   hosts: local
   become: yes
 
+  vars:
+    gui: false
+
   tasks:
   - name: Setup basic system
     include_role:
       name: system
+    vars:
+      include_gui: "{{ gui }}"
 
   - name: Install Git from source
     when: ansible_os_family != 'Archlinux'
@@ -115,11 +120,3 @@
   - name: Install Mono
     include_role:
       name: mono
-
-  # - name: Install Polybar
-  #   include_role:
-  #     name: polybar
-
-  # - name: Install VS Code
-  #   include_role:
-  #     name: visual-studio-code
