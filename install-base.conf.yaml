@@ -84,17 +84,20 @@
     - [sudo cp -f ~/.dotfiles/fonts/powerline/Terminus/PSF/*.psf.gz /usr/share/kbd/consolefonts/, Installing Terminess Powerline font]
     - [setfont ter-powerline-v22n, Enabling Terminess Powerline font]
     -
-      command: "setfacl -m u:sddm:r ~/"
+      command: "setfacl -m u:sddm:rx ~/"
       description: Giving SDDM read access to ~/
     -
-      command: "setfacl -m u:sddm:r ~/.dotfiles/"
+      command: "setfacl -m u:sddm:rx ~/.dotfiles/"
       description: Giving SDDM read access to ~/.dotfiles/
     -
-      command: "setfacl -m u:sddm:r ~/.dotfiles/sddm/"
+      command: "setfacl -m u:sddm:rx ~/.dotfiles/sddm/"
       description: Giving SDDM read access to ~/.dotfiles/sddm/
     -
       command: "setfacl -m u:sddm:r ~/.dotfiles/sddm/*"
       description: Giving SDDM read access to ~/.dotfiles/sddm/*
+    -
+      command: "setfacl -m u:sddm:rx ~/.dotfiles/sddm/aerial"
+      description: Giving SDDM read access to ~/.dotfiles/sddm/aerial
     -
       command: "setfacl -m u:sddm:r ~/.dotfiles/sddm/aerial/*"
       description: Giving SDDM read access to ~/.dotfiles/sddm/aerial/*
