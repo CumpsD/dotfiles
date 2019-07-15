@@ -39,8 +39,11 @@ else
     set -g theme_nerd_fonts yes
 end
 
-# Small tweak to autocomplate colors
+# Small tweak to autocomplete colors
 set -g fish_color_autosuggestion 555 yellow brblack
+
+# Make bspwm work with fish
+set -U SXHKD_SHELL /usr/bin/bash
 
 # Configure Docker to use Docker for Windows
 set -gx DOCKER_HOST tcp://0.0.0.0:2375
