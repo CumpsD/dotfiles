@@ -10,6 +10,8 @@ elif [ "$1" = "dotnet" ]; then
     CONFIG="install-dotnet.conf.yaml"
 elif [ "$1" = "wsl" ]; then
     CONFIG="install-wsl.conf.yaml"
+elif [ "$1" = "sudo" ]; then
+    CONFIG="install-sudo.conf.yaml"
 else
      echo "Missing argument"
      exit 1

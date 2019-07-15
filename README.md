@@ -57,15 +57,6 @@ cd <your preferred location>/dotfiles
 # In case you want to have a GUI, run the following instead:
 ./setup-system --with-gui
 
-# On Ubuntu, also run:
-sudo ./install ubuntu
-
-# On WSL, also run:
-sudo ./install wsl
-
-# If you want all .NET Core versions, also run:
-sudo ./install dotnet
-
 # At this point, it might be needed to explicitly run fisher and Oh My Fish! to get our shell setup
 fish
 fisher

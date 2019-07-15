@@ -1,0 +1,20 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+    shell:
+      stdin: false
+      stdout: false
+      stderr: false
+
+- link:
+    /etc/issue: ~/.dotfiles/configs/issue
+
+    /etc/vconsole.conf: ~/.dotfiles/configs/vconsole.conf
+
+    /etc/sddm.conf.d/hidpi.conf: ~/.dotfiles/sddm/hidpi.conf
+    /etc/sddm.conf.d/theme.conf: ~/.dotfiles/sddm/theme.conf
+    /etc/sddm.conf.d/tty.conf: ~/.dotfiles/sddm/tty.conf
+
+    /usr/share/sddm/themes/aerial-sddm-theme/theme.conf.user: ~/.dotfiles/sddm/aerial/theme.conf.user

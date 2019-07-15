@@ -19,3 +19,30 @@
     state: latest
 
 # TODO: systemd enable sddm.service
+
+- name: Install Aerial theme dependencies for SDDM
+  pacman:
+    name: [
+        'gst-libav',
+        'phonon-qt5-gstreamer',
+        'gst-plugins-good',
+        'qt5-quickcontrols',
+        'qt5-graphicaleffects']
+    state: latest
+
+- name: Install Aerial theme for SDDM
+  become: true
+  git:
+    repo: https://github.com/CumpsD/aerial-sddm-theme.git
+    dest: /usr/share/sddm/themes
+    version: 42650e20705ea3b3de45df80d39561accc4c7cc2
+
+# TODO: Download videos for offline
+# while read -r link; do
+#     wget "$link"
+# done < playlist_file
+# sddm-greeter --test-mode --theme /usr/share/sddm/themes
+
+# TODO: Add ~/.face.icon avatar (png file, 96x96)
+# $ setfacl -m u:sddm:x ~/
+# $ setfacl -m u:sddm:r ~/.face.icon
