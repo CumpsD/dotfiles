@@ -4,3 +4,18 @@
     name: [
         'xorg-server']
     state: latest
+
+- name: Install Intel Video Driver
+  pacman:
+    name: [
+        'xf86-video-intel',
+        'mesa']
+    state: latest
+
+- name: Install SDDM
+  pacman:
+    name: [
+        'sddm']
+    state: latest
+
+# TODO: systemd enable sddm.service
