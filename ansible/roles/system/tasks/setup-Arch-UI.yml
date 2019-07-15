@@ -18,7 +18,11 @@
         'sddm']
     state: latest
 
-# TODO: systemd enable sddm.service
+- name: Enable SDDM SystemD service
+  systemd:
+    name: sddm
+    enabled: yes
+    masked: no
 
 - name: Install Aerial theme dependencies for SDDM
   pacman:
@@ -47,7 +51,3 @@
 #     wget "$link"
 # done < playlist_file
 # sddm-greeter --test-mode --theme /usr/share/sddm/themes
-
-# TODO: Add ~/.face.icon avatar (png file, 96x96)
-# $ setfacl -m u:sddm:x ~/
-# $ setfacl -m u:sddm:r ~/.face.icon
