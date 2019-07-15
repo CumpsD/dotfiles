@@ -30,11 +30,16 @@
         'qt5-graphicaleffects']
     state: latest
 
+- name: Clean Aerial theme folder
+  file:
+    state: absent
+    path: "/usr/share/sddm/themes/aerial-sddm-theme"
+
 - name: Install Aerial theme for SDDM
   become: true
   git:
     repo: https://github.com/CumpsD/aerial-sddm-theme.git
-    dest: /usr/share/sddm/themes
+    dest: /usr/share/sddm/themes/aerial-sddm-theme
     version: 42650e20705ea3b3de45df80d39561accc4c7cc2
 
 # TODO: Download videos for offline
