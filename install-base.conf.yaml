@@ -24,7 +24,7 @@
 
     ~/.wallpaper.jpg: wallpapers/antman.jpg
 
-    ~/.stalonetrayrc: wm/stalonetray/.stalonetrayrc
+    ~/.stalonetrayrc: wm/stalonetray/stalonetrayrc
 
     ~/.dir_colors: dircolors/dircolors.256dark
 
