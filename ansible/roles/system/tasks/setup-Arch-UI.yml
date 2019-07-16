@@ -3,7 +3,8 @@
   pacman:
     name: [
         'xorg-server',
-        'xorg-xrandr']
+        'xorg-xrandr',
+        'xorg-xrdb']
     state: latest
 
 - name: Install Intel Video Driver
