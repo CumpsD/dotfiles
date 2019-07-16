@@ -21,3 +21,8 @@
     /usr/share/sddm/themes/aerial-sddm-theme/theme.conf.user: /home/$SUDO_USER/.dotfiles/sddm/aerial/theme.conf.user
     /usr/share/sddm/themes/aerial-sddm-theme/playlists/day_local.m3u: /home/$SUDO_USER/.dotfiles/sddm/aerial/day.m3u
     /usr/share/sddm/themes/aerial-sddm-theme/playlists/night_local.m3u: /home/$SUDO_USER/.dotfiles/sddm/aerial/night.m3u
+
+    '/usr/share/fonts/TTF/System San Francisco Display Bold.ttf': '/home/$SUDO_USER/.dotfiles/fonts/san-francisco/System San Francisco Display Bold.ttf'
+    '/usr/share/fonts/TTF/System San Francisco Display Regular.ttf': '/home/$SUDO_USER/.dotfiles/fonts/san-francisco/System San Francisco Display Regular.ttf'
+    '/usr/share/fonts/TTF/System San Francisco Display Thin.ttf': '/home/$SUDO_USER/.dotfiles/fonts/san-francisco/System San Francisco Display Thin.ttf'
+    '/usr/share/fonts/TTF/System San Francisco Display Ultralight.ttf': '/home/$SUDO_USER/.dotfiles/fonts/san-francisco/System San Francisco Display Ultralight.ttf'
