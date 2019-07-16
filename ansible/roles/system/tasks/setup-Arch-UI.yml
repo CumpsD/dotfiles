@@ -80,7 +80,8 @@
         'network-manager-applet',
         'volumeicon',
         'rxvt-unicode',
-        'thunar']
+        'thunar',
+        'feh']
     state: latest
 
 - name: Install WM and tools (AUR)
