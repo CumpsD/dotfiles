@@ -19,10 +19,6 @@
 super + Return
 	urxvt
 
-## launch alternative terminal
-#super + shift + Return
-#	termite
-
 ## volume control
 XF86Audio{RaiseVolume,LowerVolume,Mute}
 	amixer {-c 0 set PCM 4dB+,-c 0 set PCM 4dB-,set Master toggle}
@@ -59,11 +55,9 @@ super + l
 Print
 	scrot 'scrot_%Y-%m-%d-%S_$wx$h.png' -e 'mv $f ~ ; viewnior ~/$f'
 
-
 ######################
 ##  BSPWM COMMANDS  ##
 ######################
-
 
 ## quit bspwm normally
 super + control + Escape
@@ -71,7 +65,7 @@ super + control + Escape
 
 ## reload bspwm config
 super + shift + BackSpace
-	pkill panel;~/.config/bspwm/bspwmrc
+	pkill panel; ~/.config/bspwm/bspwmrc
 
 ## close app
 super + Escape
