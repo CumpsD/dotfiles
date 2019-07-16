@@ -72,6 +72,8 @@
     ~/.config/fish/completions/repo.fish: fish/completions/repo.fish
     ~/.config/fish/completions/repodir.fish: fish/completions/repodir.fish
 
+    ~/.config/gtk-3.0/settings.ini: wm/gtk3-settings.ini
+
     ~/proxmark/cards/aiv-david-cumps.bin: cards/1.bin
     ~/proxmark/cards/aiv-koen-metsu.bin: cards/2.bin
     ~/proxmark/cards/aiv-evelien-dhollander.bin: cards/3.bin
