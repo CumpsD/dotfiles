@@ -13,6 +13,7 @@
 
     /etc/vconsole.conf: /home/$SUDO_USER/.dotfiles/configs/vconsole.conf
 
+    /etc/sddm.conf.d/dpi.conf: /home/$SUDO_USER/.dotfiles/sddm/dpi.conf
     /etc/sddm.conf.d/hidpi.conf: /home/$SUDO_USER/.dotfiles/sddm/hidpi.conf
     /etc/sddm.conf.d/theme.conf: /home/$SUDO_USER/.dotfiles/sddm/theme.conf
     /etc/sddm.conf.d/tty.conf: /home/$SUDO_USER/.dotfiles/sddm/tty.conf
