@@ -81,7 +81,9 @@
         'volumeicon',
         'rxvt-unicode',
         'thunar',
-        'feh']
+        'feh',
+        'xsettingsd',
+        'wireless_tools']
     state: latest
 
 - name: Install WM and tools (AUR)

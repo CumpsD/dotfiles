@@ -112,26 +112,26 @@ bspc rule -a feh state=floating follow=on
 ###############
 
 # Load bitmap fonts
-#xset fp+ ~/.fonts/misc &
+xset fp+ ~/.fonts/misc &
 
 ## reload compton
-#pkill compton
-#compton -b &
+pkill compton
+compton -b &
 
 # system tray
 #pkill stalonetray
 #stalonetray &
 
 # network applet
-#nm-applet &
+nm-applet &
 
 # clipboard manager
 #pkill clipit
 #clipit &
 
 # volume icon
-#pkill volumeicon
-#volumeicon &
+pkill volumeicon
+volumeicon &
 
 # keybind daemon
 pkill sxhkd
@@ -141,15 +141,15 @@ sxhkd &
 #mpd &
 
 ## reload the xsettingsd, a minimal x settings daemon
-#pkill xsettingsd
-#xsettingsd &
+pkill xsettingsd
+xsettingsd &
 
 ## set the wallpaper
 feh --bg-fill ~/.wallpaper.jpg
 
 ## load dunst
-#pkill dunst
-#dunst &
+pkill dunst
+dunst &
 
 ## reload the cursor theme
 #xsetroot -cursor_name left_ptr

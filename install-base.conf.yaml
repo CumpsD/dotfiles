@@ -21,9 +21,16 @@
     ~/.dotfiles: ''
 
     ~/.face.icon: sddm/cumpsd.png
+
     ~/.wallpaper.jpg: wallpapers/antman.jpg
 
+    ~/.stalonetrayrc: wm/stalonetray/.stalonetrayrc
+
     ~/.dir_colors: dircolors/dircolors.256dark
+
+    ~/.fonts/: wm/fonts/
+
+    ~/.gitconfig: git/gitconfig
 
     ~/.gnupg/gpg.conf: gpg/gpg.conf
     ~/.gnupg/gpg-agent.conf: gpg/gpg-agent.conf
@@ -32,13 +39,13 @@
     ~/.aws/config: aws/config
     ~/.aws/credentials: aws/credentials
 
-    ~/.gitconfig: git/gitconfig
-
     ~/.git-templates/hooks/commit-message: git/set-repo-user-hook
     ~/.git-templates/hooks/post-checkout: git/set-repo-user-hook
     ~/.git-templates/hooks/post-merge: git/set-repo-user-hook
     ~/.git-templates/hooks/pre-commit: git/set-repo-user-hook
     ~/.git-templates/hooks/prepare-commit-msg: git/set-repo-user-hook
+
+    ~/.config/compton.conf: wm/compton/compton.conf
 
     ~/.config/omf/init.fish: fish/init.fish
     ~/.config/omf/bundle: fish/omf/bundle
@@ -73,18 +80,16 @@
     ~/.config/fish/completions/repo.fish: fish/completions/repo.fish
     ~/.config/fish/completions/repodir.fish: fish/completions/repodir.fish
 
-    ~/.config/compton.conf: wm/compton/compton.conf
+    ~/.config/.bar/panel-bspwm: wm/bar/panel-bspwm
 
     ~/.config/bspwm/bspwmrc: wm/bspwm/bspwmrc
 
-    ~/.config/dunst/dunstrc: wm/dunst/dunstrc
+    ~/.config/dunst/dunstrc: wm/dunst/dunstrc-dark
 
     ~/.config/gtk-3.0/settings.ini: wm/gtk/settings.ini
     ~/.config/gtk-3.0/gtk.css: wm/gtk/gtk.css
 
     ~/.config/sxhkd/sxhkdrc: wm/sxhkd/sxhkdrc
-
-    ~/.stalonetrayrc: wm/stalonetray/.stalonetrayrc
 
     ~/proxmark/cards/aiv-david-cumps.bin: cards/1.bin
     ~/proxmark/cards/aiv-koen-metsu.bin: cards/2.bin
