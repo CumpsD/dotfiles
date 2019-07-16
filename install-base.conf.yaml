@@ -28,6 +28,12 @@
 
     ~/.dir_colors: dircolors/dircolors.256dark
 
+    ~/.Xresources: wm/x/xresources
+
+    ~/.xrdb: wm/xrdb
+
+    ~/.urxvt: wm/urxvt
+
     ~/.fonts: wm/fonts
 
     ~/.mpd: wm/mpd
