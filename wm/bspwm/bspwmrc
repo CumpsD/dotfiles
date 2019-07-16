@@ -18,8 +18,8 @@
 
 ## workspace name
 ## font needed wuncon-siji
-#bspc monitor -d '' '' '' '' '' '' '' ''
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d '' '' '' '' '' '' '' ''
+#bspc monitor -d I II III IV V VI VII VIII IX X
 
 ## common bspwm configuration
 bspc config border_width            2
@@ -126,8 +126,8 @@ stalonetray &
 nm-applet &
 
 # clipboard manager
-#pkill clipit
-#clipit &
+pkill clipit
+clipit &
 
 # volume icon
 pkill volumeicon
