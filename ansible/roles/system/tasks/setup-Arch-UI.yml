@@ -100,3 +100,19 @@
         'ttf-roboto',
         'noto-fonts']
     state: latest
+
+- name: Install Themes
+  become: yes
+  become_user: aur_builder
+  aur:
+    use: yay
+    name: [
+        'arc-gtk-theme-git',
+        'arc-icon-theme-git',
+        'arc-firefox-theme-git',
+        'arc-colors-revival',
+        'numix-gtk-theme-git',
+        'numix-circle-icon-theme-git',
+        'numix-icon-theme-git',
+        'luv-icon-theme-git',
+        'paper-icon-theme-git']
