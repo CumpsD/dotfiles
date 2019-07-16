@@ -28,7 +28,7 @@
 
     ~/.dir_colors: dircolors/dircolors.256dark
 
-    ~/.fonts/: wm/fonts/
+    ~/.fonts: wm/fonts
 
     ~/.gitconfig: git/gitconfig
 
