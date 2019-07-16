@@ -21,6 +21,7 @@
     ~/.dotfiles: ''
 
     ~/.face.icon: sddm/cumpsd.png
+    ~/.wallpaper.jpg: wallpapers/antman.jpg
 
     ~/.dir_colors: dircolors/dircolors.256dark
 
