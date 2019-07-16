@@ -192,6 +192,12 @@ if ask "Setup dotfiles with dotbot (again)?" Y; then
 fi
 
 echo
+if ask "Are you running on Arch?" N; then
+    printf "Executing ${Yellow}sudo ./install arch${Color_Off}\n"
+    sudo ./install arch
+fi
+
+echo
 if ask "Are you running on Ubuntu?" N; then
     printf "Executing ${Yellow}sudo ./install ubuntu${Color_Off}\n"
     sudo ./install ubuntu

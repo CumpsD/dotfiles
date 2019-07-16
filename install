@@ -4,6 +4,8 @@ set -e
 
 if [ "$1" = "base" ]; then
     CONFIG="install-base.conf.yaml"
+elif [ "$1" = "arch" ]; then
+    CONFIG="install-arch.conf.yaml"
 elif [ "$1" = "ubuntu" ]; then
     CONFIG="install-ubuntu.conf.yaml"
 elif [ "$1" = "dotnet" ]; then
