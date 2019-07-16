@@ -138,7 +138,7 @@ pkill sxhkd
 sxhkd &
 
 ## music is my only friend :(
-#mpd &
+mpd &
 
 ## reload the xsettingsd, a minimal x settings daemon
 pkill xsettingsd
