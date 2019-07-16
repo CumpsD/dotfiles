@@ -53,3 +53,12 @@
         'bspwm',
         'sxhkd']
     state: latest
+
+- name: Install Fonts
+  pacman:
+    name: [
+        'ttf-dejavu',
+        'ttf-droid',
+        'ttf-roboto',
+        'noto-fonts']
+    state: latest
