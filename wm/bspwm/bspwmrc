@@ -119,8 +119,8 @@ pkill compton
 compton -b &
 
 # system tray
-#pkill stalonetray
-#stalonetray &
+pkill stalonetray
+stalonetray &
 
 # network applet
 nm-applet &
@@ -155,8 +155,8 @@ dunst &
 #xsetroot -cursor_name left_ptr
 
 ## load panel script
-#pkill panel-bspwm
-#panel-bspwm &
+pkill panel-bspwm
+~/.config/.bar/panel-bspwm &
 
 ## or polybar?
 #pkill polybar

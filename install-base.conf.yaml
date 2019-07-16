@@ -30,6 +30,8 @@
 
     ~/.fonts: wm/fonts
 
+    ~/.mpd: wm/mpd
+
     ~/.gitconfig: git/gitconfig
 
     ~/.gnupg/gpg.conf: gpg/gpg.conf
