@@ -217,7 +217,7 @@ Rectangle {
                     horizontalAlignment: Text.AlignLeft
                     font.family: textFont.name
                     font.bold: true
-                    font.pointSize: 16
+                    font.pixelSize: 16
                     color: "white"
                     text: "Username"
                     anchors.verticalCenter: parent.verticalCenter
@@ -234,7 +234,7 @@ Rectangle {
                     anchors.right: parent.right
                     anchors.rightMargin: 0
                     font.family: textFont.name
-                    font.pointSize: 16
+                    font.pixelSize: config.usernameFontSize
                     color: "#25000000"
                     borderColor: "transparent"
                     textColor: "white"
@@ -269,7 +269,7 @@ Rectangle {
                     horizontalAlignment: Text.AlignLeft
                     font.family: textFont.name
                     font.bold: true
-                    font.pointSize: 16
+                    font.pixelSize: 16
                     color: "white"
                     visible: config.showPasswordLabel != "false"
                 }
@@ -277,7 +277,8 @@ Rectangle {
                 PasswordBox {
                     id: password_input_box
                     height: parent.height
-                    font: textFont.name
+                    font.family: textFont.name
+                    font.pixelSize: config.passwordFontSize
                     color: "#25000000"
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.right: parent.right

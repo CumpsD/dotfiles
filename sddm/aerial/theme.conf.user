@@ -5,6 +5,8 @@ background_night=playlists/night_local.m3u
 type=color
 displayFont="Noto Sans Thin"
 
+usernameFontSize=16
+passwordFontSize=10
 passwordLeftMargin=0
 usernameLeftMargin=0
 relativePositionX=0.5
