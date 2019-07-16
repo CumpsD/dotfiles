@@ -94,7 +94,7 @@
   aur:
     use: yay
     name: [
-        'lemonbar-xft-git',
+        'lemonbar-git',
         'clipit']
 
 - name: Install Fonts
