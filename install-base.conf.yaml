@@ -72,7 +72,18 @@
     ~/.config/fish/completions/repo.fish: fish/completions/repo.fish
     ~/.config/fish/completions/repodir.fish: fish/completions/repodir.fish
 
-    ~/.config/gtk-3.0/settings.ini: wm/gtk3-settings.ini
+    ~/.config/compton.conf: wm/compton/compton.conf
+
+    ~/.config/bspwm/bspwmrc: wm/bspwm/bspwmrc
+
+    ~/.config/dunst/dunstrc: wm/dunst/dunstrc
+
+    ~/.config/gtk-3.0/settings.ini: wm/gtk/settings.ini
+    ~/.config/gtk-3.0/gtk.css: wm/gtk/gtk.css
+
+    ~/.config/sxhkd/sxhkdrc: wm/sxhkd/sxhkdrc
+
+    ~/.stalonetrayrc: wm/stalonetray/.stalonetrayrc
 
     ~/proxmark/cards/aiv-david-cumps.bin: cards/1.bin
     ~/proxmark/cards/aiv-koen-metsu.bin: cards/2.bin
