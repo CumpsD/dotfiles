@@ -227,7 +227,7 @@ while read -r line ; do
 done
 }
 
-panel_bar < "$PANEL_FIFO" | lemonbar -a 32 -u 2 -n "$PANEL_WM_NAME" -g $PANEL_WIDTHx$PANEL_HEIGHT+150+8 -f "$PANEL_FONT_0" -f "$PANEL_FONT_1" -F "$COLOR_DEFAULT_FG" -B "$COLOR_DEFAULT_BG" | sh &
+panel_bar < "$PANEL_FIFO" | lemonbar -a 32 -u 2 -n "$PANEL_WM_NAME" -g ${PANEL_WIDTH}x${PANEL_HEIGHT}+150+8 -f "$PANEL_FONT_0" -f "$PANEL_FONT_1" -F "$COLOR_DEFAULT_FG" -B "$COLOR_DEFAULT_BG" | sh &
 
 wid=$(xdo id -a "$PANEL_WM_NAME")
 xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" "$wid"
