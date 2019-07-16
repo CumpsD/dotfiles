@@ -277,8 +277,7 @@ Rectangle {
                 PasswordBox {
                     id: password_input_box
                     height: parent.height
-                    font.family: textFont.name
-                    font.pointSize: 16
+                    font: textFont.name
                     color: "#25000000"
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.right: parent.right
