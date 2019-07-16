@@ -36,7 +36,8 @@
         'bzip2',
         'dos2unix',
         'xloadimage',
-        'screenfetch']
+        'screenfetch',
+        'lsof']
     state: latest
 
 - name: Install essential build tools
