@@ -6,7 +6,7 @@ type=color
 displayFont="Noto Sans Thin"
 
 usernameFontSize=16
-passwordFontSize=10
+passwordFontSize=8
 passwordLeftMargin=0
 usernameLeftMargin=0
 relativePositionX=0.5
