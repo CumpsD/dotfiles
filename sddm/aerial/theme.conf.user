@@ -2,14 +2,16 @@
 background=background.jpg
 background_day=playlists/day_local.m3u
 background_night=playlists/night_local.m3u
-showLoginButton=false
-showClearPasswordButton=false
+type=color
 displayFont="Noto Sans Thin"
-passwordLeftMargin=15
-usernameLeftMargin=15
+
+passwordLeftMargin=0
+usernameLeftMargin=0
 relativePositionX=0.5
 relativePositionY=0.75
-type=color
+
 showTopBar=false
+showLoginButton=false
 showUserNameLabel=false
 showPasswordLabel=false
+showClearPasswordButton=false
