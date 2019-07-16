@@ -69,3 +69,6 @@
 [submodule "fonts/powerline"]
 	path = fonts/powerline
 	url = https://github.com/CumpsD/fonts.git
+[submodule "fonts/san-francisco"]
+	path = fonts/san-francisco
+	url = https://github.com/CumpsD/YosemiteSanFranciscoFont.git
