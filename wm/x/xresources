@@ -6,6 +6,7 @@
 #include ".xrdb/rofi/nord"
 #include ".xrdb/dmenu/nord"
 #include ".xrdb/fonts/tewi"
+#include ".xrdb/fonts/hack"
 
 ! ------------------------------------------------------------------------------
 ! URxvt configs

@@ -1,5 +1,5 @@
 ! fonts
-URxvt*font:				xft:Hack Nerd Font:regular:size=16
-URxvt*boldFont:			xft:Hack Nerd Font:bold:size=16
-URxvt*italicFont:		xft:Hack Nerd Font:italic:size=16
-URxvt*boldItalicFont:	xft:Hack Nerd Font:bold italic:size=16
+URxvt*font:             xft:Hack Nerd Font:regular:size=7
+URxvt*boldFont:         xft:Hack Nerd Font:bold:size=7
+URxvt*italicFont:       xft:Hack Nerd Font:italic:size=7
+URxvt*boldItalicFont:   xft:Hack Nerd Font:bold italic:size=7
