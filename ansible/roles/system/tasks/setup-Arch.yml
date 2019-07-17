@@ -37,7 +37,8 @@
         'dos2unix',
         'xloadimage',
         'screenfetch',
-        'lsof']
+        'lsof',
+        'udisks2']
     state: latest
 
 - name: Install basic command-line utilities (AUR)
