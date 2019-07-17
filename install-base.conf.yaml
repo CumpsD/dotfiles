@@ -38,6 +38,8 @@
 
     ~/.mpd: wm/mpd
 
+    ~/.utility: utility
+
     ~/.gitconfig: git/gitconfig
 
     ~/.gnupg/gpg.conf: gpg/gpg.conf
