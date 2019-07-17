@@ -89,7 +89,7 @@ super + {h,v}
 	bspc node -p {east,south}
 
 ## preselect the ratio
-super + ctrl + {1-9}
+super + {1-9}
 	bspc node -o 0.{1-9}
 
 ## cancel it
@@ -108,11 +108,20 @@ alt + Tab
 alt + shift + Tab
 	bspc node -f prev.local
 
+########################
+##  DESKTOP COMMANDS  ##
+########################
+
 ## focus the next/previous desktop in the current monitor
 ctrl + super + Left
 	bspc desktop -f prev.local
+
 ctrl + super + Right
 	bspc desktop -f next.local
+
+## jump to another workspace
+ctrl + super + {1-8}
+	bspc desktop --focus^{1-8}
 
 ## focus the last node/desktop
 super + {Tab,grave}
@@ -121,10 +130,6 @@ super + {Tab,grave}
 ## focus or send to the given desktop
 super + {_,shift + }{1-8}
 	bspc {desktop -f,node -d} '^{1-8}'
-
-## jump to another workspace
-super + {1-8}
-	bspc desktop --focus^{1-8}
 
 #######################
 ##  WINDOW COMMANDS  ##
