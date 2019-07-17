@@ -123,10 +123,6 @@ ctrl + super + Left
 ctrl + super + Right
 	bspc desktop -f next.local
 
-## jump to another workspace
-ctrl + super + {1-8}
-	bspc desktop --focus^{1-8}
-
 ## focus the last node/desktop
 super + {Tab,grave}
 	bspc {node,desktop} -f last
