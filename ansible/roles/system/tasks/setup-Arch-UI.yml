@@ -95,7 +95,8 @@
         'viewnior',
         'chromium',
         'pepper-flash',
-        'ttf-liberation']
+        'ttf-liberation',
+        'code']
     state: latest
 
 - name: Install WM and tools (AUR)
@@ -109,7 +110,6 @@
         'i3lock-color',
         'betterlockscreen',
         'chromium-widevine',
-        'visual-studio-code-bin',
         'msbuild-stable',
         'jetbrains-toolbox',
         'ttf-symbola']
