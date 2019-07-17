@@ -89,7 +89,10 @@
         'imagemagick',
         'bc',
         'scrot',
-        'viewnior']
+        'viewnior',
+        'chromium',
+        'pepper-flash',
+        'ttf-liberation']
     state: latest
 
 - name: Install WM and tools (AUR)
@@ -101,7 +104,16 @@
         'lemonbar-git',
         'clipit',
         'i3lock-color',
-        'betterlockscreen']
+        'betterlockscreen',
+        'chromium-widevine',
+        'visual-studio-code-bin',
+        'msbuild-stable',
+        'rider']
+
+# TODO: Make sure Flash is allowed to run in chrome://settings/content/flash.
+# TODO: Make sure Allow sites to play protected content is checked in chrome://settings/content/protectedContent.
+# TODO: To enable Do Not Track, visit chrome://settings, scroll down to Advanced and under Privacy and security, check Send a "Do Not Track" request with your browsing traffic.
+
 
 - name: Install Fonts
   pacman:
