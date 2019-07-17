@@ -85,7 +85,9 @@
         'thunar',
         'feh',
         'xsettingsd',
-        'wireless_tools']
+        'wireless_tools',
+        'imagemagick',
+        'bc']
     state: latest
 
 - name: Install WM and tools (AUR)
@@ -95,7 +97,9 @@
     use: yay
     name: [
         'lemonbar-git',
-        'clipit']
+        'clipit',
+        'i3lock-color',
+        'betterlockscreen']
 
 - name: Install Fonts
   pacman:

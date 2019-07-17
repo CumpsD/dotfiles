@@ -36,20 +36,12 @@ super + s
 	pkill -USR1 -x sxhkd
 
 ## launch thunar
-super + shift + f
+super + e
 	thunar
-
-## launch firefox
-super + shift + w
-	firefox
-
-## launch geany
-super + shift + g
-	geany
 
 ## fancy lockscreen :)
 super + l
-	i3lock
+	betterlockscreen -l dim
 
 ## take a screenshot
 Print

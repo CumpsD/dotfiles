@@ -111,7 +111,10 @@ bspc rule -a feh state=floating follow=on
 ## autostart ##
 ###############
 
-# Load bitmap fonts
+# update betterlockscreen
+betterlockscreen -u ~/.wallpaper.jpg
+
+# load bitmap fonts
 xset fp+ ~/.fonts/misc &
 
 ## reload compton
