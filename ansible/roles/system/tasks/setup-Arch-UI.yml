@@ -97,6 +97,9 @@
         'pepper-flash',
         'ttf-liberation',
         'code',
+        'libva-utils',
+        'vdpauinfo',
+        'intel-media-driver',
         'udiskie']
     state: latest
 
