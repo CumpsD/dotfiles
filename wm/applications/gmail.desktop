@@ -2,6 +2,6 @@
 Version=1.0
 Name=Gmail
 GenericName=Mail Client
-Type=Link
-URL=https://mail.google.com
+Type=Application
+Exec=chromium --force-device-scale-factor=1.5 https://mail.google.com
 

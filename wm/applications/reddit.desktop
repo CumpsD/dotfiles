@@ -2,6 +2,6 @@
 Version=1.0
 Name=Reddit
 GenericName=Social
-Type=Link
-URL=http://reddit.com
+Type=Application
+Exec=chromium --force-device-scale-factor=1.5 http://reddit.com
 

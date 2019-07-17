@@ -2,7 +2,7 @@
 Version=1.0
 Name=Vimeo
 GenericName=Video Site
-Type=Link
-URL=https://vimeo.com
+Type=Application
+Exec=chromium --force-device-scale-factor=1.5 https://vimeo.com
 
 

@@ -2,5 +2,5 @@
 Version=1.0
 Name=Facebook
 GenericName=Social
-Type=Link
-URL=https://facebook.com
+Type=Application
+Exec=chromium --force-device-scale-factor=1.5 https://facebook.com

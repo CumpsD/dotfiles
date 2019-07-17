@@ -2,5 +2,5 @@
 Version=1.0
 Name=GitHub
 GenericName=Development Platform
-Type=Link
-URL=https://github.com
+Type=Application
+Exec=chromium --force-device-scale-factor=1.5 https://github.com
