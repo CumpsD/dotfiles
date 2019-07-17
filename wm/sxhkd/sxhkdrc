@@ -136,11 +136,11 @@ super + {1-8}
 	bspc desktop --focus^{1-8}
 
 ## expanding windows
-super + ctrl + {Left,Right,Up,Down}
+super + alt + {Left,Right,Up,Down}
 	bspc node -z {left -10 0,right 10 0,top 0 -10,bottom 0 10}
 
 ## shrinking windows
-super + alt + {Left,Right,Up,Down}
+super + ctrl + alt + {Left,Right,Up,Down}
 	bspc node -z {left 10 0,right -10 0,top 0 10,bottom 0 -10}
 
 ## move floating windows
