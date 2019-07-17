@@ -99,13 +99,13 @@ bspc rule -a URxvt desktop='^1' follow=on focus=on
 
 ## need to be floating
 #bspc rule -a Audacious state=floating follow=on
-#bspc rule -a Viewnior state=floating follow=on
+bspc rule -a Viewnior state=floating follow=on
 bspc rule -a feh state=floating follow=on
 #bspc rule -a Gpicview state=floating follow=on
 
 ## don't manage my conky & systemtray :/
 #bspc rule -a Conky state=floating manage=off
-#bspc rule -a stalonetray state=floating manage=off
+bspc rule -a stalonetray state=floating manage=off
 
 ###############
 ## autostart ##
