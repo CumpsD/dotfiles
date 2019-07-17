@@ -113,6 +113,7 @@
     ~/repos: repos
 
 - shell:
+    - [mkdir -p ~/screenshots, Make sure screenshots directory exists]
     - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --clean --install-to-user-path --complete Hack, Installing Hack font]
     - [sudo cp -f ~/.dotfiles/fonts/powerline/Terminus/PSF/*.psf.gz /usr/share/kbd/consolefonts/, Installing Terminess Powerline font]
     - [setfont ter-powerline-v22n, Enabling Terminess Powerline font]
