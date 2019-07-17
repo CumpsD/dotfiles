@@ -43,8 +43,8 @@ bspc rule -a URxvt desktop='^1' follow=on focus=on
 ## workspace 2 (web browsers)
 bspc rule -a Firefox-esr desktop='^2' follow=on focus=on
 bspc rule -a Chromium desktop='^2' follow=on focus=on
+bspc rule -a Chrome desktop='^2' follow=on focus=on
 bspc rule -a Opera desktop='^2' follow=on focus=on
-#bspc rule -a Transmission-gtk desktop='^2' follow=on focus=on
 
 ## workspace 3 (file-manager)
 bspc rule -a Thunar desktop='^3' follow=on focus=on
