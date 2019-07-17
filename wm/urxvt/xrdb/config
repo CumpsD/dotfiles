@@ -16,7 +16,7 @@ URxvt*iso14755:             false
 URxvt*scrollBar:            false
 URxvt*scrollBar_right:      false
 
-URxvt.perl-ext-common:      default,matcher,clipboard,url-select,keyboard-select
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
 URxvt*buffered:             false
 URxvt.urgentOnBell: 	    true
 
@@ -35,6 +35,8 @@ URxvt.url-launcher:         chromium --force-device-scale-factor=1.5
 URxvt.underlineURLs:        true
 URxvt.urlButton:            1
 URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.url-select.launcher:  chromium --force-device-scale-factor=1.5
+URxvt.url-select.underline: true
 
 ! Navigation
 URxvt.keysym.Shift-Up:      command:\033]720;1\007
