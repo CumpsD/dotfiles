@@ -112,7 +112,7 @@ bspc rule -a feh state=floating follow=on
 ###############
 
 # update betterlockscreen
-betterlockscreen -u ~/.wallpaper.jpg
+betterlockscreen -u ~/.wallpaper.jpg &
 
 # load bitmap fonts
 xset fp+ ~/.fonts/misc &
