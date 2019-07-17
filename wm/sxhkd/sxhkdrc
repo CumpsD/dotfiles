@@ -45,7 +45,13 @@ super + s
 
 ## take a screenshot
 Print
-	scrot 'scrot_%Y-%m-%d-%S_$wx$h.png' -e 'mv $f ~ ; viewnior ~/$f'
+	~/.utility/screeny
+
+Print + alt
+	~/.utility/screeny -f
+
+Print + ctrl
+	~/.utility/screeny -s
 
 ######################
 ##  BSPWM COMMANDS  ##

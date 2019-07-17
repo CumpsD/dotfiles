@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# A simple script to take screenshot using scrot
+# Then add date to the file name
+# Then open the result instantly using default image viewer
+# Need xdg-utils, mostly preinstalled
+# Cheers! Addy
+
+# 'screeny -f' to take a screenshot for current focused window only
+if [[ $1 = "-f" ]]; then
+    scrot 'screenshot-%Y-%m-%d-%S_$wx$h.png' --focused --border \
+    -e 'mv $f ~/screenshots; viewnior ~/screenshots/$f'
+
+# 'screeny -s' to take a screenshot with selection by dragging a rectangle
+elif [[ $1 = "-s" ]]; then
+    scrot 'screenshot-%Y-%m-%d-%S_$wx$h.png' --select \
+    -e 'mv $f ~/screenshots; viewnior ~/screenshots/$f'
+
+# 'screeny' only to take a screenshot normally
+else
+    scrot 'screenshot-%Y-%m-%d-%S_$wx$h.png' \
+    -e 'mv $f ~/screenshots; viewnior ~/screenshots/$f'
+fi
