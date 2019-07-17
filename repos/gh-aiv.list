@@ -1,10 +1,14 @@
+# Generic Hosting Infrastructure
 git@github.com:informatievlaanderen/aws-infrastructure.git
 
+# Public Facing Parts
 git@github.com:informatievlaanderen/public-api.git
 git@github.com:informatievlaanderen/dev-portal.git
 
+# Legacy Crap
 git@github.com:informatievlaanderen/crab.git
 
+# Registries
 git@github.com:informatievlaanderen/address-registry.git
 git@github.com:informatievlaanderen/bankaccountnumber-registry.git
 git@github.com:informatievlaanderen/building-registry.git
@@ -15,14 +19,18 @@ git@github.com:informatievlaanderen/postal-registry.git
 git@github.com:informatievlaanderen/publicservice-registry.git
 git@github.com:informatievlaanderen/streetname-registry.git
 
+# Documentation and Generator
 git@github.com:informatievlaanderen/registry-documentation.git
 git@github.com:informatievlaanderen/registry-documentation.wiki.git
 git@github.com:informatievlaanderen/templates.git
 
+# Registry Tests
 git@github.com:informatievlaanderen/registry-testing.git
 
+# Generic .NET Core build pipeline
 git@github.com:informatievlaanderen/build-pipeline.git
 
+# Components
 git@github.com:informatievlaanderen/api.git
 git@github.com:informatievlaanderen/command-handling.git
 git@github.com:informatievlaanderen/correlationid-middleware.git
