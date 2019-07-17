@@ -8,4 +8,6 @@ wm/mpd/
 !wm/mpd/mpd.conf
 
 wm/applications/chrome-*.desktop
+wm/applications/jetbrains-rider*
+
 wm/fonts/**/.uuid
