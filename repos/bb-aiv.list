@@ -1,12 +1,10 @@
 git@bitbucket.org:vlaamseoverheid/aws-infrastructure.git
 git@bitbucket.org:vlaamseoverheid/best-add.git
-git@bitbucket.org:vlaamseoverheid/building-registry.git
 git@bitbucket.org:vlaamseoverheid/cachet.git
 git@bitbucket.org:vlaamseoverheid/cjm-person-registry.git
 git@bitbucket.org:vlaamseoverheid/configuration.git
 git@bitbucket.org:vlaamseoverheid/elasticsearch.git
 git@bitbucket.org:vlaamseoverheid/organisation-registry.git
-git@bitbucket.org:vlaamseoverheid/publicservice-registry.git
 git@bitbucket.org:vlaamseoverheid/road-registry.git
 
 git@bitbucket.org:vlaamseoverheid/ui-assets.git
