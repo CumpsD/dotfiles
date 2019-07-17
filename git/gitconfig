@@ -23,8 +23,8 @@
     useConfigOnly = true
     signingKey = 9D771C7A03413FB3
 
-#[commit]
-#    gpgSign = true
+[commit]
+    gpgSign = true
 
 [tag]
     forceSignAnnotated = true
