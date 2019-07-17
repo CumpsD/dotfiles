@@ -87,7 +87,9 @@
         'xsettingsd',
         'wireless_tools',
         'imagemagick',
-        'bc']
+        'bc',
+        'scrot',
+        'viewnior']
     state: latest
 
 - name: Install WM and tools (AUR)
