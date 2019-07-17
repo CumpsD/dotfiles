@@ -37,8 +37,7 @@
         'dos2unix',
         'xloadimage',
         'screenfetch',
-        'lsof',
-        'gotop']
+        'lsof']
     state: latest
 
 - name: Install essential build tools
