@@ -132,8 +132,8 @@ stalonetray &
 nm-applet &
 
 # clipboard manager
-pkill clipit
-clipit &
+#pkill clipit
+#clipit &
 
 # volume icon
 pkill volumeicon
