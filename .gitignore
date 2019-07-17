@@ -6,3 +6,6 @@ ssh/putty/SshHostKeys
 
 wm/mpd/
 !wm/mpd/mpd.conf
+
+wm/applications/chrome-*.desktop
+wm/fonts/**/.uuid
