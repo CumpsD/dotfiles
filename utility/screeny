@@ -8,16 +8,16 @@
 
 # 'screeny -f' to take a screenshot for current focused window only
 if [[ $1 = "-f" ]]; then
-    scrot '%y.%m.%-d_%H.%M.%S.png' --focused --border \
+    scrot 'screenshot-%Y-%m-%d-%S_$wx$h.png' --focused --border \
     -e 'mv $f ~/screenshots; viewnior ~/screenshots/$f'
 
 # 'screeny -s' to take a screenshot with selection by dragging a rectangle
 elif [[ $1 = "-s" ]]; then
-    scrot '%y.%m.%-d_%H.%M.%S.png' --select \
+    scrot 'screenshot-%Y-%m-%d-%S_$wx$h.png' --select \
     -e 'mv $f ~/screenshots; viewnior ~/screenshots/$f'
 
 # 'screeny' only to take a screenshot normally
 else
-    scrot '%y.%m.%-d_%H.%M.%S.png' \
+    scrot 'screenshot-%Y-%m-%d-%S_$wx$h.png' \
     -e 'mv $f ~/screenshots; viewnior ~/screenshots/$f'
 fi
