@@ -2,3 +2,6 @@
     - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/scripts/000-use-all-cores-makepkg-conf-v3.sh, Use all cores in makepkg]
     - [sudo rm -f /usr/share/applications/chromium.desktop, Remove default Chromium shortcut]
     - [sudo rm -f /usr/share/applications/google-chrome.desktop, Remove default Chrome shortcut]
+    - [sudo cp -f /home/$SUDO_USER/.dotfiles/scripts/fix-wifi.service /etc/systemd/system, Install Fix Wifi Systemd service]
+    - [sudo cp -f /home/$SUDO_USER/.dotfiles/scripts/fix-wifi /usr/bin/, Install fix-wifi exectable]
+    - [sudo systemctl enable fix-wifi.service, Enable Fix Wifi]
