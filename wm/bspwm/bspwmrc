@@ -127,6 +127,9 @@ compton -b &
 # urxvt deamon
 urxvtd -q &
 
+# udiskie deamon
+udiskie &
+
 # system tray
 pkill stalonetray
 stalonetray &
