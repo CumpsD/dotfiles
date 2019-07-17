@@ -31,11 +31,11 @@ URxvt.keysym.M-v:           perl:clipboard:paste
 URxvt.keysym.M-C-v:         perl:clipboard:paste_escaped
 
 ! URLs
-URxvt.url-launcher:         chromium --force-device-scale-factor=1.5
+URxvt.url-launcher:         /usr/bin/google-chrome-stable --force-device-scale-factor=1.5
 URxvt.underlineURLs:        true
 URxvt.urlButton:            1
 URxvt.keysym.M-u:           perl:url-select:select_next
-URxvt.url-select.launcher:  chromium --force-device-scale-factor=1.5
+URxvt.url-select.launcher:  /usr/bin/google-chrome-stable --force-device-scale-factor=1.5
 URxvt.url-select.underline: true
 
 ! Navigation

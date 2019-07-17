@@ -3,5 +3,5 @@ Version=1.0
 Name=Reddit
 GenericName=Social
 Type=Application
-Exec=chromium --force-device-scale-factor=1.5 http://reddit.com
+Exec=/usr/bin/google-chrome-stable --force-device-scale-factor=1.5 http://reddit.com
 

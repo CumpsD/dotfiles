@@ -3,6 +3,6 @@ Version=1.0
 Name=Vimeo
 GenericName=Video Site
 Type=Application
-Exec=chromium --force-device-scale-factor=1.5 https://vimeo.com
+Exec=/usr/bin/google-chrome-stable --force-device-scale-factor=1.5 https://vimeo.com
 
 

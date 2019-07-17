@@ -3,6 +3,6 @@ Version=1.0
 Name=YouTube
 GenericName=Video Site
 Type=Application
-Exec=chromium --force-device-scale-factor=1.5 https://youtube.com
+Exec=/usr/bin/google-chrome-stable --force-device-scale-factor=1.5 https://youtube.com
 
 

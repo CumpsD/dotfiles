@@ -3,4 +3,4 @@ Version=1.0
 Name=Facebook
 GenericName=Social
 Type=Application
-Exec=chromium --force-device-scale-factor=1.5 https://facebook.com
+Exec=/usr/bin/google-chrome-stable --force-device-scale-factor=1.5 https://facebook.com

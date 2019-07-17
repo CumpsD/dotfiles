@@ -3,5 +3,5 @@ Version=1.0
 Name=Gmail
 GenericName=Mail Client
 Type=Application
-Exec=chromium --force-device-scale-factor=1.5 https://mail.google.com
+Exec=/usr/bin/google-chrome-stable --force-device-scale-factor=1.5 https://mail.google.com
 
