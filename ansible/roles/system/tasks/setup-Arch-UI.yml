@@ -96,7 +96,8 @@
         'chromium',
         'pepper-flash',
         'ttf-liberation',
-        'code']
+        'code',
+        'udiskie']
     state: latest
 
 - name: Install WM and tools (AUR)
