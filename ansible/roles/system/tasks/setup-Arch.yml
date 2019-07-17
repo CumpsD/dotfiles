@@ -39,6 +39,7 @@
         'screenfetch',
         'lsof',
         'openssh',
+        'pcsclite',
         'udisks2']
     state: latest
 
