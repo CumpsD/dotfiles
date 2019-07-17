@@ -42,6 +42,10 @@ super + e
 super + l
 	betterlockscreen -l dim
 
+######################
+##  MEDIA COMMANDS  ##
+######################
+
 ## volume control
 XF86Audio{RaiseVolume,LowerVolume,Mute}
 	amixer {-c 0 set PCM 4dB+,-c 0 set PCM 4dB-,set Master toggle}
@@ -93,7 +97,7 @@ super + {1-9}
 	bspc node -o 0.{1-9}
 
 ## cancel it
-super + ctrl + r
+super + ctrl + {0}
 	bspc node -p cancel
 
 ## send the window in the given direction
@@ -128,7 +132,7 @@ super + {Tab,grave}
 	bspc {node,desktop} -f last
 
 ## focus or send to the given desktop
-super + {_,shift + }{1-8}
+ctrl + super + {_,shift + }{1-8}
 	bspc {desktop -f,node -d} '^{1-8}'
 
 #######################
