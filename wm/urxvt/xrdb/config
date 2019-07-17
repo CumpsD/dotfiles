@@ -31,7 +31,7 @@ URxvt.keysym.M-v:           perl:clipboard:paste
 URxvt.keysym.M-C-v:         perl:clipboard:paste_escaped
 
 ! URLs
-URxvt.urlLauncher:          chromium
+URxvt.url-launcher:         chromium --force-device-scale-factor=1.5
 URxvt.underlineURLs:        true
 URxvt.urlButton:            1
 URxvt.keysym.M-u:           perl:url-select:select_next
