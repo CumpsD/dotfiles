@@ -38,6 +38,7 @@
         'xloadimage',
         'screenfetch',
         'lsof',
+        'openssh',
         'udisks2']
     state: latest
 
