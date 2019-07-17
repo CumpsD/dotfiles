@@ -10,6 +10,17 @@
 #     /__/:/        |  |:|       \  \:\        \  \:\         \__\/
 #     \__\/         |__|/         \__\/         \__\/
 
+#######################
+##  RELOAD COMMANDS  ##
+#######################
+
+## make sxhkd reload its configuration files
+super + s
+	pkill -USR1 -x sxhkd
+
+## reload bspwm config
+super + shift + BackSpace
+	pkill panel; ~/.config/bspwm/bspwmrc
 
 #######################
 ##  COMMON COMMANDS  ##
@@ -39,10 +50,6 @@ XF86Audio{RaiseVolume,LowerVolume,Mute}
 XF86Audio{Next,Prev,Play,Stop}
 	mpc {next,prev,toggle,stop}
 
-## make sxhkd reload its configuration files
-super + s
-	pkill -USR1 -x sxhkd
-
 ## take a screenshot
 Print
 	~/.utility/screeny
@@ -60,10 +67,6 @@ Print + ctrl
 ## quit bspwm normally
 super + control + Escape
 	pkill panel; bspc quit
-
-## reload bspwm config
-super + shift + BackSpace
-	pkill panel; ~/.config/bspwm/bspwmrc
 
 ## close app
 super + Escape
@@ -92,18 +95,6 @@ super + ctrl + {1-9}
 ## cancel it
 super + ctrl + r
 	bspc node -p cancel
-
-## toggle between pseudo-tiled & tiled
-super + p
-    bspc node -t pseudo_tiled
-
-## toggle between floating & tiled
-super + space
-    bspc node -t floating
-
-## just in case you want to go back to tiled mode but the toggle keybind doesn't work
-super + t
-	bspc node -t tiled
 
 ## send the window in the given direction
 super + {_,shift + }{Left,Down,Up,Right}
@@ -135,14 +126,30 @@ super + {_,shift + }{1-8}
 super + {1-8}
 	bspc desktop --focus^{1-8}
 
+#######################
+##  WINDOW COMMANDS  ##
+#######################
+
+## toggle between pseudo-tiled & tiled
+super + p
+    bspc node -t pseudo_tiled
+
+## toggle between floating & tiled
+super + space
+    bspc node -t floating
+
+## just in case you want to go back to tiled mode but the toggle keybind doesn't work
+super + t
+	bspc node -t tiled
+
 ## expanding windows
 super + alt + {Left,Right,Up,Down}
 	bspc node -z {left -10 0,right 10 0,top 0 -10,bottom 0 10}
 
 ## shrinking windows
 super + ctrl + alt + {Left,Right,Up,Down}
-	bspc node -z {left 10 0,right -10 0,top 0 10,bottom 0 -10}
+	bspc node -z {right -10 0,left 10 0,bottom 0 -10,top 0 10}
 
 ## move floating windows
-alt + shift + {Left,Down,Up,Right}
+alt + super + shift + {Left,Down,Up,Right}
 	bspc node -v {-10 0,0 10,0 -10,10 0}
