@@ -1,2 +1,3 @@
 - shell:
     - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/scripts/000-use-all-cores-makepkg-conf-v3.sh, Use all cores in makepkg]
+    - [sudo rm /usr/share/applications/chromium.desktop, Remove default Chromium shortcut]
