@@ -11,7 +11,7 @@
 ! URxvt configs
 ! ------------------------------------------------------------------------------
 #include ".urxvt/xrdb/config"
-#include ".urxvt/xrdb/hack-font"
+#include ".urxvt/xrdb/font"
 
 ! ------------------------------------------------------------------------------
 ! Xft Font Configuration

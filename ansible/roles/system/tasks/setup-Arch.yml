@@ -40,6 +40,14 @@
         'lsof']
     state: latest
 
+- name: Install basic command-line utilities (AUR)
+  become: yes
+  become_user: aur_builder
+  aur:
+    use: yay
+    name: [
+        'gotop']
+
 - name: Install essential build tools
   pacman:
     name: [
@@ -62,7 +70,6 @@
     name: [
         'json-c',
         'libsndfile-git']
-
 
 - name: Install rEFInd
   pacman:
