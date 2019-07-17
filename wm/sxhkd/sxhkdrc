@@ -97,7 +97,7 @@ super + {1-9}
 	bspc node -o 0.{1-9}
 
 ## cancel it
-super + ctrl + {0}
+super + {0}
 	bspc node -p cancel
 
 ## send the window in the given direction
