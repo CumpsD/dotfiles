@@ -17,7 +17,7 @@
 
 ## launch terminal (Win + Enter)
 super + Return
-	urxvt
+	urxvtc
 
 ## program launcher (Win + R)
 super + r

@@ -124,6 +124,9 @@ xset fp+ ~/.fonts/misc &
 pkill compton
 compton -b &
 
+# urxvt deamon
+urxvtd -q &
+
 # system tray
 pkill stalonetray
 stalonetray &

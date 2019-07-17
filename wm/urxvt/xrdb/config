@@ -16,28 +16,30 @@ URxvt*iso14755:             false
 URxvt*scrollBar:            false
 URxvt*scrollBar_right:      false
 
-URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
-URxvt.keysym.M-Escape:      perl:keyboard-select:activate
-URxvt.keysym.Shift-Up:	    command:\033]720;1\007
-URxvt.keysym.Shift-Down:    command:\033]721;1\007
-URxvt.keysym.M-s:           perl:keyboard-select:search
-URxvt.keysym.M-u:           perl:url-select:select_next
-
-URxvt.urlLauncher:          chromium
-URxvt.underlineURLs:        true
-URxvt.urlButton:            1
+URxvt.perl-ext-common:      default,matcher,clipboard,url-select,keyboard-select
 URxvt*buffered:             false
 URxvt.urgentOnBell: 	    true
 
-! Copy paste settings
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search
+
+! Copy Paste
 URxvt.copyCommand:          xclip -i -selection clipboard
 URxvt.pasteCommand:         xclip -o -selection clipboard
 URxvt.keysym.M-c:           perl:clipboard:copy
 URxvt.keysym.M-v:           perl:clipboard:paste
 URxvt.keysym.M-C-v:         perl:clipboard:paste_escaped
 
-! Make ctrl+arrow work
+! URLs
+URxvt.urlLauncher:          chromium
+URxvt.underlineURLs:        true
+URxvt.urlButton:            1
+URxvt.keysym.M-u:           perl:url-select:select_next
+
+! Navigation
+URxvt.keysym.Shift-Up:      command:\033]720;1\007
+URxvt.keysym.Shift-Down:    command:\033]721;1\007
 URxvt.keysym.Control-Up:    \033[1;5A
 URxvt.keysym.Control-Down:  \033[1;5B
-URxvt.keysym.Control-Left:  \033[1;5D
 URxvt.keysym.Control-Right: \033[1;5C
+URxvt.keysym.Control-Left:  \033[1;5D
