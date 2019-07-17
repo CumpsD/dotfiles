@@ -101,6 +101,8 @@
 
     ~/.config/xsettingsd/xsettingsd.conf: wm/x/xsettingsd.conf
 
+    ~/.local/share/applications: wm/applications
+
     ~/proxmark/cards/aiv-david-cumps.bin: cards/1.bin
     ~/proxmark/cards/aiv-koen-metsu.bin: cards/2.bin
     ~/proxmark/cards/aiv-evelien-dhollander.bin: cards/3.bin
