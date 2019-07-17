@@ -83,15 +83,15 @@ super + {h,v}
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
-## cancel it, I set it to super + r. like in my herbstluftwm config
-super + r
+## cancel it
+super + ctrl + r
 	bspc node -p cancel
 
-## toggle beetwen pseudo-tiled & tiled
+## toggle between pseudo-tiled & tiled
 super + p
     bspc node -t pseudo_tiled
 
-## toggle beetwen floating & tiled
+## toggle between floating & tiled
 super + space
     bspc node -t floating
 
@@ -112,10 +112,9 @@ alt + shift + Tab
 	bspc node -f prev.local
 
 ## focus the next/previous desktop in the current monitor
-## i'm using control + alt + left/right. you know what they say? old habit, they die hard :D
-ctrl + alt + Left
+ctrl + super + Left
 	bspc desktop -f prev.local
-ctrl + alt + Right
+ctrl + super + Right
 	bspc desktop -f next.local
 
 ## focus the last node/desktop
