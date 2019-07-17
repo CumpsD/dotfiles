@@ -164,7 +164,7 @@ pkill dunst
 dunst &
 
 ## reload the cursor theme
-#xsetroot -cursor_name left_ptr
+xsetroot -cursor_name left_ptr
 
 ## load panel script
 pkill panel-bspwm
