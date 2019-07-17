@@ -15,8 +15,8 @@
 ##  COMMON COMMANDS  ##
 #######################
 
-## launch terminal
-super + Return (Win + Enter)
+## launch terminal (Win + Enter)
+super + Return
 	urxvt
 
 ## program launcher (Win + R)
