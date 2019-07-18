@@ -47,7 +47,7 @@ bspc rule -a Google-chrome desktop='^2' follow=on focus=on
 bspc rule -a Opera desktop='^2' follow=on focus=on
 
 ## work space 3 (social)
-bspc rule -a Rambox desktop='^3' follow=on focus=on
+bspc rule -a Rambox desktop='^3' follow=off focus=off
 
 ## workspace 4 (code)
 bspc rule -a Code desktop='^4' follow=on focus=on
@@ -154,10 +154,6 @@ sxhkd &
 
 ## music is my only friend :(
 mpd &
-
-# start rambox
-pkill rambox
-rambox --force-device-scale-factor=1.5 &
 
 ## reload the xsettingsd, a minimal x settings daemon
 pkill xsettingsd
