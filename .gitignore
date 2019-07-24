@@ -1,3 +1,5 @@
+.idea/
+
 proxmark/cards/*.bin
 
 ssh/putty/Jumplist
