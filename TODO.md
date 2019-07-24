@@ -17,3 +17,4 @@
 [ ] Configure touchscreen in X
 [ ] Look into making sure TLP is not installed
 [ ] See if mic works
+[ ] See if Steam and Civ work
