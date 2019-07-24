@@ -74,6 +74,13 @@
         'json-c',
         'libsndfile-git']
 
+- name: Install NFS Tooling
+  pacman:
+    name: [
+        'nfs-utils',
+        'autofs']
+    state: latest
+
 - name: Install rEFInd
   pacman:
     name: [
