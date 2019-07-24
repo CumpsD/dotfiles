@@ -6,8 +6,9 @@
 [ ] Testing volume shortcuts
 [ ] Figuring out why Code and Chrome randomly hang
 [ ] How to get Rider to work with bspwm?
-[ ] Install Fira font and configure Rider to use it
+[x] Install FiraCode font and configure Rider to use it
+[x] Configure VS code to use FiraCode
 [ ] Configure Rider (Plugins, environment, GitHub account)
 [ ] Prevent VS Code Sync Extension opening every time
-[ ] Figure out why Hack font in uxrvt doesnt show all icons
+[ ] Figure out why Fira and Hack font in uxrvt doesnt show all icons
 [ ] Figure out if fish-nvm is working ok

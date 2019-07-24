@@ -106,6 +106,19 @@
 
     ~/.local/share/applications: wm/applications
 
+    ~/.local/share/fonts/i_all.sh: fonts/nerd-fonts/bin/scripts/lib/i_all.sh
+    ~/.local/share/fonts/i_dev.sh: fonts/nerd-fonts/bin/scripts/lib/i_dev.sh
+    ~/.local/share/fonts/i_fae.sh: fonts/nerd-fonts/bin/scripts/lib/i_fae.sh
+    ~/.local/share/fonts/i_fa.sh: fonts/nerd-fonts/bin/scripts/lib/i_fa.sh
+    ~/.local/share/fonts/i_iec.sh: fonts/nerd-fonts/bin/scripts/lib/i_iec.sh
+    ~/.local/share/fonts/i_linux.sh: fonts/nerd-fonts/bin/scripts/lib/i_linux.sh
+    ~/.local/share/fonts/i_material.sh: fonts/nerd-fonts/bin/scripts/lib/i_material.sh
+    ~/.local/share/fonts/i_oct.sh: fonts/nerd-fonts/bin/scripts/lib/i_oct.sh
+    ~/.local/share/fonts/i_ple.sh: fonts/nerd-fonts/bin/scripts/lib/i_ple.sh
+    ~/.local/share/fonts/i_pom.sh: fonts/nerd-fonts/bin/scripts/lib/i_pom.sh
+    ~/.local/share/fonts/i_seti.sh: fonts/nerd-fonts/bin/scripts/lib/i_seti.sh
+    ~/.local/share/fonts/i_weather.sh: fonts/nerd-fonts/bin/scripts/lib/i_weather.sh
+
     ~/proxmark/cards/aiv-david-cumps.bin: cards/1.bin
     ~/proxmark/cards/aiv-koen-metsu.bin: cards/2.bin
     ~/proxmark/cards/aiv-evelien-dhollander.bin: cards/3.bin
@@ -115,7 +128,9 @@
 
 - shell:
     - [mkdir -p ~/screenshots, Make sure screenshots directory exists]
-    - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --clean --install-to-user-path --complete Hack, Installing Hack font]
+    - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --install-to-user-path --complete Hack, Installing Hack font]
+    - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --install-to-user-path --complete FiraCode, Installing Fira Code font]
+    - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --install-to-user-path --complete FiraMono, Installing Fira Mono font]
     - [sudo cp -f ~/.dotfiles/fonts/powerline/Terminus/PSF/*.psf.gz /usr/share/kbd/consolefonts/, Installing Terminess Powerline font]
     - [setfont ter-powerline-v22n, Enabling Terminess Powerline font]
     -
