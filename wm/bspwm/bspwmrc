@@ -52,7 +52,7 @@ bspc rule -a Rambox desktop='^3' follow=off focus=off
 ## workspace 4 (code)
 bspc rule -a Code desktop='^4' follow=on focus=on
 bspc rule -a code-oss desktop='^4' follow=on focus=on
-bspc rule -a Rider desktop='^4' follow=on focus=on
+bspc rule -a jetbrains-rider desktop='^4' follow=on focus=on
 
 ## workspace 5 (file-manager)
 bspc rule -a Thunar desktop='^3' follow=on focus=on
