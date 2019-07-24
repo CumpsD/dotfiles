@@ -12,3 +12,4 @@ X-GNOME-Autostart-Delay=10
 X-GNOME-Autostart-enabled=true
 X-KDE-autostart-after=panel
 X-MATE-Autostart-Delay=10
+GenericName=Development

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Visual Studio Code
 Comment=Code Editing. Redefined.
-GenericName=Text Editor
+GenericName=Development
 Exec=code-oss --force-device-scale-factor=1.5 --unity-launch %F
 Icon=code-oss
 Type=Application
