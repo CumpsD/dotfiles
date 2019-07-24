@@ -3,6 +3,7 @@
     - [sudo rm -f /usr/share/applications/chromium.desktop, Remove default Chromium shortcut]
     - [sudo rm -f /usr/share/applications/google-chrome.desktop, Remove default Chrome shortcut]
     - [sudo rm -f /usr/share/applications/rambox.desktop, Remove default Rambox shortcut]
+    - [sudo rm -f /usr/share/applications/code-oss.desktop, Remove default VS Code shortcut]
     - [sudo cp -f /home/$SUDO_USER/.dotfiles/scripts/fix-wifi.service /etc/systemd/system, Install Fix Wifi Systemd service]
     - [sudo cp -f /home/$SUDO_USER/.dotfiles/scripts/fix-wifi /usr/bin/, Install fix-wifi exectable]
     - [sudo systemctl enable fix-wifi.service, Enable Fix Wifi]
