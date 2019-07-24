@@ -135,4 +135,4 @@
     -
       command: "setfacl -m u:sddm:r ~/.dotfiles/sddm/aerial/*"
       description: Giving SDDM read access to ~/.dotfiles/sddm/aerial/*
-
+    - [fish -c fish_update_completions, Generating Fish completions based on man pages]
