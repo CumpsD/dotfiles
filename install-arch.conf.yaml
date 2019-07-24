@@ -1,3 +1,18 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+    shell:
+      stdin: false
+      stdout: false
+      stderr: false
+
+- link:
+    /etc/nsswitch.conf: configs/nsswitch.conf
+    /etc/autofs/auto.master.d/fs.cumps.be.autofs: configs/autofs-fs.cumps.be
+    /etc/autofs/auto.master.d/fs.cumps.be-cc: configs/autofs-fs.cumps.be-cc
+
 - shell:
     - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/scripts/000-use-all-cores-makepkg-conf-v3.sh, Use all cores in makepkg]
     - [sudo rm -f /usr/share/applications/chromium.desktop, Remove default Chromium shortcut]
