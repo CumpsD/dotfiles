@@ -10,5 +10,5 @@
 [x] Configure VS code to use FiraCode
 [ ] Configure Rider (Plugins, environment, GitHub account)
 [ ] Prevent VS Code Sync Extension opening every time
-[ ] Figure out why Fira and Hack font in uxrvt doesnt show all icons
+[ ] Figure out why Fira and Hack font in uxrvt doesnt show all icons, is the xft string in wm/urxvt/xrdb/font wrong?
 [ ] Figure out if fish-nvm is working ok

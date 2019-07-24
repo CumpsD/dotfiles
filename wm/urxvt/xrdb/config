@@ -2,9 +2,9 @@
 ! URxvt configs
 ! ------------------------------------------------------------------------------
 
-URxvt.geometry: 		    72x18
-URxvt*letterSpace: 	        0
-URxvt.lineSpace: 		    0
+URxvt.geometry:             72x18
+URxvt*letterSpace:          0
+URxvt.lineSpace:            0
 URxvt*internalBorder:       24
 URxvt*externalBorder:       0
 URxvt.background:           [90]#2f343f
