@@ -57,7 +57,7 @@ bspc rule -a jetbrains-rider desktop='^4' follow=on focus=on
 #bspc rule -a jetbrains-rider state=floating manage=off
 
 ## workspace 5 (file-manager)
-bspc rule -a Thunar desktop='^3' follow=on focus=on
+bspc rule -a Thunar desktop='^5' follow=on focus=on
 #bspc rule -a File-roller desktop='^3' follow=on focus=on
 
 ## workspace 4 (text-editors)
