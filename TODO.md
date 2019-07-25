@@ -25,6 +25,7 @@
 - [ ] Setup flicker free boot
   - https://wiki.archlinux.org/index.php/Plymouth
 - [ ] Setup rEFInd
+  - enable_touch https://www.rodsbooks.com/refind/configfile.html
 - [ ] Turn NFS /etc/fstab into systemd module and link it in
   - https://wiki.archlinux.org/index.php/NFS#As_systemd_unit
 - [ ] Add SSH sessions to `~/.ssh/config`
