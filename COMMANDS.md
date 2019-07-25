@@ -29,7 +29,7 @@ fc-list -f "%{family} : %{file}\n" :spacing=100 | sort
 ### Find Xft Font Name
 
 ```bash
-fc-scan -f "%{postscriptname}\n" /usr/share/fonts
+fc-scan -f "Xft Name: 'xft:%{fullname}:' | Style: '%{style}'\n" /usr/share/fonts/ 
 
 fc-match "Lato:bold"
 fc-match "Lato:bold:italic"
