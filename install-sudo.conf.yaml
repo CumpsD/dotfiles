@@ -28,6 +28,3 @@
     '/usr/share/fonts/TTF/System San Francisco Display Regular.ttf': '/home/$SUDO_USER/.dotfiles/fonts/san-francisco/System San Francisco Display Regular.ttf'
     '/usr/share/fonts/TTF/System San Francisco Display Thin.ttf': '/home/$SUDO_USER/.dotfiles/fonts/san-francisco/System San Francisco Display Thin.ttf'
     '/usr/share/fonts/TTF/System San Francisco Display Ultralight.ttf': '/home/$SUDO_USER/.dotfiles/fonts/san-francisco/System San Francisco Display Ultralight.ttf'
-
-    /etc/autofs/auto.master.d/fs.cumps.be.autofs: configs/autofs-fs.cumps.be
-    /etc/autofs/auto.master.d/fs.cumps.be-cc: configs/autofs-fs.cumps.be-cc
