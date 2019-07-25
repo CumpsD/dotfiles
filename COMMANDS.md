@@ -46,5 +46,6 @@ pacman -S xorg-xfontsel gtk2fontsel
 
 ```
 URxvt.font: xft:FantasqueSansMono Nerd Font Mono:size=12
+URxvt*font: xft:Iosevka\ Nerd\ Font:size=11
 URxvt.font: xft:Lato:bold:italic:size=12
 ```
