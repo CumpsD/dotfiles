@@ -106,11 +106,6 @@
         'default-jdk']
     state: latest
 
-- name: Install Azure cli package
-  package:
-    name: azure-cli
-    state: latest
-
 - name: Install mssql-tools package
   package:
     name: mssql-tools
