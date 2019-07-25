@@ -1,0 +1,11 @@
+[Trigger]
+Type = File
+Operation = Install
+Operation = Upgrade
+Target = boot/vmlinuz-linux-surface
+Target = usr/lib/initcpio/*
+
+[Action]
+Description = Copy /boot to /efi...
+When = PostTransaction
+Exec = cp -f /boot/* /efi/

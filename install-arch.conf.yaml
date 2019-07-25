@@ -11,6 +11,8 @@
 - link:
     /etc/nsswitch.conf: configs/nsswitch.conf
 
+    /usr/share/libalpm/hooks/91-linux-surface-efi.hook: configs/91-linux-surface-efi.hook
+
 - shell:
     - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/scripts/000-use-all-cores-makepkg-conf-v3.sh, Use all cores in makepkg]
 
