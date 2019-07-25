@@ -3,7 +3,6 @@
   pacman:
     update_cache: yes
     upgrade: yes
-    upgrade_extra_args: '--ignore=python-yaml'
 
 - name: Add AUR builder user
   user:
