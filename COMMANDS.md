@@ -41,3 +41,10 @@ fc-match "Lato"
 ```bash
 pacman -S xorg-xfontsel gtk2fontsel
 ```
+
+### URxvt example
+
+```
+URxvt.font: xft:FantasqueSansMono Nerd Font Mono:size=12
+URxvt.font: xft:Lato:bold:italic:size=12
+```
