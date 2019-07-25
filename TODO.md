@@ -6,6 +6,7 @@
   - https://wiki.archlinux.org/index.php/Backlight
 - [ ] Testing volume shortcuts
   - https://wiki.archlinux.org/index.php/Xbindkeys#Volume_control
+  - https://wiki.archlinux.org/index.php/PulseAudio
 - [ ] Figuring out why Code and Chrome randomly hang
 - [ ] How to get Rider to work with bspwm?
 - [x] Install FiraCode font and configure Rider to use it
@@ -20,8 +21,10 @@
 - [ ] Try to get camera working and try out in Chrome/WhatsApp/Messenger/Skype
 - [ ] Configure touchscreen in X
 - [ ] Look into making sure TLP is not installed
+  - https://wiki.archlinux.org/index.php/TLP
 - [ ] See if mic works
 - [ ] See if Steam and Civ work
+  - https://wiki.archlinux.org/index.php/Steam
 - [ ] Setup flicker free boot
   - https://wiki.archlinux.org/index.php/Plymouth
 - [ ] Setup rEFInd
@@ -29,6 +32,7 @@
 - [ ] Turn NFS /etc/fstab into systemd module and link it in
   - https://wiki.archlinux.org/index.php/NFS#As_systemd_unit
 - [ ] Add SSH sessions to `~/.ssh/config`
+  - https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/#sshconfig
 - [ ] Setup Secure Boot
   - https://wiki.archlinux.org/index.php/Microsoft_Surface_Pro_3#Booting_with_Secure_Boot_Enabled
   - https://wiki.archlinux.org/index.php/Microsoft_Surface_Pro_3#Boot_with_Secure_Boot
