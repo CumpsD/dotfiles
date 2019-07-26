@@ -60,6 +60,9 @@ bspc rule -a jetbrains-rider desktop='^4' follow=on focus=on
 bspc rule -a Thunar desktop='^5' follow=on focus=on
 #bspc rule -a File-roller desktop='^3' follow=on focus=on
 
+## workspace 6 (rdp)
+bspc rule -a org.remmina.Remmina desktop='^6' follow=on focus=on
+
 ## workspace 4 (text-editors)
 #bspc rule -a Geany desktop='^4' follow=on focus=on
 #bspc rule -a libreoffice-startcenter desktop='^4' follow=on focus=on
