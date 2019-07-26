@@ -3,8 +3,8 @@
 ! ------------------------------------------------------------------------------
 
 URxvt.geometry:             72x18
-! URxvt*letterSpace:          0
-URxvt*letterSpace:          1
+URxvt*letterSpace:          0
+! URxvt*letterSpace:          1
 URxvt.lineSpace:            0
 URxvt*internalBorder:       24
 URxvt*externalBorder:       0
