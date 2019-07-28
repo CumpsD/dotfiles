@@ -13,6 +13,8 @@
 
     /etc/vconsole.conf: /home/$SUDO_USER/.dotfiles/configs/vconsole.conf
 
+    /etc/systemd/system/mnt-fs-cc.mount: nfs/mnt-fs-cc.mount
+
     /etc/sddm.conf.d/dpi.conf: /home/$SUDO_USER/.dotfiles/sddm/dpi.conf
     /etc/sddm.conf.d/hidpi.conf: /home/$SUDO_USER/.dotfiles/sddm/hidpi.conf
     /etc/sddm.conf.d/theme.conf: /home/$SUDO_USER/.dotfiles/sddm/theme.conf
@@ -28,3 +30,6 @@
     '/usr/share/fonts/TTF/System San Francisco Display Regular.ttf': '/home/$SUDO_USER/.dotfiles/fonts/san-francisco/System San Francisco Display Regular.ttf'
     '/usr/share/fonts/TTF/System San Francisco Display Thin.ttf': '/home/$SUDO_USER/.dotfiles/fonts/san-francisco/System San Francisco Display Thin.ttf'
     '/usr/share/fonts/TTF/System San Francisco Display Ultralight.ttf': '/home/$SUDO_USER/.dotfiles/fonts/san-francisco/System San Francisco Display Ultralight.ttf'
+
+- shell:
+    - [sudo systemctl enable mnt-fs-cc.mount, Enable /mnt/fs/cc]
