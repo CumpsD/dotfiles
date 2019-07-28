@@ -104,6 +104,9 @@
 
     ~/.config/xsettingsd/xsettingsd.conf: wm/x/xsettingsd.conf
 
+    ~/.config/remmina: rdp/remmina-config
+    ~/.local/share/remmina: rdp/remmina-connections
+
     ~/.local/share/applications: wm/applications
 
     ~/.local/share/fonts/i_all.sh: fonts/nerd-fonts/bin/scripts/lib/i_all.sh
