@@ -2,17 +2,12 @@
 
 ## Surface Laptop
 
-- [ ] Dimming the brightness, via shortcuts
-  - https://wiki.archlinux.org/index.php/Backlight
 - [ ] Testing volume shortcuts
   - https://wiki.archlinux.org/index.php/Xbindkeys#Volume_control
   - https://wiki.archlinux.org/index.php/PulseAudio
 - [ ] Figuring out why Code and Chrome randomly hang
 - [ ] How to get Rider to work with bspwm?
-- [x] Install FiraCode font and configure Rider to use it
-- [x] Configure VS code to use FiraCode
 - [ ] Configure Rider (Plugins, environment, GitHub account)
-- [x] Prevent VS Code Sync Extension opening every time
 - [ ] Figure out why Fira and Hack font in uxrvt doesnt show all icons, is the xft string in wm/urxvt/xrdb/font wrong?
   - https://github.com/ryanoasis/nerd-fonts/issues/313
   - https://github.com/powerline/fonts/issues/176
@@ -29,11 +24,18 @@
   - https://wiki.archlinux.org/index.php/Plymouth
 - [ ] Setup rEFInd
   - enable_touch https://www.rodsbooks.com/refind/configfile.html
-- [ ] Turn NFS /etc/fstab into systemd module and link it in
-  - https://wiki.archlinux.org/index.php/NFS#As_systemd_unit
 - [ ] Add SSH sessions to `~/.ssh/config`
   - https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/#sshconfig
 - [ ] Setup Secure Boot
   - https://wiki.archlinux.org/index.php/Microsoft_Surface_Pro_3#Booting_with_Secure_Boot_Enabled
   - https://wiki.archlinux.org/index.php/Microsoft_Surface_Pro_3#Boot_with_Secure_Boot
   - https://wiki.archlinux.org/index.php/REFInd#Secure_Boot
+- [ ] Have some on screen display when changing brightness/volume
+
+- [x] Turn NFS /etc/fstab into systemd module and link it in
+  - https://wiki.archlinux.org/index.php/NFS#As_systemd_unit
+- [x] Prevent VS Code Sync Extension opening every time
+- [x] Install FiraCode font and configure Rider to use it
+- [x] Configure VS code to use FiraCode
+- [x] Dimming the brightness, via shortcuts
+  - https://wiki.archlinux.org/index.php/Backlight

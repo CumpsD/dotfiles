@@ -103,6 +103,7 @@
         'capitaine-cursors',
         'libva-utils',
         'vdpauinfo',
+        'xorg-xbacklight',
         'intel-media-driver',
         'udiskie']
     state: latest
