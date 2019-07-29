@@ -2,9 +2,6 @@
 
 ## Surface Laptop
 
-- [ ] Testing volume shortcuts
-  - https://wiki.archlinux.org/index.php/Xbindkeys#Volume_control
-  - https://wiki.archlinux.org/index.php/PulseAudio
 - [ ] Figuring out why Code and Chrome randomly hang
 - [ ] How to get Rider to work with bspwm?
 - [ ] Configure Rider (Plugins, environment, GitHub account)
@@ -39,3 +36,6 @@
 - [x] Configure VS code to use FiraCode
 - [x] Dimming the brightness, via shortcuts
   - https://wiki.archlinux.org/index.php/Backlight
+- [x] Testing volume shortcuts
+  - https://wiki.archlinux.org/index.php/Xbindkeys#Volume_control
+  - https://wiki.archlinux.org/index.php/PulseAudio
