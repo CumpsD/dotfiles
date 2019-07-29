@@ -73,5 +73,10 @@ set -x THEFUCK_OVERRIDDEN_ALIASES 'git'
 # Run Private tweaks
 . ~/.config/fish/init-private.fish
 
+# Load in Nerd Fonts
+for i in ~/.local/share/fonts/i_{dev,fae,fa,iec,linux,oct,ple,pom,seti,material,weather}.sh
+    . "$i"
+end
+
 # Start in home directory
 cd ~

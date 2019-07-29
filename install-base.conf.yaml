@@ -94,6 +94,7 @@
     ~/.config/.bar/panel-bspwm: wm/bar/panel-bspwm
 
     ~/.config/bspwm/bspwmrc: wm/bspwm/bspwmrc
+    ~/.config/bspwm/polybar: wm/polybar/polybar
 
     ~/.config/dunst/dunstrc: wm/dunst/dunstrc-dark
 
@@ -109,18 +110,17 @@
 
     ~/.local/share/applications: wm/applications
 
-    ~/.local/share/fonts/i_all.sh: fonts/nerd-fonts/bin/scripts/lib/i_all.sh
-    ~/.local/share/fonts/i_dev.sh: fonts/nerd-fonts/bin/scripts/lib/i_dev.sh
-    ~/.local/share/fonts/i_fae.sh: fonts/nerd-fonts/bin/scripts/lib/i_fae.sh
-    ~/.local/share/fonts/i_fa.sh: fonts/nerd-fonts/bin/scripts/lib/i_fa.sh
-    ~/.local/share/fonts/i_iec.sh: fonts/nerd-fonts/bin/scripts/lib/i_iec.sh
-    ~/.local/share/fonts/i_linux.sh: fonts/nerd-fonts/bin/scripts/lib/i_linux.sh
-    ~/.local/share/fonts/i_material.sh: fonts/nerd-fonts/bin/scripts/lib/i_material.sh
-    ~/.local/share/fonts/i_oct.sh: fonts/nerd-fonts/bin/scripts/lib/i_oct.sh
-    ~/.local/share/fonts/i_ple.sh: fonts/nerd-fonts/bin/scripts/lib/i_ple.sh
-    ~/.local/share/fonts/i_pom.sh: fonts/nerd-fonts/bin/scripts/lib/i_pom.sh
-    ~/.local/share/fonts/i_seti.sh: fonts/nerd-fonts/bin/scripts/lib/i_seti.sh
-    ~/.local/share/fonts/i_weather.sh: fonts/nerd-fonts/bin/scripts/lib/i_weather.sh
+    ~/.local/share/fonts/i_dev.sh: fonts/helpers/i_dev.sh
+    ~/.local/share/fonts/i_fae.sh: fonts/helpers/i_fae.sh
+    ~/.local/share/fonts/i_fa.sh: fonts/helpers/i_fa.sh
+    ~/.local/share/fonts/i_iec.sh: fonts/helpers/i_iec.sh
+    ~/.local/share/fonts/i_linux.sh: fonts/helpers/i_linux.sh
+    ~/.local/share/fonts/i_material.sh: fonts/helpers/i_material.sh
+    ~/.local/share/fonts/i_oct.sh: fonts/helpers/i_oct.sh
+    ~/.local/share/fonts/i_ple.sh: fonts/helpers/i_ple.sh
+    ~/.local/share/fonts/i_pom.sh: fonts/helpers/i_pom.sh
+    ~/.local/share/fonts/i_seti.sh: fonts/helpers/i_seti.sh
+    ~/.local/share/fonts/i_weather.sh: fonts/helpers/i_weather.sh
 
     ~/proxmark/cards/aiv-david-cumps.bin: cards/1.bin
     ~/proxmark/cards/aiv-koen-metsu.bin: cards/2.bin

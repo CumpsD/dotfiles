@@ -122,6 +122,7 @@
         'msbuild-stable',
         'jetbrains-toolbox',
         'ttf-symbola',
+        'polybar',
         'rambox-bin']
 
 # TODO: To enable Do Not Track, visit chrome://settings, scroll down to Advanced and under Privacy and security, check Send a "Do Not Track" request with your browsing traffic.
@@ -132,6 +133,7 @@
         'ttf-dejavu',
         'ttf-droid',
         'ttf-roboto',
+        'ttf-font-awesome',
         'noto-fonts']
     state: latest
 

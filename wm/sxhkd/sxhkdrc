@@ -47,10 +47,10 @@ super + l
 #########################
 
 XF86MonBrightnessDown
-	xbacklight -dec 10
+	xbacklight -dec 5
 
 XF86MonBrightnessUp
-	xbacklight -inc 10
+	xbacklight -inc 5
 
 ######################
 ##  MEDIA COMMANDS  ##
@@ -58,7 +58,7 @@ XF86MonBrightnessUp
 
 ## volume control
 XF86Audio{RaiseVolume,LowerVolume,Mute}
-	amixer {-c 0 set PCM 4dB+,-c 0 set PCM 4dB-,set Master toggle}
+	amixer {set Master 5%+,set Master 5%-,set Master toggle}
 
 ## music control
 XF86Audio{Next,Prev,Play,Stop}
