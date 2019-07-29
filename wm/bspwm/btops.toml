@@ -32,4 +32,7 @@ constant = "empty"
 "rdp" = ["org.remmina.Remmina"]
 
 [[names.classified]]
+"media" = ["Audacity", "Vlc", "mpv"]
+
+[[names.classified]]
 "gaming" = ["Steam"]
