@@ -1,0 +1,11 @@
+#!/bin/bash
+
+volume=$(amixer sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }')
+volume=${volume%\%*}
+muted=$(pacmd list-sinks | awk '/muted/ { print $2 }')
+
+if [[ $muted = "yes" ]]; then
+    volnoti-show -m
+else
+    volnoti-show $volume
+fi

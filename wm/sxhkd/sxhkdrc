@@ -58,7 +58,7 @@ XF86MonBrightnessUp
 
 ## volume control
 XF86Audio{RaiseVolume,LowerVolume,Mute}
-    amixer {set Master 5%+,set Master 5%-,set Master toggle}
+    amixer {set Master 5%+,set Master 5%-,set Master toggle} && ~/.utility/display-volume
 
 ## music control
 XF86Audio{Next,Prev,Play,Stop}

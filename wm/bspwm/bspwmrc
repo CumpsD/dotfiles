@@ -91,3 +91,6 @@ polybar -c ~/.config/bspwm/polybar top &
 
 # Load btops to cleanup workspaces
 btops &
+
+# Load volnotify
+volnoti &
