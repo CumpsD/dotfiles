@@ -36,8 +36,10 @@ bspc config normal_border_color     "#2f343f"
 ###########
 
 ## need to be floating
-bspc rule -a Viewnior state=floating follow=on
+bspc rule -a Viewnior state=floating center=on
 bspc rule -a feh state=floating follow=on
+bspc rule -a Google-chrome:crx_gaedmjdfmmahhbjefcbgaolhhanlaolb state=floating center=on # Authy
+bspc rule -a chrome_app_list state=floating
 
 ## don't manage Conky
 bspc rule -a Conky state=floating manage=off
