@@ -4,6 +4,9 @@ if [ (umask) = "0000" ]; umask 022; end
 # Export our Display to get it into Windows
 set -gx DISPLAY :0
 
+# Pick the correct VA-API driver
+set -gx LIBVA_DRIVER_NAME iHD
+
 # Set a default editor
 set -gx EDITOR nano
 

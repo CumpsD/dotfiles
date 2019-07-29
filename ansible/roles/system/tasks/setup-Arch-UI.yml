@@ -11,6 +11,11 @@
   pacman:
     name: [
         'xf86-video-intel',
+        'libvdpau-va-gl',
+        'libva-vdpau-driver',
+        'intel-media-driver',
+        'libva-utils',
+        'vdpauinfo',
         'mesa']
     state: latest
 
@@ -20,7 +25,7 @@
         'sddm']
     state: latest
 
-- name: Enable SDDM SystemD service
+- name: Enable SDDM systemd service
   systemd:
     name: sddm
     enabled: yes
@@ -79,14 +84,16 @@
         'rofi',
         'dunst',
         'rxvt-unicode',
-        'network-manager-applet',
         'urxvt-perls',
-        'xsel',
-        'xclip',
+        'network-manager-applet',
         'thunar',
         'ranger',
         'feh',
+        'xsel',
+        'xclip',
         'xsettingsd',
+        'xorg-xbacklight',
+        'xorg-xsetroot',
         'wireless_tools',
         'imagemagick',
         'bc',
@@ -99,11 +106,6 @@
         'remmina',
         'freerdp',
         'capitaine-cursors',
-        'libva-utils',
-        'vdpauinfo',
-        'xorg-xbacklight',
-        'xorg-xsetroot',
-        'intel-media-driver',
         'udiskie']
     state: latest
 

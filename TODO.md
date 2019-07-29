@@ -30,6 +30,8 @@
 - [ ] Have some on screen display when changing brightness/volume
 - [ ] Configure NordVPN
 - [ ] Configure Ranger
+  - https://wiki.archlinux.org/index.php/Ranger
+  - https://github.com/addy-dclxvi/almighty-dotfiles/tree/cef4ffae733d4ec5d81d0773c7dd0fbefce401a0/.config/ranger
 
 - [x] Turn NFS /etc/fstab into systemd module and link it in
   - https://wiki.archlinux.org/index.php/NFS#As_systemd_unit
