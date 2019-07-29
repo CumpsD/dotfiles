@@ -35,7 +35,7 @@ module-margin-right = 2
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = wlan-speed-down wlan-speed-up wlan battery backlight volume date
+modules-right = wlan-speed-down wlan-speed-up wlan battery backlight volume time date
 
 [module/bspwm]
 type = internal/bspwm
@@ -199,14 +199,25 @@ label-muted-padding-left = 2
 
 [module/date]
 type = internal/date
-interval = 30
-label = " %date% %time%"
-date =
-date-alt = %a %d
-time = %H:%M
-time-alt =
-format-prefix = 
+interval = 5
+
+format-prefix = 
 format-prefix-foreground = ${colors.accent}
+
+label = %date%
+label-padding-left = 2
+date = %a %d
+
+[module/time]
+type = internal/date
+interval = 5
+
+format-prefix = 
+format-prefix-foreground = ${colors.accent}
+
+label = %time%
+label-padding-left = 2
+time = %H:%M
 
 [module/eth]
 type = internal/network
