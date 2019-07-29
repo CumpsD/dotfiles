@@ -104,6 +104,7 @@
         'libva-utils',
         'vdpauinfo',
         'xorg-xbacklight',
+        'xorg-xsetroot',
         'intel-media-driver',
         'udiskie']
     state: latest
@@ -123,6 +124,8 @@
         'jetbrains-toolbox',
         'ttf-symbola',
         'polybar',
+        'xtitle'
+        'btops-git',
         'networkmanager-dmenu-git',
         'rambox-bin']
 

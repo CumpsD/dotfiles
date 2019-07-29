@@ -41,64 +41,35 @@ bspc config normal_border_color     "#2f343f"
 ##################
 
 ## workspace 1 (labs)
-bspc rule -a URxvt desktop='^1' follow=on focus=on
+#bspc rule -a URxvt desktop='^1' follow=on focus=on
 
 ## workspace 2 (web browsers)
-bspc rule -a Firefox-esr desktop='^2' follow=on focus=on
-bspc rule -a Chromium desktop='^2' follow=on focus=on
-bspc rule -a Google-chrome desktop='^2' follow=on focus=on
-bspc rule -a Opera desktop='^2' follow=on focus=on
+#bspc rule -a Firefox-esr desktop='^2' follow=on focus=on
+#bspc rule -a Chromium desktop='^2' follow=on focus=on
+#bspc rule -a Google-chrome desktop='^2' follow=on focus=on
 
 ## work space 3 (social)
-bspc rule -a Rambox desktop='^3' follow=off focus=off
+#bspc rule -a Rambox desktop='^3' follow=off focus=off
 
 ## workspace 4 (code)
-bspc rule -a Code desktop='^4' follow=on focus=on
-bspc rule -a code-oss desktop='^4' follow=on focus=on
+#bspc rule -a Code desktop='^4' follow=on focus=on
+#bspc rule -a code-oss desktop='^4' follow=on focus=on
 
-bspc rule -a jetbrains-rider desktop='^4' follow=on focus=on
-#bspc rule -a jetbrains-rider state=floating manage=off
+#bspc rule -a jetbrains-rider desktop='^4' follow=on focus=on
 
 ## workspace 5 (file-manager)
-bspc rule -a Thunar desktop='^5' follow=on focus=on
-#bspc rule -a File-roller desktop='^3' follow=on focus=on
+#bspc rule -a Thunar desktop='^5' follow=on focus=on
 
 ## workspace 6 (rdp)
-bspc rule -a org.remmina.Remmina desktop='^6' follow=on focus=on
+#bspc rule -a Remmina desktop='^6' follow=on focus=on
+#bspc rule -a Remmina Remote Desktop Client desktop='^6' follow=on focus=on
 
-## workspace 4 (text-editors)
-#bspc rule -a Geany desktop='^4' follow=on focus=on
-#bspc rule -a libreoffice-startcenter desktop='^4' follow=on focus=on
-#bspc rule -a libreoffice desktop='^4' follow=on focus=on
-#bspc rule -a Soffice desktop='^4' follow=on focus=on
-#bspc rule -a libreoffice-base desktop='^4' follow=on focus=on
-#bspc rule -a libreoffice-calc desktop='^4' follow=on focus=on
-#bspc rule -a libreoffice-draw desktop='^4' follow=on focus=on
-#bspc rule -a libreoffice-impress desktop='^4' follow=on focus=on
-#bspc rule -a libreoffice-math desktop='^4' follow=on focus=on
-#bspc rule -a libreoffice-writer desktop='^4' follow=on focus=on
-#bspc rule -a Wps desktop='^4' follow=on focus=on
-#bspc rule -a Et desktop='^4' follow=on focus=on
-#bspc rule -a Wpp desktop='^4' follow=on focus=on
-
-## workspace 5 (graphic-utilities)
-#bspc rule -a Nitrogen desktop='^5' follow=on focus=on
-#bspc rule -a Font-manager desktop='^5' state=tiled follow=on focus=on
-#bspc rule -a Evince desktop='^5' follow=on focus=on
-#bspc rule -a Gucharmap desktop='^5' follow=on focus=on
-
-## workspace 6 (multimedia)
+## workspace 7 (multimedia)
 #bspc rule -a Audacity desktop='^6' follow=on focus=on
 #bspc rule -a Vlc desktop='^6' follow=on focus=on
 #bspc rule -a mpv desktop='^6' follow=on focus=on
 #bspc rule -a Ghb desktop='^6' follow=on focus=on
 #bspc rule -a Xfburn desktop='^6' follow=on focus=on
-
-## workspace 7 (graphics-editors)
-#bspc rule -a Gimp desktop='^7' follow=on focus=on
-#bspc rule -a Gimp-2.8 desktop='^7' follow=on focus=on
-#bspc rule -a Inkscape desktop='^7' follow=on focus=on
-#bspc rule -a Oomox desktop='^7' follow=on focus=on
 
 ## workspace 8 (system-settings)
 #bspc rule -a Lxappearance desktop='^8' state=floating follow=on
@@ -113,10 +84,8 @@ bspc rule -a org.remmina.Remmina desktop='^6' follow=on focus=on
 #bspc rule -a Arandr desktop='^8' state=floating follow=on
 
 ## need to be floating
-#bspc rule -a Audacious state=floating follow=on
 bspc rule -a Viewnior state=floating follow=on
 bspc rule -a feh state=floating follow=on
-#bspc rule -a Gpicview state=floating follow=on
 
 ## don't manage my conky & systemtray :/
 #bspc rule -a Conky state=floating manage=off
@@ -181,3 +150,6 @@ xsetroot -cursor_name left_ptr
 # Load polybar
 pkill polybar
 polybar -c ~/.config/bspwm/polybar top &
+
+# Load btops to cleanup workspaces
+btops &

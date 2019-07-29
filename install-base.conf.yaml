@@ -96,6 +96,8 @@
     ~/.config/bspwm/bspwmrc: wm/bspwm/bspwmrc
     ~/.config/bspwm/polybar: wm/polybar/polybar
 
+    ~/.config/btops/config.toml: wm/bspwm/btops.toml
+
     ~/.config/dunst/dunstrc: wm/dunst/dunstrc-dark
 
     ~/.config/gtk-3.0/settings.ini: wm/gtk/settings.ini

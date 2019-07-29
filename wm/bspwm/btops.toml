@@ -1,0 +1,35 @@
+# This config is focused on classified names.
+#
+# When a new client is spawned, it checks its name against
+# any of the classifiers.  If there's a match, it will use
+# the name specified.  If not, the desktop name will be 
+# a space separated string of opened clients.  All empty 
+# desktops will use the constant name
+
+remove-empty = true
+append-when-occupied = true
+renamers = ["classified", "client", "constant"]
+
+[names]
+constant = "empty"
+
+[[names.classified]]
+"shell" = ["Termite", "Alacritty", "URxvt"]
+
+[[names.classified]]
+"web" = ["Firefox-esr", "Chromium", "Google-chrome", "Opera"]
+
+[[names.classified]]
+"social" = ["Rambox"]
+
+[[names.classified]]
+"code" = ["Code", "code-oss", "jetbrains-rider"]
+
+[[names.classified]]
+"file" = ["Thunar"]
+
+[[names.classified]]
+"rdp" = ["org.remmina.Remmina"]
+
+[[names.classified]]
+"gaming" = ["Steam"]
