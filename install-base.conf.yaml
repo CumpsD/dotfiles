@@ -105,6 +105,11 @@
 
     ~/.config/xsettingsd/xsettingsd.conf: wm/x/xsettingsd.conf
 
+    ~/.config/rofi/config.rasi: wm/rofi/config.rasi
+    ~/.config/rofi/cumpsd.rasi: wm/rofi/cumpsd.rasi
+
+    ~/.config/networkmanager-dmenu/config.ini: wm/rofi/network-manager.ini
+
     ~/.config/remmina: rdp/remmina-config
     ~/.local/share/remmina: rdp/remmina-connections
 

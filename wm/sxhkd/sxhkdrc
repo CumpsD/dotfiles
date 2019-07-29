@@ -32,7 +32,7 @@ super + Return
 
 ## Program launcher (Win + R)
 super + r
-	rofi -modi ssh,run,drun,window -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font "Noto Sans 8"
+	rofi -show drun
 
 ## Launch Thunar (Win + E)
 super + e
