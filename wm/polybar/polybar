@@ -61,9 +61,10 @@ label-urgent = %{F#81a1c1}%icon%%{F-}  %name%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 3
 
-label-empty = %{F#81a1c1}%icon%%{F-}  %{F#787e68}%name%%{F-}
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 3
+label-empty =
+;label-empty = %{F#81a1c1}%icon%%{F-}  %{F#787e68}%name%%{F-}
+;label-empty-foreground = ${colors.foreground-alt}
+;label-empty-padding = 3
 
 [module/xwindow]
 type = internal/xwindow
