@@ -22,6 +22,8 @@
 #bspc monitor -d I II III IV V VI VII VIII IX X
 bspc monitor -d 'shell' 'web' 'social' 'code' 'file' 'rdp'
 
+# TODO: Make workspaces disappear when there is nothing in them
+
 ## common bspwm configuration
 bspc config border_width            2
 bspc config window_gap         	    16

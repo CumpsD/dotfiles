@@ -47,10 +47,10 @@ super + l
 #########################
 
 XF86MonBrightnessDown
-	xbacklight -dec 5
+	xbacklight -dec 5 -time 200
 
 XF86MonBrightnessUp
-	xbacklight -inc 5
+	xbacklight -inc 5 -time 200
 
 ######################
 ##  MEDIA COMMANDS  ##

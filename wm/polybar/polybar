@@ -90,7 +90,7 @@ type = internal/xbacklight
 format = <label>
 format-prefix = 
 format-prefix-foreground = ${colors.accent}
-label = %percentage%%
+label = %{A1:~/.utility/toggle-brightness:}%percentage%%%{A}
 label-padding-left = 2
 
 [module/battery]
