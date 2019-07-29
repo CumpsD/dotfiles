@@ -112,7 +112,6 @@ Terminal=false
 Icon=google-chrome
 Type=Application
 Categories=Network;WebBrowser;
-MimeType=text/html;text/xml;application/xhtml_xml;image/webp;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
 Actions=new-window;new-private-window;
 
 [Desktop Action new-window]
@@ -222,3 +221,4 @@ Name[zh_CN]=新建隐身窗口
 Name[zh_TW]=新增無痕式視窗
 StartupWMClass=Google-chrome
 Exec=/usr/bin/google-chrome-stable --force-device-scale-factor=1.5 --incognito
+MimeType=x-scheme-handler/unknown;x-scheme-handler/about;text/html;text/xml;application/xhtml_xml;image/webp;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;

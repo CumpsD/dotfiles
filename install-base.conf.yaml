@@ -141,8 +141,7 @@
     - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --install-to-user-path --complete Hack, Installing Hack font]
     - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --install-to-user-path --complete FiraCode, Installing Fira Code font]
     - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --install-to-user-path --complete FiraMono, Installing Fira Mono font]
-    - [sudo cp -f ~/.dotfiles/fonts/powerline/Terminus/PSF/*.psf.gz /usr/share/kbd/consolefonts/, Installing Terminess Powerline font]
-    - [setfont ter-powerline-v22n, Enabling Terminess Powerline font]
+    - [xdg-settings set default-web-browser chrome.desktop, Setting Chrome as default desktop]
     -
       command: "setfacl -m u:sddm:rx ~/"
       description: Giving SDDM read access to ~/
@@ -162,3 +161,5 @@
       command: "setfacl -m u:sddm:r ~/.dotfiles/sddm/aerial/*"
       description: Giving SDDM read access to ~/.dotfiles/sddm/aerial/*
     - [fish -c fish_update_completions, Generating Fish completions based on man pages]
+    - [sudo cp -f ~/.dotfiles/fonts/powerline/Terminus/PSF/*.psf.gz /usr/share/kbd/consolefonts/, Installing Terminess Powerline font]
+    - [setfont ter-powerline-v22n, Enabling Terminess Powerline font]
