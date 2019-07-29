@@ -76,6 +76,10 @@ Print + alt
 Print + ctrl
 	~/.utility/screeny -s
 
+## Take a screenshot with 3s delay (Print + Shift)
+Print + shift
+        ~/.utility/screeny -d
+
 ######################
 ##  BSPWM COMMANDS  ##
 ######################

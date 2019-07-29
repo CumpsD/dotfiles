@@ -16,6 +16,10 @@ elif [[ $1 = "-s" ]]; then
     scrot 'screenshot-%Y-%m-%d-%S_$wx$h.png' --select \
     -e 'mv $f ~/screenshots; viewnior ~/screenshots/$f'
 
+# 'screeny -d' to take a screenshot normally with 3s delay
+elif [[ $1 = "-d" ]]; then
+    scrot 'screenshot-%Y-%m-%d-%S_$wx$h.png' -d 3 \
+    -e 'mv $f ~/screenshots; viewnior ~/screenshots/$f'
 # 'screeny' only to take a screenshot normally
 else
     scrot 'screenshot-%Y-%m-%d-%S_$wx$h.png' \
