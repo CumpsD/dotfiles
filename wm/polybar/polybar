@@ -135,8 +135,6 @@ type = internal/network
 interface = wlp2s0
 interval = 3
 
-; TODO: Something to open network applet %{A1:command:} clickable text %{A}
-
 format-connected = <label-connected>
 format-connected-prefix = 
 format-connected-prefix-foreground = ${colors.accent}

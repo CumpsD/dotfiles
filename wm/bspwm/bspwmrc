@@ -62,21 +62,6 @@ urxvtd -q &
 # Start udiskie deamon
 udiskie &
 
-# system tray
-#pkill stalonetray
-#stalonetray &
-
-# network applet
-#nm-applet &
-
-# clipboard manager
-#pkill clipit
-#clipit &
-
-# volume icon
-#pkill volumeicon
-#volumeicon &
-
 # Start keybind daemon (sxhkd)
 pkill sxhkd
 sxhkd &
