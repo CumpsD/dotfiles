@@ -28,6 +28,8 @@
   - https://wiki.archlinux.org/index.php/Microsoft_Surface_Pro_3#Boot_with_Secure_Boot
   - https://wiki.archlinux.org/index.php/REFInd#Secure_Boot
 - [ ] Have some on screen display when changing brightness/volume
+- [ ] Configure NordVPN
+- [ ] Configure Ranger
 
 - [x] Turn NFS /etc/fstab into systemd module and link it in
   - https://wiki.archlinux.org/index.php/NFS#As_systemd_unit
