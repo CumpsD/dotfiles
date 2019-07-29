@@ -27,7 +27,6 @@
   - https://wiki.archlinux.org/index.php/Microsoft_Surface_Pro_3#Booting_with_Secure_Boot_Enabled
   - https://wiki.archlinux.org/index.php/Microsoft_Surface_Pro_3#Boot_with_Secure_Boot
   - https://wiki.archlinux.org/index.php/REFInd#Secure_Boot
-- [ ] Have some on screen display when changing brightness/volume
 - [ ] Configure NordVPN
 - [ ] Configure Ranger
   - https://wiki.archlinux.org/index.php/Ranger
@@ -43,3 +42,4 @@
 - [x] Testing volume shortcuts
   - https://wiki.archlinux.org/index.php/Xbindkeys#Volume_control
   - https://wiki.archlinux.org/index.php/PulseAudio
+- [x] Have some on screen display when changing brightness/volume
