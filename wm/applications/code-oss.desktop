@@ -2,7 +2,7 @@
 Name=Visual Studio Code
 Comment=Code Editing. Redefined.
 GenericName=Development
-Exec=code-oss --force-device-scale-factor=1.5 --unity-launch %F
+Exec=code-oss --force-device-scale-factor=1.5 --disable-gpu --force-cpu-draw --unity-launch %F
 Icon=code-oss
 Type=Application
 StartupNotify=false
