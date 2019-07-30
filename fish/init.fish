@@ -48,6 +48,10 @@ set -g fish_color_autosuggestion 555 yellow brblack
 # Make bspwm work with fish
 set -U SXHKD_SHELL /usr/bin/bash
 
+# Make java work bith bspwm
+set -U _JAVA_AWT_WM_NONREPARENTING 1
+wmname LG3D
+
 # Configure Docker to use Docker for Windows
 set -gx DOCKER_HOST tcp://0.0.0.0:2375
 

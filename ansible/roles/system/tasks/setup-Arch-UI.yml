@@ -80,6 +80,7 @@
         'bspwm',
         'sxhkd',
         'xdo',
+        'wmname',
         'compton',
         'rofi',
         'dunst',
