@@ -3,7 +3,6 @@
 ## Surface Laptop
 
 - [ ] Figuring out why Code and Chrome randomly hang
-- [ ] How to get Rider to work with bspwm?
 - [ ] Configure Rider (Plugins, environment, GitHub account)
 - [ ] Figure out why Fira and Hack font in uxrvt doesnt show all icons, is the xft string in wm/urxvt/xrdb/font wrong?
   - https://github.com/ryanoasis/nerd-fonts/issues/313
@@ -43,3 +42,4 @@
   - https://wiki.archlinux.org/index.php/Xbindkeys#Volume_control
   - https://wiki.archlinux.org/index.php/PulseAudio
 - [x] Have some on screen display when changing brightness/volume
+- [x] How to get Rider to work with bspwm?
