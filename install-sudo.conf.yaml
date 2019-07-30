@@ -31,5 +31,8 @@
     '/usr/share/fonts/TTF/System San Francisco Display Thin.ttf': '/home/$SUDO_USER/.dotfiles/fonts/san-francisco/System San Francisco Display Thin.ttf'
     '/usr/share/fonts/TTF/System San Francisco Display Ultralight.ttf': '/home/$SUDO_USER/.dotfiles/fonts/san-francisco/System San Francisco Display Ultralight.ttf'
 
+    /etc/systemd/system/docker.socket.d/socket.conf: /home/$SUDO_USER/.dotfiles/docker/socket.conf
+
 - shell:
     - [sudo systemctl enable mnt-fs-cc.mount, Enable /mnt/fs/cc]
+    - [sudo systemctl enable docker, Enable Docker]
