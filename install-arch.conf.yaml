@@ -21,6 +21,7 @@
     - [sudo rm -f /usr/share/applications/electron4.desktop, Remove Electron 4 shortcut]
     - [sudo rm -f /usr/share/applications/compton.desktop, Remove Compton shortcut]
     - [sudo rm -f /usr/share/applications/jetbrains-toolbox.desktop, Remove default Jetbrains Toolbox shortcut]
+    - [sudo rm -f /usr/share/applications/openscad.desktop, Remove default OpenSCAD shortcut]
 
     - [sudo cp -f /home/$SUDO_USER/.dotfiles/scripts/fix-wifi.service /etc/systemd/system, Install Fix Wifi Systemd service]
     - [sudo cp -f /home/$SUDO_USER/.dotfiles/scripts/fix-wifi /usr/bin/, Install fix-wifi exectable]

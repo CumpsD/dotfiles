@@ -17,7 +17,7 @@
 ###################
 
 ## workspace name
-bspc monitor -d 'shell' 'web' 'social' 'code' 'file' 'rdp' 'media' 'gaming'
+bspc monitor -d 'shell' 'web' 'social' 'code' 'gfx' 'file' 'rdp' 'media' 'gaming'
 
 ## common bspwm configuration
 bspc config border_width            2

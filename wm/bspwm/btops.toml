@@ -26,6 +26,9 @@ constant = "empty"
 "code" = ["Code", "code-oss", "jetbrains-rider"]
 
 [[names.classified]]
+"gfx" = ["OpenSCAD"]
+
+[[names.classified]]
 "file" = ["Thunar"]
 
 [[names.classified]]
@@ -33,6 +36,9 @@ constant = "empty"
 
 [[names.classified]]
 "media" = ["Audacity", "Vlc", "mpv"]
+
+[[names.classified]]
+"music" = ["itunes"]
 
 [[names.classified]]
 "gaming" = ["Steam"]

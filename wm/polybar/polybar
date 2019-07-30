@@ -44,9 +44,12 @@ ws-icon-0 = shell;
 ws-icon-1 = web;
 ws-icon-2 = social;
 ws-icon-3 = code;
-ws-icon-4 = file;
-ws-icon-5 = rdp;
-ws-icon-6 = music;ﱘ
+ws-icon-4 = gfx;
+ws-icon-5 = file;
+ws-icon-6 = rdp;
+ws-icon-7 = media;
+ws-icon-8 = music;ﱘ
+ws-icon-9 = gaming;
 ws-icon-default = 
 
 label-focused = %{F#81a1c1}%icon%%{F-}  %name%

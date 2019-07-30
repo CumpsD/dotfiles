@@ -106,7 +106,8 @@
         'remmina',
         'freerdp',
         'capitaine-cursors',
-        'udiskie']
+        'udiskie',
+        'openscad']
     state: latest
 
 - name: Install WM and tools (AUR)
