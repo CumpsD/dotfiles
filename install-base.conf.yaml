@@ -127,6 +127,11 @@
     ~/.local/share/fonts/i_seti.sh: fonts/helpers/i_seti.sh
     ~/.local/share/fonts/i_weather.sh: fonts/helpers/i_weather.sh
 
+    ~/.Rider2019.1/config/codestyles: rider/codestyles
+    ~/.Rider2019.1/config/colors: rider/colors
+    ~/.Rider2019.1/config/disabled_plugins.txt: rider/disabled_plugins.txt
+    ~/.Rider2019.1/config/options: rider/options
+
     ~/proxmark/cards/aiv-david-cumps.bin: cards/1.bin
     ~/proxmark/cards/aiv-koen-metsu.bin: cards/2.bin
     ~/proxmark/cards/aiv-evelien-dhollander.bin: cards/3.bin

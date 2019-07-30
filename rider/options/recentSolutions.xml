@@ -1,0 +1,59 @@
+<application>
+  <component name="RiderRecentProjectsManager">
+    <option name="recentPaths">
+      <list>
+        <option value="$USER_HOME$/repos/gh-aiv/municipality-registry/MunicipalityRegistry.sln" />
+        <option value="$USER_HOME$/dotfiles" />
+      </list>
+    </option>
+    <option name="openPaths">
+      <list>
+        <option value="$USER_HOME$/repos/gh-aiv/municipality-registry/MunicipalityRegistry.sln" />
+      </list>
+    </option>
+    <option name="names">
+      <map>
+        <entry key="$USER_HOME$/dotfiles" value="dotfiles" />
+      </map>
+    </option>
+    <option name="groups">
+      <list>
+        <ProjectGroup>
+          <option name="expanded" value="true" />
+          <option name="name" value="Tutorials" />
+          <option name="projectPaths" value="Catch exceptions, use conditional breakpoints, and more:Learn how to run your apps in Rider:Use the editor efficiently with shortcuts, code completion, live templates...:Set breakpoints, step through code, and more:Add unit tests to your projects, run them, and analyze results:Do almost any VCS operation right in the IDE" />
+          <option name="tutorials" value="true" />
+        </ProjectGroup>
+      </list>
+    </option>
+    <option name="lastPath" value="$USER_HOME$/repos/gh-aiv/municipality-registry/MunicipalityRegistry.sln" />
+    <option name="pid" value="" />
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/dotfiles">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="RD-191.7141.460" />
+              <option name="productionCode" value="RD" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1563938018572" />
+              <option name="buildTimestamp" value="1562710889036" />
+              <option name="metadata" value="dotfiles|" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/repos/gh-aiv/municipality-registry/MunicipalityRegistry.sln">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="RD-191.7141.460" />
+              <option name="productionCode" value="RD" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1564483203153" />
+              <option name="buildTimestamp" value="1562710870181" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</application>

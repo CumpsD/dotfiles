@@ -1,0 +1,13 @@
+<application>
+  <component name="DimensionService">
+    <location key="SettingsEditor.0.0.2256.1504@192dpi" x="0" y="0" />
+    <location key="FileChooserDialogImpl.0.0.2256.1504@192dpi" x="704" y="200" />
+    <location key="WELCOME_SCREEN.0.0.2256.1504@192dpi" x="1128" y="654" />
+    <location key="search.everywhere.popup.0.0.2256.1504@192dpi" x="380" y="0" />
+    <location key="#Default.0.0.2256.1504@192dpi" x="419" y="164" />
+    <location key="SettingsEditor.0.0.2256.1504@120dpi" x="0" y="0" />
+    <location key="SettingsEditor.0.0.2256.1504" x="0" y="0" />
+    <size key="SettingsEditor.0.0.2256.1504@192dpi" width="2167" height="1390" />
+    <size key="search.everywhere.popup.0.0.2256.1504@192dpi" width="1483" height="1500" />
+  </component>
+</application>
