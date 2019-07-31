@@ -229,7 +229,7 @@ format-prefix-foreground = ${colors.accent}
 
 label = %date%
 label-padding-left = 2
-date = %a %d
+date = %Y-%m-%d
 
 [module/time]
 type = internal/date
