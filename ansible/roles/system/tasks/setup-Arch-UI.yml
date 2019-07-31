@@ -87,6 +87,7 @@
         'rxvt-unicode',
         'urxvt-perls',
         'network-manager-applet',
+        'networkmanager-openvpn',
         'thunar',
         'ranger',
         'feh',
