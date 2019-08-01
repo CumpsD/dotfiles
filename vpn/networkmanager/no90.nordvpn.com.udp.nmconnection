@@ -27,8 +27,11 @@ username=david@cumps.be
 service-type=org.freedesktop.NetworkManager.openvpn
 
 [ipv4]
+dns=103.86.96.100;103.86.99.100;
 dns-search=
+ignore-auto-dns=true
 method=auto
+
 
 [ipv6]
 addr-gen-mode=stable-privacy
