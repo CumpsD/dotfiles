@@ -1,0 +1,23 @@
+[connection]
+id=Informatie Vlaanderen
+uuid=14c10332-6d83-4564-b32b-e79bd221220c
+type=wifi
+permissions=
+timestamp=1563298046
+
+[wifi]
+mac-address-blacklist=
+mode=infrastructure
+seen-bssids=24:DE:C6:57:4A:EB;
+ssid=AGIV-GUEST
+
+[ipv4]
+dns-search=
+may-fail=false
+method=auto
+
+[ipv6]
+addr-gen-mode=stable-privacy
+dns-search=
+ip6-privacy=0
+method=ignore

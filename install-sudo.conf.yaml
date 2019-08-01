@@ -33,6 +33,14 @@
 
     /etc/systemd/system/docker.socket.d/socket.conf: /home/$SUDO_USER/.dotfiles/docker/socket.conf
 
+    /etc/NetworkManager/system-connections/be114.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/be114.nordvpn.com.udp.nmconnection
+    /etc/NetworkManager/system-connections/be79.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/be79.nordvpn.com.udp.nmconnection
+    /etc/NetworkManager/system-connections/mx24.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/mx24.nordvpn.com.udp.nmconnection
+    /etc/NetworkManager/system-connections/nl414.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/nl414.nordvpn.com.udp.nmconnection
+    /etc/NetworkManager/system-connections/no90.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/no90.nordvpn.com.udp.nmconnection
+    /etc/NetworkManager/system-connections/us3033.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/us3033.nordvpn.com.udp.nmconnection
+    '/etc/NetworkManager/system-connections/Informatie Vlaanderen.nmconnection': '/home/$SUDO_USER/.dotfiles/vpn/networkmanager/Informatie Vlaanderen.nmconnection'
+
 - shell:
     - [sudo systemctl enable mnt-fs-cc.mount, Enable /mnt/fs/cc]
     - [sudo systemctl enable docker, Enable Docker]
