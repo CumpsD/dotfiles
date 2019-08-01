@@ -1,16 +1,21 @@
 [connection]
-id=Informatie Vlaanderen
-uuid=14c10332-6d83-4564-b32b-e79bd221220c
+id=Heaven
+uuid=f0c01bd8-d8c6-41b7-be1c-c6a6c4a2e579
 type=wifi
 permissions=
 secondaries=d335bc4b-068e-4f01-8f93-c0906bdde0b4;
-timestamp=1563383859
+timestamp=1564691756
 
 [wifi]
 mac-address-blacklist=
 mode=infrastructure
-seen-bssids=24:DE:C6:57:4A:EB;
-ssid=AGIV-GUEST
+powersave=2
+seen-bssids=DC:9F:DB:1B:84:30;DC:9F:DB:1C:84:30;FC:EC:DA:72:D9:7C;FC:EC:DA:72:D9:7D;
+ssid=Heaven
+
+[wifi-security]
+key-mgmt=wpa-psk
+psk-flags=1
 
 [ipv4]
 dns-search=
@@ -21,4 +26,4 @@ method=auto
 addr-gen-mode=stable-privacy
 dns-search=
 ip6-privacy=0
-method=ignore
+method=auto

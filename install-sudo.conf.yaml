@@ -39,6 +39,7 @@
     /etc/NetworkManager/system-connections/nl414.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/nl414.nordvpn.com.udp.nmconnection
     /etc/NetworkManager/system-connections/no90.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/no90.nordvpn.com.udp.nmconnection
     /etc/NetworkManager/system-connections/us3033.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/us3033.nordvpn.com.udp.nmconnection
+    /etc/NetworkManager/system-connections/Heaven.nmconnection': /home/$SUDO_USER/.dotfiles/vpn/networkmanager/Heaven.nmconnection
     '/etc/NetworkManager/system-connections/Informatie Vlaanderen.nmconnection': '/home/$SUDO_USER/.dotfiles/vpn/networkmanager/Informatie Vlaanderen.nmconnection'
 
 - shell:
