@@ -35,7 +35,7 @@ module-margin-right = 2
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = wlan-speed-down wlan-speed-up wlan battery backlight temperature volume time date
+modules-right = wlan-speed-down wlan-speed-up wlan vpn battery backlight temperature volume time date
 
 [module/bspwm]
 type = internal/bspwm
@@ -132,6 +132,34 @@ ramp-capacity-1 = ${env:i_mdi_battery_20}
 ramp-capacity-2 = ${env:i_mdi_battery_40}
 ramp-capacity-3 = ${env:i_mdi_battery_60}
 ramp-capacity-4 = ${env:i_mdi_battery_80}
+
+;[module/vpn]
+;type = internal/network
+;interface = tun0
+;interval = 3
+
+;format-connected = <label-connected>
+;format-connected-prefix = 
+;format-connected-prefix-foreground = ${colors.accent}
+;label-connected = %ifname%
+;label-connected-padding-left = 2
+
+;format-disconnected = <label-disconnected>
+;format-disconnected-prefix = 
+;format-disconnected-prefix-foreground = ${colors.accent}
+;label-disconnected = Disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+;label-disconnected-padding-left = 2
+
+[module/vpn]
+type = custom/script
+interval = 3
+
+exec = ~/.utility/vpn-status.sh
+
+format-prefix = 
+format-prefix-foreground = ${colors.accent}
+label-padding-left = 2
 
 [module/wlan]
 type = internal/network
