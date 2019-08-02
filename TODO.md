@@ -26,7 +26,6 @@
   - https://wiki.archlinux.org/index.php/Microsoft_Surface_Pro_3#Booting_with_Secure_Boot_Enabled
   - https://wiki.archlinux.org/index.php/Microsoft_Surface_Pro_3#Boot_with_Secure_Boot
   - https://wiki.archlinux.org/index.php/REFInd#Secure_Boot
-- [ ] Configure NordVPN
 - [ ] Configure Ranger
   - https://wiki.archlinux.org/index.php/Ranger
   - https://github.com/addy-dclxvi/almighty-dotfiles/tree/cef4ffae733d4ec5d81d0773c7dd0fbefce401a0/.config/ranger
@@ -44,3 +43,4 @@
 - [x] Have some on screen display when changing brightness/volume
 - [x] How to get Rider to work with bspwm?
 - [x] How to hide applications in rofi?
+- [x] Configure NordVPN
