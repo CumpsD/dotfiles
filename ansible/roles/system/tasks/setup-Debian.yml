@@ -86,7 +86,8 @@
         'dos2unix',
         'xloadimage',
         'screenfetch',
-        'git-crypt']
+        'git-crypt',
+        'suckless-tools']
     state: latest
 
 - name: Install essential build tools

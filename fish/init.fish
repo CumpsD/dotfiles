@@ -50,7 +50,7 @@ set -gx SXHKD_SHELL /usr/bin/bash
 
 # Make java work bith bspwm
 set -gx _JAVA_AWT_WM_NONREPARENTING 1
-wmname LG3D
+wmname LG3D 2> /dev/null
 
 # Configure Docker to use Docker for Windows
 set -gx DOCKER_HOST tcp://0.0.0.0:2375
