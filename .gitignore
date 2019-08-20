@@ -13,3 +13,6 @@ wm/applications/chrome-*.desktop
 wm/applications/jetbrains-rider*
 
 wm/fonts/**/.uuid
+
+node_modules/
+package-lock.json
