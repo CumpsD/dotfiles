@@ -126,12 +126,14 @@
         'jetbrains-toolbox',
         'ttf-symbola',
         'polybar',
-        'xtitle'
+        'xtitle',
         'btops-git',
         'networkmanager-dmenu-git',
         'rambox-bin',
         'volnoti-brightness-git',
-        'glxinfo']
+        'glxinfo',
+        'pkgtop-git',
+        'pingg-git']
 
 # TODO: To enable Do Not Track, visit chrome://settings, scroll down to Advanced and under Privacy and security, check Send a "Do Not Track" request with your browsing traffic.
 
