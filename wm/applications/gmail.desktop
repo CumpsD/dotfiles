@@ -1,5 +1,7 @@
 [Desktop Entry]
-Encoding=UTF-8
+Version=1.0
 Name=Gmail
-Type=Link
-URL=https://mail.google.com
+GenericName=Mail Client
+Type=Application
+Exec=/usr/bin/google-chrome-stable --force-device-scale-factor=1.5 https://mail.google.com
+

@@ -4,6 +4,9 @@ if [ (umask) = "0000" ]; umask 022; end
 # Export our Display to get it into Windows
 set -gx DISPLAY :0
 
+# Pick the correct VA-API driver
+set -gx LIBVA_DRIVER_NAME iHD
+
 # Set a default editor
 set -gx EDITOR nano
 
@@ -43,13 +46,17 @@ end
 set -g fish_color_autosuggestion 555 yellow brblack
 
 # Make bspwm work with fish
-set -U SXHKD_SHELL /usr/bin/bash
+set -gx SXHKD_SHELL /usr/bin/bash
+
+# Make java work bith bspwm
+set -gx _JAVA_AWT_WM_NONREPARENTING 1
+wmname LG3D 2> /dev/null
 
 # Configure Docker to use Docker for Windows
 set -gx DOCKER_HOST tcp://0.0.0.0:2375
 
 # Configure new keybindings for fzf
-set -U FZF_LEGACY_KEYBINDINGS 0
+set -gx FZF_LEGACY_KEYBINDINGS 0
 
 # Disable .NET telemetry
 set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
@@ -65,13 +72,18 @@ set PATH $PATH (python3 -m site --user-base)/bin 2> /dev/null
 
 # Map hub to git for TheFuck
 eval (hub alias -s)
-set -x THEFUCK_OVERRIDDEN_ALIASES 'git'
+set -gx THEFUCK_OVERRIDDEN_ALIASES 'git'
 
 # Start GnuPG-agent
 . ~/.config/fish/gnupg.fish
 
 # Run Private tweaks
 . ~/.config/fish/init-private.fish
+
+# Load in Nerd Fonts
+for i in ~/.local/share/fonts/i_{dev,fae,fa,iec,linux,oct,ple,pom,seti,material,weather}.sh
+    . "$i"
+end
 
 # Start in home directory
 cd ~

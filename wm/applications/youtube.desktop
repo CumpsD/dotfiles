@@ -1,5 +1,8 @@
 [Desktop Entry]
-Encoding=UTF-8
+Version=1.0
 Name=YouTube
-Type=Link
-URL=https://youtube.com
+GenericName=Video Site
+Type=Application
+Exec=/usr/bin/google-chrome-stable --force-device-scale-factor=1.5 https://youtube.com
+
+

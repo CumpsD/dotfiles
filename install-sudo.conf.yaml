@@ -13,6 +13,8 @@
 
     /etc/vconsole.conf: /home/$SUDO_USER/.dotfiles/configs/vconsole.conf
 
+    /etc/systemd/system/mnt-fs-cc.mount: nfs/mnt-fs-cc.mount
+
     /etc/sddm.conf.d/dpi.conf: /home/$SUDO_USER/.dotfiles/sddm/dpi.conf
     /etc/sddm.conf.d/hidpi.conf: /home/$SUDO_USER/.dotfiles/sddm/hidpi.conf
     /etc/sddm.conf.d/theme.conf: /home/$SUDO_USER/.dotfiles/sddm/theme.conf
@@ -28,3 +30,18 @@
     '/usr/share/fonts/TTF/System San Francisco Display Regular.ttf': '/home/$SUDO_USER/.dotfiles/fonts/san-francisco/System San Francisco Display Regular.ttf'
     '/usr/share/fonts/TTF/System San Francisco Display Thin.ttf': '/home/$SUDO_USER/.dotfiles/fonts/san-francisco/System San Francisco Display Thin.ttf'
     '/usr/share/fonts/TTF/System San Francisco Display Ultralight.ttf': '/home/$SUDO_USER/.dotfiles/fonts/san-francisco/System San Francisco Display Ultralight.ttf'
+
+    /etc/systemd/system/docker.socket.d/socket.conf: /home/$SUDO_USER/.dotfiles/docker/socket.conf
+
+    /etc/NetworkManager/system-connections/be114.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/be114.nordvpn.com.udp.nmconnection
+    /etc/NetworkManager/system-connections/be79.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/be79.nordvpn.com.udp.nmconnection
+    /etc/NetworkManager/system-connections/mx24.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/mx24.nordvpn.com.udp.nmconnection
+    /etc/NetworkManager/system-connections/nl414.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/nl414.nordvpn.com.udp.nmconnection
+    /etc/NetworkManager/system-connections/no90.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/no90.nordvpn.com.udp.nmconnection
+    /etc/NetworkManager/system-connections/us3033.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/us3033.nordvpn.com.udp.nmconnection
+    /etc/NetworkManager/system-connections/Heaven.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/Heaven.nmconnection
+    '/etc/NetworkManager/system-connections/Informatie Vlaanderen.nmconnection': '/home/$SUDO_USER/.dotfiles/vpn/networkmanager/Informatie Vlaanderen.nmconnection'
+
+- shell:
+    - [sudo systemctl enable mnt-fs-cc.mount, Enable /mnt/fs/cc]
+    - [sudo systemctl enable docker, Enable Docker]

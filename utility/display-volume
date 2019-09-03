@@ -1,0 +1,16 @@
+#!/bin/bash
+
+volume=$(amixer sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }')
+volume=${volume%\%*}
+muted=$(pacmd list-sinks | awk '/muted/ { print $2 }')
+
+if [[ $muted = "yes" ]]; then
+    volnoti-show -m -s ~/.utility/icons/baseline-volume-off-500px-white.svg
+else
+  volnoti-show -0 ~/.utility/icons/baseline-volume-off-500px-white.svg \
+               -1 ~/.utility/icons/baseline-volume-mute-500px-white.svg \
+               -2 ~/.utility/icons/baseline-volume-down-500px-white.svg \
+               -3 ~/.utility/icons/baseline-volume-up-500px-white.svg \
+               -4 ~/.utility/icons/baseline-volume-up-500px-white.svg \
+               $volume
+fi

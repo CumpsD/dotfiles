@@ -1,0 +1,10 @@
+! fonts
+URxvt*font:             xft:FuraCode Nerd Font:style=regular:size=7, \
+                        xft:Hack Nerd Font:style=regular:size=7, \
+                        xft:Symbola:style=regular:size=7
+URxvt*boldFont:         xft:FuraCode Nerd Font:style=bold:size=7, \
+                        xft:Hack Nerd Font:style=bold:size=7
+URxvt*italicFont:       xft:FuraCode Nerd Font:style=italic:size=7, \
+                        xft:Hack Nerd Font:style=italic:size=7
+URxvt*boldItalicFont:   xft:FuraCode Nerd Font:style=bold italic:size=7, \
+                        xft:Hack Nerd Font:style=bold italic:size=7

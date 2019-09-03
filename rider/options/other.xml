@@ -1,0 +1,29 @@
+<application>
+  <component name="NodeJsLocalInterpreters">
+    <local-interpreter path="/usr/bin/node">
+      <version-cache version="11.15.0" last-modified="1557238730000" />
+    </local-interpreter>
+  </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontScale" value="2.0" />
+    <option name="fontSize" value="18" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandBeforeRunStepsPanel" value="true" />
+    <property name="FileTemplates.SelectedTemplate" value="HTML File" />
+    <property name="PluginConfigurable.selectionTab" value="1" />
+    <property name="RD.Init.Cfg.2" value="true" />
+    <property name="RD.Init.DialogShown.Ide" value="true" />
+    <property name="RD.Switch.Laf" value="true" />
+    <property name="SettingsSearchHistory" value="underline" />
+    <property name="evlsprt3.191" value="12" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/repos/gh-aiv/municipality-registry/MunicipalityRegistry.sln&#10;/home/cumpsd/dotfiles" />
+    <property name="file.gist.reindex.count" value="5820" />
+    <property name="ignoreUltimateEdition" value="true" />
+    <property name="last_open_file_path" value="$USER_HOME$/dotfiles" />
+    <property name="last_open_solution_path" value="$USER_HOME$/repos/gh-aiv/municipality-registry" />
+    <property name="tasks.pass.word.conversion.enforced" value="true" />
+    <property name="toolwindow.stripes.buttons.info.shown" value="true" />
+    <property name="ts.lib.d.ts.version" value="3.4.1" />
+  </component>
+</application>

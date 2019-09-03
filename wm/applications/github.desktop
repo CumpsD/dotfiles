@@ -1,5 +1,6 @@
 [Desktop Entry]
-Encoding=UTF-8
+Version=1.0
 Name=GitHub
-Type=Link
-URL=https://github.com
+GenericName=Development Platform
+Type=Application
+Exec=/usr/bin/google-chrome-stable --force-device-scale-factor=1.5 https://github.com

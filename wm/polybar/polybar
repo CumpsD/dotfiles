@@ -1,60 +1,79 @@
 [colors]
-
-background = #2f343f
+background = #D92E3440
+;background = #2f343f
 background-alt = #4f545f
 foreground = #d8dee8
 foreground-alt = #787e68
 accent = #81a1c1
 alert = #ebcb8b
 
-
 [bar/top]
-
-monitor = LVDS-1
-height = 24
+monitor = eDP1
+dpi = 150
+width = 98%
+height = 32
+radius = 14
+line-size = 0
+wm-restack = bspwm
 fixed-center = true
+font-0 = Noto Sans:size=8;2
+font-1 = Hack Nerd Font:size=8;2
+override-redirect = true
+offset-x = 1%
+offset-y = 10
 background = ${colors.background}
 foreground = ${colors.foreground}
 padding-left = 4
 padding-right = 4
 module-margin-left = 2
 module-margin-right = 2
-font-0 = Noto Sans:pixelsize=8
-font-1 = FontAwesome:pixelsize=8
+
 ;tray-position = right
 ;tray-padding = 2
 ;tray-background = ${colors.background}
-wm-restack = bspwm
+;tray-maxsize = 1000
+
 modules-left = bspwm
 modules-center = xwindow
-modules-right = wlan volume date
-
+modules-right = wlan-speed-down wlan-speed-up wlan vpn battery backlight temperature volume time date
 
 [module/bspwm]
-
 type = internal/bspwm
-label-focused = %name%
-label-focused-background= ${colors.background-alt}
+
+ws-icon-0 = shell;
+ws-icon-1 = web;
+ws-icon-2 = social;
+ws-icon-3 = code;
+ws-icon-4 = gfx;
+ws-icon-5 = file;
+ws-icon-6 = rdp;
+ws-icon-7 = media;
+ws-icon-8 = music;ﱘ
+ws-icon-9 = gaming;
+ws-icon-default = 
+
+label-focused = %{F#81a1c1}%icon%%{F-}  %name%
+label-focused-background = ${colors.background-alt}
 label-focused-padding = 3
-label-occupied = %name%
+
+label-occupied = %{F#81a1c1}%icon%%{F-}  %{F#d8dee8}%name%%{F-}
 label-occupied-padding = 3
 label-occupied-foreground= ${colors.foreground}
-label-urgent = %name%
+
+label-urgent = %{F#81a1c1}%icon%%{F-}  %name%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 3
-label-empty = %name%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 3
 
+label-empty =
+;label-empty = %{F#81a1c1}%icon%%{F-}  %{F#787e68}%name%%{F-}
+;label-empty-foreground = ${colors.foreground-alt}
+;label-empty-padding = 3
 
 [module/xwindow]
-
 type = internal/xwindow
 label = %title:0:100:...%
 
-
 [module/mpd]
-
 type = internal/mpd
 ;format-online = <icon-prev>  <label-time>  <label-song>  <icon-next>
 format-online = <toggle>  <label-song>
@@ -69,72 +88,197 @@ icon-pause-foreground = ${colors.accent}
 label-song-maxlen = 45
 label-song-ellipsis = true
 
+[module/backlight]
+type = internal/xbacklight
 
-[module/wlan]
-
-type = internal/network
-interface = wlp2s0
-interval = 15
-format-connected = <ramp-signal>  <label-connected>
-label-connected = %essid%
-format-disconnected = <label-disconnected>
-label-disconnected =   Disconnected
-label-disconnected-foreground = ${colors.foreground-alt}
-ramp-signal-0 = 
-ramp-signal-1 =  
-ramp-signal-2 =  
-ramp-signal-3 =  
-ramp-signal-4 =  
-ramp-signal-5 =  
-ramp-signal-foreground = ${colors.accent}
-
-
-
-[module/volume]
-
-type = internal/volume
-format-volume = <label-volume> <bar-volume>
-label-volume = " "
-label-volume-foreground = ${colors.accent}
-format-muted-prefix = " "
-format-muted-foreground = ${colors.accent}
-label-muted = Muted
-label-muted-foreground= ${colors.foreground-alt}
-bar-volume-width = 6
-bar-volume-indicator = 
-bar-volume-fill = ─
-bar-volume-empty = ─
-bar-volume-empty-foreground = ${colors.foreground-alt}
-
+format = <label>
+format-prefix = 
+format-prefix-foreground = ${colors.accent}
+label = %{A1:~/.utility/toggle-brightness:}%percentage%%%{A}
+label-padding-left = 2
 
 [module/battery]
-
 type = internal/battery
-full-at = 98
+full-at = 99
 battery = BAT1
-adapter = ACAD
-poll-interval = 60
-format-charging = <ramp-capacity>  <label-charging>
-label-charging =  %percentage%%
-label-full = Full
-format-discharging = <ramp-capacity>  <label-discharging>
-label-discharging = %percentage%%
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-ramp-capacity-foreground = ${colors.accent}
+adapter = ADP1
+poll-interval = 3
 
+format-charging = <animation-charging><label-charging>
+label-charging = %percentage%%
+label-charging-padding-left = 2
+
+format-discharging = <ramp-capacity><label-discharging>
+label-discharging = %percentage%%
+label-discharging-padding-left = 2
+
+format-full = <label-full>
+format-full-prefix = 
+format-full-prefix-foreground = ${colors.accent}
+label-full = 100%
+label-full-padding-left = 2
+
+animation-charging-0 = ${env:i_mdi_battery_charging_20}
+animation-charging-1 = ${env:i_mdi_battery_charging_40}
+animation-charging-2 = ${env:i_mdi_battery_charging_60}
+animation-charging-3 = ${env:i_mdi_battery_charging_80}
+animation-charging-4 = ${env:i_mdi_battery_charging_100}
+animation-charging-framerate = 500
+animation-charging-foreground = ${colors.accent}
+
+ramp-capacity-foreground = ${colors.accent}
+ramp-capacity-0 = ${env:i_mdi_battery_outline}
+ramp-capacity-1 = ${env:i_mdi_battery_20}
+ramp-capacity-2 = ${env:i_mdi_battery_40}
+ramp-capacity-3 = ${env:i_mdi_battery_60}
+ramp-capacity-4 = ${env:i_mdi_battery_80}
+
+;[module/vpn]
+;type = internal/network
+;interface = tun0
+;interval = 3
+
+;format-connected = <label-connected>
+;format-connected-prefix = 
+;format-connected-prefix-foreground = ${colors.accent}
+;label-connected = %ifname%
+;label-connected-padding-left = 2
+
+;format-disconnected = <label-disconnected>
+;format-disconnected-prefix = 
+;format-disconnected-prefix-foreground = ${colors.accent}
+;label-disconnected = Disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+;label-disconnected-padding-left = 2
+
+[module/vpn]
+type = custom/script
+interval = 3
+
+exec = ~/.utility/vpn-status.sh
+
+format-prefix = 
+format-prefix-foreground = ${colors.accent}
+label-padding-left = 2
+
+[module/wlan]
+type = internal/network
+interface = wlp2s0
+interval = 3
+
+format-connected = <label-connected>
+format-connected-prefix = 
+format-connected-prefix-foreground = ${colors.accent}
+label-connected = %essid% (%signal%%)
+label-connected-padding-left = 2
+
+format-disconnected = <label-disconnected>
+format-disconnected-prefix = 
+format-disconnected-prefix-foreground = ${colors.accent}
+label-disconnected = Disconnected
+label-disconnected-foreground = ${colors.foreground-alt}
+label-disconnected-padding-left = 2
+
+[module/wlan-speed-up]
+type = internal/network
+interface = wlp2s0
+interval = 3
+
+format-connected = <label-connected>
+format-connected-prefix = 祝
+format-connected-prefix-foreground = ${colors.accent}
+label-connected = %upspeed%
+label-connected-padding-left = 2
+
+[module/wlan-speed-down]
+type = internal/network
+interface = wlp2s0
+interval = 3
+
+format-connected = <label-connected>
+format-connected-prefix = 
+format-connected-prefix-foreground = ${colors.accent}
+label-connected = %downspeed%
+label-connected-padding-left = 2
+
+[module/volume]
+type = internal/alsa
+
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+
+master-mixer = Master
+;speaker-mixer = Speaker
+;headphone-mixer = Headphone
+
+;headphone-id = 9
+
+interval = 5
+
+format-volume =<label-volume>
+format-volume-prefix = 墳
+format-volume-prefix-foreground = ${colors.accent}
+label-volume-padding-left = 2
+
+format-muted = <label-muted>
+format-muted-prefix = 婢
+format-muted-prefix-foreground = ${colors.accent}
+label-muted = 0%
+label-muted-padding-left = 2
+
+[module/temperature]
+type = internal/temperature
+
+interval = 1
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+
+units = false
+
+format = <label>
+format-prefix = 
+format-prefix-foreground = ${colors.accent}
+label = %temperature-c%糖
+label-padding-left = 2
+
+format-warn = <label-warn>
+format-warn-prefix = 
+format-warn-prefix-foreground = ${colors.accent}
+label-warn = %temperature-c%糖
+label-warn-foreground = #f00
+label-warn-padding-left = 2
 
 [module/date]
-
 type = internal/date
-interval = 30
-label = " %date% %time%"
-date =
-date-alt = %a %d
-time = %H:%M
-time-alt =
-format-prefix = 
+interval = 5
+
+format-prefix = 
 format-prefix-foreground = ${colors.accent}
+
+label = %date%
+label-padding-left = 2
+date = %Y-%m-%d
+
+[module/time]
+type = internal/date
+interval = 5
+
+format-prefix = 
+format-prefix-foreground = ${colors.accent}
+
+label = %time%
+label-padding-left = 2
+time = %H:%M
+
+[module/eth]
+type = internal/network
+interface = enp2s0
+interval = 3.0
+format-connected = <label-connected>
+format-connected-prefix = "  "
+format-connected-prefix-foreground = #eceff4
+label-connected = %downspeed:9%
+format-disconnected = <label-disconnected>
+label-disconnected = not connected
+label-disconnected-foreground = #66ffffff
+format-padding = 1

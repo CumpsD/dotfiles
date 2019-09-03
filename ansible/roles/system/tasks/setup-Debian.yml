@@ -86,7 +86,8 @@
         'dos2unix',
         'xloadimage',
         'screenfetch',
-        'git-crypt']
+        'git-crypt',
+        'suckless-tools']
     state: latest
 
 - name: Install essential build tools
@@ -104,11 +105,6 @@
         'python3.7',
         'python3-pip',
         'default-jdk']
-    state: latest
-
-- name: Install Azure cli package
-  package:
-    name: azure-cli
     state: latest
 
 - name: Install mssql-tools package

@@ -40,6 +40,7 @@
       pip_install_packages:
       - pip
       - awscli
+      - azure-cli
       - thefuck
       - boto
       - virtualfish
@@ -110,12 +111,12 @@
     include_role:
       name: terraform
     vars:
-      terraform_ver : '0.12.4'
+      terraform_ver : '0.12.6'
       terraform_platform : linux_amd64
       terraform_install_dir : /usr/local/bin
       terraform_checksums:
-        '0.12.4':
-          linux_amd64: sha256:0231562f26262de233e8e8fac668196af21b7aff355bb04f3ee1606cca239c0a
+        '0.12.6':
+          linux_amd64: sha256:6544eb55b3e916affeea0a46fe785329c36de1ba1bdb51ca5239d3567101876f
 
   - name: Install Mono
     include_role:

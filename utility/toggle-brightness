@@ -1,0 +1,16 @@
+#!/bin/bash
+
+brightness=$(xbacklight -get)
+brightness=${brightness%.*}
+
+if [ $brightness -le 100 ] && [ $brightness -gt 75 ]; then
+    xbacklight -set 75% -time 500
+elif [ $brightness -le 75 ] && [ $brightness -gt 50 ]; then
+    xbacklight -set 50% -time 500
+elif [ $brightness -le 50 ] && [ $brightness -gt 25 ]; then
+    xbacklight -set 25% -time 500
+elif [ $brightness -le 25 ] && [ $brightness -gt 5 ]; then
+    xbacklight -set 5% -time 500
+else
+    xbacklight -set 100% -time 500
+fi

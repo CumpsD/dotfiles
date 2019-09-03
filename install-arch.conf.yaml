@@ -1,2 +1,50 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+    shell:
+      stdin: false
+      stdout: false
+      stderr: false
+
+- link:
+    /usr/share/libalpm/hooks/91-linux-surface-efi.hook: configs/91-linux-surface-efi.hook
+
 - shell:
     - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/scripts/000-use-all-cores-makepkg-conf-v3.sh, Use all cores in makepkg]
+
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/avahi-discover.desktop, Hide avahi zeroconf browser shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/bssh.desktop, Hide avahi ssh browser shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/bvnc.desktop, Hide avahi vnc browser shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/cmake-gui.desktop, Hide cmake shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/exo-file-manager.desktop, Hide file manager shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/exo-mail-reader.desktop, Hide mail reader shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/inkscape.desktop, Hide inkscape shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/java-java-openjdk.desktop, Hide java shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/jconsole-java-openjdk.desktop, Hide java console shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/jshell-java-openjdk.desktop, Hide java shell shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/qv4l2.desktop, Hide qt v4l2 capture shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/qvidcap.desktop, Hide qt v4l2 capture shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/networkmanager_dmenu.desktop, Hide network dmenu shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/nm-connection-editor.desktop, Hide advanced network configuration shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/Thunar-bulk-rename.desktop, Hide bulk rename shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/thunar-settings.desktop, Hide file manager shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/urxvtc.desktop, Hide urxvtc shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/urxvt.desktop, Hide urxvt shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/urxvt-tabbed.desktop, Hide urxvt-tabbed shortcut]
+    - [sudo /home/$SUDO_USER/.utility/hide-application.sh /usr/share/applications/viewnior.desktop, Hide viewnior shortcut]
+
+    - [sudo rm -f /usr/share/applications/chromium.desktop, Remove default Chromium shortcut]
+    - [sudo rm -f /usr/share/applications/google-chrome.desktop, Remove default Chrome shortcut]
+    - [sudo rm -f /usr/share/applications/rambox.desktop, Remove default Rambox shortcut]
+    - [sudo rm -f /usr/share/applications/code-oss.desktop, Remove default VS Code shortcut]
+    - [sudo rm -f /usr/share/applications/electron4.desktop, Remove Electron 4 shortcut]
+    - [sudo rm -f /usr/share/applications/compton.desktop, Remove Compton shortcut]
+    - [sudo rm -f /usr/share/applications/jetbrains-toolbox.desktop, Remove default Jetbrains Toolbox shortcut]
+    - [sudo rm -f /usr/share/applications/openscad.desktop, Remove default OpenSCAD shortcut]
+    - [sudo rm -f /usr/share/applications/ranger.desktop, Remove default Ranger shortcut]
+
+    - [sudo cp -f /home/$SUDO_USER/.dotfiles/scripts/fix-wifi.service /etc/systemd/system, Install Fix Wifi Systemd service]
+    - [sudo cp -f /home/$SUDO_USER/.dotfiles/scripts/fix-wifi /usr/bin/, Install fix-wifi exectable]
+    - [sudo systemctl enable fix-wifi.service, Enable Fix Wifi]

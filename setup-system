@@ -227,15 +227,23 @@ if ask "Do you want to install .NET Core?" N; then
 fi
 
 echo
+
 if ask "Do you want to clone all repos?" N; then
     printf "Executing ${Yellow}pushd repos > /dev/null${Color_Off}\n"
     pushd repos > /dev/null
 
-    printf "Executing ${Yellow}/setup.sh${Color_Off}\n"
+    printf "Executing ${Yellow}./setup.sh${Color_Off}\n"
     ./setup.sh
 
     printf "Executing ${Yellow}popd > /dev/null${Color_Off}\n"
     popd > /dev/null
+fi
+
+echo
+
+if ask "Do you want to fetch all repos?" N; then
+    printf "Executing ${Yellow}forrepos git fetch --all${Color_Off}\n"
+    forrepos git fetch --all
 fi
 
 echo

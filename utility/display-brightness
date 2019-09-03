@@ -1,0 +1,11 @@
+#!/bin/bash
+
+brightness=$(xbacklight -get)
+brightness=${brightness%.*}
+
+volnoti-show -0 ~/.utility/icons/baseline-brightness_low-500px-white.svg \
+             -1 ~/.utility/icons/baseline-brightness_low-500px-white.svg \
+             -2 ~/.utility/icons/baseline-brightness_low-500px-white.svg \
+             -3 ~/.utility/icons/baseline-brightness_medium-500px-white.svg \
+             -4 ~/.utility/icons/baseline-brightness_high-500px-white.svg \
+             $brightness

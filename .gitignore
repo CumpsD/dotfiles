@@ -1,3 +1,5 @@
+.idea/
+
 proxmark/cards/*.bin
 
 ssh/putty/Jumplist
@@ -6,3 +8,11 @@ ssh/putty/SshHostKeys
 
 wm/mpd/
 !wm/mpd/mpd.conf
+
+wm/applications/chrome-*.desktop
+wm/applications/jetbrains-rider*
+
+wm/fonts/**/.uuid
+
+node_modules/
+package-lock.json

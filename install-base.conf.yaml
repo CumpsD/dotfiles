@@ -24,8 +24,6 @@
 
     ~/.wallpaper.jpg: wallpapers/antman.jpg
 
-    ~/.stalonetrayrc: wm/stalonetray/stalonetrayrc
-
     ~/.dir_colors: dircolors/dircolors.256dark
 
     ~/.Xresources: wm/x/xresources
@@ -37,6 +35,8 @@
     ~/.fonts: wm/fonts
 
     ~/.mpd: wm/mpd
+
+    ~/.utility: utility
 
     ~/.gitconfig: git/gitconfig
 
@@ -68,6 +68,7 @@
     ~/.config/fish/functions/fisher.fish: fish/fisher.fish
     ~/.config/fish/functions/abbrex.fish: fish/functions/abbrex.fish
     ~/.config/fish/functions/clear.fish: fish/functions/clear.fish
+    ~/.config/fish/functions/code.fish: fish/functions/code.fish
     ~/.config/fish/functions/fish_greeting.fish: fish/functions/fish_greeting.fish
     ~/.config/fish/functions/fish_right_prompt.fish: fish/functions/fish_right_prompt.fish
     ~/.config/fish/functions/forrepos.fish: fish/functions/forrepos.fish
@@ -91,6 +92,9 @@
     ~/.config/.bar/panel-bspwm: wm/bar/panel-bspwm
 
     ~/.config/bspwm/bspwmrc: wm/bspwm/bspwmrc
+    ~/.config/bspwm/polybar: wm/polybar/polybar
+
+    ~/.config/btops/config.toml: wm/bspwm/btops.toml
 
     ~/.config/dunst/dunstrc: wm/dunst/dunstrc-dark
 
@@ -101,7 +105,45 @@
 
     ~/.config/xsettingsd/xsettingsd.conf: wm/x/xsettingsd.conf
 
+    ~/.config/rofi/config.rasi: wm/rofi/config.rasi
+    ~/.config/rofi/cumpsd.rasi: wm/rofi/cumpsd.rasi
+
+    ~/.config/networkmanager-dmenu/config.ini: wm/rofi/network-manager.ini
+
+    ~/.config/remmina: rdp/remmina-config
+    ~/.local/share/remmina: rdp/remmina-connections
+
     ~/.local/share/applications: wm/applications
+
+    ~/.local/share/fonts/i_dev.sh: fonts/helpers/i_dev.sh
+    ~/.local/share/fonts/i_fae.sh: fonts/helpers/i_fae.sh
+    ~/.local/share/fonts/i_fa.sh: fonts/helpers/i_fa.sh
+    ~/.local/share/fonts/i_iec.sh: fonts/helpers/i_iec.sh
+    ~/.local/share/fonts/i_linux.sh: fonts/helpers/i_linux.sh
+    ~/.local/share/fonts/i_material.sh: fonts/helpers/i_material.sh
+    ~/.local/share/fonts/i_oct.sh: fonts/helpers/i_oct.sh
+    ~/.local/share/fonts/i_ple.sh: fonts/helpers/i_ple.sh
+    ~/.local/share/fonts/i_pom.sh: fonts/helpers/i_pom.sh
+    ~/.local/share/fonts/i_seti.sh: fonts/helpers/i_seti.sh
+    ~/.local/share/fonts/i_weather.sh: fonts/helpers/i_weather.sh
+
+    ~/.Rider2019.1/config/codestyles: rider/codestyles
+    ~/.Rider2019.1/config/colors: rider/colors
+    ~/.Rider2019.1/config/disabled_plugins.txt: rider/disabled_plugins.txt
+    ~/.Rider2019.1/config/options: rider/options
+
+    ~/.cert/nm-openvpn/be114.nordvpn.com.udp-ca.pem: vpn/networkmanager/be114.nordvpn.com.udp-ca.pem
+    ~/.cert/nm-openvpn/be114.nordvpn.com.udp-tls-auth.pem: vpn/networkmanager/be114.nordvpn.com.udp-tls-auth.pem
+    ~/.cert/nm-openvpn/be79.nordvpn.com.udp-ca.pem: vpn/networkmanager/be79.nordvpn.com.udp-ca.pem
+    ~/.cert/nm-openvpn/be79.nordvpn.com.udp-tls-auth.pem: vpn/networkmanager/be79.nordvpn.com.udp-tls-auth.pem
+    ~/.cert/nm-openvpn/mx24.nordvpn.com.udp-ca.pem: vpn/networkmanager/mx24.nordvpn.com.udp-ca.pem
+    ~/.cert/nm-openvpn/mx24.nordvpn.com.udp-tls-auth.pem: vpn/networkmanager/mx24.nordvpn.com.udp-tls-auth.pem
+    ~/.cert/nm-openvpn/nl414.nordvpn.com.udp-ca.pem: vpn/networkmanager/nl414.nordvpn.com.udp-ca.pem
+    ~/.cert/nm-openvpn/nl414.nordvpn.com.udp-tls-auth.pem: vpn/networkmanager/nl414.nordvpn.com.udp-tls-auth.pem
+    ~/.cert/nm-openvpn/no90.nordvpn.com.udp-ca.pem: vpn/networkmanager/no90.nordvpn.com.udp-ca.pem
+    ~/.cert/nm-openvpn/no90.nordvpn.com.udp-tls-auth.pem: vpn/networkmanager/no90.nordvpn.com.udp-tls-auth.pem
+    ~/.cert/nm-openvpn/us3033.nordvpn.com.udp-ca.pem: vpn/networkmanager/us3033.nordvpn.com.udp-ca.pem
+    ~/.cert/nm-openvpn/us3033.nordvpn.com.udp-tls-auth.pem: vpn/networkmanager/us3033.nordvpn.com.udp-tls-auth.pem
 
     ~/proxmark/cards/aiv-david-cumps.bin: cards/1.bin
     ~/proxmark/cards/aiv-koen-metsu.bin: cards/2.bin
@@ -111,9 +153,11 @@
     ~/repos: repos
 
 - shell:
-    - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --clean --install-to-user-path --complete Hack, Installing Hack font]
-    - [sudo cp -f ~/.dotfiles/fonts/powerline/Terminus/PSF/*.psf.gz /usr/share/kbd/consolefonts/, Installing Terminess Powerline font]
-    - [setfont ter-powerline-v22n, Enabling Terminess Powerline font]
+    - [mkdir -p ~/screenshots, Make sure screenshots directory exists]
+    - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --install-to-user-path --complete Hack, Installing Hack font]
+    - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --install-to-user-path --complete FiraCode, Installing Fira Code font]
+    - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --install-to-user-path --complete FiraMono, Installing Fira Mono font]
+    - [xdg-settings set default-web-browser chrome.desktop, Setting Chrome as default desktop]
     -
       command: "setfacl -m u:sddm:rx ~/"
       description: Giving SDDM read access to ~/
@@ -132,4 +176,6 @@
     -
       command: "setfacl -m u:sddm:r ~/.dotfiles/sddm/aerial/*"
       description: Giving SDDM read access to ~/.dotfiles/sddm/aerial/*
-
+    - [fish -c fish_update_completions, Generating Fish completions based on man pages]
+    - [sudo cp -f ~/.dotfiles/fonts/powerline/Terminus/PSF/*.psf.gz /usr/share/kbd/consolefonts/, Installing Terminess Powerline font]
+    - [setfont ter-powerline-v22n, Enabling Terminess Powerline font]

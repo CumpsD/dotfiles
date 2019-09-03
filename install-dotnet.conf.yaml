@@ -33,4 +33,4 @@
     - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/dotnet/dotnet-install.sh --no-path --runtime aspnetcore --version 2.2.3   , Install .NET Core 2.2.3]
     - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/dotnet/dotnet-install.sh --no-path --runtime aspnetcore --version 2.2.4   , Install .NET Core 2.2.4]
     - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/dotnet/dotnet-install.sh --no-path --runtime aspnetcore --version 2.2.5   , Install .NET Core 2.2.5]
-    - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/dotnet/dotnet-install.sh --no-path --version 2.2.301                      , Install .NET Core 2.2.6]
+    - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/dotnet/dotnet-install.sh --no-path --version 2.2.401                      , Install .NET Core 2.2.6]

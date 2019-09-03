@@ -1,5 +1,7 @@
 [Desktop Entry]
-Encoding=UTF-8
+Version=1.0
 Name=Reddit
-Type=Link
-URL=http://reddit.com
+GenericName=Social
+Type=Application
+Exec=/usr/bin/google-chrome-stable --force-device-scale-factor=1.5 http://reddit.com
+

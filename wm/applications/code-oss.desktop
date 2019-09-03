@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=Visual Studio Code
+Comment=Code Editing. Redefined.
+GenericName=Development
+Exec=code-oss --force-device-scale-factor=1.5 --disable-gpu --force-cpu-draw --unity-launch %F
+Icon=code-oss
+Type=Application
+StartupNotify=false
+StartupWMClass=Code
+Categories=Utility;TextEditor;Development;IDE;
+MimeType=text/plain;
+Actions=new-empty-window;
+Keywords=vscode;
+
+[Desktop Action new-empty-window]
+Name=New Empty Window
+Exec=code-oss --new-window %F
+Icon=code-oss

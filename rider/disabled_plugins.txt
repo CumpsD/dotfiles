@@ -1,0 +1,10 @@
+CVS
+PerforceDirectPlugin
+Subversion
+com.intellij.resharper.unity
+com.intellij.tasks.timeTracking
+com.jetbrains.plugins.yeoman
+com.microsoft.vso.idea
+hg4idea
+org.jetbrains.plugins.stylus
+org.jetbrains.plugins.vagrant

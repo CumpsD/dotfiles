@@ -1,0 +1,20 @@
+<scheme name="_@user_Rider Dark" version="142" parent_scheme="Rider Dark">
+  <option name="FONT_SCALE" value="2.0" />
+  <metaInfo>
+    <property name="created">2019-07-24T06:11:29</property>
+    <property name="ide">Rider</property>
+    <property name="ideVersion">2019.1.3.0.0</property>
+    <property name="modified">2019-07-30T12:48:52</property>
+    <property name="originalScheme">Rider Dark</property>
+  </metaInfo>
+  <option name="LINE_SPACING" value="1.1" />
+  <font>
+    <option name="EDITOR_FONT_NAME" value="FuraCode Nerd Font" />
+    <option name="EDITOR_FONT_SIZE" value="20" />
+  </font>
+  <font>
+    <option name="EDITOR_FONT_NAME" value="DejaVu Sans Mono" />
+    <option name="EDITOR_FONT_SIZE" value="20" />
+  </font>
+  <option name="EDITOR_LIGATURES" value="true" />
+</scheme>

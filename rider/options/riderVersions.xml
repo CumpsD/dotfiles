@@ -1,0 +1,12 @@
+<application>
+  <component name="RiderSettingsUpdater">
+    <option name="autoPopupSummaryInfoVersion" value="1" />
+    <option name="fileChooserNativeVersion" value="2" />
+    <option name="flushAbbreviations" value="1" />
+    <option name="ideWinFrameDecorationVersion" value="2" />
+    <option name="initialHighlighterTooltipDelayVersion" value="1" />
+    <option name="initialTooltipDelayVersion" value="1" />
+    <option name="solutionOpenVersion" value="1" />
+    <option name="treeHorizontalDefaultAutoscrollingVersion" value="1" />
+  </component>
+</application>

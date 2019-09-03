@@ -11,6 +11,11 @@
   pacman:
     name: [
         'xf86-video-intel',
+        'libvdpau-va-gl',
+        'libva-vdpau-driver',
+        'intel-media-driver',
+        'libva-utils',
+        'vdpauinfo',
         'mesa']
     state: latest
 
@@ -20,7 +25,7 @@
         'sddm']
     state: latest
 
-- name: Enable SDDM SystemD service
+- name: Enable SDDM systemd service
   systemd:
     name: sddm
     enabled: yes
@@ -75,24 +80,36 @@
         'bspwm',
         'sxhkd',
         'xdo',
-        'stalonetray',
+        'wmname',
         'compton',
         'rofi',
         'dunst',
-        'network-manager-applet',
-        'volumeicon',
         'rxvt-unicode',
+        'urxvt-perls',
+        'network-manager-applet',
+        'networkmanager-openvpn',
         'thunar',
+        'ranger',
         'feh',
+        'xsel',
+        'xclip',
         'xsettingsd',
+        'xorg-xbacklight',
+        'xorg-xsetroot',
         'wireless_tools',
         'imagemagick',
         'bc',
         'scrot',
         'viewnior',
-        'chromium',
+        'w3m',
         'pepper-flash',
-        'ttf-liberation']
+        'ttf-liberation',
+        'code',
+        'remmina',
+        'freerdp',
+        'capitaine-cursors',
+        'udiskie',
+        'openscad']
     state: latest
 
 - name: Install WM and tools (AUR)
@@ -101,19 +118,24 @@
   aur:
     use: yay
     name: [
+        'google-chrome',
         'lemonbar-git',
-        'clipit',
         'i3lock-color',
         'betterlockscreen',
-        'chromium-widevine',
-        'visual-studio-code-bin',
         'msbuild-stable',
-        'rider']
+        'jetbrains-toolbox',
+        'ttf-symbola',
+        'polybar',
+        'xtitle',
+        'btops-git',
+        'networkmanager-dmenu-git',
+        'rambox-bin',
+        'volnoti-brightness-git',
+        'glxinfo',
+        'pkgtop-git',
+        'pingg-git']
 
-# TODO: Make sure Flash is allowed to run in chrome://settings/content/flash.
-# TODO: Make sure Allow sites to play protected content is checked in chrome://settings/content/protectedContent.
 # TODO: To enable Do Not Track, visit chrome://settings, scroll down to Advanced and under Privacy and security, check Send a "Do Not Track" request with your browsing traffic.
-
 
 - name: Install Fonts
   pacman:
@@ -121,6 +143,7 @@
         'ttf-dejavu',
         'ttf-droid',
         'ttf-roboto',
+        'ttf-font-awesome',
         'noto-fonts']
     state: latest
 

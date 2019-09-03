@@ -10,133 +10,177 @@
 #     /__/:/        |  |:|       \  \:\        \  \:\         \__\/
 #     \__\/         |__|/         \__\/         \__\/
 
+#######################
+##  RELOAD COMMANDS  ##
+#######################
+
+## Reload sxhkd configuration files (Win + S)
+super + s
+    pkill -USR1 -x sxhkd
+
+## Reload bspwm configuration files (Win + Shift + Back)
+super + shift + BackSpace
+    pkill panel; ~/.config/bspwm/bspwmrc
 
 #######################
 ##  COMMON COMMANDS  ##
 #######################
 
-## launch terminal (Win + Enter)
+## Launch terminal (Win + Enter)
 super + Return
-	urxvt
+    urxvtc
 
-## program launcher (Win + R)
+## Program launcher (Win + R)
 super + r
-	rofi -modi run,drun,window -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font "Noto Sans 8"
+    rofi -show drun
 
-## launch thunar (Win + E)
+## Launch Thunar (Win + E)
 super + e
-	thunar
+    thunar
 
-## lockscreen (Win + L)
+## Lockscreen (Win + L)
 super + l
-	betterlockscreen -l dim
+    betterlockscreen -l dim
+
+#########################
+## BRIGHTNESS COMMANDS ##
+#########################
+
+XF86MonBrightnessDown
+    xbacklight -dec 5 -time 200 && ~/.utility/display-brightness
+
+XF86MonBrightnessUp
+    xbacklight -inc 5 -time 200 && ~/.utility/display-brightness
+
+######################
+##  MEDIA COMMANDS  ##
+######################
 
 ## volume control
 XF86Audio{RaiseVolume,LowerVolume,Mute}
-	amixer {-c 0 set PCM 4dB+,-c 0 set PCM 4dB-,set Master toggle}
+    amixer {set Master 5%+,set Master 5%-,set Master toggle} && ~/.utility/display-volume
 
 ## music control
 XF86Audio{Next,Prev,Play,Stop}
-	mpc {next,prev,toggle,stop}
+    mpc {next,prev,toggle,stop}
 
-## make sxhkd reload its configuration files
-super + s
-	pkill -USR1 -x sxhkd
-
-## take a screenshot
+## Take a screenshot (Print)
 Print
-	scrot 'scrot_%Y-%m-%d-%S_$wx$h.png' -e 'mv $f ~ ; viewnior ~/$f'
+    ~/.utility/screeny
+
+## Take a screenshot of the current window (Print + Alt)
+Print + alt
+    ~/.utility/screeny -f
+
+## Take a screenshot by selecting an area (Print + Ctrl)
+Print + ctrl
+    ~/.utility/screeny -s
+
+## Take a screenshot with 3s delay (Print + Shift)
+Print + shift
+    ~/.utility/screeny -d
 
 ######################
 ##  BSPWM COMMANDS  ##
 ######################
 
-## quit bspwm normally
+## Quit bspwm (Win + Ctrl + Esc)
 super + control + Escape
-	pkill panel; bspc quit
+    pkill panel; bspc quit
 
-## reload bspwm config
-super + shift + BackSpace
-	pkill panel; ~/.config/bspwm/bspwmrc
-
-## close app
-super + Escape
-	bspc node -c
-
-## close app (common way)
+## Close application (Alt + F4)
 alt + F4
-	bspc node -c
+    bspc node -c
 
-## he disobey you? kill!
+## Close application (Win + Esc)
+super + Escape
+    bspc node -c
+
+## Kill application (Win + Shift + Esc)
 super + shift + Escape
-	bspc node -k
+    bspc node -k
 
-## fullscreen
+## Toggle application fullscreen (Win + F)
 super + f
-	bspc desktop -l next
+    bspc desktop -l next
 
-## spit horizontal & split vertical, like in i3-gaps :D
+## Split horizontal & split vertical (Win + H/V)
 super + {h,v}
-	bspc node -p {east,south}
+    bspc node -p {east,south}
 
-## preselect the ratio
-super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
+## Preselect the ratio (Win + 1-9)
+super + {1-9}
+    bspc node -o 0.{1-9}
 
-## cancel it
-super + ctrl + r
-	bspc node -p cancel
+## Cancel split/preselect (Win + 0)
+super + {0}
+    bspc node -p cancel
 
-## toggle between pseudo-tiled & tiled
+## Focus another window (Win + Arrows)
+## Send the window in the given direction (Win + Shift + Arrows)
+super + {_,shift + }{Left,Down,Up,Right}
+    bspc node -{f,s} {west,south,north,east}
+
+## Focus the next node in the current desktop (Alt + Tab)
+alt + Tab
+    bspc node -f next.local
+
+## Focus the previous node in the current desktop (Alt + Shift + Tab)
+alt + shift + Tab
+    bspc node -f prev.local
+
+########################
+##  DESKTOP COMMANDS  ##
+########################
+
+## Focus the next/previous desktop in the current monitor (Win + Ctrl + Left/Right)
+ctrl + super + Left
+    bspc desktop -f prev.local
+
+ctrl + super + Right
+    bspc desktop -f next.local
+
+## Focus the last desktop (Win + Tab)
+super + Tab
+    bspc desktop -f last
+
+## Focus the given desktop (Win + Ctrl + 1-8)
+## Send to the given desktop (Win + Ctrl + Shift + 1-8)
+ctrl + super + {_,shift + }{1-8}
+    bspc {desktop -f,node -d} '^{1-8}'
+
+## Send to the next/previous desktop (Win + Ctrl + Shift + Left/Right)
+ctrl + super + shift + {Left,Right}
+    bspc node -d {prev,next} -f
+
+#######################
+##  WINDOW COMMANDS  ##
+#######################
+
+# Pseudo: P
+# Tiled: T
+# Floating: Space
+
+## Toggle between pseudo-tiled & tiled (Win + P)
 super + p
     bspc node -t pseudo_tiled
 
-## toggle between floating & tiled
+## Toggle between floating & tiled (Win + Space)
 super + space
     bspc node -t floating
 
-## just in case you want to go back to tiled mode but the toggle keybind doesn't work
+## just in case you want to go back to tiled mode but the toggle keybind doesn't work (Win + T)
 super + t
-	bspc node -t tiled
+    bspc node -t tiled
 
-## send the window in the given direction
-super + {_,shift + }{Left,Down,Up,Right}
-	bspc node -{f,s} {west,south,north,east}
-
-## focus the next node in the current desktop
-alt + Tab
-	bspc node -f next.local
-
-## focus the previous node in the current desktop
-alt + shift + Tab
-	bspc node -f prev.local
-
-## focus the next/previous desktop in the current monitor
-ctrl + super + Left
-	bspc desktop -f prev.local
-ctrl + super + Right
-	bspc desktop -f next.local
-
-## focus the last node/desktop
-super + {Tab,grave}
-	bspc {node,desktop} -f last
-
-## focus or send to the given desktop
-super + {_,shift + }{1-8}
-	bspc {desktop -f,node -d} '^{1-8}'
-
-## jump to another workspace
-super + {1-8}
-	bspc desktop --focus^{1-8}
-
-## expanding windows
-super + ctrl + {Left,Right,Up,Down}
-	bspc node -z {left -10 0,right 10 0,top 0 -10,bottom 0 10}
-
-## shrinking windows
+## Expanding windows (Win + Alt + Arrows)
 super + alt + {Left,Right,Up,Down}
-	bspc node -z {left 10 0,right -10 0,top 0 10,bottom 0 -10}
+    bspc node -z {left -10 0,right 10 0,top 0 -10,bottom 0 10}
 
-## move floating windows
-alt + shift + {Left,Down,Up,Right}
-	bspc node -v {-10 0,0 10,0 -10,10 0}
+## Shrinking windows (Win + Alt + Ctrl + Arrows)
+super + ctrl + alt + {Left,Right,Up,Down}
+    bspc node -z {right -10 0,left 10 0,bottom 0 -10,top 0 10}
+
+## Move floating windows (Win + Alt + Shift + Arrows)
+alt + super + shift + {Left,Down,Up,Right}
+    bspc node -v {-10 0,0 10,0 -10,10 0}

@@ -37,8 +37,19 @@
         'dos2unix',
         'xloadimage',
         'screenfetch',
-        'lsof']
+        'lsof',
+        'openssh',
+        'pcsclite',
+        'udisks2']
     state: latest
+
+- name: Install basic command-line utilities (AUR)
+  become: yes
+  become_user: aur_builder
+  aur:
+    use: yay
+    name: [
+        'gotop']
 
 - name: Install essential build tools
   pacman:
@@ -63,6 +74,11 @@
         'json-c',
         'libsndfile-git']
 
+- name: Install NFS Tooling
+  pacman:
+    name: [
+        'nfs-utils']
+    state: latest
 
 - name: Install rEFInd
   pacman:
@@ -93,14 +109,6 @@
     name: [
         'console-solarized-git',
         'tulizu']
-
-- name: Install Azure cli package
-  become: yes
-  become_user: aur_builder
-  aur:
-    use: yay
-    name: [
-        'python-azure-cli']
 
 - name: Install mssql-tools package
   become: yes
