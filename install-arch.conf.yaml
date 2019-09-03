@@ -50,3 +50,4 @@
     - [sudo systemctl enable fix-wifi.service, Enable Fix Wifi]
 
     - [sudo cp -f /home/$SUDO_USER/.dotfiles/refind/refind.conf /efi/EFI/BOOT/refind.conf, Configure rEFInd]
+    - [sudo cp -rf /home/$SUDO_USER/.dotfiles/refind/themes/ /efi/EFI/BOOT/themes/, Copy rEFInd Themes]
