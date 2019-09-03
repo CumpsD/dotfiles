@@ -239,6 +239,8 @@ if ask "Do you want to clone all repos?" N; then
     popd > /dev/null
 fi
 
+echo
+
 if ask "Do you want to fetch all repos?" N; then
     printf "Executing ${Yellow}forrepos git fetch --all${Color_Off}\n"
     forrepos git fetch --all
