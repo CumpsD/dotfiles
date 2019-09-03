@@ -6,13 +6,13 @@ ssh/putty/Jumplist
 ssh/putty/Sessions
 ssh/putty/SshHostKeys
 
-wm/mpd/
-!wm/mpd/mpd.conf
+mpd/
+!mpd/mpd.conf
 
-wm/applications/chrome-*.desktop
-wm/applications/jetbrains-rider*
+applications/chrome-*.desktop
+applications/jetbrains-rider*
 
-wm/fonts/**/.uuid
+fonts/**/.uuid
 
 node_modules/
 package-lock.json

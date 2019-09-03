@@ -26,15 +26,15 @@
 
     ~/.dir_colors: dircolors/dircolors.256dark
 
-    ~/.Xresources: wm/x/xresources
+    ~/.Xresources: x/xresources
 
-    ~/.xrdb: wm/xrdb
+    ~/.xrdb: xrdb
 
-    ~/.urxvt: wm/urxvt
+    ~/.urxvt: urxvt
 
-    ~/.fonts: wm/fonts
+    ~/.fonts: fonts
 
-    ~/.mpd: wm/mpd
+    ~/.mpd: mpd
 
     ~/.utility: utility
 
@@ -53,7 +53,7 @@
     ~/.git-templates/hooks/pre-commit: git/set-repo-user-hook
     ~/.git-templates/hooks/prepare-commit-msg: git/set-repo-user-hook
 
-    ~/.config/compton.conf: wm/compton/compton.conf
+    ~/.config/compton.conf: compton/compton.conf
 
     ~/.config/omf/init.fish: fish/init.fish
     ~/.config/omf/bundle: fish/omf/bundle
@@ -89,31 +89,29 @@
     ~/.config/fish/completions/repo.fish: fish/completions/repo.fish
     ~/.config/fish/completions/repodir.fish: fish/completions/repodir.fish
 
-    ~/.config/.bar/panel-bspwm: wm/bar/panel-bspwm
+    ~/.config/bspwm/bspwmrc: bspwm/bspwmrc
+    ~/.config/bspwm/polybar: polybar/polybar
 
-    ~/.config/bspwm/bspwmrc: wm/bspwm/bspwmrc
-    ~/.config/bspwm/polybar: wm/polybar/polybar
+    ~/.config/btops/config.toml: bspwm/btops.toml
 
-    ~/.config/btops/config.toml: wm/bspwm/btops.toml
+    ~/.config/dunst/dunstrc: dunst/dunstrc-dark
 
-    ~/.config/dunst/dunstrc: wm/dunst/dunstrc-dark
+    ~/.config/gtk-3.0/settings.ini: gtk/settings.ini
+    ~/.config/gtk-3.0/gtk.css: gtk/gtk.css
 
-    ~/.config/gtk-3.0/settings.ini: wm/gtk/settings.ini
-    ~/.config/gtk-3.0/gtk.css: wm/gtk/gtk.css
+    ~/.config/sxhkd/sxhkdrc: sxhkd/sxhkdrc
 
-    ~/.config/sxhkd/sxhkdrc: wm/sxhkd/sxhkdrc
+    ~/.config/xsettingsd/xsettingsd.conf: x/xsettingsd.conf
 
-    ~/.config/xsettingsd/xsettingsd.conf: wm/x/xsettingsd.conf
+    ~/.config/rofi/config.rasi: rofi/config.rasi
+    ~/.config/rofi/cumpsd.rasi: rofi/cumpsd.rasi
 
-    ~/.config/rofi/config.rasi: wm/rofi/config.rasi
-    ~/.config/rofi/cumpsd.rasi: wm/rofi/cumpsd.rasi
-
-    ~/.config/networkmanager-dmenu/config.ini: wm/rofi/network-manager.ini
+    ~/.config/networkmanager-dmenu/config.ini: rofi/network-manager.ini
 
     ~/.config/remmina: rdp/remmina-config
     ~/.local/share/remmina: rdp/remmina-connections
 
-    ~/.local/share/applications: wm/applications
+    ~/.local/share/applications: applications
 
     ~/.local/share/fonts/i_dev.sh: fonts/helpers/i_dev.sh
     ~/.local/share/fonts/i_fae.sh: fonts/helpers/i_fae.sh

@@ -9,7 +9,7 @@
       stderr: false
 
 - link:
-    /usr/share/libalpm/hooks/91-linux-surface-efi.hook: configs/91-linux-surface-efi.hook
+    /usr/share/libalpm/hooks/91-linux-surface-efi.hook: surface/pacman-hooks/91-linux-surface-efi.hook
 
 - shell:
     - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/scripts/000-use-all-cores-makepkg-conf-v3.sh, Use all cores in makepkg]
@@ -45,6 +45,8 @@
     - [sudo rm -f /usr/share/applications/openscad.desktop, Remove default OpenSCAD shortcut]
     - [sudo rm -f /usr/share/applications/ranger.desktop, Remove default Ranger shortcut]
 
-    - [sudo cp -f /home/$SUDO_USER/.dotfiles/scripts/fix-wifi.service /etc/systemd/system, Install Fix Wifi Systemd service]
-    - [sudo cp -f /home/$SUDO_USER/.dotfiles/scripts/fix-wifi /usr/bin/, Install fix-wifi exectable]
+    - [sudo cp -f /home/$SUDO_USER/.dotfiles/wifi/fix-wifi.service /etc/systemd/system, Install Fix Wifi Systemd service]
+    - [sudo cp -f /home/$SUDO_USER/.dotfiles/wifi/fix-wifi /usr/bin/, Install fix-wifi exectable]
     - [sudo systemctl enable fix-wifi.service, Enable Fix Wifi]
+
+    - [sudo cp -f /home/$SUDO_USER/.dotfiles/refind/refind.conf /efi/EFI/BOOT/refind.conf, Configure rEFInd]

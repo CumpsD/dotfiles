@@ -9,9 +9,9 @@
       stderr: false
 
 - link:
-    /etc/issue: /home/$SUDO_USER/.dotfiles/configs/issue
+    /etc/issue: /home/$SUDO_USER/.dotfiles/issue/issue
 
-    /etc/vconsole.conf: /home/$SUDO_USER/.dotfiles/configs/vconsole.conf
+    /etc/vconsole.conf: /home/$SUDO_USER/.dotfiles/console/vconsole.conf
 
     /etc/systemd/system/mnt-fs-cc.mount: nfs/mnt-fs-cc.mount
 
