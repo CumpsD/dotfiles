@@ -18,8 +18,6 @@
   - https://wiki.archlinux.org/index.php/Steam
 - [ ] Setup flicker free boot
   - https://wiki.archlinux.org/index.php/Plymouth
-- [ ] Setup rEFInd
-  - enable_touch https://www.rodsbooks.com/refind/configfile.html
 - [ ] Add SSH sessions to `~/.ssh/config`
   - https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/#sshconfig
 - [ ] Setup Secure Boot
@@ -44,3 +42,5 @@
 - [x] How to get Rider to work with bspwm?
 - [x] How to hide applications in rofi?
 - [x] Configure NordVPN
+- [x] Setup rEFInd
+  - enable_touch https://www.rodsbooks.com/refind/configfile.html
