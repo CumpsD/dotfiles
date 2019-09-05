@@ -20,10 +20,6 @@
   - https://wiki.archlinux.org/index.php/Plymouth
 - [ ] Add SSH sessions to `~/.ssh/config`
   - https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/#sshconfig
-- [ ] Setup Secure Boot
-  - https://wiki.archlinux.org/index.php/Microsoft_Surface_Pro_3#Booting_with_Secure_Boot_Enabled
-  - https://wiki.archlinux.org/index.php/Microsoft_Surface_Pro_3#Boot_with_Secure_Boot
-  - https://wiki.archlinux.org/index.php/REFInd#Secure_Boot
 - [ ] Configure Ranger
   - https://wiki.archlinux.org/index.php/Ranger
   - https://github.com/addy-dclxvi/almighty-dotfiles/tree/cef4ffae733d4ec5d81d0773c7dd0fbefce401a0/.config/ranger
@@ -44,3 +40,7 @@
 - [x] Configure NordVPN
 - [x] Setup rEFInd
   - enable_touch https://www.rodsbooks.com/refind/configfile.html
+- [x] Setup Secure Boot
+  - https://wiki.archlinux.org/index.php/Microsoft_Surface_Pro_3#Booting_with_Secure_Boot_Enabled
+  - https://wiki.archlinux.org/index.php/Microsoft_Surface_Pro_3#Boot_with_Secure_Boot
+  - https://wiki.archlinux.org/index.php/REFInd#Secure_Boot

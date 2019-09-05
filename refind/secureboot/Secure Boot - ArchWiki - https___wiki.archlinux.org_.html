@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://wiki.archlinux.org/index.php/Secure_Boot#shim -->
+<html class="client-js gr__wiki_archlinux_org" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Secure Boot - ArchWiki - https://wiki.archlinux.org/</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Secure_Boot","wgTitle":"Secure Boot","wgCurRevisionId":577765,"wgRevisionId":577765,"wgArticleId":20517,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages or sections flagged with Template:Move","Pages or sections flagged with Template:Expansion","Boot process"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Secure_Boot","wgRelevantArticleId":20517,"wgRequestId":"3bb19f9eb0975a2c8df810cf","wgCSPNonce":false,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.toc.styles":"ready","zzz.ext.archLinux.styles":"ready","skins.vector.styles.responsive":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.tokens@0tffind",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.vector.js"];mw.loader.load(RLPAGEMODULES);});</script>
+<link rel="stylesheet" href="./Secure Boot - ArchWiki - https___wiki.archlinux.org__files/load.php">
+<script async="" src="./Secure Boot - ArchWiki - https___wiki.archlinux.org__files/load(1).php"></script>
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#2a4b8d;color:#fff}.suggestions-special .special-label{color:#72777d;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c8ccd1}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	.toc.tochidden,.toctoggle{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="./Secure Boot - ArchWiki - https___wiki.archlinux.org__files/load(2).php">
+<meta name="generator" content="MediaWiki 1.33.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="https://wiki.archlinux.org/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.archlinux.org/opensearch_desc.php" title="ArchWiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.archlinux.org/api.php?action=rsd">
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html">
+<link rel="alternate" type="application/atom+xml" title="ArchWiki Atom feed" href="https://wiki.archlinux.org/index.php?title=Special:RecentChanges&amp;feed=atom">
+<!--[if lt IE 9]><script src="/load.php?lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Secure_Boot rootpage-Secure_Boot skin-vector action-view" data-gr-c-s-loaded="true"><div id="archnavbar" class="noprint">
+    <div id="archnavbarlogo">
+        <p><a id="logo" href="https://www.archlinux.org/"></a></p>
+    </div>
+    <div id="archnavbarmenu">
+        <ul id="archnavbarlist">
+                        <li id="anb-home"><a href="https://www.archlinux.org/">Home</a></li>            <li id="anb-packages"><a href="https://www.archlinux.org/packages/">Packages</a></li>            <li id="anb-forums"><a href="https://bbs.archlinux.org/">Forums</a></li>            <li id="anb-wiki" class="anb-selected"><a href="https://wiki.archlinux.org/">Wiki</a></li>            <li id="anb-bugs"><a href="https://bugs.archlinux.org/">Bugs</a></li>            <li id="anb-security"><a href="https://security.archlinux.org/">Security</a></li>            <li id="anb-aur"><a href="https://aur.archlinux.org/">AUR</a></li>            <li id="anb-download"><a href="https://www.archlinux.org/download/">Download</a></li>        </ul>
+    </div>
+</div>
+
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Secure Boot</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From ArchWiki</div>
+		<div id="contentSub"></div>
+		
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="https://wiki.archlinux.org/index.php/Secure_Boot#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="https://wiki.archlinux.org/index.php/Secure_Boot#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="noprint archwiki-template-message">
+<p><a href="https://wiki.archlinux.org/index.php/File:Tango-go-next.png" class="image"><img alt="Tango-go-next.png" src="./Secure Boot - ArchWiki - https___wiki.archlinux.org__files/Tango-go-next.png" decoding="async" width="48" height="48"></a><b>This article or section is a candidate for moving to <a href="https://wiki.archlinux.org/index.php?title=Unified_Extensible_Firmware_Interface/Secure_Boot&amp;action=edit&amp;redlink=1" class="new" title="Unified Extensible Firmware Interface/Secure Boot (page does not exist)">Unified Extensible Firmware Interface/Secure Boot</a>.</b><a href="https://wiki.archlinux.org/index.php/File:Tango-go-next.png" class="image"><img alt="Tango-go-next.png" src="./Secure Boot - ArchWiki - https___wiki.archlinux.org__files/Tango-go-next.png" decoding="async" width="48" height="48"></a></p>
+<div><b>Notes:</b> Secure Boot is a direct UEFI feature. (Discuss in <a rel="nofollow" class="external text" href="https://wiki.archlinux.org/index.php/Talk:Secure_Boot#Move_to_">"Unified_Extensible_Firmware_Interface/Secure_Boot" Talk:Secure Boot#Move to "Unified Extensible Firmware Interface/Secure Boot"</a>)</div>
+</div>
+<div class="noprint archwiki-template-message">
+<p><a href="https://wiki.archlinux.org/index.php/File:Tango-view-fullscreen.png" class="image"><img alt="Tango-view-fullscreen.png" src="./Secure Boot - ArchWiki - https___wiki.archlinux.org__files/Tango-view-fullscreen.png" decoding="async" width="48" height="48"></a><b>This article or section needs expansion.</b><a href="https://wiki.archlinux.org/index.php/File:Tango-view-fullscreen.png" class="image"><img alt="Tango-view-fullscreen.png" src="./Secure Boot - ArchWiki - https___wiki.archlinux.org__files/Tango-view-fullscreen.png" decoding="async" width="48" height="48"></a></p>
+<div><b>Reason:</b> Need to explain the relationship with Win8 which is already documented in <a href="https://wiki.archlinux.org/index.php/Dual_boot_with_Windows#UEFI_Secure_Boot" title="Dual boot with Windows">Dual boot with Windows#UEFI Secure Boot</a>. Not sure how to integrate the info without duplication. (Discuss in <a rel="nofollow" class="external text" href="https://wiki.archlinux.org/index.php/Talk:Secure_Boot">Talk:Secure Boot#</a>)</div>
+</div>
+<div class="archwiki-template-meta-related-articles-start"><p>Related articles</p><ul>
+<li><a href="https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface" title="Unified Extensible Firmware Interface">Unified Extensible Firmware Interface</a></li>
+</ul></div>
+<p>For an overview about Secure Boot in Linux see <a rel="nofollow" class="external text" href="http://www.rodsbooks.com/efi-bootloaders/secureboot.html">Rodsbooks' Secure Boot</a>  article. This article focuses on how to set up Secure Boot in Arch Linux. 
+</p>
+<div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Secure_Boot_status"><span class="tocnumber">1</span> <span class="toctext">Secure Boot status</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Check_the_status"><span class="tocnumber">1.1</span> <span class="toctext">Check the status</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Before_booting_the_OS"><span class="tocnumber">1.1.1</span> <span class="toctext">Before booting the OS</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#After_booting_the_OS"><span class="tocnumber">1.1.2</span> <span class="toctext">After booting the OS</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-5"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Change_the_status"><span class="tocnumber">1.2</span> <span class="toctext">Change the status</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Using_a_signed_boot_loader"><span class="tocnumber">2</span> <span class="toctext">Using a signed boot loader</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#PreLoader"><span class="tocnumber">2.1</span> <span class="toctext">PreLoader</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Set_up_PreLoader"><span class="tocnumber">2.1.1</span> <span class="toctext">Set up PreLoader</span></a>
+<ul>
+<li class="toclevel-4 tocsection-9"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Fallback"><span class="tocnumber">2.1.1.1</span> <span class="toctext">Fallback</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-10"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#How_to_use_while_booting?"><span class="tocnumber">2.1.2</span> <span class="toctext">How to use while booting?</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Remove_PreLoader"><span class="tocnumber">2.1.3</span> <span class="toctext">Remove PreLoader</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#shim"><span class="tocnumber">2.2</span> <span class="toctext">shim</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Set_up_shim"><span class="tocnumber">2.2.1</span> <span class="toctext">Set up shim</span></a>
+<ul>
+<li class="toclevel-4 tocsection-14"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#shim_with_hash"><span class="tocnumber">2.2.1.1</span> <span class="toctext">shim with hash</span></a></li>
+<li class="toclevel-4 tocsection-15"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#shim_with_key"><span class="tocnumber">2.2.1.2</span> <span class="toctext">shim with key</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-16"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Remove_shim"><span class="tocnumber">2.2.2</span> <span class="toctext">Remove shim</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Using_your_own_keys"><span class="tocnumber">3</span> <span class="toctext">Using your own keys</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Custom_keys"><span class="tocnumber">3.1</span> <span class="toctext">Custom keys</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Creating_keys"><span class="tocnumber">3.1.1</span> <span class="toctext">Creating keys</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Updating_keys"><span class="tocnumber">3.1.2</span> <span class="toctext">Updating keys</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-21"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Signing_bootloader_and_kernel"><span class="tocnumber">3.2</span> <span class="toctext">Signing bootloader and kernel</span></a>
+<ul>
+<li class="toclevel-3 tocsection-22"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Signing_kernel_with_pacman_hook"><span class="tocnumber">3.2.1</span> <span class="toctext">Signing kernel with pacman hook</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-23"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Put_firmware_in_%22Setup_Mode%22"><span class="tocnumber">3.3</span> <span class="toctext">Put firmware in "Setup Mode"</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Enroll_keys_in_firmware"><span class="tocnumber">3.4</span> <span class="toctext">Enroll keys in firmware</span></a>
+<ul>
+<li class="toclevel-3 tocsection-25"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Using_firmware_setup_utility"><span class="tocnumber">3.4.1</span> <span class="toctext">Using firmware setup utility</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Using_KeyTool"><span class="tocnumber">3.4.2</span> <span class="toctext">Using KeyTool</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-27"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Dual_booting_with_other_operating_systems"><span class="tocnumber">3.5</span> <span class="toctext">Dual booting with other operating systems</span></a>
+<ul>
+<li class="toclevel-3 tocsection-28"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Microsoft_Windows"><span class="tocnumber">3.5.1</span> <span class="toctext">Microsoft Windows</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Disable_Secure_Boot"><span class="tocnumber">4</span> <span class="toctext">Disable Secure Boot</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Booting_an_install_media"><span class="tocnumber">5</span> <span class="toctext">Booting an install media</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="https://wiki.archlinux.org/index.php/Secure_Boot#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Secure_Boot_status">Secure Boot status</span></h2>
+<h3><span class="mw-headline" id="Check_the_status">Check the status</span></h3>
+<h4><span class="mw-headline" id="Before_booting_the_OS">Before booting the OS</span></h4>
+<p>At this point, one has to look at the firmware setup. If the machine was booted and is running, in most cases it will have to be rebooted.   
+</p><p>You may access the firmware configuration by pressing a special key during the boot process. The key to use depends on the firmware. It is usually one of <code>Esc</code>, <code>F2</code>, <code>Del</code> or possibly another <code>F<i>n</i></code> key. Sometimes the right key is displayed for a short while at the beginning of the boot process. The motherboard manual usually records it. You might want to press the key, and keep pressing it, immediately following powering on the machine, even before the screen actually displays anything.
+</p><p>After entering the firmware setup, be careful not to change any settings without prior intention. Usually there are navigation instructions, and short help for the settings, at the bottom of each setup screen. The setup itself might be composed of several pages. You will have to navigate to the correct place. The interesting setting might be simply denoted by secure boot, which can be set on or off.
+</p>
+<h4><span class="mw-headline" id="After_booting_the_OS">After booting the OS</span></h4>
+<p>To check if the machine was booted with Secure Boot, use this command:
+</p>
+<pre>$ od --address-radix=n --format=u1 /sys/firmware/efi/efivars/SecureBoot-<i>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</i>
+</pre>
+<p>The characters denoted by <code><i>XXXX</i></code> differ from machine to machine. To help with this, you can use <a href="https://wiki.archlinux.org/index.php/Bash#Tab_completion" title="Bash">tab completion</a> or list the EFI variables.
+</p><p>If Secure Boot is enabled, this command returns <code>1</code> as the final integer in a list of five, for example:
+</p>
+<pre>6  0  0  0  1
+</pre>
+<p>For a verbose status, another way is to execute:
+</p>
+<pre>$ bootctl status
+</pre>
+<h3><span class="mw-headline" id="Change_the_status">Change the status</span></h3>
+<div class="noprint archwiki-template-message">
+<p><a href="https://wiki.archlinux.org/index.php/File:Tango-view-fullscreen.png" class="image"><img alt="Tango-view-fullscreen.png" src="./Secure Boot - ArchWiki - https___wiki.archlinux.org__files/Tango-view-fullscreen.png" decoding="async" width="48" height="48"></a><b>This article or section needs expansion.</b><a href="https://wiki.archlinux.org/index.php/File:Tango-view-fullscreen.png" class="image"><img alt="Tango-view-fullscreen.png" src="./Secure Boot - ArchWiki - https___wiki.archlinux.org__files/Tango-view-fullscreen.png" decoding="async" width="48" height="48"></a></p>
+<div><b>Reason:</b> Layout quick steps how an Arch install can gain Secure Boot with either <a href="https://wiki.archlinux.org/index.php/Secure_Boot#Using_a_signed_boot_loader">#Using a signed boot loader</a> or <a href="https://wiki.archlinux.org/index.php/Secure_Boot#Using_your_own_keys">#Using your own keys</a>. In the steps it is best mentioned that the structure of those two sections relies on having booted into Arch, i.e. <a href="https://wiki.archlinux.org/index.php/Secure_Boot#Disable_Secure_Boot">#Disable Secure Boot</a> first. (Discuss in <a rel="nofollow" class="external text" href="https://wiki.archlinux.org/index.php/Talk:Secure_Boot">Talk:Secure Boot#</a>)</div>
+</div>
+<h2><span class="mw-headline" id="Using_a_signed_boot_loader">Using a signed boot loader</span></h2>
+<p>Using a signed boot loader means using a boot loader signed with Microsoft's key. There are two known signed boot loaders PreLoader and shim, their purpose is to chainload other EFI binaries (usually <a href="https://wiki.archlinux.org/index.php/Boot_loader" class="mw-redirect" title="Boot loader">boot loaders</a>). Since Microsoft would never sign a boot loader that automatically launches any unsigned binary, PreLoader and shim use a whitelist called Machine Owner Key list, abbreviated MokList. If the SHA256 hash of the binary (Preloader and shim) or key the binary is signed with (shim) is in the MokList they execute it, if not they launch a key management utility which allows enrolling the hash or key.
+</p>
+<h3><span class="mw-headline" id="PreLoader">PreLoader</span></h3>
+<p>When run, PreLoader tries to launch <code>loader.efi</code>. If the hash of <code>loader.efi</code> is not in MokList, PreLoader will launch <code>HashTool.efi</code>. In HashTool you must enroll the hash of the EFI binaries you want to launch, that means your <a href="https://wiki.archlinux.org/index.php/Boot_loader" class="mw-redirect" title="Boot loader">boot loader</a> (<code>loader.efi</code>) and kernel.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> Each time you update any of the binaries (e.g. boot loader or kernel) you will need to enroll their new hash.</div>
+<div class="archwiki-template-box archwiki-template-box-tip"><strong>Tip:</strong> The <a href="https://wiki.archlinux.org/index.php/REFInd" title="REFInd">rEFInd</a> boot manager's <code>refind-install</code> script can copy the rEFInd and PreLoader EFI binaries to the ESP. See <a href="https://wiki.archlinux.org/index.php/REFInd#Using_PreLoader" title="REFInd">rEFInd#Using PreLoader</a> for instructions.</div>
+<h4><span class="mw-headline" id="Set_up_PreLoader">Set up PreLoader</span></h4>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> <code>PreLoader.efi</code> and <code>HashTool.efi</code> in <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=efitools">efitools</a></span> package are not signed, so their usefulness is limited. You can get a signed <code>PreLoader.efi</code> and <code>HashTool.efi</code> from <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/preloader-signed/">preloader-signed</a></span><sup><small>AUR</small></sup> or <a rel="nofollow" class="external text" href="https://blog.hansenpartnership.com/linux-foundation-secure-boot-system-released/">download them manually</a>.</div>
+<p><a href="https://wiki.archlinux.org/index.php/Install" class="mw-redirect" title="Install">Install</a> <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/preloader-signed/">preloader-signed</a></span><sup><small>AUR</small></sup> and copy <code>PreLoader.efi</code> and <code>HashTool.efi</code> to the <a href="https://wiki.archlinux.org/index.php/Boot_loader" class="mw-redirect" title="Boot loader">boot loader</a> directory; for <a href="https://wiki.archlinux.org/index.php/Systemd-boot" title="Systemd-boot">systemd-boot</a> use:
+</p>
+<pre># cp /usr/share/preloader-signed/{PreLoader,HashTool}.efi <i>esp</i>/EFI/systemd
+</pre>
+<p>Now copy over the boot loader binary and rename it to <code>loader.efi</code>; for <a href="https://wiki.archlinux.org/index.php/Systemd-boot" title="Systemd-boot">systemd-boot</a> use:
+</p>
+<pre># cp <i>esp</i>/EFI/systemd/systemd-bootx64.efi <i>esp</i>/EFI/systemd/loader.efi
+</pre>
+<p>Finally, create a new NVRAM entry to boot <code>PreLoader.efi</code>:
+</p>
+<pre># efibootmgr --verbose --disk /dev/sd<i><b>X</b></i> --part <i><b>Y</b></i> --create --label "PreLoader" --loader /EFI/systemd/PreLoader.efi
+</pre>
+<p>Replace <code><i>X</i></code> with the drive letter and replace <code><i>Y</i></code> with the partition number of the <a href="https://wiki.archlinux.org/index.php/EFI_system_partition" title="EFI system partition">EFI system partition</a>.
+</p><p>This entry should be added to the list as the first to boot; check with the <code>efibootmgr</code> command and adjust the boot-order if necessary.
+</p>
+<h5><span class="mw-headline" id="Fallback">Fallback</span></h5>
+<p>If there are problems booting the custom NVRAM entry, copy <code>HashTool.efi</code> and <code>loader.efi</code> to the default loader location booted automatically by UEFI systems:
+</p>
+<pre># cp /usr/share/preloader-signed/HashTool.efi <i>esp</i>/EFI/Boot
+# cp <i>esp</i>/EFI/systemd/systemd-bootx64.efi <i>esp</i>/EFI/Boot/loader.efi
+</pre>
+<p>Copy over <code>PreLoader.efi</code> and rename it:
+</p>
+<pre># cp /usr/share/preloader-signed/PreLoader.efi <i>esp</i>/EFI/Boot/bootx64.efi
+</pre>
+<p>For particularly intransigent UEFI implementations, copy <code>PreLoader.efi</code> to the default loader location used by Windows systems:
+</p>
+<pre># mkdir -p <i>esp</i>/EFI/Microsoft/Boot
+# cp /usr/share/preloader-signed/PreLoader.efi <i>esp</i>/EFI/Microsoft/Boot/bootmgfw.efi
+</pre>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> If dual-booting with Windows, backup the original <code>bootmgfw.efi</code> first as replacing it may cause problems with Windows updates.</div>
+<p>As before, copy <code>HashTool.efi</code> and <code>loader.efi</code> to <code><i>esp</i>/EFI/Microsoft/Boot/</code>.
+</p><p>When the system starts with Secure Boot enabled, follow the steps above to enroll <code>loader.efi</code> and <code>/vmlinuz-linux</code> (or whichever kernel image is being used).
+</p>
+<h4><span id="How_to_use_while_booting.3F"></span><span class="mw-headline" id="How_to_use_while_booting?">How to use while booting?</span></h4>
+<p>A message will show up that says <code>Failed to Start loader... I will now execute HashTool.</code> To use HashTool for enrolling the hash of <code>loader.efi</code> and <code>vmlinuz.efi</code>, follow these steps. These steps assume titles for a remastered archiso installation media. The exact titles you will get depends on your boot loader setup.
+</p>
+<ul><li>Select <i>OK</i></li>
+<li>In the HashTool main menu, select <i>Enroll Hash</i>, choose <code>\loader.efi</code> and confirm with <i>Yes</i>. Again, select <i>Enroll Hash</i> and <code>archiso</code> to enter the archiso directory, then select <code>vmlinuz.efi</code> and confirm with <i>Yes</i>. Then choose <i>Exit</i> to return to the boot device selection menu.</li>
+<li>In the boot device selection menu choose <i>Arch Linux archiso x86_64 UEFI CD</i></li></ul>
+<h4><span class="mw-headline" id="Remove_PreLoader">Remove PreLoader</span></h4>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> Since you are going to remove stuff, is a good idea to backup it.</div>
+<p><a href="https://wiki.archlinux.org/index.php/Uninstall" class="mw-redirect" title="Uninstall">Uninstall</a> <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/preloader-signed/">preloader-signed</a></span><sup><small>AUR</small></sup> and simply remove the copied files and revert configuration; for <a href="https://wiki.archlinux.org/index.php/Systemd-boot" title="Systemd-boot">systemd-boot</a> use:
+</p>
+<pre># rm <i>esp</i>/EFI/systemd/{PreLoader,HashTool}.efi
+# rm <i>esp</i>/EFI/systemd/loader.efi
+# efibootmgr --verbose --bootnum <i>N</i> --delete-bootnum
+# bootctl update
+</pre>
+<p>Where <code><i>N</i></code> is the NVRAM boot entry created for booting <code>PreLoader.efi</code>.
+Check with the <i>efibootmgr</i> command and adjust the boot-order if necessary.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> The above commands cover the easiest case; if you have created, copied, renamed or edited further files probably you have to handle with them, too. If PreLoader was your operational boot entry, you obviously also need to <a href="https://wiki.archlinux.org/index.php/Secure_Boot#Disable_Secure_Boot">#Disable Secure Boot</a>.</div>
+<h3><span class="mw-headline" id="shim">shim</span></h3>
+<div class="noprint archwiki-template-message">
+<p><a href="https://wiki.archlinux.org/index.php/File:Tango-view-fullscreen.png" class="image"><img alt="Tango-view-fullscreen.png" src="./Secure Boot - ArchWiki - https___wiki.archlinux.org__files/Tango-view-fullscreen.png" decoding="async" width="48" height="48"></a><b>This article or section needs expansion.</b><a href="https://wiki.archlinux.org/index.php/File:Tango-view-fullscreen.png" class="image"><img alt="Tango-view-fullscreen.png" src="./Secure Boot - ArchWiki - https___wiki.archlinux.org__files/Tango-view-fullscreen.png" decoding="async" width="48" height="48"></a></p>
+<div><b>Reason:</b> Testing needed. (Discuss in <a rel="nofollow" class="external text" href="https://wiki.archlinux.org/index.php/Talk:Secure_Boot#shim">Talk:Secure Boot#shim</a>)</div>
+</div>
+<p>When run, shim tries to launch <code>grubx64.efi</code>. If MokList does not contain the hash of <code>grubx64.efi</code> or the key it is signed with, shim will launch MokManager (<code>mmx64.efi</code>). In MokManager you must enroll the hash of the EFI binaries you want to launch (your <a href="https://wiki.archlinux.org/index.php/Boot_loader" class="mw-redirect" title="Boot loader">boot loader</a> (<code>grubx64.efi</code>) and kernel) or enroll the key they are signed with.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> If you use <a href="https://wiki.archlinux.org/index.php/Secure_Boot#shim_with_hash">#shim with hash</a>, each time you update any of the binaries (e.g. boot loader or kernel) you will need to enroll their new hash.</div>
+<h4><span class="mw-headline" id="Set_up_shim">Set up shim</span></h4>
+<div class="archwiki-template-box archwiki-template-box-tip"><strong>Tip:</strong> The <a href="https://wiki.archlinux.org/index.php/REFInd" title="REFInd">rEFInd</a> boot manager's <code>refind-install</code> script can sign rEFInd EFI binaries and copy them along with shim and the MOK certificates to the ESP. See <a href="https://wiki.archlinux.org/index.php/REFInd#Using_shim" title="REFInd">rEFInd#Using shim</a> for instructions.</div>
+<p><a href="https://wiki.archlinux.org/index.php/Install" class="mw-redirect" title="Install">Install</a> <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/shim-signed/">shim-signed</a></span><sup><small>AUR</small></sup>.
+</p><p>Rename your current <a href="https://wiki.archlinux.org/index.php/Boot_loader" class="mw-redirect" title="Boot loader">boot loader</a> to <code>grubx64.efi</code>
+</p>
+<pre># mv <i>esp</i>/EFI/BOOT/BOOTX64.efi <i>esp</i>/EFI/BOOT/grubx64.efi
+</pre>
+<p>Copy <i>shim</i> and <i>MokManager</i> to your boot loader directory on ESP; use previous filename of your boot loader as as the filename for <code>shimx64.efi</code>:
+</p>
+<pre># cp /usr/share/shim-signed/shimx64.efi <i>esp</i>/EFI/BOOT/BOOTX64.efi
+# cp /usr/share/shim-signed/mmx64.efi <i>esp</i>/EFI/BOOT/
+</pre>
+<p><i>shim</i> can authenticate binaries by Machine Owner Key or hash stored in MokList.
+</p>
+<dl><dt>Machine Owner Key (MOK)</dt>
+<dd>A key that a user generates and uses to sign EFI binaries.</dd>
+<dt>hash</dt>
+<dd>A SHA256 hash of an EFI binary.</dd></dl>
+<p>Using hash is simpler, but each time you update your boot loader or kernel you will need to add their hashes in MokManager. With MOK you only need to add the key once, but you will have to sign the boot loader and kernel each time it updates.
+</p>
+<h5><span class="mw-headline" id="shim_with_hash">shim with hash</span></h5>
+<p>If <i>shim</i> does not find the SHA256 hash of <code>grubx64.efi</code> in MokList it will launch MokManager (<code>mmx64.efi</code>).
+</p><p>In <i>MokManager</i> select <i>Enroll hash from disk</i>, find <code>grubx64.efi</code> and add it to MokList. Repeat the steps and add your kernel <code>vmlinuz-linux</code>. When done select <i>Continue boot</i> and your boot loader will launch and it will be capable launching the kernel.
+</p>
+<h5><span class="mw-headline" id="shim_with_key">shim with key</span></h5>
+<p>Install <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=sbsigntools">sbsigntools</a></span>.
+</p><p>You will need:
+</p>
+<dl><dt><i>.key</i></dt>
+<dd>PEM format <b>private</b> key for EFI binary signing.</dd>
+<dt><i>.crt</i></dt>
+<dd>PEM format certificate for <i>sbsign</i>.</dd>
+<dt><i>.cer</i></dt>
+<dd>DER format certificate for <i>MokManager</i>.</dd></dl>
+<p>Create a Machine Owner Key:
+</p>
+<pre>$ openssl req -newkey rsa:4096 -nodes -keyout MOK.key -new -x509 -sha256 -days <i>3650</i> -subj "/CN=<i>my Machine Owner Key</i>/" -out MOK.crt
+$ openssl x509 -outform DER -in MOK.crt -out MOK.cer
+</pre>
+<p>Sign your boot loader (named <code>grubx64.efi</code>) and kernel:
+</p>
+<pre># sbsign --key MOK.key --cert MOK.crt --output /boot/vmlinuz-linux /boot/vmlinuz-linux
+# sbsign --key MOK.key --cert MOK.crt --output <i>esp</i>/EFI/BOOT/grubx64.efi <i>esp</i>/EFI/BOOT/grubx64.efi
+</pre>
+<p>You will need to do this each time they are updated. You can automate the kernel signing with a <a href="https://wiki.archlinux.org/index.php/Pacman_hook" class="mw-redirect" title="Pacman hook">pacman hook</a>, e.g.:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/etc/pacman.d/hooks/999-sign_kernel_for_secureboot.hook</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = linux
+
+[Action]
+Description = Signing kernel with Machine Owner Key for Secure Boot
+When = PostTransaction
+Exec = /usr/bin/find /boot/ -maxdepth 1 -name 'vmlinuz-*' -exec /usr/bin/sh -c 'if&nbsp;! /usr/bin/sbverify --list {} 2&gt;/dev/null | /usr/bin/grep -q "signature certificates"; then /usr/bin/sbsign --key MOK.key --cert MOK.crt --output {} {}; fi'&nbsp;;
+Depends = sbsigntools
+Depends = findutils
+Depends = grep</pre>
+<p>Copy <code>MOK.cer</code> to a <a href="https://wiki.archlinux.org/index.php/FAT" title="FAT">FAT</a> formatted file system (you can use <a href="https://wiki.archlinux.org/index.php/EFI_system_partition" title="EFI system partition">EFI system partition</a>).
+</p><p>Reboot and enable Secure Boot. If <i>shim</i> does not find the certificate <code>grubx64.efi</code> is signed with in MokList it will launch MokManager (<code>mmx64.efi</code>).
+</p><p>In <i>MokManager</i> select <i>Enroll key from disk</i>, find <code>MOK.cer</code> and add it to MokList. When done select <i>Continue boot</i> and your boot loader will launch and it will be capable launching any binary signed with your Machine Owner Key.
+</p>
+<h4><span class="mw-headline" id="Remove_shim">Remove shim</span></h4>
+<p><a href="https://wiki.archlinux.org/index.php/Uninstall" class="mw-redirect" title="Uninstall">Uninstall</a> <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/shim-signed/">shim-signed</a></span><sup><small>AUR</small></sup>, remove the copied <i>shim</i> and <i>MokManager</i> files and rename back your boot loader.
+</p>
+<h2><span class="mw-headline" id="Using_your_own_keys">Using your own keys</span></h2>
+<div class="noprint archwiki-template-message">
+<p><a href="https://wiki.archlinux.org/index.php/File:Tango-view-fullscreen.png" class="image"><img alt="Tango-view-fullscreen.png" src="./Secure Boot - ArchWiki - https___wiki.archlinux.org__files/Tango-view-fullscreen.png" decoding="async" width="48" height="48"></a><b>This article or section needs expansion.</b><a href="https://wiki.archlinux.org/index.php/File:Tango-view-fullscreen.png" class="image"><img alt="Tango-view-fullscreen.png" src="./Secure Boot - ArchWiki - https___wiki.archlinux.org__files/Tango-view-fullscreen.png" decoding="async" width="48" height="48"></a></p>
+<div><b>Reason:</b> instructions needed, testing too, a subsection on backing up existing keys prior to replacing them should be added (Discuss in <a rel="nofollow" class="external text" href="https://wiki.archlinux.org/index.php/Talk:Secure_Boot">Talk:Secure Boot#</a>)</div>
+</div>
+<div class="archwiki-template-box archwiki-template-box-tip"><strong>Tip:</strong> 
+<ul><li>It is advised to read <a rel="nofollow" class="external text" href="http://www.rodsbooks.com/efi-bootloaders/controlling-sb.html">Rod Smith's Controlling Secure Boot</a>.</li>
+<li>You can use <code>cryptboot-efikeys</code> script from <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/cryptboot/">cryptboot</a></span><sup><small>AUR</small></sup> package for simplified creating keys, enrolling keys, signing bootloader and verifying signatures.
+<ul><li>Note that <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/cryptboot/">cryptboot</a></span><sup><small>AUR</small></sup> requires the encrypted <code>/boot</code> partition to be specified in <code>/etc/crypttab</code> before it runs, and if you are using it in combination with <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/sbupdate-git/">sbupdate-git</a></span><sup><small>AUR</small></sup>, <i>sbupdate</i> expects the <code>/boot/efikeys/db.*</code> files created by <i>cryptboot</i> to be capitalized like <code>DB.*</code> unless otherwise configured in <code>/etc/sbupdate.conf</code>. Users who do not use systemd to handle encryption may not have anything in their <code>/etc/crypttab</code> file and would need to create an entry.</li></ul></li></ul>
+</div>
+<p>Secure Boot implementations use these keys:
+</p>
+<dl><dt>Platform Key (PK)</dt>
+<dd>Top-level key.</dd>
+<dt>Key Exchange Key (KEK)</dt>
+<dd>Keys used to sign Signatures Database and Forbidden Signatures Database updates.</dd>
+<dt>Signature Database (db)</dt>
+<dd>Contains keys and/or hashes of allowed EFI binaries.</dd>
+<dt>Forbidden Signatures Database (dbx)</dt>
+<dd>Contains keys and/or hashes of blacklisted EFI binaries.</dd></dl>
+<p>See <a rel="nofollow" class="external text" href="https://blog.hansenpartnership.com/the-meaning-of-all-the-uefi-keys/">The Meaning of all the UEFI Keys</a> for a more detailed explanation.
+</p>
+<h3><span class="mw-headline" id="Custom_keys">Custom keys</span></h3>
+<p>To use Secure Boot you need at least <b>PK</b>, <b>KEK</b> and <b>db</b> keys. While you can add multiple KEK, db and dbx certificates, only one Platform Key is allowed.
+</p><p>Once Secure Boot is in "User Mode" keys can only be updated by signing the update (using <i>sign-efi-sig-list</i>) with a higher level key. Platform key can be signed by itself.
+</p>
+<h4><span class="mw-headline" id="Creating_keys">Creating keys</span></h4>
+<p>To generate keys, <a href="https://wiki.archlinux.org/index.php/Install" class="mw-redirect" title="Install">install</a> <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=efitools">efitools</a></span>.
+</p><p>You will need private keys and certificates in multiple formats:
+</p>
+<dl><dt><i>.key</i></dt>
+<dd>PEM format <b>private</b> keys for EFI binary and EFI signature list signing.</dd>
+<dt><i>.crt</i></dt>
+<dd>PEM format certificates for <i>sbsign</i>.</dd>
+<dt><i>.cer</i></dt>
+<dd>DER format certificates for firmware.</dd>
+<dt><i>.esl</i></dt>
+<dd>Certificates in EFI Signature List for <i>KeyTool</i> and/or firmware.</dd>
+<dt><i>.auth</i></dt>
+<dd>Certificates in EFI Signature List with authentication header (i.e. a signed certificate update file) for <i>KeyTool</i> and/or firmware.</dd></dl>
+<p>Create a <a href="https://en.wikipedia.org/wiki/Globally_unique_identifier" class="extiw" title="wikipedia:Globally unique identifier">GUID</a> for owner identification:
+</p>
+<pre>$ uuidgen --random &gt; GUID.txt
+</pre>
+<p>Platform key:
+</p>
+<pre>$ openssl req -newkey rsa:4096 -nodes -keyout PK.key -new -x509 -sha256 -days <i>3650</i> -subj "/CN=<i>my Platform Key</i>/" -out PK.crt
+$ openssl x509 -outform DER -in PK.crt -out PK.cer
+$ cert-to-efi-sig-list -g "$(&lt; GUID.txt)" PK.crt PK.esl
+$ sign-efi-sig-list -g "$(&lt; GUID.txt)" -k PK.key -c PK.crt PK PK.esl PK.auth
+</pre>
+<p>Sign an empty file to allow removing Platform Key when in "User Mode":
+</p>
+<pre>$ sign-efi-sig-list -g "$(&lt; GUID.txt)" -c PK.crt -k PK.key PK /dev/null rm_PK.auth
+</pre>
+<p>Key Exchange Key:
+</p>
+<pre>$ openssl req -newkey rsa:4096 -nodes -keyout KEK.key -new -x509 -sha256 -days <i>3650</i> -subj "/CN=<i>my Key Exchange Key</i>/" -out KEK.crt
+$ openssl x509 -outform DER -in KEK.crt -out KEK.cer
+$ cert-to-efi-sig-list -g "$(&lt; GUID.txt)" KEK.crt KEK.esl
+$ sign-efi-sig-list -g "$(&lt; GUID.txt)" -k PK.key -c PK.crt KEK KEK.esl KEK.auth
+</pre>
+<p>Signature Database key:
+</p>
+<pre>$ openssl req -newkey rsa:4096 -nodes -keyout db.key -new -x509 -sha256 -days <i>3650</i> -subj "/CN=<i>my Signature Database key</i>/" -out db.crt
+$ openssl x509 -outform DER -in db.crt -out db.cer
+$ cert-to-efi-sig-list -g "$(&lt; GUID.txt)" db.crt db.esl
+$ sign-efi-sig-list -g "$(&lt; GUID.txt)" -k KEK.key -c KEK.crt db db.esl db.auth
+</pre>
+<h4><span class="mw-headline" id="Updating_keys">Updating keys</span></h4>
+<p>Once Secure Boot is in "User Mode" any changes to KEK, db and dbx need to be signed with a higher level key.
+</p><p>For example, if you wanted to replace your db key with a new one:
+</p>
+<ol><li><a href="https://wiki.archlinux.org/index.php/Secure_Boot#Creating_keys">Create the new key</a>,</li>
+<li>Convert it to EFI Signature List,</li>
+<li>Sign the EFI Signature List,</li>
+<li>Enroll the signed certificate update file.</li></ol>
+<pre>$ cert-to-efi-sig-list -g "$(&lt; GUID.txt)" <i>new_db</i>.crt <i>new_db</i>.esl
+$ sign-efi-sig-list -g "$(&lt; GUID.txt)" -k KEK.key -c KEK.crt db <i>new_db</i>.esl <i>new_db</i>.auth
+</pre>
+<p>If instead of replacing your db key, you want to <b>add</b> another one to the Signature Database, you need to use the option <code>-a</code> (see <span class="plainlinks archwiki-template-man" title="$ man 1 sign-efi-sig-list"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/sign-efi-sig-list.1">sign-efi-sig-list(1)</a></span>):
+</p>
+<pre>$ sign-efi-sig-list <b>-a</b> -g "$(&lt; GUID.txt)" -k KEK.key -c KEK.crt db <i>new_db</i>.esl <i>new_db</i>.auth
+</pre>
+<p>When <code><i>new_db</i>.auth</code> is created, <a href="https://wiki.archlinux.org/index.php/Secure_Boot#Enroll_keys_in_firmware">enroll it</a>.
+</p>
+<h3><span class="mw-headline" id="Signing_bootloader_and_kernel">Signing bootloader and kernel</span></h3>
+<div class="archwiki-template-box archwiki-template-box-tip"><strong>Tip:</strong> The <a href="https://wiki.archlinux.org/index.php/REFInd" title="REFInd">rEFInd</a> boot manager's <code>refind-install</code> script can sign rEFInd EFI binaries and copy them together with the db certificates to the ESP. See <a href="https://wiki.archlinux.org/index.php/REFInd#Using_your_own_keys" title="REFInd">rEFInd#Using your own keys</a> for instructions.</div>
+<p>When Secure Boot is active (i.e. in "User Mode") you will only be able to launch signed binaries, so you need to sign your kernel and <a href="https://wiki.archlinux.org/index.php/Boot_loader" class="mw-redirect" title="Boot loader">boot loader</a>.
+</p><p>Install <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=sbsigntools">sbsigntools</a></span>.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> If running <i>sbsign</i> without <code>--output</code> the resulting file will be <code><i>filename</i>.signed</code>. See <span class="plainlinks archwiki-template-man" title="$ man 1 sbsign"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/sbsign.1">sbsign(1)</a></span> for more information.</div>
+<pre># sbsign --key db.key --cert db.crt --output /boot/vmlinuz-linux /boot/vmlinuz-linux
+# sbsign --key db.key --cert db.crt --output <i>esp</i>/EFI/BOOT/BOOTX64.EFI <i>esp</i>/EFI/BOOT/BOOTX64.EFI
+</pre>
+<div class="archwiki-template-box archwiki-template-box-tip"><strong>Tip:</strong> 
+<ul><li>To check if a binary is signed and list its signatures use <code>sbverify --list <i>/path/to/binary</i></code>.</li>
+<li>You can use <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/sbupdate-git/">sbupdate-git</a></span><sup><small>AUR</small></sup> to automatically sign your kernels on update. This will also take care of embedding the otherwise unprotected initramfs and kernel command line into the signed UEFI image.
+<ul><li>When using <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/sbupdate-git/">sbupdate-git</a></span><sup><small>AUR</small></sup>, <code>CMDLINE_DEFAULT</code> must be set in <code>/etc/sbupdate.conf</code> in order for the <i>.efi</i> image to be bootable.</li>
+<li>You may want to consider using <a href="https://wiki.archlinux.org/index.php/EFISTUB#efibootmgr_with_.efi_file" title="EFISTUB">Direct UEFI boot</a> with <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=efibootmgr">efibootmgr</a></span> after generating the signed <i>.efi</i> file.</li></ul></li></ul>
+</div>
+<h4><span class="mw-headline" id="Signing_kernel_with_pacman_hook">Signing kernel with pacman hook</span></h4>
+<p>You can also create your own pacman hook to sign kernel on install and updates.
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/etc/pacman.d/hooks/99-secureboot.hook</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = linux
+
+[Action]
+Description = Signing Kernel for SecureBoot
+When = PostTransaction
+Exec = /usr/bin/find /boot/ -maxdepth 1 -name 'vmlinuz-*' -exec /usr/bin/sh -c 'if&nbsp;! /usr/bin/sbverify --list {} 2&gt;/dev/null | /usr/bin/grep -q "signature certificates"; then /usr/bin/sbsign --key db.key --cert db.crt --output {} {}; fi' \&nbsp;;
+Depends = sbsigntools
+Depends = findutils
+Depends = grep</pre>
+<p>Since your boot loader or boot manager will also need to be signed, you might want to trigger the hook when the former is updated. Here is an example with systemd-boot:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/etc/pacman.d/hooks/99-secureboot.hook</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = linux
+Target = systemd
+
+[Action]
+Description = Signing Kernel for SecureBoot
+When = PostTransaction
+Exec = /usr/bin/sh -c "/usr/bin/find /boot/ -type f \( -name 'vmlinuz-*' -o -name 'systemd*' \) -exec /usr/bin/sh -c 'if&nbsp;! /usr/bin/sbverify --list {} 2&gt;/dev/null</pre>
+<p>The <code>Target</code> needs to be duplicated each time you want to add a new package. Wrt. the <code>find</code> statement, since we had a condition with the filenames and APLM hooks are being split on spaces, we had to surround the whole statement by quotes in order for the hook to be parsed properly. Since systemd-boot is located in sub-folders, the depth needed to be adjusted as well so that we removed the <code>-maxdepth</code> argument. In order to avoid hassle, if you are unsure, try to reinstall the package you want to test to see if the hook and signing part are processed successfully. See <a href="https://wiki.archlinux.org/index.php/Pacman#Hooks" title="Pacman">Pacman#Hooks</a> or <span class="plainlinks archwiki-template-man" title="$ man 5 alpm-hooks"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/alpm-hooks.5">alpm-hooks(5)</a></span> for more info.
+</p>
+<h3><span id="Put_firmware_in_.22Setup_Mode.22"></span><span class="mw-headline" id="Put_firmware_in_&quot;Setup_Mode&quot;">Put firmware in "Setup Mode"</span></h3>
+<p>Secure Boot is in Setup Mode when the Platform Key is removed. To put firmware in Setup Mode, enter firmware setup utility and find an option to delete or clear certificates. How to enter the setup utility is described in <a href="https://wiki.archlinux.org/index.php/Secure_Boot#Before_booting_the_OS">#Before booting the OS</a>.
+</p>
+<h3><span class="mw-headline" id="Enroll_keys_in_firmware">Enroll keys in firmware</span></h3>
+<p>Copy all <code>*.cer</code>, <code>*.esl</code>, <code>*.auth</code> to a <a href="https://wiki.archlinux.org/index.php/FAT" title="FAT">FAT</a> formatted file system (you can use <a href="https://wiki.archlinux.org/index.php/EFI_system_partition" title="EFI system partition">EFI system partition</a>).
+</p><p>Launch firmware setup utility or KeyTool and enroll <b>db</b>, <b>KEK</b> and <b>PK</b> certificates.
+</p><p>If the used tool supports it prefer using <i>.auth</i> and <i>.esl</i> over <i>.cer</i>.
+</p>
+<div class="archwiki-template-box archwiki-template-box-warning"><strong>Warning:</strong> Enrolling Platform Key sets Secure Boot in "User Mode", leaving "Setup Mode", so it should be enrolled last in sequence.</div>
+<h4><span class="mw-headline" id="Using_firmware_setup_utility">Using firmware setup utility</span></h4>
+<p>Firmwares have various different interfaces, see <a rel="nofollow" class="external text" href="http://www.rodsbooks.com/efi-bootloaders/controlling-sb.html#setuputil">Replacing Keys Using Your Firmware's Setup Utility</a> for example how to enroll keys.
+</p>
+<h4><span class="mw-headline" id="Using_KeyTool">Using KeyTool</span></h4>
+<p><code>KeyTool.efi</code> is in <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=efitools">efitools</a></span> package, copy it to ESP. To use it after enrolling keys, sign it with <code>sbsign</code>.
+</p>
+<pre># sbsign --key db.key --cert db.crt --output <i>esp</i>/KeyTool-signed.efi /usr/share/efitools/efi/KeyTool.efi
+</pre>
+<p>Launch <code>KeyTool-signed.efi</code> using firmware setup utility, boot loader or <a href="https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface#UEFI_Shell" title="Unified Extensible Firmware Interface">UEFI Shell</a> and enroll keys.
+</p><p>See <a rel="nofollow" class="external text" href="http://www.rodsbooks.com/efi-bootloaders/controlling-sb.html#keytool">Replacing Keys Using KeyTool</a> for explanation of KeyTool menu options.
+</p>
+<h3><span class="mw-headline" id="Dual_booting_with_other_operating_systems">Dual booting with other operating systems</span></h3>
+<h4><span class="mw-headline" id="Microsoft_Windows">Microsoft Windows</span></h4>
+<div class="noprint archwiki-template-message">
+<p><a href="https://wiki.archlinux.org/index.php/File:Tango-view-fullscreen.png" class="image"><img alt="Tango-view-fullscreen.png" src="./Secure Boot - ArchWiki - https___wiki.archlinux.org__files/Tango-view-fullscreen.png" decoding="async" width="48" height="48"></a><b>This article or section needs expansion.</b><a href="https://wiki.archlinux.org/index.php/File:Tango-view-fullscreen.png" class="image"><img alt="Tango-view-fullscreen.png" src="./Secure Boot - ArchWiki - https___wiki.archlinux.org__files/Tango-view-fullscreen.png" decoding="async" width="48" height="48"></a></p>
+<div><b>Reason:</b> Is it possible to boot Windows by signing its bootloader with a <a href="https://wiki.archlinux.org/index.php/Secure_Boot#Creating_keys">custom key</a>? (Discuss in <a rel="nofollow" class="external text" href="https://wiki.archlinux.org/index.php/Talk:Secure_Boot">Talk:Secure Boot#</a>)</div>
+</div>
+<p>To <a href="https://wiki.archlinux.org/index.php/Dual_boot_with_Windows" title="Dual boot with Windows">dual boot with Windows</a>, you would need to add Microsoft's certificates to the Signature Database. Microsoft has two db certificates:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://www.microsoft.com/pkiops/certs/MicWinProPCA2011_2011-10-19.crt">Microsoft Windows Production PCA 2011</a> for Windows</li>
+<li><a rel="nofollow" class="external text" href="https://www.microsoft.com/pkiops/certs/MicCorUEFCA2011_2011-06-27.crt">Microsoft Corporation UEFI CA 2011</a> for third-party binaries like UEFI drivers, option ROMs etc.</li></ul>
+<p>Microsoft's certificates are in DER format, convert them to PEM format with <i>openssl</i>:
+</p>
+<pre>$ openssl x509 -inform DER -outform PEM -in MicWinProPCA2011_2011-10-19.crt -out MicWinProPCA2011_2011-10-19.crt.pem
+$ openssl x509 -inform DER -outform PEM -in MicCorUEFCA2011_2011-06-27.crt -out MicCorUEFCA2011_2011-06-27.crt.pem
+</pre>
+<p>Create EFI Signature Lists with Microsoft's GUID (<code>77fa9abd-0359-4d32-bd60-28f4e78f784b</code>) and combine them in one file for simplicity:
+</p>
+<pre>$ cert-to-efi-sig-list -g 77fa9abd-0359-4d32-bd60-28f4e78f784b MicWinProPCA2011_2011-10-19.crt.pem MS_Win_db.esl
+$ cert-to-efi-sig-list -g 77fa9abd-0359-4d32-bd60-28f4e78f784b MicCorUEFCA2011_2011-06-27.crt.pem MS_UEFI_db.esl
+$ cat MS_Win_db.esl MS_UEFI_db.esl &gt; MS_db.esl
+</pre>
+<p>Sign a db update with your KEK. Use <code>sign-efi-sig-list</code> with option <code>-a</code> to <b>add</b> not replace a db certificate:
+</p>
+<pre>$ sign-efi-sig-list -a -g 77fa9abd-0359-4d32-bd60-28f4e78f784b -k KEK.key -c KEK.crt db MS_db.esl add_MS_db.auth
+</pre>
+<p>Follow <a href="https://wiki.archlinux.org/index.php/Secure_Boot#Enroll_keys_in_firmware">#Enroll keys in firmware</a> to add <code>add_MS_db.auth</code> to Signature Database.
+</p>
+<h2><span class="mw-headline" id="Disable_Secure_Boot">Disable Secure Boot</span></h2>
+<p>The Secure Boot feature can be disabled via the UEFI firmware interface. How to access the firmware configuration is described in <a href="https://wiki.archlinux.org/index.php/Secure_Boot#Before_booting_the_OS">#Before booting the OS</a>.
+</p><p>If using a hotkey did not work and you can boot Windows, you can force a reboot into the firmware configuration in the following way (for Windows 10): <i>Settings &gt; Update &amp; Security &gt; Recovery &gt; Advanced startup (Restart now) &gt; Troubleshoot &gt; Advanced options &gt; UEFI Firmware settings &gt; restart</i>.
+</p><p>Note that some motherboards (this is the case in a Packard Bell laptop) only allow to disable secure boot if you have set an administrator password (that can be removed afterwards). See also <a rel="nofollow" class="external text" href="http://www.rodsbooks.com/efi-bootloaders/secureboot.html#disable">Rod Smith's Disabling Secure Boot</a>.
+</p>
+<h2><span class="mw-headline" id="Booting_an_install_media">Booting an install media</span></h2>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> The official installation image does not support Secure Boot (<a rel="nofollow" class="external text" href="https://bugs.archlinux.org/task/53864">FS#53864</a>). To successfully boot the installation medium you will need to <a href="https://wiki.archlinux.org/index.php/Secure_Boot#Disable_Secure_Boot">disable Secure Boot</a>.</div>
+<p>Secure Boot support was removed starting with <code>archlinux-2016.06.01-dual.iso</code>. At that time <i>prebootloader</i> was  replaced with <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=efitools">efitools</a></span>, even though the later uses unsigned EFI binaries. One might want to <a href="https://wiki.archlinux.org/index.php/Remastering_the_Install_ISO" title="Remastering the Install ISO">remaster the Install ISO</a> in a way described by previous topics of this article. For example, the signed EFI applications <code>PreLoader.efi</code> and <code>HashTool.efi</code> from <a href="https://wiki.archlinux.org/index.php/Secure_Boot#PreLoader">#PreLoader</a> can be adopted to here. Note that up to this point, the article assumed one can access the <a href="https://wiki.archlinux.org/index.php/ESP" class="mw-redirect" title="ESP">ESP</a> of the machine. But when installing a machine that never had an OS before, there is no ESP present. You should explore other articles, for example <a href="https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface#Create_UEFI_bootable_USB_from_ISO" title="Unified Extensible Firmware Interface">Unified Extensible Firmware Interface#Create UEFI bootable USB from ISO</a>, to learn how this situation should be handled.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface#Secure_boot" class="extiw" title="wikipedia:Unified Extensible Firmware Interface">Wikipedia:Unified Extensible Firmware Interface#Secure boot</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.rodsbooks.com/efi-bootloaders/secureboot.html">Dealing with Secure Boot</a> by Rod Smith</li>
+<li><a rel="nofollow" class="external text" href="http://www.rodsbooks.com/efi-bootloaders/controlling-sb.html">Controlling Secure Boot</a> by Rod Smith</li>
+<li><a rel="nofollow" class="external text" href="https://mjg59.dreamwidth.org/5850.html">UEFI secure booting (part 2)</a> by Matthew Garrett</li>
+<li><a rel="nofollow" class="external text" href="https://blog.hansenpartnership.com/uefi-secure-boot/">UEFI Secure Boot</a> by James Bottomley</li>
+<li><a rel="nofollow" class="external text" href="https://git.kernel.org/cgit/linux/kernel/git/jejb/efitools.git/tree/README">efitools README</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.fsf.org/campaigns/secure-boot-vs-restricted-boot">Will your computer's "Secure Boot" turn out to be "Restricted Boot"?</a> — Free Software Foundation</li>
+<li><a rel="nofollow" class="external text" href="https://www.fsf.org/campaigns/secure-boot-vs-restricted-boot/statement/campaigns/secure-boot-vs-restricted-boot/whitepaper-web">Free Software Foundation recommendations for free operating system distributions considering Secure Boot</a></li>
+<li><a rel="nofollow" class="external text" href="https://firmware.intel.com/messages/219">Intel's UEFI Secure Boot Tutorial</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20190903041700
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.123 seconds
+Real time usage: 0.127 seconds
+Preprocessor visited node count: 1234/1000000
+Preprocessor generated node count: 3396/1000000
+Post‐expand include size: 19747/2097152 bytes
+Template argument size: 10724/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   44.413      1 -total
+ 18.00%    7.993     87 Template:Ic
+ 13.31%    5.913      8 Template:Note
+ 10.90%    4.839      6 Template:META_Message
+ 10.46%    4.645      1 Template:Move
+ 10.45%    4.642      5 Template:Expansion
+  9.81%    4.355      5 Template:Tip
+  6.13%    2.724      1 Template:Related_articles_start
+  4.88%    2.169      3 Template:Man
+  4.56%    2.024     10 Template:AUR
+-->
+
+<!-- Saved in parser cache with key archwiki:pcache:idhash:20517-0!canonical and timestamp 20190903041700 and revision id 577765
+ -->
+</div></div>
+		
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.archlinux.org/index.php?title=Secure_Boot&amp;oldid=577765">https://wiki.archlinux.org/index.php?title=Secure_Boot&amp;oldid=577765</a>"</div>
+		
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://wiki.archlinux.org/index.php/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="https://wiki.archlinux.org/index.php/Category:Boot_process" title="Category:Boot process">Boot process</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://wiki.archlinux.org/index.php/Category:Pages_or_sections_flagged_with_Template:Move" title="Category:Pages or sections flagged with Template:Move">Pages or sections flagged with Template:Move</a></li><li><a href="https://wiki.archlinux.org/index.php/Category:Pages_or_sections_flagged_with_Template:Expansion" title="Category:Pages or sections flagged with Template:Expansion">Pages or sections flagged with Template:Expansion</a></li></ul></div></div>
+		
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-createaccount"><a href="https://wiki.archlinux.org/index.php?title=Special:CreateAccount&amp;returnto=Secure+Boot" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.archlinux.org/index.php?title=Special:UserLogin&amp;returnto=Secure+Boot" title="You are encouraged to log in; however, it is not mandatory [alt-shift-o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="https://wiki.archlinux.org/index.php/Secure_Boot" title="View the content page [alt-shift-c]" accesskey="c">Page</a></span></li><li id="ca-talk"><span><a href="https://wiki.archlinux.org/index.php/Talk:Secure_Boot" rel="discussion" title="Discussion about the content page [alt-shift-t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label">
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<ul class="menu">
+													</ul>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="https://wiki.archlinux.org/index.php/Secure_Boot">Read</a></span></li><li id="ca-viewsource" class="collapsible"><span><a href="https://wiki.archlinux.org/index.php?title=Secure_Boot&amp;action=edit" title="This page is protected.
+You can view its source [alt-shift-e]" accesskey="e">View source</a></span></li><li id="ca-history" class="collapsible"><span><a href="https://wiki.archlinux.org/index.php?title=Secure_Boot&amp;action=history" title="Past revisions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label" style="">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<ul class="menu">
+													</ul>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="https://wiki.archlinux.org/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search ArchWiki" title="Search ArchWiki [alt-shift-f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Special:Search" name="title"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://wiki.archlinux.org/index.php/Main_page" title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="https://wiki.archlinux.org/index.php/Main_page" title="Visit the main page [alt-shift-z]" accesskey="z">Main page</a></li><li id="n-Table-of-contents"><a href="https://wiki.archlinux.org/index.php/Table_of_contents">Table of contents</a></li><li id="n-portal"><a href="https://wiki.archlinux.org/index.php/Getting_involved" title="Various ways Archers can contribute to the community">Getting involved</a></li><li id="n-currentevents"><a href="https://wiki.archlinux.org/index.php/ArchWiki:News" title="The latest lowdown on the wiki">Wiki news</a></li><li id="n-randompage"><a href="https://wiki.archlinux.org/index.php/Special:Random" title="Load a random page [alt-shift-x]" accesskey="x">Random page</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Interaction" aria-labelledby="p-Interaction-label">
+			<h3 id="p-Interaction-label">Interaction</h3>
+			<div class="body">
+								<ul>
+					<li id="n-help"><a href="https://wiki.archlinux.org/index.php/Category:Help" title="Wiki navigation, reading, and editing help">Help</a></li><li id="n-Contributing"><a href="https://wiki.archlinux.org/index.php/ArchWiki:Contributing">Contributing</a></li><li id="n-recentchanges"><a href="https://wiki.archlinux.org/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li><li id="n-Recent-talks"><a href="https://wiki.archlinux.org/index.php/Special:RecentChanges?namespace=0&amp;invert=1" rel="nofollow">Recent talks</a></li><li id="n-newpages"><a href="https://wiki.archlinux.org/index.php/Special:NewPages">New pages</a></li><li id="n-Statistics"><a href="https://wiki.archlinux.org/index.php/ArchWiki:Statistics">Statistics</a></li><li id="n-Requests"><a href="https://wiki.archlinux.org/index.php/ArchWiki:Requests">Requests</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="https://wiki.archlinux.org/index.php/Special:WhatLinksHere/Secure_Boot" title="A list of all wiki pages that link here [alt-shift-j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.archlinux.org/index.php/Special:RecentChangesLinked/Secure_Boot" rel="nofollow" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="https://wiki.archlinux.org/index.php/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.archlinux.org/index.php?title=Secure_Boot&amp;printable=yes" rel="alternate" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.archlinux.org/index.php?title=Secure_Boot&amp;oldid=577765" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.archlinux.org/index.php?title=Secure_Boot&amp;action=info" title="More information about this page">Page information</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label">
+			<h3 id="p-lang-label">In other languages</h3>
+			<div class="body">
+								<ul>
+					<li class="interlanguage-link interwiki-ja"><a href="https://wiki.archlinux.jp/index.php/%E3%82%BB%E3%82%AD%E3%83%A5%E3%82%A2%E3%83%96%E3%83%BC%E3%83%88" title="セキュアブート – 日本語" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-zh-hans"><a href="https://wiki.archlinux.org/index.php/Secure_Boot_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" title="Secure Boot – 中文（简体）‎" lang="zh-Hans" hreflang="zh-Hans" class="interlanguage-link-target">中文（简体）‎</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last edited on 22 July 2019, at 14:45.</li>
+								<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3 or later</a> unless otherwise noted.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://wiki.archlinux.org/index.php/ArchWiki:Privacy_policy" title="ArchWiki:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="https://wiki.archlinux.org/index.php/ArchWiki:About" title="ArchWiki:About">About ArchWiki</a></li>
+								<li id="footer-places-disclaimer"><a href="https://wiki.archlinux.org/index.php/ArchWiki:General_disclaimer" title="ArchWiki:General disclaimer">Disclaimers</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+											</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.123","walltime":"0.127","ppvisitednodes":{"value":1234,"limit":1000000},"ppgeneratednodes":{"value":3396,"limit":1000000},"postexpandincludesize":{"value":19747,"limit":2097152},"templateargumentsize":{"value":10724,"limit":2097152},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   44.413      1 -total"," 18.00%    7.993     87 Template:Ic"," 13.31%    5.913      8 Template:Note"," 10.90%    4.839      6 Template:META_Message"," 10.46%    4.645      1 Template:Move"," 10.45%    4.642      5 Template:Expansion","  9.81%    4.355      5 Template:Tip","  6.13%    2.724      1 Template:Related_articles_start","  4.88%    2.169      3 Template:Man","  4.56%    2.024     10 Template:AUR"]},"cachereport":{"timestamp":"20190903041700","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":176});});</script>
+
+<!-- Cached/compressed 20190903041700 -->
+
+<div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body></html>

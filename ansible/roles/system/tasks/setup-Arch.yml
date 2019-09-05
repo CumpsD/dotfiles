@@ -83,7 +83,8 @@
 - name: Install rEFInd
   pacman:
     name: [
-        'refind-efi']
+        'refind-efi',
+        'sbsigntools']
     state: latest
 
 - name: Install Git and Hub
