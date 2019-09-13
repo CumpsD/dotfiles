@@ -168,3 +168,26 @@
         'numix-icon-theme-git',
         'luv-icon-theme-git',
         'paper-icon-theme-git']
+
+- name: Install Plymouth (AUR)
+  become: yes
+  become_user: aur_builder
+  aur:
+    use: yay
+    name: [
+        'plymouth',
+        'plymouth-theme-arch-charge',
+        'plymouth-theme-arch-charge-big']
+
+#- name: Disable SDDM systemd service
+#  systemd:
+#    name: sddm
+#    enabled: no
+#    masked: no
+
+#- name: Enable Plymouth SDDM systemd service
+#  systemd:
+#    name: sddm-plymouth
+#    enabled: yes
+#    masked: no
+

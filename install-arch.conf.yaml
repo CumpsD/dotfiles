@@ -11,6 +11,9 @@
 - link:
     /usr/share/libalpm/hooks/91-linux-surface-efi.hook: surface/pacman-hooks/91-linux-surface-efi.hook
 
+    /etc/plymouth/plymouthd.conf: plymouth/plymouthd.conf
+    /etc/mkinitcpio.conf: plymouth/mkinitcpio.conf
+
 - shell:
     - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/scripts/000-use-all-cores-makepkg-conf-v3.sh, Use all cores in makepkg]
 
