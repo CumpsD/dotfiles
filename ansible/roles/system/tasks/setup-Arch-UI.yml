@@ -74,6 +74,14 @@
         'gst-plugins-base']
     state: latest
 
+- name: Install Sound (AUR)
+  become: yes
+  become_user: aur_builder
+  aur:
+    use: yay
+    name: [
+        'roonbridge']
+
 - name: Install WM and tools
   pacman:
     name: [
