@@ -117,7 +117,8 @@
         'freerdp',
         'capitaine-cursors',
         'udiskie',
-        'openscad']
+        'openscad',
+        'galculator']
     state: latest
 
 - name: Install WM and tools (AUR)
