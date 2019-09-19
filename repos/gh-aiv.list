@@ -2,6 +2,7 @@
 git@github.com:informatievlaanderen/aws-infrastructure.git
 
 # Public Facing Parts
+git@github.com:informatievlaanderen/base-registries.git
 git@github.com:informatievlaanderen/public-api.git
 git@github.com:informatievlaanderen/dev-portal.git
 
