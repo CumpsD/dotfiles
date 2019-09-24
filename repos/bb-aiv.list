@@ -17,6 +17,8 @@ git@bitbucket.org:vlaamseoverheid/vlaanderen-ui.git
 git@bitbucket.org:vlaamseoverheid/ipdc.git
 git@bitbucket.org:vlaamseoverheid/web-platform.git
 
+git@bitbucket.org:vlaamseoverheid/salarissimulator.git
+
 git@bitbucket.org:vlaamseoverheid/vl-build.git
 git@bitbucket.org:vlaamseoverheid/vl-common-types.git
 git@bitbucket.org:vlaamseoverheid/vl-contactschuif.git
@@ -124,5 +126,6 @@ git@bitbucket.org:vlaamseoverheid/vl-ui-user-toggle.git
 git@bitbucket.org:vlaamseoverheid/vl-ui-util.git
 git@bitbucket.org:vlaamseoverheid/vl-ui-video-player.git
 git@bitbucket.org:vlaamseoverheid/vl-ui-wizard.git
+
 git@bitbucket.org:vlaamseoverheid/webcomponenten-drilldown-poc.git
 git@bitbucket.org:vlaamseoverheid/webcomponents-vue-poc.git
