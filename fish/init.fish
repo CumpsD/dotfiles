@@ -11,14 +11,13 @@ set -gx LIBVA_DRIVER_NAME iHD
 set -gx EDITOR nano
 
 # Tweak some environment variables
-set -gx GOPATH $HOME/go 2> /dev/null
-set PATH $GOPATH/bin /usr/local/go/bin $PATH 2> /dev/null
+set -gx GOPATH $HOME/go
+set PATH $GOPATH/bin /usr/local/go/bin $PATH
 set PATH $PATH (gem env gempath | sed 's/:/\/bin\/:/g' | string split : --) 2> /dev/null
-set PATH $PATH /opt/mssql-tools/bin/ 2> /dev/null
-set PATH $PATH /usr/local/lib/npm/bin 2> /dev/null
+set PATH $PATH /opt/mssql-tools/bin/
 
 # Add .NET Core to PATH
-set PATH $PATH /usr/share/dotnet 2> /dev/null
+set PATH $PATH /usr/share/dotnet
 
 # OMF Settings
 set -gx OMF_REPO_URI "https://github.com/cumpsd/oh-my-fish"
@@ -44,6 +43,11 @@ end
 
 # Small tweak to autocomplete colors
 set -g fish_color_autosuggestion 555 yellow brblack
+
+# Configure NPM to not go to /usr/local
+mkdir -p ~/.npm-global
+set -gx NPM_CONFIG_PREFIX ~/.npm-global
+set PATH ~/.npm-global/bin $PATH
 
 # Make bspwm work with fish
 set -gx SXHKD_SHELL /usr/bin/bash
