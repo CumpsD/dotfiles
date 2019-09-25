@@ -8,7 +8,6 @@
 - [ ] Figure out why Fira and Hack font in uxrvt doesnt show all icons, is the xft string in wm/urxvt/xrdb/font wrong?
   - https://github.com/ryanoasis/nerd-fonts/issues/313
   - https://github.com/powerline/fonts/issues/176
-- [ ] Figure out if fish-nvm is working ok
 - [ ] Try to get camera working and try out in Chrome/WhatsApp/Messenger/Skype
 - [ ] Configure touchscreen in X
 - [ ] Look into making sure TLP is not installed
@@ -44,3 +43,4 @@
   - https://wiki.archlinux.org/index.php/Microsoft_Surface_Pro_3#Booting_with_Secure_Boot_Enabled
   - https://wiki.archlinux.org/index.php/Microsoft_Surface_Pro_3#Boot_with_Secure_Boot
   - https://wiki.archlinux.org/index.php/REFInd#Secure_Boot
+- [x] Figure out if fish-nvm is working ok
