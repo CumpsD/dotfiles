@@ -45,16 +45,16 @@
       - boto
       - virtualfish
 
-  - name: Install Node.js and NPM
-    include_role:
-      name: nodejs
-    vars:
-      nodejs_version: '10.x'
-      nodejs_npm_global_packages:
-      - npm
-      - npx
-      - yarn
-      - eslint
+# Install via NVM instead
+#  - name: Install Node.js and NPM
+#    include_role:
+#      name: nodejs
+#    vars:
+#      nodejs_version: '10.x'
+#      nodejs_npm_global_packages:
+#      - npm
+#      - npx
+#      - eslint
 
   - name: Install Go
     include_role:
