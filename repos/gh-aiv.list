@@ -5,6 +5,7 @@ git@github.com:informatievlaanderen/aws-infrastructure.git
 git@github.com:informatievlaanderen/base-registries.git
 git@github.com:informatievlaanderen/public-api.git
 git@github.com:informatievlaanderen/dev-portal.git
+git@github.com:Informatievlaanderen/discourse_docker.git
 
 # Legacy Crap
 git@github.com:informatievlaanderen/crab.git
