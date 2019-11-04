@@ -16,6 +16,7 @@ git@github.com:informatievlaanderen/bankaccountnumber-registry.git
 git@github.com:informatievlaanderen/building-registry.git
 git@github.com:informatievlaanderen/example-registry.git
 git@github.com:informatievlaanderen/municipality-registry.git
+git@github.com:Informatievlaanderen/organisation-registry.git
 git@github.com:informatievlaanderen/parcel-registry.git
 git@github.com:informatievlaanderen/postal-registry.git
 git@github.com:informatievlaanderen/publicservice-registry.git
