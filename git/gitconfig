@@ -2,7 +2,7 @@
     default = simple
 	
 [vlaamseoverheid]
-    email = david.cumps@kb.vlaanderen.be
+    email = david.cumps@vlaanderen.be
     name = David Cumps
 
 [gogs]
