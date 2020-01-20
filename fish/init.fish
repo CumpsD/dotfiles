@@ -20,6 +20,9 @@ set PATH $PATH /home/linuxbrew/.linuxbrew/bin/
 # Add .NET Core to PATH
 set PATH $PATH /usr/share/dotnet
 
+# Add Elm to PATH
+set PATH $PATH $HOME/elm
+
 # OMF Settings
 set -gx OMF_REPO_URI "https://github.com/cumpsd/oh-my-fish"
 

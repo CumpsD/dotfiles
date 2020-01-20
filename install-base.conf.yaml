@@ -150,6 +150,8 @@
 
     ~/repos: repos
 
+    ~/elm: elm
+
 - shell:
     - [mkdir -p ~/screenshots, Make sure screenshots directory exists]
     - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --install-to-user-path --complete Hack, Installing Hack font]
