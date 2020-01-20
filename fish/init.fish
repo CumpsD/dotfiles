@@ -15,6 +15,7 @@ set -gx GOPATH $HOME/go
 set PATH $GOPATH/bin /usr/local/go/bin $PATH
 set PATH $PATH (gem env gempath | sed 's/:/\/bin\/:/g' | string split : --) 2> /dev/null
 set PATH $PATH /opt/mssql-tools/bin/
+set PATH $PATH /home/linuxbrew/.linuxbrew/bin/
 
 # Add .NET Core to PATH
 set PATH $PATH /usr/share/dotnet
