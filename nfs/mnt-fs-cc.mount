@@ -4,7 +4,7 @@ After=nss-lookup.target
 Wants=nss-lookup.target
 
 [Mount]
-What=fs.cumps.be:/volume1/cc
+What=fs.exira.com:/volume1/cc
 Where=/mnt/fs/cc
 Options=x-systemd.automount,rw,vers=3,noatime,noauto
 Type=nfs

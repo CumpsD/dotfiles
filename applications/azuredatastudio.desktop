@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Azure Data Studio
+Comment=SQL. Redefined.
+GenericName=Development
+Exec=/home/cumpsd/azuredatastudio-linux-x64/azuredatastudio --force-device-scale-factor=1.5 --disable-gpu --force-cpu-draw --unity-launch %F
+Icon=code-oss
+Type=Application
+StartupNotify=false
+StartupWMClass=Code
+Categories=Utility;TextEditor;Development;IDE;
+MimeType=text/plain;
+Actions=new-empty-window;
+Keywords=vscode;
