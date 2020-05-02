@@ -1,0 +1,121 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+    shell:
+      stdin: false
+      stdout: false
+      stderr: false
+
+- clean:
+    - '~'
+    - ~/.git-templates/hooks
+    - ~/.config/fish
+    - ~/.config/omf
+    - ~/.config/fish/functions
+    - ~/.gnupg
+    - ~/.aws
+
+- link:
+    ~/.dotfiles: ''
+
+    ~/.face.icon: sddm/cumpsd.png
+
+    ~/.wallpaper.jpg: wallpapers/antman.jpg
+
+    ~/.fonts: fonts
+
+    ~/.utility: utility
+
+    ~/.gitconfig: git/gitconfig
+
+    ~/.gnupg/gpg.conf: gpg/gpg.conf
+    ~/.gnupg/gpg-agent.conf: gpg/gpg-agent.conf
+    ~/.gnupg/sshcontrol: gpg/sshcontrol
+
+    ~/.aws/config: aws/config
+    ~/.aws/credentials: aws/credentials
+
+    ~/.git-templates/hooks/commit-message: git/set-repo-user-hook
+    ~/.git-templates/hooks/post-checkout: git/set-repo-user-hook
+    ~/.git-templates/hooks/post-merge: git/set-repo-user-hook
+    ~/.git-templates/hooks/pre-commit: git/set-repo-user-hook
+    ~/.git-templates/hooks/prepare-commit-msg: git/set-repo-user-hook
+
+    ~/.config/omf/init.fish: fish/init.fish
+    ~/.config/omf/bundle: fish/omf/bundle
+    ~/.config/omf/channel: fish/omf/channel
+    ~/.config/omf/theme: fish/omf/theme
+
+    ~/.config/fish/fishfile: fish/fishfile
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/gnupg.fish: fish/gnupg.fish
+    ~/.config/fish/init-private.fish: fish/init-private.fish
+
+    ~/.config/fish/functions/fisher.fish: fish/fisher.fish
+    ~/.config/fish/functions/abbrex.fish: fish/functions/abbrex.fish
+    ~/.config/fish/functions/clear.fish: fish/functions/clear.fish
+    ~/.config/fish/functions/code.fish: fish/functions/code.fish
+    ~/.config/fish/functions/fish_greeting.fish: fish/functions/fish_greeting.fish
+    ~/.config/fish/functions/fish_right_prompt.fish: fish/functions/fish_right_prompt.fish
+    ~/.config/fish/functions/forrepos.fish: fish/functions/forrepos.fish
+    ~/.config/fish/functions/repo.fish: fish/functions/repo.fish
+    ~/.config/fish/functions/repodir.fish: fish/functions/repodir.fish
+    ~/.config/fish/functions/fuck.fish: fish/functions/fuck.fish
+    ~/.config/fish/functions/dotfiles.fish: fish/functions/dotfiles.fish
+    ~/.config/fish/functions/cat.fish: fish/functions/cat.fish
+    ~/.config/fish/functions/fix-gpg-tty.fish: fish/functions/fix-gpg-tty.fish
+    ~/.config/fish/functions/reboot-wsl.fish: fish/functions/reboot-wsl.fish
+    ~/.config/fish/functions/nuke-nuget.fish: fish/functions/nuke-nuget.fish
+    ~/.config/fish/functions/connect-proxmark.fish: fish/functions/connect-proxmark.fish
+    ~/.config/fish/functions/update-keybase.fish: fish/functions/update-keybase.fish
+
+    ~/.config/fish/completions/dotnet.fish: fish/completions/dotnet.fish
+    ~/.config/fish/completions/hub.fish: fish/completions/hub.fish
+    ~/.config/fish/completions/repo.fish: fish/completions/repo.fish
+    ~/.config/fish/completions/repodir.fish: fish/completions/repodir.fish
+
+    ~/.config/remmina: rdp/remmina-config
+    ~/.local/share/remmina: rdp/remmina-connections
+
+    ~/.local/share/fonts/i_dev.sh: fonts/helpers/i_dev.sh
+    ~/.local/share/fonts/i_fae.sh: fonts/helpers/i_fae.sh
+    ~/.local/share/fonts/i_fa.sh: fonts/helpers/i_fa.sh
+    ~/.local/share/fonts/i_iec.sh: fonts/helpers/i_iec.sh
+    ~/.local/share/fonts/i_linux.sh: fonts/helpers/i_linux.sh
+    ~/.local/share/fonts/i_material.sh: fonts/helpers/i_material.sh
+    ~/.local/share/fonts/i_oct.sh: fonts/helpers/i_oct.sh
+    ~/.local/share/fonts/i_ple.sh: fonts/helpers/i_ple.sh
+    ~/.local/share/fonts/i_pom.sh: fonts/helpers/i_pom.sh
+    ~/.local/share/fonts/i_seti.sh: fonts/helpers/i_seti.sh
+    ~/.local/share/fonts/i_weather.sh: fonts/helpers/i_weather.sh
+
+    ~/.cert/nm-openvpn/be114.nordvpn.com.udp-ca.pem: vpn/networkmanager/be114.nordvpn.com.udp-ca.pem
+    ~/.cert/nm-openvpn/be114.nordvpn.com.udp-tls-auth.pem: vpn/networkmanager/be114.nordvpn.com.udp-tls-auth.pem
+    ~/.cert/nm-openvpn/be79.nordvpn.com.udp-ca.pem: vpn/networkmanager/be79.nordvpn.com.udp-ca.pem
+    ~/.cert/nm-openvpn/be79.nordvpn.com.udp-tls-auth.pem: vpn/networkmanager/be79.nordvpn.com.udp-tls-auth.pem
+    ~/.cert/nm-openvpn/mx24.nordvpn.com.udp-ca.pem: vpn/networkmanager/mx24.nordvpn.com.udp-ca.pem
+    ~/.cert/nm-openvpn/mx24.nordvpn.com.udp-tls-auth.pem: vpn/networkmanager/mx24.nordvpn.com.udp-tls-auth.pem
+    ~/.cert/nm-openvpn/nl414.nordvpn.com.udp-ca.pem: vpn/networkmanager/nl414.nordvpn.com.udp-ca.pem
+    ~/.cert/nm-openvpn/nl414.nordvpn.com.udp-tls-auth.pem: vpn/networkmanager/nl414.nordvpn.com.udp-tls-auth.pem
+    ~/.cert/nm-openvpn/no90.nordvpn.com.udp-ca.pem: vpn/networkmanager/no90.nordvpn.com.udp-ca.pem
+    ~/.cert/nm-openvpn/no90.nordvpn.com.udp-tls-auth.pem: vpn/networkmanager/no90.nordvpn.com.udp-tls-auth.pem
+    ~/.cert/nm-openvpn/us3033.nordvpn.com.udp-ca.pem: vpn/networkmanager/us3033.nordvpn.com.udp-ca.pem
+    ~/.cert/nm-openvpn/us3033.nordvpn.com.udp-tls-auth.pem: vpn/networkmanager/us3033.nordvpn.com.udp-tls-auth.pem
+
+    ~/proxmark/cards/aiv-david-cumps.bin: cards/1.bin
+    ~/proxmark/cards/aiv-koen-metsu.bin: cards/2.bin
+    ~/proxmark/cards/aiv-evelien-dhollander.bin: cards/3.bin
+    ~/proxmark/cards/aiv-benjamin-todts.bin: cards/4.bin
+
+    ~/repos: repos
+
+    ~/elm: elm
+
+- shell:
+    - [mkdir -p ~/screenshots, Make sure screenshots directory exists]
+    - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --install-to-user-path --complete Hack, Installing Hack font]
+    - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --install-to-user-path --complete FiraCode, Installing Fira Code font]
+    - [~/.dotfiles/fonts/nerd-fonts/install.sh --link --install-to-user-path --complete FiraMono, Installing Fira Mono font]
+    - [fish -c fish_update_completions, Generating Fish completions based on man pages]
