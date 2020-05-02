@@ -16,6 +16,8 @@
 
     /etc/systemd/system/docker.socket.d/socket.conf: /home/$SUDO_USER/.dotfiles/docker/socket.conf
 
+    /usr/bin/ytop: /home/$SUDO_USER/.dotfiles/ytop/ytop
+
     /etc/NetworkManager/system-connections/be114.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/be114.nordvpn.com.udp.nmconnection
     /etc/NetworkManager/system-connections/be79.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/be79.nordvpn.com.udp.nmconnection
     /etc/NetworkManager/system-connections/mx24.nordvpn.com.udp.nmconnection: /home/$SUDO_USER/.dotfiles/vpn/networkmanager/mx24.nordvpn.com.udp.nmconnection
