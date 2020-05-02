@@ -1,0 +1,2 @@
+*.bak filter=git-crypt diff=git-crypt
+*.remmina filter=git-crypt diff=git-crypt
