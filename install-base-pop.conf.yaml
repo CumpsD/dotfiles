@@ -65,7 +65,7 @@
     ~/.config/fish/functions/fuck.fish: fish/functions/fuck.fish
     ~/.config/fish/functions/dotfiles.fish: fish/functions/dotfiles.fish
     ~/.config/fish/functions/cat.fish: fish/functions/cat.fish
-    ~/.config/fish/functions/ytop.fish: fish/functions/ytop.fish
+    ~/.config/fish/functions/top.fish: fish/functions/ytop.fish
     ~/.config/fish/functions/fix-gpg-tty.fish: fish/functions/fix-gpg-tty.fish
     ~/.config/fish/functions/reboot-wsl.fish: fish/functions/reboot-wsl.fish
     ~/.config/fish/functions/nuke-nuget.fish: fish/functions/nuke-nuget.fish
