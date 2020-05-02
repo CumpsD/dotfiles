@@ -1,3 +1,10 @@
-git@github.com:exira/account.git
-git@github.com:exira/admin-ui.git
-git@github.com:exira/dns.git
+git@github.com:exira/exira-backend.git
+git@github.com:exira/exira-frontend.git
+git@github.com:exira/exira-infrastructure.git
+
+git@github.com:exira/documentation.git
+git@github.com:exira/documentation.wiki
+
+git@github.com:exira/public.git
+
+git@github.com:exira/asterisk-cc.git
