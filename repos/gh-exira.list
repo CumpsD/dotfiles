@@ -1,10 +1,22 @@
+# Sources
 git@github.com:exira/exira-backend.git
 git@github.com:exira/exira-frontend.git
 git@github.com:exira/exira-infrastructure.git
 
 git@github.com:exira/documentation.git
 git@github.com:exira/documentation.wiki
+git@github.com:exira/eventstorming.git
 
 git@github.com:exira/public.git
 
 git@github.com:exira/asterisk-cc.git
+
+# Forks
+git@github.com:exira/awesome-phonenumber.git
+git@github.com:exira/libphonenumber-csharp.git
+git@github.com:exira/Akkatecture.git
+git@github.com:exira/Akkatecture-Documentation.git
+git@github.com:exira/Akkatecture-Walkthrough.git
+git@github.com:exira/Akkatecture.github.io.git
+git@github.com:exira/Akka.Persistence.PostgreSql.git
+git@github.com:exira/NISOCountries.git

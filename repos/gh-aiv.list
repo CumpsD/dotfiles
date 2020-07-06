@@ -10,18 +10,19 @@ git@github.com:informatievlaanderen/extract-bundler.git
 
 # Legacy Crap
 git@github.com:informatievlaanderen/crab.git
+git@github.com:informatievlaanderen/poc-crab-edit.git
 
 # Registries
 git@github.com:informatievlaanderen/address-registry.git
 git@github.com:informatievlaanderen/bankaccountnumber-registry.git
 git@github.com:informatievlaanderen/building-registry.git
-git@github.com:informatievlaanderen/example-registry.git
 git@github.com:informatievlaanderen/municipality-registry.git
 git@github.com:Informatievlaanderen/organisation-registry.git
 git@github.com:informatievlaanderen/parcel-registry.git
 git@github.com:informatievlaanderen/postal-registry.git
 git@github.com:informatievlaanderen/publicservice-registry.git
 git@github.com:informatievlaanderen/streetname-registry.git
+git@github.com:informatievlaanderen/road-registry.git
 
 # Documentation and Generator
 git@github.com:informatievlaanderen/registry-documentation.git
