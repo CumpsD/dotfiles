@@ -1,13 +1,30 @@
 # Sources
+git@github.com:CumpsD/CumpsD.git
 git@github.com:CumpsD/functional-living.git
 git@github.com:CumpsD/financial-converter.git
 git@github.com:CumpsD/second-brain.git
-git@github.com:CumpsD/CumpsD.git
 git@github.com:CumpsD/homebridge-functional-living.git
 
 # Forks
-git@github.com:CumpsD/matrix-docker-ansible-deploy.git
+git@github.com:CumpsD/dotbot.git.git
 
+# Tools
+git@github.com:CumpsD/docker-gphotos-syncplantuml-libs.git
+git@github.com:CumpsD/backup-on-the-go.git
+git@github.com:CumpsD/BlackVueDownloader.git
+git@github.com:CumpsD/Muffin.Pictures.Archiver.git
+
+# Diagrams
+git@github.com:CumpsD/plantuml-libs.git
+git@github.com:CumpsD/plantuml-server.git
+
+# Linked Open Data
+git@github.com:CumpsD/dotnetrdf.git
+git@github.com:CumpsD/RDFSharp.Semantics.git
+git@github.com:CumpsD/Rdf.Vocabularies.git
+
+# Home Automation
+git@github.com:CumpsD/knx.net.git
 git@github.com:CumpsD/alexa-spotify-connect.git
 git@github.com:CumpsD/homebridge-roomba-stv.git
 git@github.com:CumpsD/homebridge-bravia.git
@@ -18,30 +35,34 @@ git@github.com:CumpsD/homebridge-roomba.git
 git@github.com:CumpsD/rest980.git
 git@github.com:CumpsD/dorita980.git
 
-git@github.com:CumpsD/iTextSharp.LGPLv2.Core.git
+# Clock
+git@github.com:CumpsD/enix-clock.git
 
+# RFID
+git@github.com:CumpsD/proxmark3.git
+
+# Hosting
+git@github.com:CumpsD/EppLib.NET.git
+
+# GDPR
+git@github.com:CumpsD/klaro.git
+
+# Encryption
+git@github.com:CumpsD/git-crypt.git
+git@github.com:CumpsD/mailvelope.git
+
+# Financial
 git@github.com:CumpsD/SharpMt940Lib.Core.git
 git@github.com:CumpsD/MT940Parser.git
 git@github.com:CumpsD/coda-parser.git
 git@github.com:CumpsD/php-belgianbankstatement-parser.git
 
-git@github.com:CumpsD/docker-gphotos-syncplantuml-libs.git
-git@github.com:CumpsD/backup-on-the-go.git
-git@github.com:CumpsD/BlackVueDownloader.git
-git@github.com:CumpsD/Muffin.Pictures.Archiver.git
+# Matrix
+git@github.com:CumpsD/matrix-docker-ansible-deploy.git
 
-git@github.com:CumpsD/plantuml-libs.git
-git@github.com:CumpsD/plantuml-server.git
+# PDF Generation
+git@github.com:CumpsD/iTextSharp.LGPLv2.Core.git
 
-git@github.com:CumpsD/dotbot.git.git
-
-git@github.com:CumpsD/dotnetrdf.git
-git@github.com:CumpsD/RDFSharp.Semantics.git
-git@github.com:CumpsD/Rdf.Vocabularies.git
-
-git@github.com:CumpsD/knx.net.git
-
-git@github.com:CumpsD/proxmark3.git
-git@github.com:CumpsD/git-crypt.git
-
-git@github.com:CumpsD/EppLib.NET.git
+# Elasticsearch
+git@github.com:CumpsD/running-elasticsearch-fun-profit.git
+git@github.com:CumpsD/elasticsearch-curator-wsl.git
