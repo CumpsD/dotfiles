@@ -56,7 +56,6 @@
     ~/.config/fish/functions/fisher.fish: fish/fisher.fish
     ~/.config/fish/functions/abbrex.fish: fish/functions/abbrex.fish
     ~/.config/fish/functions/clear.fish: fish/functions/clear.fish
-    ~/.config/fish/functions/code.fish: fish/functions/code.fish
     ~/.config/fish/functions/fish_greeting.fish: fish/functions/fish_greeting.fish
     ~/.config/fish/functions/fish_right_prompt.fish: fish/functions/fish_right_prompt.fish
     ~/.config/fish/functions/forrepos.fish: fish/functions/forrepos.fish
@@ -67,7 +66,6 @@
     ~/.config/fish/functions/cat.fish: fish/functions/cat.fish
     ~/.config/fish/functions/top.fish: fish/functions/ytop.fish
     ~/.config/fish/functions/fix-gpg-tty.fish: fish/functions/fix-gpg-tty.fish
-    ~/.config/fish/functions/reboot-wsl.fish: fish/functions/reboot-wsl.fish
     ~/.config/fish/functions/nuke-nuget.fish: fish/functions/nuke-nuget.fish
     ~/.config/fish/functions/connect-proxmark.fish: fish/functions/connect-proxmark.fish
     ~/.config/fish/functions/update-keybase.fish: fish/functions/update-keybase.fish
