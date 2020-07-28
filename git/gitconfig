@@ -18,6 +18,7 @@
 
 [init]
     templateDir = ~/.git-templates
+    defaultBranch = main
 
 [user]
     useConfigOnly = true
