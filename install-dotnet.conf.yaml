@@ -17,4 +17,4 @@
     - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/dotnet/dotnet-install.sh --no-path --version 2.1.805                      , Install .NET Core 2.1.17]
     - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/dotnet/dotnet-install.sh --no-path --version 2.2.207                      , Install .NET Core 2.2.8]
     - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/dotnet/dotnet-install.sh --no-path --version 3.0.103                      , Install .NET Core 3.0.3]
-    - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/dotnet/dotnet-install.sh --no-path --version 3.1.302                      , Install .NET Core 3.1.6]
+    - [sudo -u $SUDO_USER /home/$SUDO_USER/.dotfiles/dotnet/dotnet-install.sh --no-path --version 3.1.402                      , Install .NET Core 3.1.8]
