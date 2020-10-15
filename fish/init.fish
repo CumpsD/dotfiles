@@ -103,4 +103,4 @@ for i in ~/.local/share/fonts/i_{dev,fae,fa,iec,linux,oct,ple,pom,seti,material,
 end
 
 # Start in home directory
-cd ~
+# cd ~
