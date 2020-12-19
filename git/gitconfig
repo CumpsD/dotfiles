@@ -35,6 +35,7 @@
 
 [core]
     compression = 9
+    autocrlf = input
 
 [url "git@github.com:"]
     insteadOf = gh:
@@ -107,3 +108,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[pull]
+	ff = only
